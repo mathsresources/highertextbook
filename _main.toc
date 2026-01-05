@@ -28,7 +28,8 @@
 \contentsline {section}{\numberline {14.3}Maximum and Minimum Values using the Wave Function}{30}{section.14.3}%
 \contentsline {subsubsection}{Exercise 14.3}{30}{section*.8}%
 \contentsline {section}{\numberline {14.4}Solving Equations using the Wave Function}{31}{section.14.4}%
-\contentsline {section}{The Wave Function: Extension Questions}{32}{section*.9}%
-\contentsline {section}{The Wave Function: Review Exercise}{33}{section*.10}%
+\contentsline {subsubsection}{Exercise 14.4}{31}{section*.9}%
+\contentsline {section}{Multiple Angles and the Wave Function}{32}{section*.10}%
+\contentsline {section}{Chapter 14 Review Exercise}{33}{section*.11}%
 \contentsline {chapter}{\numberline {15}Logs and Exponentials}{34}{chapter.15}%
 \contentsline {chapter}{\numberline {16}Further Calculus}{35}{chapter.16}%
