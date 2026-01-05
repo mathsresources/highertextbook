@@ -1,0 +1,399 @@
+\chapterfont{\color{white}}
+
+# The Wave Function
+
+\vspace{-12cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (10,5) circle (0.01);
+        \draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
+        \draw[DarkOrchid,fill=DarkOrchid] (6,1.8) rectangle (18.2,0.2);
+        \node[white] at (12.1,1) {\Huge{\textsc{The Wave Function}}};
+        \node at (3,1) {\Large{\textsc{Chapter 14}}};
+    \end{tikzpicture}
+\end{center}
+
+In this chapter, the sums and differences of *equal-angled* trigonometric operations will be explored.
+
+\[\text{e.g. }3\sin{x}\degree+4\cos{x}\degree\]
+
+The graphs of basic trigonometric functions such as $y=3\sin{x}\degree$ and $y=4\cos{x}\degree$ should be familiar:
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[-stealth] (0,0) -- (14,0) node[below] {$x$};
+        \draw[-stealth] (0,-3) -- (0,3) node[left] {$y$};
+        \draw[smooth,domain=0:2*3.141592,xscale=2] plot (\x,{0.5*3*sin(\x r)});
+        \draw[smooth,domain=0:2*3.141592,xscale=2] plot (\x,{0.5*4*cos(\x r)});
+        \node[above] at (4*3.141592,0) {$360\degree$};
+        \foreach \y in {-5,-4,...,5}{
+        \draw (0,0.5*\y) -- (-0.1,0.5*\y) node[left] {\y};
+}
+        \node[below] at (3.5*3.141592,-1.35) {$y=3\sin{x}\degree$};
+        \node[above] at (4*3.141592,2) {$y=4\cos{x}\degree$};
+    \end{tikzpicture}
+\end{center}
+
+The graph of $\color{DarkOrchid}y=3\sin{x}\degree+4\cos{x}\degree$ is the same as that of $\color{DarkOrchid}y=5\cos{(x-36.9)}\degree$.
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[-stealth] (0,0) -- (14,0) node[below] {$x$};
+        \draw[-stealth] (0,-3) -- (0,3) node[left] {$y$};
+        \draw[black!50,smooth,domain=0:2*3.141592,xscale=2] plot (\x,{0.5*3*sin(\x r)});
+        \draw[black!50,smooth,domain=0:2*3.141592,xscale=2] plot (\x,{0.5*4*cos(\x r)});
+        \draw[smooth,very thick,DarkOrchid,domain=0:2*3.141592,xscale=2] plot (\x,{0.5*4*cos(\x r)+0.5*3*sin(\x r)});
+        \node[above] at (4*3.141592,0) {$360\degree$};
+        \foreach \y in {-5,-4,...,5}{
+        \draw (0,0.5*\y) -- (-0.1,0.5*\y) node[left] {\y};
+}
+        \node[black!50,below] at (3.5*3.141592,-1.35) {$y=3\sin{x}\degree$};
+        \node[black!50,above] at (4*3.141592,2) {$y=4\cos{x}\degree$};
+        \node[above,DarkOrchid] at (1.3*3.141592,2.5) {$y=3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$};
+        \draw[dashed,DarkOrchid] (2*0.644,2.5) -- (2*0.644,0) node[below] {$36.9\degree$};
+    \end{tikzpicture}
+\end{center}
+
+Determining that $3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$ allows the maximum values and minimum values of $3\sin{x}\degree+4\cos{x}\degree$ to be determined and the values of $x$ which produce them, and allow equations such as $3\sin{x}\degree+4\cos{x}\degree=2$ to be solved.
+
+*Any* trigonometric expression $k_1\sin{x}\pm k_2\cos{x}$ can be written as either $k\sin{(x\pm a)}$ or $k\cos{(x\pm a)}$.
+
+This chapter will cover how to do this and explore the various applications of this property.
+
+\pagebreak
+
+## The Wave Function using the Form $k\cos{(x-a)}$
+
+
+Whilst any of $k\sin{(x\pm a)}$ or $k\cos{(x\pm a)}$ may be used in general, any Higher exam question is likely to specify a particular form to use. The simplest is often $k\cos{(x-a)}$.
+
+To express $3\sin{x}\degree+4\cos{x}\degree$ in the form $k\cos{(x-a)}\degree$, two key *trigonometric identities* are needed:
+
+\[\sin^2{x}+\cos^2{x}=1\hspace{2cm}\text{and}\hspace{2cm}\tan{x}=\frac{\sin{x}}{\cos{x}}\]
+
+First, $k\cos{(x-a)}\degree$ can be expanded using the the formula $\cos{(A\pm B)}=\cos{A}\cos{B}\mp \sin{A}\sin{B}$:
+
+\[k\cos{(x-a)}\degree=k\cos{x}\degree\cos{a}\degree+k\sin{x}\degree\sin{a}\degree\]
+
+It is required that this expansion is equal to the original expression:
+
+\[3\underline{\sin{x}\degree}+4\doubleunderline{\cos{x}\degree}=k\doubleunderline{\cos{x}\degree}\cos{a}\degree+k\underline{\sin{x}\degree}\sin{a}\degree\]
+
+Equating the coefficients of $\underline{\sin{x}\degree}$ and $\doubleunderline{\cos{x}\degree}$ gives a set of simultaneous equations in $k$ and $a$:
+
+\begin{align*}
+    k\sin{a}\degree&=3&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\underline{\sin{x}\degree}\\
+    k\cos{a}\degree&=4&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\doubleunderline{\cos{x}\degree}
+\end{align*}
+
+Squaring both sides of each equation and adding allows $k$ to be determined using $\sin^2{x}+\cos^2{x}=1$:
+
+\begin{align*}
+    k^2\sin^2{a}\degree+k^2\cos^2{a}\degree&=3^2+4^2\\
+    k^2\left(\sin^2{x}\degree+\cos^2{x}\degree\right)&=3^2+4^2\\
+    k^2(1)&=3^2+4^2\\
+    \color{DarkOrchid}k&\color{DarkOrchid}=\sqrt{3^2+4^2}\\
+    k&=\sqrt{25}\\
+    k&=5
+\end{align*}
+
+Dividing $k\sin{a}\degree$ by $k\cos{a}\degree$ allows $a$ to be calculated, noting $k\sin{a}\degree$ and $k\cos{a}\degree$ are both positive:
+
+\vspace{2.8cm}
+\hspace{14cm}
+\begin{tikzpicture}[remember picture, overlay, scale=0.5]
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (0,-1) -- (0,1);
+        \node at (0.7,0.5) {A};
+        \node at (-0.7,0.5) {S};
+        \node at (-0.7,-0.5) {T};
+        \node at (0.7,-0.5) {C};
+        \node[DarkOrchid,above right] at (0.7,0.65) {\scriptsize{$a\degree$}};
+        \node[DarkOrchid,right] at (0.7,0.5) {\ding{51}\ding{51}};
+        \node[DarkOrchid,left] at (-0.7,0.5) {\ding{51}};
+        \node[DarkOrchid,right] at (0.7,-0.5) {\ding{51}};
+\end{tikzpicture}
+
+\vspace{-3.8cm}
+\begin{align*}
+    \color{DarkOrchid}\frac{k\sin{a}\degree}{k\cos{a}\degree}&\color{DarkOrchid}=\frac{3}{4}\\
+    \tan{a}\degree&=\frac{3}{4}\\
+    a\degree_{\text{acute}}&=\tan^{-1}{\left(\frac{3}{4}\right)}=36.9\degree\\
+    a\degree&=36.9\degree
+\end{align*}
+
+Hence $3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$. Here it has been assumed that $k>0$ and $0<a<360$.
+
+\pagebreak
+
+Some abbreviations of the working shown on the previous page are routinely permitted in the Higher exam. The following example demonstrates an appropriate level of detail in its solution.
+
+\begin{tcolorbox}[title=Example 14.1.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+
+Express $3\cos{x}-\sin{x}$ in the form $k\sin{(x-a)}$ where $k>0$ and $0<a<2\pi$.
+
+\tcblower
+
+\vspace{10cm}
+\hspace{4cm}
+\begin{tikzpicture}[remember picture, overlay, scale=0.5]
+        \draw[white] (-8,0) -- (8,0);
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (0,-1) -- (0,1);
+        \node at (0.7,0.5) {A};
+        \node at (-0.7,0.5) {S};
+        \node at (-0.7,-0.5) {T};
+        \node at (0.7,-0.5) {C};
+        \node[DarkOrchid,below right] at (0.7,-0.65) {\scriptsize{$360\degree-\text{acute}\degree$}};
+        \node[DarkOrchid,right] at (0.7,-0.5) {\ding{51}\ding{51}};
+        \node[DarkOrchid,right] at (0.7,0.5) {\ding{51}};
+        \node[DarkOrchid,left] at (-0.7,-0.5) {\ding{51}};
+\end{tikzpicture}
+
+\vspace{-10.9cm}
+\begin{align*}
+    3\cos{x}-\sin{x}&=k\cos{(x-a)}&&\\[0.5em]
+    3\doubleunderline{\cos{x}}-\underline{\sin{x}}&=k\doubleunderline{\cos{x}}\cos{a}+k\underline{\sin{x}}\sin{a}&&\color{DarkOrchid}\longleftarrow \text{Expand }k\cos{(x-a)}\\[1.5em]
+    k\sin{a}&=-1&&\color{DarkOrchid}\longleftarrow \text{Equate }\sin{x}\text{ coefficients}\\[0.5em]
+    k\cos{a}&=3&&\color{DarkOrchid}\longleftarrow \text{Equate }\cos{x}\text{ coefficients}\\[1.5em]
+    k&=\sqrt{(-1)^2+3^2}&&\color{DarkOrchid}\longleftarrow \text{Calculate }k\\[0.5em]
+    &=\sqrt{10}\\[1.5em]
+    \tan{a}&=\frac{-1}{3}&&\color{DarkOrchid}\longleftarrow \text{Calculate }a\\[0.5em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{1}{3}\right)}=18.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[2em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\text{: TC, positive }\cos{a}\text{: AC}\\[2em]
+    a\degree &=341.6\degree&&\color{DarkOrchid}\longleftarrow \text{Using }360\degree-18.4\degree\text{ (Double-ticked quadrant)}\\[0.5em]
+    a &=5.96&&\color{DarkOrchid}\longleftarrow \text{Convert to radians: }341.6\times\frac{\pi}{180}\\[1.5em]
+    3\cos{x}-\sin{x}&=\sqrt{10}\cos{(x-5.96)}&&\color{DarkOrchid}\longleftarrow \text{State solution}
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
+
+#### Exercise 14.1 {-}
+
+\begin{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $5\cos{x}\degree+12\sin{x}\degree$
+            \item $4\sin{x}\degree+5\cos{x}\degree$
+            \item $6\cos{x}\degree+\sin{x}\degree$
+        \end{multicols}
+    \end{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}$, where $k>0$ and $0<a<2\pi$ \faCalculator.
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $8\sin{x}-6\cos{x}$
+            \item $\cos{x}-3\sin{x}$
+            \item $-2\sin{x}-\cos{x}$
+        \end{multicols}
+    \end{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$.
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\sin{x}\degree+\cos{x}\degree$
+            \item $2\cos{x}\degree-\sqrt{3}\sin{x}\degree$
+            \item $-\sin{x}\degree-\sqrt{2}\cos{x}\degree$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+## The Wave Function using Other Forms
+
+\vspace{-0.5cm}
+
+As well as $k\cos{(x-a)}$, three other forms may be used, shown below including their expansions:
+
+\vspace{-1.0cm}
+
+\begin{align*}
+    k\cos{(x+a)}&\color{DarkOrchid}=k\cos{x}\cos{a}-k\sin{a}\sin{a}\\
+    k\cos{(x+a)}&\color{DarkOrchid}=k\cos{x}\cos{a}-k\sin{a}\sin{a}\\
+    k\cos{(x+a)}&\color{DarkOrchid}=k\cos{x}\cos{a}-k\sin{a}\sin{a}
+\end{align*}
+
+\vspace{-0.3cm}
+
+\begin{tcolorbox}[title=Example 14.2.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+
+Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$.
+
+\tcblower
+
+\vspace{9.9cm}
+\hspace{4cm}
+\begin{tikzpicture}[remember picture, overlay, scale=0.5]
+        \draw[white] (-8,0) -- (8,0);
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (0,-1) -- (0,1);
+        \node at (0.7,0.5) {A};
+        \node at (-0.7,0.5) {S};
+        \node at (-0.7,-0.5) {T};
+        \node at (0.7,-0.5) {C};
+        \node[DarkOrchid,below left] at (-0.7,-0.65) {\scriptsize{$180\degree+\text{acute}\degree$}};
+        \node[DarkOrchid,left] at (-0.7,-0.5) {\ding{51}\ding{51}};
+        \node[DarkOrchid,right] at (0.7,-0.5) {\ding{51}};
+        \node[DarkOrchid,left] at (-0.7,0.5) {\ding{51}};
+\end{tikzpicture}
+
+\vspace{-11cm}
+\begin{align*}
+    12\cos{x}\degree-5\sin{x}\degree&=k\sin{(x-a)}\degree&&\\[0.5em]
+    12\doubleunderline{\cos{x}\degree}-5\underline{\sin{x}\degree}&=k\underline{\sin{x}\degree}\cos{a}\degree-k\doubleunderline{\cos{x}\degree}\sin{a}\degree&&\color{DarkOrchid}\longleftarrow \text{Expand }k\sin{(x-a)}\degree\\[1.5em]
+    -k\sin{a}\degree&=12\implies k\sin{a}\degree=-12&&\color{DarkOrchid}\longleftarrow \text{Equate }\sin{x}\degree\text{ coefficients}\\[0.5em]
+    k\cos{a}\degree&=-5&&\color{DarkOrchid}\longleftarrow \text{Equate }\cos{x}\degree\text{ coefficients}\\[1.5em]
+    k&=\sqrt{(-12)^2+(-5)^2}&&\color{DarkOrchid}\longleftarrow \text{Calculate }k\\[0.5em]
+    &=13\\[1.5em]
+    \tan{a}\degree&=\frac{-12}{-5}=\frac{12}{5}&&\color{DarkOrchid}\longleftarrow \text{Calculate }a\degree\\[0.5em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{12}{5}\right)}=67.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[2em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\degree\text{: TC, negative }\cos{a}\degree\text{: ST}\\[2em]
+    a\degree &=247.4\degree&&\color{DarkOrchid}\longleftarrow \text{Using }180\degree+67.4\degree\text{ (Double-ticked)}\\[1.5em]
+    12\cos{x}\degree-5\sin{x}\degree&=13\sin{(x-247.4)}\degree&&\color{DarkOrchid}\longleftarrow \text{State solution}
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
+
+#### Exercise 14.2 {-}
+
+\begin{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $5\cos{x}\degree+12\sin{x}\degree$
+            \item $4\sin{x}\degree+5\cos{x}\degree$
+            \item $6\cos{x}\degree+\sin{x}\degree$
+        \end{multicols}
+    \end{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}$, where $k>0$ and $0<a<2\pi$ \faCalculator.
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $8\sin{x}-6\cos{x}$
+            \item $\cos{x}-3\sin{x}$
+            \item $-2\sin{x}-\cos{x}$
+        \end{multicols}
+    \end{enumerate}
+    \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$.
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\sin{x}\degree+\cos{x}\degree$
+            \item $2\cos{x}\degree-\sqrt{3}\sin{x}\degree$
+            \item $-\sin{x}\degree-\sqrt{2}\cos{x}\degree$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+## Maximum and Minimum Values using the Wave Function
+
+\vspace{-0.5cm}
+
+The graphs of $y=\sin{x}\degree$ and $y=\cos{x}\degree$, including their turning points, should already be familiar:
+
+\begin{multicols}{2}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[-stealth] (0,0) -- (7,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.4) -- (0,1.4) node[left] {$y$};
+            \draw[smooth,domain=0:2*3.141592] plot (\x,{sin(\x r)});
+            \node[above] at (2*3.141592,0) {$360$};
+            \node[left] at (0,1) {$1$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1) {$-1$};
+            \node at (3.3,1) {$y=\sin{x}\degree$};
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[-stealth] (0,0) -- (7,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.4) -- (0,1.4) node[left] {$y$};
+            \draw[smooth,domain=0:2*3.141592] plot (\x,{cos(\x r)});
+            \node[below] at (2*3.141592,0) {$360$};
+            \node[left] at (0,1) {$1$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1) {$-1$};
+            \node at (3.3,1) {$y=\cos{x}\degree$};
+            \draw[dashed] (2*3.141592,1) -- (2*3.141592,0);
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+        \end{tikzpicture}
+    \end{center}
+\end{multicols}
+
+Graphs of the form $k\sin{(x\pm a)}$ and $k\cos{(x\pm a)}$ have maximum/minimum values of $\pm k$, and their *horizontal translation* is described by $\pm a$ following the rules covered in the Graph Transformations chapter.
+
+\begin{tcolorbox}[title=Example 14.3.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+
+Given that $3\sin{x}\degree+4\cos{x}\degree$ can be expressed as $5\cos{(x-36.9)}\degree$, state the minimum value of $f(x)=3\sin{x}\degree+4\cos{x}\degree$ and the value of $x$ at which it occurs for $0<x<360$.
+
+\tcblower
+
+\textcolor{DarkOrchid}{Consider the graph of $y=5\cos{x}\degree$ translated $36.9\degree$ to the right:}
+
+\begin{center}
+        \begin{tikzpicture}
+            \draw[-stealth] (0,0) -- (7,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.6) -- (0,2) node[left] {$y$};
+            \draw[thin,black!50,smooth,domain=0:2*3.141592] plot (\x,{0.3*5*cos(\x r)});
+            \draw[thick,DarkOrchid,smooth,domain=0:2*3.141592] plot (\x,{0.3*3*sin(\x r)+0.3*4*cos(\x r)});
+            \draw[thick,dashed,DarkOrchid,smooth,domain=2*3.141592:6.9272] plot (\x,{0.3*3*sin(\x r)+0.3*4*cos(\x r)});
+            \node[black!50] at (2*3.141592,1.8) {$y=5\cos{x}\degree$};
+            \node[right,DarkOrchid] at (6.9272,1.5) {$y=5\cos{(x-36.9)}\degree$};
+            \node[below] at (2*3.141592,0) {$360$};
+            \node[below] at (3.141592,0) {$180$};
+            \node[left] at (0,1.5) {$5$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1.5) {$-5$};
+            \node at (3.3,1) {$y=\cos{x}\degree$};
+            \draw[dashed,black!50] (2*3.141592,1) -- (2*3.141592,0);
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+            \draw[stealth-,DarkOrchid] (3.8859,-1.6) -- (4.1859,-1.9) node[right] {$(216.9\degree,-5)$};
+            \draw[stealth-,black!50] (3.041592,-1.6) -- (2.741592,-1.9) node[left] {$(180\degree,-5)$};
+            \draw[DarkOrchid,fill=DarkOrchid] (3.7859,-1.5) circle (0.05);
+            \draw[black!50,fill=black!50] (3.141592,-1.5) circle (0.05);
+        \end{tikzpicture}
+    \end{center}
+
+\textcolor{DarkOrchid}{Use the graph to state the answer:}
+
+\vspace{0.1cm}
+
+Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
+
+\end{tcolorbox}
+
+#### Exercise 14.3 {-}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\newpage
+
+## Solving Equations using the Wave Function
+
+\newpage
+
+## The Wave Function: Extension Questions {-}
+
+\newpage
+
+## The Wave Function: Review Exercise {-}
