@@ -63,8 +63,9 @@ This chapter will cover how to do this and explore the various applications of t
 
 \pagebreak
 
-## The Wave Function using the Form $k\cos{(x-a)}$
+## The Wave Function using $k\cos{(x-a)}$
 
+\vspace{-0.5cm}
 
 Whilst any of $k\sin{(x\pm a)}$ or $k\cos{(x\pm a)}$ may be used in general, any Higher exam question is likely to specify a particular form to use. The simplest is often $k\cos{(x-a)}$.
 
@@ -131,7 +132,7 @@ Some abbreviations of the working shown on the previous page are routinely permi
 
 \begin{tcolorbox}[title=Example 14.1.1,colback=blue!1!red!1!, colframe=DarkOrchid]
 
-Express $3\cos{x}-\sin{x}$ in the form $k\sin{(x-a)}$ where $k>0$ and $0<a<2\pi$.
+Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$.
 
 \tcblower
 
@@ -158,10 +159,11 @@ Express $3\cos{x}-\sin{x}$ in the form $k\sin{(x-a)}$ where $k>0$ and $0<a<2\pi$
     k\sin{a}&=-1&&\color{DarkOrchid}\longleftarrow \text{Equate }\sin{x}\text{ coefficients}\\[0.5em]
     k\cos{a}&=3&&\color{DarkOrchid}\longleftarrow \text{Equate }\cos{x}\text{ coefficients}\\[1.5em]
     k&=\sqrt{(-1)^2+3^2}&&\color{DarkOrchid}\longleftarrow \text{Calculate }k\\[0.5em]
-    &=\sqrt{10}\\[1.5em]
+    &=\sqrt{10}\\[1em]
     \tan{a}&=\frac{-1}{3}&&\color{DarkOrchid}\longleftarrow \text{Find }\tan{a}\\[0.5em]
-    \text{acute}\degree&=\tan^{-1}{\left(\frac{1}{3}\right)}=18.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[2em]
-    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\text{: T,C, positive }\cos{a}\text{: A,C}\\[2em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{1}{3}\right)}=18.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[1.5em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\text{: quadrants T and C}\\[0.5em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Positive }\cos{a}\text{: quadrants A and C}\\[2em]
     a\degree &=341.6\degree&&\color{DarkOrchid}\longleftarrow \text{Using }360\degree-18.4\degree\text{ (Double-ticked quadrant)}\\[0.5em]
     a &=5.96&&\color{DarkOrchid}\longleftarrow \text{Convert to radians: }341.6\times\frac{\pi}{180}\\[1.5em]
     3\cos{x}-\sin{x}&=\sqrt{10}\cos{(x-5.96)}&&\color{DarkOrchid}\longleftarrow \text{State solution}
@@ -172,6 +174,8 @@ Express $3\cos{x}-\sin{x}$ in the form $k\sin{(x-a)}$ where $k>0$ and $0<a<2\pi$
 \vspace{-0.5cm}
 
 #### Exercise 14.1 {-}
+
+\vspace{-0.3cm}
 
 \begin{enumerate}
     \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
@@ -196,16 +200,16 @@ Express $3\cos{x}-\sin{x}$ in the form $k\sin{(x-a)}$ where $k>0$ and $0<a<2\pi$
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\sin{x}\degree+\cos{x}\degree$
+            \item $\sin{x}\degree+\sqrt{3}\cos{x}\degree$
             \item $\cos{x}\degree-\sqrt{3}\sin{x}\degree$
-            \item $-\sin{x}\degree-\sqrt{3}\cos{x}\degree$
+            \item $-3\sin{x}\degree-\sqrt{3}\cos{x}\degree$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
 
 \pagebreak
 
-## The Wave Function using Other Forms
+## Other Forms of the The Wave Function
 
 \vspace{-0.5cm}
 
@@ -227,8 +231,8 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \tcblower
 
-\vspace{9.9cm}
-\hspace{4cm}
+\vspace{10cm}
+\hspace{6cm}
 \begin{tikzpicture}[remember picture, overlay, scale=0.5]
         \draw[white] (-8,0) -- (8,0);
         \draw (-1.5,0) -- (1.5,0);
@@ -243,7 +247,7 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
         \node[DarkOrchid,left] at (-0.7,0.5) {\ding{51}};
 \end{tikzpicture}
 
-\vspace{-11cm}
+\vspace{-10.9cm}
 \begin{align*}
     12\cos{x}\degree-5\sin{x}\degree&=k\sin{(x-a)}\degree&&\\[0.5em]
     12\doubleunderline{\cos{x}\degree}-5\underline{\sin{x}\degree}&=k\underline{\sin{x}\degree}\cos{a}\degree-k\doubleunderline{\cos{x}\degree}\sin{a}\degree&&\color{DarkOrchid}\longleftarrow \text{Expand }k\sin{(x-a)}\degree\\[1.5em]
@@ -252,9 +256,10 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
     k&=\sqrt{(-12)^2+(-5)^2}&&\color{DarkOrchid}\longleftarrow \text{Calculate }k\\[0.5em]
     &=13\\[1.5em]
     \tan{a}\degree&=\frac{-12}{-5}=\frac{12}{5}&&\color{DarkOrchid}\longleftarrow \text{Find }\tan{a}\degree\\[0.5em]
-    \text{acute}\degree&=\tan^{-1}{\left(\frac{12}{5}\right)}=67.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[2em]
-    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\degree\text{: TC, negative }\cos{a}\degree\text{: ST}\\[2em]
-    a\degree &=247.4\degree&&\color{DarkOrchid}\longleftarrow \text{Using }180\degree+67.4\degree\text{ (Double-ticked)}\\[1.5em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{12}{5}\right)}=67.4\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[0.8em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\sin{a}\degree\text{: quadrants T and C}\\[0.5em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\cos{a}\degree\text{: quadrants S and T}\\[1.5em]
+    a\degree &=247.4\degree&&\color{DarkOrchid}\longleftarrow \text{Using }180\degree+67.4\degree\text{ (Double-ticked)}\\[1em]
     12\cos{x}\degree-5\sin{x}\degree&=13\sin{(x-247.4)}\degree&&\color{DarkOrchid}\longleftarrow \text{State solution}
 \end{align*}
 
@@ -263,6 +268,8 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 \vspace{-0.5cm}
 
 #### Exercise 14.2 {-}
+
+\vspace{-0.3cm}
 
 \begin{enumerate}
     \item Express each of the following in the form $k\sin{(x+a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
@@ -287,8 +294,8 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\sin{x}+\cos{x}$
-            \item $\sqrt{3}\cos{x}-\sqrt{3}\sin{x}$
+            \item $\sqrt{3}\sin{x}+\cos{x}$
+            \item $\sqrt{3}\cos{x}-\sin{x}$
             \item $2\sqrt{3}\sin{x}-6\cos{x}$
         \end{multicols}
     \end{enumerate}
@@ -380,7 +387,11 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \end{tcolorbox}
 
+\vspace{-0.5cm}
+
 #### Exercise 14.3 {-}
+
+\vspace{-0.3cm}
 
 \begin{enumerate}
     \item Sketch each for $0<x<360$, showing the coordinates of any roots and turning points:
@@ -405,9 +416,9 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $3\cos{\left(x-\frac{\pi}{6}\right)}$
-            \item $5\sin{\left(x+\frac{\pi}{3}\right)}+2$
-            \item $-12\sin{\left(x+\frac{\pi}{4}\right)}$
+            \item $3\cos{\left(x-\dfrac{\pi}{6}\right)}$
+            \item $5\sin{\left(x+\dfrac{\pi}{3}\right)}+2$
+            \item $-12\sin{\left(x+\dfrac{\pi}{4}\right)}$
         \end{multicols}
     \end{enumerate}
     \item
@@ -455,26 +466,134 @@ Hence, solve the equation $5\sin{x}\degree-2\cos{x}\degree=4$ where $0<x<360$.
     \sqrt{29}\sin{(x-21.8)}\degree&=4&&\color{DarkOrchid}\longleftarrow \text{Substitute the wave function form}\\[0.5em]
     \sin{(x-21.8)}\degree&=\frac{4}{\sqrt{29}}&&\color{DarkOrchid}\longleftarrow \text{Rearrange to }\sin{(\dots)}=\dots\\[0.5em]
     \color{DarkOrchid}a&\color{DarkOrchid}=\sin^{-1}{\left(\frac{4}{\sqrt{29}}\right)=48.0\degree}&&\color{DarkOrchid}\longleftarrow \text{Calculate acute angle}\\[2.5em]
-    &&&\color{DarkOrchid}\longleftarrow \text{Positive }\sin\text{: quadrants A and S}\\[2.5em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Positive }\sin{a}\degree\text{: quadrants A and S}\\[2.5em]
     x-21.8\degree&=48.0\degree,180\degree-48.0\degree&&\color{DarkOrchid}\longleftarrow \text{Apply ticked quadrants}\\[0.5em]
     x-21.8\degree&=48.0\degree,132.0\degree&&\\[0.5em]
-    x\degree&=69.8\degree,153.8\degree&&\color{DarkOrchid}\longleftarrow \text{Add }21.8\degree\text{ to both sides}\\[0.5em]
+    x\degree&=69.8\degree,153.8\degree&&\color{DarkOrchid}\longleftarrow \text{Add }21.8\degree\text{ to both sides}
 \end{align*}
 
 \end{tcolorbox}
 
-Note that if any solutions obtained are not longer within the domain of $0<x<360$ at the end of the solut
+Note that any solutions outwith the domain (often $0<x<360$) should have $360\degree$ added or subtracted to bring it back within the domain, where possible.
+
+\vspace{-0.5cm}
 
 #### Exercise 14.4 {-}
 
+\vspace{-0.3cm}
+
 \begin{enumerate}
+    \item Solve each equation for $0<x<360$: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $7\sin{(x-18)}\degree=4$
+            \item $3\cos{(x+34.1)}\degree=-2$
+            \item $\sqrt{5}\sin{(x-106)}\degree+1=0$
+        \end{multicols}
+    \end{enumerate}
+    \item Given $6\sin{x}\degree-8\cos{x}\degree=10\sin{(x-53.1)}\degree$, solve $6\sin{x}\degree-8\cos{x}\degree=5$ where $0<x<360$.
     \item 
+    \begin{enumerate}
+        \item Express $\sqrt{3}\sin{x}\degree+\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. 
+        \item Hence solve the equation $\sqrt{3}\sin{x}\degree+\cos{x}\degree=1$ where $0<x<360$.
+    \end{enumerate}
+    \item Solve each equation for $0<x<2\pi$: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $4\sin{(x+0.31)}+2=1$
+            \item $9\cos{(x+1.24)}=5$
+            \item $2\sqrt{3}\sin{(x-0.82)}=\sqrt{5}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $3\cos{x}+2\c{sinx}$ in the form $k\cos{(x+a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator
+        \item Hence solve the equation $2+6\sin{x}+4\cos{x}=5$ where $0<x<2\pi$. \faCalculator
+    \end{enumerate}
 \end{enumerate}
 
-\newpage
+\pagebreak
 
-## Multiple Angles and the Wave Function {-}
+## Multiple Angles and Different Variables
 
-\newpage
+\vspace{-0.5cm}
 
-## Chapter 14 Review Exercise {-}
+The techniques covered in this chapter can be applied to trigonometric expressions beyond those containing only $\sin{x}$ and $\cos{x}$; they work for any sum or difference of *equal-angled* trigonometric operations.
+
+\vspace{-0.2cm}
+
+\[\text{e.g. }\qquad 3\sin{t}\degree+4\cos{t}\degree \qquad \text{ or } \qquad 2\sin{2x}-5\cos{2x}\]
+
+\begin{tcolorbox}[title=Example 14.5.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+
+Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ where $k>0$ and $0<a<360$.
+
+\tcblower
+
+\vspace{10cm}
+\hspace{6cm}
+\begin{tikzpicture}[remember picture, overlay, scale=0.5]
+        \draw[white] (-8,0) -- (8,0);
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (0,-1) -- (0,1);
+        \node at (0.7,0.5) {A};
+        \node at (-0.7,0.5) {S};
+        \node at (-0.7,-0.5) {T};
+        \node at (0.7,-0.5) {C};
+        \node[DarkOrchid,above left] at (-0.7,0.65) {\scriptsize{$180\degree-\text{acute}\degree$}};
+        \node[DarkOrchid,left] at (-0.7,0.5) {\ding{51}\ding{51}};
+        \node[DarkOrchid,right] at (0.7,0.5) {\ding{51}};
+        \node[DarkOrchid,left] at (-0.7,-0.5) {\ding{51}};
+\end{tikzpicture}
+
+\vspace{-10.9cm}
+\begin{align*}
+    5\cos{2t}\degree-3\sin{2t}\degree&=k\sin{(2t+a)}\degree&&\\[0.5em]
+    5\doubleunderline{\cos{2t}\degree}-3\underline{\sin{2t}\degree}&=k\underline{\sin{2t}\degree}\cos{a}\degree+k\doubleunderline{\cos{2t}\degree}\sin{a}\degree&&\color{DarkOrchid}\longleftarrow \text{Expand }k\sin{(2t+a)}\degree\\[1.5em]
+    k\sin{a}\degree&=5&&\color{DarkOrchid}\longleftarrow \text{Equate }\sin{2t}\degree\text{ coefficients}\\[0.5em]
+    k\cos{a}\degree&=-3&&\color{DarkOrchid}\longleftarrow \text{Equate }\cos{2t}\degree\text{ coefficients}\\[1.5em]
+    k&=\sqrt{(5)^2+(-3)^2}&&\color{DarkOrchid}\longleftarrow \text{Calculate }k\\[0.5em]
+    &=\sqrt{34}\\[1.5em]
+    \tan{a}\degree&=\frac{5}{-3}=-\frac{5}{3}&&\color{DarkOrchid}\longleftarrow \text{Find }\tan{a}\degree\\[0.5em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{5}{3}\right)}=59.0\degree &&\color{DarkOrchid}\longleftarrow \text{Find acute angle first}\\[0.8em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Positive }\sin{a}\degree\text{: quadrants A and S}\\[0.5em]
+    &&&\color{DarkOrchid}\longleftarrow \text{Negative }\cos{a}\degree\text{: quadrants S and T}\\[1.5em]
+    a\degree &=121.0\degree&&\color{DarkOrchid}\longleftarrow \text{Using }180\degree-59.0\degree\text{ (Double-ticked)}\\[1em]
+    5\cos{2t}\degree-3\sin{2t}\degree&=\sqrt{34}\sin{(x+59.0)}\degree&&\color{DarkOrchid}\longleftarrow \text{State solution}
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
+
+#### Exercise 14.5 {-}
+
+\vspace{-0.3cm}
+
+\begin{enumerate}
+    \item Express $4\cos{t}\degree-3\sin{t}\degree$ in the form $k\sin{(t-a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
+    \item Express $2\sin{2x}-\cos{2x}$ in the form $k\cos{(2x-a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator
+    \item 
+    \begin{enumerate}
+        \item Express $12\cos{t}\degree+5\sin{t}\degree$ in the form $k\sin{(t+a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
+        \item Hence state:
+        \begin{enumerate}
+            \item The maximum value of the function $f(x)=12\cos{t}\degree+5\sin{t}\degree$, $0<t<360$.
+            \item The value(s) of $t$ for which it occurs.
+        \end{enumerate}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $\sin{2x}-\sqrt{3}\cos{2x}$ in the form $k\cos{(2x-a)}$ where $k>0$, $0<a<2\pi$.
+        \item Hence solve $\sin{2x}-\sqrt{3}\cos{2x}-1=0$, $0<x<2\pi$.
+        \item Sketch $y=-\sin{2x}+\sqrt{3}\cos{2x}-1=0$ for $0\leqslant x \leqslant 2\pi$.
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+## Wave Function Review Exercise {-}
+
+\begin{enumerate}
+    \item
+\end{enumerate}
