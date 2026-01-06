@@ -130,14 +130,14 @@ Hence $3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$. Here it has been
 
 Some abbreviations of the working shown on the previous page are routinely permitted in the Higher exam. The following example demonstrates an appropriate level of detail in its solution.
 
-\begin{tcolorbox}[title=Example 14.1.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example,colback=DarkOrchid!1!, colframe=DarkOrchid]
 
 Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$.
 
 \tcblower
 
 \vspace{10cm}
-\hspace{4cm}
+\hspace{2.2cm}
 \begin{tikzpicture}[remember picture, overlay, scale=0.5]
         \draw[white] (-8,0) -- (8,0);
         \draw (-1.5,0) -- (1.5,0);
@@ -152,7 +152,13 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
         \node[DarkOrchid,left] at (-0.7,-0.5) {\ding{51}};
 \end{tikzpicture}
 
-\vspace{-10.9cm}
+\vspace{-4cm}
+\hspace{8cm}
+\begin{tikzpicture}[remember picture, overlay]
+        \draw[thick,DarkOrchid,-stealth] (160:8) arc (160:200:8);
+\end{tikzpicture}
+
+\vspace{-7.5cm}
 \begin{align*}
     3\cos{x}-\sin{x}&=k\cos{(x-a)}&&\\[0.5em]
     3\doubleunderline{\cos{x}}-\underline{\sin{x}}&=k\doubleunderline{\cos{x}}\cos{a}+k\underline{\sin{x}}\sin{a}&&\color{DarkOrchid}\longleftarrow \text{Expand }k\cos{(x-a)}\\[1.5em]
@@ -200,9 +206,9 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\sin{x}\degree+\sqrt{3}\cos{x}\degree$
+            \item $\sin{x}\degree+\cos{x}\degree$
             \item $\cos{x}\degree-\sqrt{3}\sin{x}\degree$
-            \item $-3\sin{x}\degree-\sqrt{3}\cos{x}\degree$
+            \item $-\sin{x}\degree-\sqrt{3}\cos{x}\degree$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -225,14 +231,14 @@ As well as $k\cos{(x-a)}$, three other forms may be used, shown below including 
 
 \vspace{-0.3cm}
 
-\begin{tcolorbox}[title=Example 14.2.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example,colback=DarkOrchid!1!, colframe=DarkOrchid]
 
 Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$.
 
 \tcblower
 
-\vspace{10cm}
-\hspace{6cm}
+\vspace{9.7cm}
+\hspace{3.2cm}
 \begin{tikzpicture}[remember picture, overlay, scale=0.5]
         \draw[white] (-8,0) -- (8,0);
         \draw (-1.5,0) -- (1.5,0);
@@ -247,7 +253,13 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
         \node[DarkOrchid,left] at (-0.7,0.5) {\ding{51}};
 \end{tikzpicture}
 
-\vspace{-10.9cm}
+\vspace{-3.7cm}
+\hspace{8.5cm}
+\begin{tikzpicture}[remember picture, overlay]
+        \draw[thick,DarkOrchid,-stealth] (160:8) arc (160:200:8);
+\end{tikzpicture}
+
+\vspace{-7.5cm}
 \begin{align*}
     12\cos{x}\degree-5\sin{x}\degree&=k\sin{(x-a)}\degree&&\\[0.5em]
     12\doubleunderline{\cos{x}\degree}-5\underline{\sin{x}\degree}&=k\underline{\sin{x}\degree}\cos{a}\degree-k\doubleunderline{\cos{x}\degree}\sin{a}\degree&&\color{DarkOrchid}\longleftarrow \text{Expand }k\sin{(x-a)}\degree\\[1.5em]
@@ -295,8 +307,8 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\sqrt{3}\sin{x}+\cos{x}$
-            \item $\sqrt{3}\cos{x}-\sin{x}$
-            \item $2\sqrt{3}\sin{x}-6\cos{x}$
+            \item $\cos{x}-\sin{x}$
+            \item $2\sqrt{3}\sin{x}-2\cos{x}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -345,7 +357,7 @@ The graphs of $y=\sin{x}\degree$ and $y=\cos{x}\degree$, including their turning
 
 Graphs of the form $k\sin{(x\pm a)}$ and $k\cos{(x\pm a)}$ have maximum/minimum values of $\pm k$, and their *horizontal translation* is described by $\pm a$ following the rules covered in the Graph Transformations chapter.
 
-\begin{tcolorbox}[title=Example 14.3.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example,colback=DarkOrchid!1!, colframe=DarkOrchid]
 
 Given that $3\sin{x}\degree+4\cos{x}\degree$ can be expressed as $5\cos{(x-36.9)}\degree$, state the minimum value of $f(x)=3\sin{x}\degree+4\cos{x}\degree$ and the value of $x$ at which it occurs for $0<x<360$.
 
@@ -436,7 +448,7 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 Solving an equation like $3\sin{x}\degree+4\cos{x}\degree=2$ can be approached by using the wave function to rewrite it as $5\cos{(x-36.9)}\degree=2$, before solving it in the manner covered in Chapter 6.
 
-\begin{tcolorbox}[title=Example 14.4.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example,colback=DarkOrchid!1!, colframe=DarkOrchid]
 
 It can be shown that $5\sin{x}\degree-2\cos{x}\degree$ can be expressed as $\sqrt{29}\sin{(x-21.8)}\degree$.
 
@@ -524,14 +536,14 @@ The techniques covered in this chapter can be applied to trigonometric expressio
 
 \[\text{e.g. }\qquad 3\sin{t}\degree+4\cos{t}\degree \qquad \text{ or } \qquad 2\sin{2x}-5\cos{2x}\]
 
-\begin{tcolorbox}[title=Example 14.5.1,colback=blue!1!red!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example,colback=DarkOrchid!1!, colframe=DarkOrchid]
 
 Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ where $k>0$ and $0<a<360$.
 
 \tcblower
 
 \vspace{10cm}
-\hspace{6cm}
+\hspace{4cm}
 \begin{tikzpicture}[remember picture, overlay, scale=0.5]
         \draw[white] (-8,0) -- (8,0);
         \draw (-1.5,0) -- (1.5,0);
@@ -546,7 +558,13 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
         \node[DarkOrchid,left] at (-0.7,-0.5) {\ding{51}};
 \end{tikzpicture}
 
-\vspace{-10.9cm}
+\vspace{-4cm}
+\hspace{8.3cm}
+\begin{tikzpicture}[remember picture, overlay]
+        \draw[thick,DarkOrchid,-stealth] (160:8) arc (160:200:8);
+\end{tikzpicture}
+
+\vspace{-7.6cm}
 \begin{align*}
     5\cos{2t}\degree-3\sin{2t}\degree&=k\sin{(2t+a)}\degree&&\\[0.5em]
     5\doubleunderline{\cos{2t}\degree}-3\underline{\sin{2t}\degree}&=k\underline{\sin{2t}\degree}\cos{a}\degree+k\doubleunderline{\cos{2t}\degree}\sin{a}\degree&&\color{DarkOrchid}\longleftarrow \text{Expand }k\sin{(2t+a)}\degree\\[1.5em]
@@ -559,7 +577,7 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
     &&&\color{DarkOrchid}\longleftarrow \text{Positive }\sin{a}\degree\text{: quadrants A and S}\\[0.5em]
     &&&\color{DarkOrchid}\longleftarrow \text{Negative }\cos{a}\degree\text{: quadrants S and T}\\[1.5em]
     a\degree &=121.0\degree&&\color{DarkOrchid}\longleftarrow \text{Using }180\degree-59.0\degree\text{ (Double-ticked)}\\[1em]
-    5\cos{2t}\degree-3\sin{2t}\degree&=\sqrt{34}\sin{(x+59.0)}\degree&&\color{DarkOrchid}\longleftarrow \text{State solution}
+    5\cos{2t}\degree-3\sin{2t}\degree&=\sqrt{34}\sin{(2t+121.0)}\degree&&\color{DarkOrchid}\longleftarrow \text{State solution}
 \end{align*}
 
 \end{tcolorbox}
@@ -595,5 +613,47 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 ## Wave Function Review Exercise {-}
 
 \begin{enumerate}
-    \item
+    \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
+    \item Express $\sqrt{5}\sin{x}+\cos{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator\\[0.5em]
+    \item Express $\sqrt{3}\cos{t}\degree-\sin{t}\degree$ in the form $k\sin{(t+a)}\degree$ where $k>0$ and $0<a<360$.\\[0.5em]
+    \item Part of the graphs of $y=3\cos{x}\degree-5\sin{x}\degree$ and $y=-4$ are shown in the diagram below: \faCalculator
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \draw[-stealth] (-0.5,0) -- (7.5,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.5) -- (0,1.5) node[left] {$y$};
+            \node[below left] {O};
+            \draw[thick,smooth,domain=0:2*3.141592] plot (\x,{0.6*cos(\x r)-1.0*sin(\x r)}) node[right] {$y=3\cos{x}\degree-5\sin{x}\degree$};
+            \draw[dashed] (2*3.141592,0.6) -- (2*3.141592,0) node[below] {$360\degree$};
+            \draw[thick] (0,-0.8) -- (2*3.141592,-0.8) node[right] {$y=-4$};
+            \draw[fill] (1.29639,-0.8) circle (0.04) node[below left] {P};
+            \draw[fill] (2.92604,-0.8) circle (0.04) node[below right] {Q};
+        \end{tikzpicture}
+    \end{center}
+    Points P and Q are points of intersection.\\
+    \begin{enumerate}
+        \item Express $y=3\cos{x}\degree-5\sin{x}\degree$ in the form $k\cos{(x+a)}\degree$ where $k>0$ and $0<a<360$.\\[0.1em]
+        \item Hence determine the coordinates of P and Q.\\[0.5em]
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $2\sin{x}\degree-4\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<x<360$. \faCalculator\\[0.1em]
+        \item Hence sketch the graph of $y=2\sin{x}\degree-4\cos{x}\degree$ for $0<x<360$.\\[0.5em]
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $\cos{x}+\sqrt{3}\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$.\\[0.1em]
+        \item Hence sketch the graph of $y=2\cos{x}+2\sqrt{3}\sin{x}$ for $0<x<2\pi$.\\[0.5em]
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $6\cos{t}-3\sin{t}$ in the form $k\cos{(t+a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator\\[0.1em]
+        \item Hence solve $2\cos{t}-\sin{t}+2=1$ where $0<t<2\pi$. \faCalculator\\[0.5em]
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Express $\sin{2x}\degree-\cos{2x}\degree$ in the form $k\sin{(2x-a)}$ where $k>0$ and $0<a<360$.\\[0.1em]
+        \item Hence solve the equation $\sin{2x}\degree=\cos{2x}\degree$ where $0<x<360$.
+    \end{enumerate}
 \end{enumerate}
+
+\pagebreak

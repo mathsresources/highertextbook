@@ -6,9 +6,55 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (6,1.8) rectangle (18.2,0.2);
+\draw[PineGreen,fill=PineGreen] (0,0) rectangle (18.2,0.2);
+\draw[PineGreen,fill=PineGreen] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{Logs and Exponentials}}};
 \node at (3,1) {\Large{\textsc{Chapter 15}}};
 \end{tikzpicture}
 \end{center}
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ where $k>0$ and $0<a<360$.
+
+\tcblower
+
+\vspace{10cm}
+\hspace{4cm}
+\begin{tikzpicture}[remember picture, overlay, scale=0.5]
+        \draw[white] (-8,0) -- (8,0);
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (0,-1) -- (0,1);
+        \node at (0.7,0.5) {A};
+        \node at (-0.7,0.5) {S};
+        \node at (-0.7,-0.5) {T};
+        \node at (0.7,-0.5) {C};
+        \node[PineGreen,above left] at (-0.7,0.65) {\scriptsize{$180\degree-\text{acute}\degree$}};
+        \node[PineGreen,left] at (-0.7,0.5) {\ding{51}\ding{51}};
+        \node[PineGreen,right] at (0.7,0.5) {\ding{51}};
+        \node[PineGreen,left] at (-0.7,-0.5) {\ding{51}};
+\end{tikzpicture}
+
+\vspace{-4cm}
+\hspace{8.3cm}
+\begin{tikzpicture}[remember picture, overlay]
+        \draw[thick,PineGreen,-stealth] (160:8) arc (160:200:8);
+\end{tikzpicture}
+
+\vspace{-7.6cm}
+\begin{align*}
+    5\cos{2t}\degree-3\sin{2t}\degree&=k\sin{(2t+a)}\degree&&\\[0.5em]
+    5\doubleunderline{\cos{2t}\degree}-3\underline{\sin{2t}\degree}&=k\underline{\sin{2t}\degree}\cos{a}\degree+k\doubleunderline{\cos{2t}\degree}\sin{a}\degree&&\color{PineGreen}\longleftarrow \text{Expand }k\sin{(2t+a)}\degree\\[1.5em]
+    k\sin{a}\degree&=5&&\color{PineGreen}\longleftarrow \text{Equate }\sin{2t}\degree\text{ coefficients}\\[0.5em]
+    k\cos{a}\degree&=-3&&\color{PineGreen}\longleftarrow \text{Equate }\cos{2t}\degree\text{ coefficients}\\[1.5em]
+    k&=\sqrt{(5)^2+(-3)^2}&&\color{PineGreen}\longleftarrow \text{Calculate }k\\[0.5em]
+    &=\sqrt{34}\\[1.5em]
+    \tan{a}\degree&=\frac{5}{-3}=-\frac{5}{3}&&\color{PineGreen}\longleftarrow \text{Find }\tan{a}\degree\\[0.5em]
+    \text{acute}\degree&=\tan^{-1}{\left(\frac{5}{3}\right)}=59.0\degree &&\color{PineGreen}\longleftarrow \text{Find acute angle first}\\[0.8em]
+    &&&\color{PineGreen}\longleftarrow \text{Positive }\sin{a}\degree\text{: quadrants A and S}\\[0.5em]
+    &&&\color{PineGreen}\longleftarrow \text{Negative }\cos{a}\degree\text{: quadrants S and T}\\[1.5em]
+    a\degree &=121.0\degree&&\color{PineGreen}\longleftarrow \text{Using }180\degree-59.0\degree\text{ (Double-ticked)}\\[1em]
+    5\cos{2t}\degree-3\sin{2t}\degree&=\sqrt{34}\sin{(2t+121.0)}\degree&&\color{PineGreen}\longleftarrow \text{State solution}
+\end{align*}
+
+\end{tcolorbox}

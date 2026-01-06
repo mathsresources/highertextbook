@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  6 JAN 2026 21:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  6 JAN 2026 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2152,7 +2152,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30]
 
-LaTeX Warning: Command \c invalid in math mode on input line 1429.
+LaTeX Warning: Command \c invalid in math mode on input line 1441.
 
 Missing character: There is no ş ("15F) in font lmmi12!
 
@@ -2181,7 +2181,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [33]
 Chapter 15.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1534--1535
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1594--1595
  [] 
  []
 
@@ -2190,21 +2190,21 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 1534--1535
 ]
 Chapter 16.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1549--1550
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1655--1656
  [] 
  []
 
 [35
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1566--1567
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1672--1673
  [] 
  []
 
 [36
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1583--1584
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1689--1690
  [] 
  []
 
@@ -2218,10 +2218,10 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 58212 strings out of 470195
- 1375185 string characters out of 5477728
- 2147074 words of memory out of 5000000
- 85779 multiletter control sequences out of 15000+600000
+ 58228 strings out of 470195
+ 1375517 string characters out of 5477728
+ 2147315 words of memory out of 5000000
+ 85795 multiletter control sequences out of 15000+600000
  665891 words of font info for 158 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,13n,128p,1686b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
