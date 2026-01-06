@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  6 JAN 2026 22:20
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  6 JAN 2026 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2179,37 +2179,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [33]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34]
 Chapter 15.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1594--1595
- [] 
- []
-
-[34
-
-]
-Chapter 16.
-
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1655--1656
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1603--1604
  [] 
  []
 
 [35
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1672--1673
+Chapter 16.
+
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1664--1665
  [] 
  []
 
 [36
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1689--1690
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1681--1682
+ [] 
+ []
+
+[37
+
+]
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1698--1699
  [] 
  []
 
 No file _main.bbl.
-[37
+[38
 
 ] (./_main.aux)
  ***********
@@ -2218,12 +2226,12 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 58228 strings out of 470195
- 1375517 string characters out of 5477728
- 2147315 words of memory out of 5000000
- 85795 multiletter control sequences out of 15000+600000
+ 58230 strings out of 470195
+ 1375543 string characters out of 5477728
+ 2147362 words of memory out of 5000000
+ 85797 multiletter control sequences out of 15000+600000
  665891 words of font info for 158 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,13n,128p,1686b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (39 pages).
+Output written on _main.pdf (40 pages).

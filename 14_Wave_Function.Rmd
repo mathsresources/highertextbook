@@ -610,6 +610,14 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
+## Challenge Problems {-}
+
+The following problems **do not** represent the kind of question expected to feature in a Higher Mathematics exam, either in the way they are presented or the level of difficulty. Instead, they aim to encourage a flexible approach towards problem-solving and an understanding that the skills covered in the course have applications beyond those featured in any typical exam. *Some questions may be solveable without using the skills covered in this chapter, and some questions may be unreleated to this chapter.*
+
+\newpage
+
+\newpage
+
 ## Wave Function Review Exercise {-}
 
 \begin{enumerate}
