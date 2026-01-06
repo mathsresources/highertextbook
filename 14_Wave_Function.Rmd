@@ -456,12 +456,14 @@ Hence, solve the equation $5\sin{x}\degree-2\cos{x}\degree=4$ where $0<x<360$.
     \sin{(x-21.8)}\degree&=\frac{4}{\sqrt{29}}&&\color{DarkOrchid}\longleftarrow \text{Rearrange to }\sin{(\dots)}=\dots\\[0.5em]
     \color{DarkOrchid}a&\color{DarkOrchid}=\sin^{-1}{\left(\frac{4}{\sqrt{29}}\right)=48.0\degree}&&\color{DarkOrchid}\longleftarrow \text{Calculate acute angle}\\[2.5em]
     &&&\color{DarkOrchid}\longleftarrow \text{Positive }\sin\text{: quadrants A and S}\\[2.5em]
-    x-21.8\degree&=48.0\degree,180\degree-48.0\degree&&\color{DarkOrchid}\longleftarrow \text{Ticked quadrants}\\[0.5em]
+    x-21.8\degree&=48.0\degree,180\degree-48.0\degree&&\color{DarkOrchid}\longleftarrow \text{Apply ticked quadrants}\\[0.5em]
     x-21.8\degree&=48.0\degree,132.0\degree&&\\[0.5em]
     x\degree&=69.8\degree,153.8\degree&&\color{DarkOrchid}\longleftarrow \text{Add }21.8\degree\text{ to both sides}\\[0.5em]
 \end{align*}
 
 \end{tcolorbox}
+
+Note that if any solutions obtained are not longer within the domain of $0<x<360$ at the end of the solut
 
 #### Exercise 14.4 {-}
 
