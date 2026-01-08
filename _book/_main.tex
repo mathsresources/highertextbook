@@ -1594,6 +1594,36 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 \end{tikzpicture}
 \end{center}
 
+Any function of the form \(f(x)=a^x\), where \(a>0\) and \(a\ne1\), is known as an \emph{exponential function}.
+
+Where \(a>1\), an exponential function is strictly increasing on \(x\in\mathbb{R}\), describing \textbf{exponential growth}:
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[-stealth] (-6,0) -- (6.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-1) -- (0,4) node[left] {$y$};
+        \node[below left] {O};
+        \draw[smooth,thick,PineGreen,domain=-6:6] plot (\x,{0.5*1.4^(\x)}) node[right] {$y=a^x$};
+        \draw[PineGreen,fill=PineGreen] (0,0.5) circle (0.05) node[above left] {$1$};
+        \draw[PineGreen,fill=PineGreen] (1,0.5*1.4) circle (0.05) node[above] {$(1,a)$};
+    \end{tikzpicture}
+\end{center}
+
+Where \(0<a<1\), an exponential function is strictly dcreasing on \(x\in\mathbb{R}\), describing \textbf{exponential decay}:
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[-stealth] (-6,0) -- (6.5,0) node[below] {$x$};
+        \draw[-stealth] (0,-1) -- (0,4) node[left] {$y$};
+        \node[below left] {O};
+        \draw[smooth,thick,PineGreen,domain=-6:6] plot (\x,{0.5*0.71428^(\x)}) node[above] {$y=a^x$};
+        \draw[PineGreen,fill=PineGreen] (0,0.5) circle (0.05) node[above left] {$1$};
+        \draw[PineGreen,fill=PineGreen] (1,0.5*0.71428) circle (0.05) node[above] {$(1,a)$};
+    \end{tikzpicture}
+\end{center}
+
+\newpage
+
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
 Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ where $k>0$ and $0<a<360$.
