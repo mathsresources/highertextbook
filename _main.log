@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  7 JAN 2026 20:02
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  8 JAN 2026 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2185,9 +2185,29 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 1594--1595
  [] 
  []
 
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 14.83438pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.21117pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.83571pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.2118pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.83284pt on input line 1601.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.21042pt on input line 1601.
 [34
 
 ]
+Overfull \hbox (8.71014pt too wide) in paragraph at lines 1677--1678
+ [] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2196,28 +2216,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
+Underfull \vbox (badness 1983) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
 Chapter 16.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1685--1686
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1817--1818
  [] 
  []
 
-[36
+[38
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1702--1703
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1834--1835
  [] 
  []
 
-[37
+[39
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1719--1720
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1851--1852
  [] 
  []
 
 No file _main.bbl.
-[38
+[40
 
 ] (./_main.aux)
  ***********
@@ -2226,12 +2264,12 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 58253 strings out of 470195
- 1376003 string characters out of 5477728
- 2147324 words of memory out of 5000000
- 85820 multiletter control sequences out of 15000+600000
- 665891 words of font info for 158 fonts, out of 8000000 for 9000
+ 58357 strings out of 470195
+ 1378406 string characters out of 5477728
+ 2149369 words of memory out of 5000000
+ 85914 multiletter control sequences out of 15000+600000
+ 675044 words of font info for 178 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,13n,128p,1686b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (40 pages).
+Output written on _main.pdf (42 pages).

@@ -33,6 +33,9 @@
 \contentsline {subsubsection}{Exercise 14.5}{32}{section*.10}%
 \contentsline {section}{Wave Function Review Exercise}{33}{section*.11}%
 \contentsline {chapter}{\numberline {15}Logs and Exponentials}{34}{chapter.15}%
-\contentsline {chapter}{\numberline {16}Further Calculus}{36}{chapter.16}%
-\contentsline {chapter}{Answers}{37}{chapter*.12}%
-\contentsline {chapter}{Challenge Problems}{38}{chapter*.13}%
+\contentsline {section}{\numberline {15.1}Graphs of Exponential Functions}{35}{section.15.1}%
+\contentsline {subsection}{Exercise 15.1}{36}{section*.12}%
+\contentsline {section}{\numberline {15.2}Logarithms}{37}{section.15.2}%
+\contentsline {chapter}{\numberline {16}Further Calculus}{38}{chapter.16}%
+\contentsline {chapter}{Answers}{39}{chapter*.13}%
+\contentsline {chapter}{Challenge Problems}{40}{chapter*.14}%
