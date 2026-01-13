@@ -81,14 +81,20 @@ It is required that this expansion is equal to the original expression:
 
 \[3\underline{\sin{x}\degree}+4\doubleunderline{\cos{x}\degree}=k\doubleunderline{\cos{x}\degree}\cos{a}\degree+k\underline{\sin{x}\degree}\sin{a}\degree\]
 
-Equating the coefficients of $\underline{\sin{x}\degree}$ and $\doubleunderline{\cos{x}\degree}$ gives a set of simultaneous equations in $k$ and $a$:
+Equating the coefficients of $\underline{\sin{x}\degree}$ and $\doubleunderline{\cos{x}\degree}$ gives a pair of simultaneous equations in $k$ and $a$:
+
+\vspace{-0.3cm}
 
 \begin{align*}
     k\sin{a}\degree&=3&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\underline{\sin{x}\degree}\\
     k\cos{a}\degree&=4&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\doubleunderline{\cos{x}\degree}
 \end{align*}
 
+\vspace{-0.3cm}
+
 Squaring both sides of each equation and adding allows $k$ to be determined using $\sin^2{x}+\cos^2{x}=1$:
+
+\vspace{-0.3cm}
 
 \begin{align*}
     k^2\sin^2{a}\degree+k^2\cos^2{a}\degree&=3^2+4^2\\
@@ -99,7 +105,9 @@ Squaring both sides of each equation and adding allows $k$ to be determined usin
     k&=5
 \end{align*}
 
-Dividing $k\sin{a}\degree$ by $k\cos{a}\degree$ allows $a$ to be calculated, noting $k\sin{a}\degree$ and $k\cos{a}\degree$ are both positive:
+\vspace{-0.3cm}
+
+Dividing $k\sin{a}\degree$ by $k\cos{a}\degree$ allows $a\degree$ to be calculated. Since the positive $\sin{a}\degree$ means $a\degree$ must lie in either the 1st quadrant (A) or the 2nd quadrant (S), and the positive $\cos{a}\degree$ means $a\degree$ must lie in the 1st quadrant (A) of the 4th quadrant (C), $a\degree$ must lie in the 1st quadrant (A).
 
 \vspace{2.8cm}
 \hspace{14cm}
@@ -118,8 +126,8 @@ Dividing $k\sin{a}\degree$ by $k\cos{a}\degree$ allows $a$ to be calculated, not
 
 \vspace{-3.8cm}
 \begin{align*}
-    \color{DarkOrchid}\frac{k\sin{a}\degree}{k\cos{a}\degree}&\color{DarkOrchid}=\frac{3}{4}\\
-    \tan{a}\degree&=\frac{3}{4}\\
+    \frac{k\sin{a}\degree}{k\cos{a}\degree}&=\frac{3}{4}\\
+    \color{DarkOrchid}\tan{a}\degree&\color{DarkOrchid}=\frac{3}{4}\\
     a\degree_{\text{acute}}&=\tan^{-1}{\left(\frac{3}{4}\right)}=36.9\degree\\
     a\degree&=36.9\degree
 \end{align*}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  8 JAN 2026 22:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.2)  12 JAN 2026 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1433,6 +1433,8 @@ File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
 )) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
 
@@ -1456,38 +1458,38 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 \BKM@id=\count445
 ))
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 177.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 179.
 (./_main.aux)
 \openout1 = `_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 177.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 179.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 177.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 179.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 177.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 179.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 177.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 179.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 1.030160523730429.
@@ -1515,7 +1517,7 @@ Package fontspec Info:
 (fontspec)             <->s*[1.030160523730429]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.362pt on input line 177.
+(Font)              scaled to size 12.362pt on input line 179.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 1.030160523730429.
@@ -1551,15 +1553,15 @@ Package fontspec Info:
 (fontspec)             <->s*[1.030160523730429]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.362pt on input line 177.
+(Font)              scaled to size 12.362pt on input line 179.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 177.
+(Font)              `operators' in the math version `normal' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 177.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 179.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 177.
+(Font)              `operators' in the math version `bold' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 177.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 179.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 1.030160523730429.
@@ -1625,13 +1627,13 @@ Package fontspec Info:
 (fontspec)             <->s*[1.030263539782802]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 177.
+(Font)              `symbols' in the math version `normal' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 177.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 179.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 177.
+(Font)              `symbols' in the math version `bold' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 177.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 179.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 1.030160523730429.
@@ -1691,13 +1693,13 @@ Package fontspec Info:
 (fontspec)             <->s*[1.030057507678056]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 177.
+(Font)              `largesymbols' in the math version `normal' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 177.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 179.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 177.
+(Font)              `largesymbols' in the math version `bold' on input line 179.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 177.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 179.
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
 (unicode-math)                `mathtools' package.
@@ -1755,7 +1757,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 177.
+Package hyperref Info: Link coloring OFF on input line 179.
 
 Package exsheets Info: Loading custom configurations file
 (exsheets)             `exsheets_configurations.cfg'.
@@ -1765,14 +1767,14 @@ File: exsheets_configurations.cfg
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 177.
-LaTeX Info: Redefining \celsius on input line 177.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 177.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 179.
+LaTeX Info: Redefining \celsius on input line 179.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 179.
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 177.
-Package gensymb Info: Using \upOmega for \ohm on input line 177.
+LaTeX Info: Redefining \ohm on input line 179.
+Package gensymb Info: Using \upOmega for \ohm on input line 179.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1843,14 +1845,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 1.
 
 LaTeX Font Warning: Font shape `TU/lmss/m/sc' in size <24.88> not available
-(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 200.
+(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 202.
 
 
 LaTeX Font Warning: Font shape `TU/lmss/m/sc' in size <17.28> not available
-(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 201.
+(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 203.
 
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 202--203
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 204--205
  [] 
  []
 
@@ -1859,7 +1861,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 202--203
 ]
 Chapter 2.
 
-Overfull \hbox (7.60472pt too wide) in paragraph at lines 217--218
+Overfull \hbox (7.60472pt too wide) in paragraph at lines 219--220
  [] 
  []
 
@@ -1868,7 +1870,7 @@ Overfull \hbox (7.60472pt too wide) in paragraph at lines 217--218
 ]
 Chapter 3.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 232--233
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 234--235
  [] 
  []
 
@@ -1877,7 +1879,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 232--233
 ]
 Chapter 4.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 247--248
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 249--250
  [] 
  []
 
@@ -1886,7 +1888,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 247--248
 ]
 Chapter 5.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 262--263
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 264--265
  [] 
  []
 
@@ -1895,7 +1897,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 262--263
 ]
 Chapter 6.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 277--278
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 279--280
  [] 
  []
 
@@ -1904,7 +1906,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 277--278
 ]
 Chapter 7.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 292--293
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 294--295
  [] 
  []
 
@@ -1913,7 +1915,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 292--293
 ]
 Chapter 8.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 307--308
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 309--310
  [] 
  []
 
@@ -1922,7 +1924,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 307--308
 ]
 Chapter 9.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 322--323
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 324--325
  [] 
  []
 
@@ -1931,7 +1933,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 322--323
 ]
 Chapter 10.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 337--338
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 339--340
  [] 
  []
 
@@ -1940,12 +1942,12 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 337--338
 ]
 Chapter 11.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 352--353
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 354--355
  [] 
  []
 
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 358.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 360.
 [12
 
 ]
@@ -2006,21 +2008,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.28032pt on input line 697.
+(Font)              scaled to size 11.28032pt on input line 699.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.24133pt on input line 697.
+(Font)              scaled to size 8.24133pt on input line 699.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 697.
+(Font)              scaled to size 10.95pt on input line 699.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 697.
+(Font)              scaled to size 8.0pt on input line 699.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.28131pt on input line 697.
+(Font)              scaled to size 11.28131pt on input line 699.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.24207pt on input line 697.
+(Font)              scaled to size 8.24207pt on input line 699.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.27914pt on input line 697.
+(Font)              scaled to size 11.27914pt on input line 699.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.24048pt on input line 697.
+(Font)              scaled to size 8.24048pt on input line 699.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2070,7 +2072,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23]
 Chapter 12.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 897--898
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 899--900
  [] 
  []
 
@@ -2079,7 +2081,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 897--898
 ]
 Chapter 13.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 912--913
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 914--915
  [] 
  []
 
@@ -2088,7 +2090,7 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 912--913
 ]
 Chapter 14.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 928--929
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 930--931
  [] 
  []
 
@@ -2096,29 +2098,29 @@ Overfull \hbox (6.09021pt too wide) in paragraph at lines 928--929
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.80127pt on input line 980.
+(Font)              scaled to size 17.80127pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.30167pt on input line 980.
+(Font)              scaled to size 10.30167pt on input line 982.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 980.
+(Font)              scaled to size 17.28pt on input line 982.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 980.
+(Font)              scaled to size 10.0pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.80286pt on input line 980.
+(Font)              scaled to size 17.80286pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.30258pt on input line 980.
+(Font)              scaled to size 10.30258pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.79942pt on input line 980.
+(Font)              scaled to size 17.79942pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.3006pt on input line 980.
+(Font)              scaled to size 10.3006pt on input line 982.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.15083pt on input line 1027.
+(Font)              scaled to size 5.15083pt on input line 1037.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1027.
+(Font)              scaled to size 5.0pt on input line 1037.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.15129pt on input line 1027.
+(Font)              scaled to size 5.15129pt on input line 1037.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.1503pt on input line 1027.
+(Font)              scaled to size 5.1503pt on input line 1037.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2152,7 +2154,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30]
 
-LaTeX Warning: Command \c invalid in math mode on input line 1441.
+LaTeX Warning: Command \c invalid in math mode on input line 1451.
 
 Missing character: There is no ş ("15F) in font lmmi12!
 
@@ -2181,30 +2183,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [33]
 Chapter 15.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1594--1595
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 1604--1605
  [] 
  []
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.83438pt on input line 1601.
+(Font)              scaled to size 14.83438pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.21117pt on input line 1601.
+(Font)              scaled to size 7.21117pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1601.
+(Font)              scaled to size 14.4pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1601.
+(Font)              scaled to size 7.0pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.83571pt on input line 1601.
+(Font)              scaled to size 14.83571pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.2118pt on input line 1601.
+(Font)              scaled to size 7.2118pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.83284pt on input line 1601.
+(Font)              scaled to size 14.83284pt on input line 1611.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.21042pt on input line 1601.
+(Font)              scaled to size 7.21042pt on input line 1611.
 [34
 
 ]
-Overfull \hbox (8.71014pt too wide) in paragraph at lines 1677--1678
+Overfull \hbox (8.71014pt too wide) in paragraph at lines 1691--1692
  [] 
  []
 
@@ -2216,8 +2218,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
-Underfull \vbox (badness 1983) has occurred while \output is active []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2234,28 +2234,182 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [37]
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 2024--2024
+ [] 
+ []
+
+
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 2034--2034
+ [] 
+ []
+
+
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 2044--2044
+ [] 
+ []
+
+
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 2054--2054
+ [] 
+ []
+
+
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 2061--2061
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2078
+
+ []
+
+
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 2081--2081
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2087--2088
+
+ []
+
+
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 2091--2091
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2098
+
+ []
+
+
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 2101--2101
+ [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+Overfull \hbox (6.4425pt too wide) detected at line 2196
+[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[44]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49]
 Chapter 16.
 
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1817--1818
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 2359--2360
  [] 
  []
 
-[38
+[50
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1834--1835
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 2376--2377
  [] 
  []
 
-[39
+[51
 
 ]
-Overfull \hbox (6.09021pt too wide) in paragraph at lines 1851--1852
+Overfull \hbox (6.09021pt too wide) in paragraph at lines 2393--2394
  [] 
  []
 
 No file _main.bbl.
-[40
+[52
 
 ] (./_main.aux)
  ***********
@@ -2264,12 +2418,12 @@ L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 58357 strings out of 470195
- 1378406 string characters out of 5477728
- 2149369 words of memory out of 5000000
- 85914 multiletter control sequences out of 15000+600000
+ 58717 strings out of 470195
+ 1385587 string characters out of 5477728
+ 2161109 words of memory out of 5000000
+ 86270 multiletter control sequences out of 15000+600000
  675044 words of font info for 178 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,13n,128p,1686b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (42 pages).
+Output written on _main.pdf (54 pages).

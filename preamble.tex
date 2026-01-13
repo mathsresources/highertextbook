@@ -102,7 +102,9 @@
 
 \usepackage[dvipsnames]{xcolor}
 
-
+\usepackage{cancel}
+\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
+\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
 
 \usepackage{sectsty}
 \usepackage{fontawesome5}

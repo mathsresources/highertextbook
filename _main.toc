@@ -35,7 +35,21 @@
 \contentsline {chapter}{\numberline {15}Logs and Exponentials}{34}{chapter.15}%
 \contentsline {section}{\numberline {15.1}Graphs of Exponential Functions}{35}{section.15.1}%
 \contentsline {subsection}{Exercise 15.1}{36}{section*.12}%
-\contentsline {section}{\numberline {15.2}Logarithms}{37}{section.15.2}%
-\contentsline {chapter}{\numberline {16}Further Calculus}{38}{chapter.16}%
-\contentsline {chapter}{Answers}{39}{chapter*.13}%
-\contentsline {chapter}{Challenge Problems}{40}{chapter*.14}%
+\contentsline {section}{\numberline {15.2}Evaluating Logarithms}{37}{section.15.2}%
+\contentsline {subsection}{Exercise 15.2}{37}{section*.13}%
+\contentsline {section}{\numberline {15.3}Laws of Logarithms}{38}{section.15.3}%
+\contentsline {subsection}{Exercise 15.3}{38}{section*.14}%
+\contentsline {section}{\numberline {15.4}Solving Log Equations}{39}{section.15.4}%
+\contentsline {subsection}{Exercise 15.4}{39}{section*.15}%
+\contentsline {section}{\numberline {15.5}Graphs of Logarithmic Functions}{41}{section.15.5}%
+\contentsline {subsection}{Exercise 15.5}{42}{section*.16}%
+\contentsline {section}{\numberline {15.6}Exponential Growth and Decay}{43}{section.15.6}%
+\contentsline {subsection}{Exercise 15.6}{44}{section*.17}%
+\contentsline {section}{\numberline {15.7}Experimental Data of the form \(y=ab^x\)}{45}{section.15.7}%
+\contentsline {subsection}{Exercise 15.6}{46}{section*.18}%
+\contentsline {section}{\numberline {15.8}Experimental Data of the form \(y=ax^b\)}{47}{section.15.8}%
+\contentsline {subsection}{Exercise 15.7}{48}{section*.19}%
+\contentsline {section}{Logs and Exponentials Review Exercise}{49}{section*.20}%
+\contentsline {chapter}{\numberline {16}Further Calculus}{50}{chapter.16}%
+\contentsline {chapter}{Answers}{51}{chapter*.21}%
+\contentsline {chapter}{Challenge Problems}{52}{chapter*.22}%

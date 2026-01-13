@@ -157,7 +157,9 @@
 
 \usepackage[dvipsnames]{xcolor}
 
-
+\usepackage{cancel}
+\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
+\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
 
 \usepackage{sectsty}
 \usepackage{fontawesome5}
@@ -995,14 +997,20 @@ It is required that this expansion is equal to the original expression:
 
 \[3\underline{\sin{x}\degree}+4\doubleunderline{\cos{x}\degree}=k\doubleunderline{\cos{x}\degree}\cos{a}\degree+k\underline{\sin{x}\degree}\sin{a}\degree\]
 
-Equating the coefficients of \(\underline{\sin{x}\degree}\) and \(\doubleunderline{\cos{x}\degree}\) gives a set of simultaneous equations in \(k\) and \(a\):
+Equating the coefficients of \(\underline{\sin{x}\degree}\) and \(\doubleunderline{\cos{x}\degree}\) gives a pair of simultaneous equations in \(k\) and \(a\):
+
+\vspace{-0.3cm}
 
 \begin{align*}
     k\sin{a}\degree&=3&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\underline{\sin{x}\degree}\\
     k\cos{a}\degree&=4&&\color{DarkOrchid}\longleftarrow \text{Coefficients of }\doubleunderline{\cos{x}\degree}
 \end{align*}
 
+\vspace{-0.3cm}
+
 Squaring both sides of each equation and adding allows \(k\) to be determined using \(\sin^2{x}+\cos^2{x}=1\):
+
+\vspace{-0.3cm}
 
 \begin{align*}
     k^2\sin^2{a}\degree+k^2\cos^2{a}\degree&=3^2+4^2\\
@@ -1013,7 +1021,9 @@ Squaring both sides of each equation and adding allows \(k\) to be determined us
     k&=5
 \end{align*}
 
-Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\) to be calculated, noting \(k\sin{a}\degree\) and \(k\cos{a}\degree\) are both positive:
+\vspace{-0.3cm}
+
+Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\degree\) to be calculated. Since the positive \(\sin{a}\degree\) means \(a\degree\) must lie in either the 1st quadrant (A) or the 2nd quadrant (S), and the positive \(\cos{a}\degree\) means \(a\degree\) must lie in the 1st quadrant (A) of the 4th quadrant (C), \(a\degree\) must lie in the 1st quadrant (A).
 
 \vspace{2.8cm}
 \hspace{14cm}
@@ -1033,8 +1043,8 @@ Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\) to be calculate
 \vspace{-3.8cm}
 
 \begin{align*}
-    \color{DarkOrchid}\frac{k\sin{a}\degree}{k\cos{a}\degree}&\color{DarkOrchid}=\frac{3}{4}\\
-    \tan{a}\degree&=\frac{3}{4}\\
+    \frac{k\sin{a}\degree}{k\cos{a}\degree}&=\frac{3}{4}\\
+    \color{DarkOrchid}\tan{a}\degree&\color{DarkOrchid}=\frac{3}{4}\\
     a\degree_{\text{acute}}&=\tan^{-1}{\left(\frac{3}{4}\right)}=36.9\degree\\
     a\degree&=36.9\degree
 \end{align*}
@@ -1599,7 +1609,7 @@ Each part of an operation of the form \(a^n\) can be described using the followi
 \begin{center}
     \begin{tikzpicture}
         \node at (0,0) {\large{$a^n$}};
-        \draw[stealth-,PineGreen,thick] (0.3,0.2) --++(1,0.5) node[right] {"power" or "exponent"};
+        \draw[stealth-,PineGreen,thick] (0.3,0.2) --++(1,0.5) node[right] {"power" or "exponent" or "index"};
         \draw[stealth-,PineGreen,thick] (-0.32,0) --++(-1,0.2) node[left] {"base"};
     \end{tikzpicture}
 \end{center}
@@ -1642,6 +1652,8 @@ This chapter will introduce a range of skills required when working with exponen
 
 Where $a>1$:
 
+\vspace{-0.2cm}
+
 $y=a^x$ is \textit{strictly increasing} on $x\in\mathbb{R}$:
 
 \vspace{-0.5cm}
@@ -1663,6 +1675,8 @@ This describes \textbf{exponential growth}.
 
 Where $0<a<1$:
 
+\vspace{-0.2cm}
+
 $y=a^x$ is \textit{strictly decreasing} on $x\in\mathbb{R}$:
 
 \vspace{-0.5cm}
@@ -1682,33 +1696,40 @@ This describes \textbf{exponential decay}.
 
 \end{multicols}
 
+\vspace{-0.5cm}
+
 \setlength{\columnsep}{10pt}
 
 Since \(a^0=1\), any graph of the form \(y=a^x\) will pass through the point \((0,1)\) for all \(a\ne 0\).
 
 Since \(a^1=a\), any graph of the form \(y=a^x\) will pass through the point \((1,a)\) for all \(a\).
 
+The graph of \(y=a^x\) has the \(x\)-axis as a \emph{horizontal asymptote} - a line that it approaches but never meets.
+
 Determining the equation of the graph of an exponential function can typically be achieved using substitution or consideration of graph transformations, along with knowledge of points \((0,1)\) and \((1,a)\).
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
-The graph of $y=a^x+b$ is shown below. 
+The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the range of $f(x)=a^x+b$.
 
 \vspace{-0.5cm}
 \begin{center}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.9]
         \draw[-stealth] (-5,0) -- (5,0) node[below] {$x$};
-        \draw[-stealth] (0,-1) -- (0,4) node[left] {$y$};
-        \node[below left] {O};
-        \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1}) node[above] {$y=a^x+b$};
+        \draw[-stealth] (0,-0.3) -- (0,4) node[left] {$y$};
+        \node[below left,xshift=0.2,yshift=0.2] {\small{O}};
+        \draw[smooth,thick,domain=-3:4,yscale=0.2] plot (\x,{2^(\x)+1}) node[above] {$y=a^x+b$};
         \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
         \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+        \draw[dashed] (-4,0.17) -- (4,0.17);
     \end{tikzpicture}
 \end{center}
 
+\vspace{-0.4cm}
+
 \tcblower
 
-\vspace{-0.5cm}
+\vspace{-0.6cm}
 \begin{align*}
     2&=a^0+b && \color{PineGreen}\longleftarrow\text{Substitute }(0,2)\\[0.5em]
     2&=1+b &&\\[0.5em]
@@ -1716,7 +1737,8 @@ The graph of $y=a^x+b$ is shown below.
     5&=a^2+1 && \color{PineGreen}\longleftarrow\text{Substitute }(2,5)\text{ and }b=1\\[0.5em]
     4&=a^2 &&\\[0.5em]
     2&=a && \color{PineGreen}\longleftarrow\text{Solve to obtain }a\\[1em]
-    y&=2^x+1&&\color{PineGreen}\longleftarrow\text{State equation}
+    y&=2^x+1&&\color{PineGreen}\longleftarrow\text{State equation}\\[0.5em]
+    f(x)&\geqslant 1&&\color{PineGreen}\longleftarrow\text{State range}
 \end{align*}
 
 \end{tcolorbox}
@@ -1726,81 +1748,601 @@ The graph of $y=a^x+b$ is shown below.
 \subsection*{Exercise 15.1}\label{exercise-15.1}
 \addcontentsline{toc}{subsection}{Exercise 15.1}
 
+\vspace{-0.5cm}
+
 \begin{enumerate}
-    \item Find the equation of each exponential graphs using the form given.
+    \item Find the equation of each exponential graph using the form given, then determine the value of $k$.
     \begin{enumerate}
+    \vspace{-0.2cm}
         \begin{multicols}{2}
             \item[(a)] $y=a^x$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,0.4) circle (0.07) node[above left] {$1$};
+            \draw[fill] (1,1.2) circle (0.07) node[right,xshift=0.1cm] {$(1,3)$};
+            \draw[fill,PineGreen] (2,3.6) circle (0.07) node[below right,xshift=-0.1cm,yshift=0.1cm] {$(2,k)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
             \item[(c)] $y=a^x$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2.5:3.3,] plot (\x,{0.4*4^(0.5*\x)});
+            \draw[fill] (0,0.4) circle (0.07) node[above left] {$1$};
+            \draw[fill] (2,1.6) circle (0.07) node[below right] {$(2,4)$};
+            \draw[fill,PineGreen] (3,3.2) circle (0.07) node[below right] {$(3,k)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
-            \item[(e)] $y=a^x$\\
+            \item[(e)] $y=a^x+2$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3:2.5,yscale=0.5] plot (\x,{2^(\x)+2});
+            \draw[fill] (0,1.5) circle (0.07) node[above left] {$3$};
+            \draw[dashed,thin,PineGreen] (-4,1) -- (2.5,1) node[right] {$y=k$};
+            \draw[fill] (2,3) circle (0.07) node[below right] {$(2,6)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
-            \item[(g)] $y=a^x$\\
+            \item[(g)] $y=a^x+b$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.5) -- (0,3.7) node[left] {$y$};
+            \draw[smooth,thick,domain=-3:1.3] plot (\x,{3^(\x)-1});
+            \draw[fill] (0,0) circle (0.07);
+            \draw[fill] (1,2) circle (0.07) node[below right] {$(1,2)$};
+            \node[above left] {\scriptsize{O}};
+            \draw[dashed,thin] (-4,-1) -- (2.5,-1) node[right] {$y=-1$};
+            \draw[fill,PineGreen] (0.5,0.732) circle (0.07) node[below right] {$(0.5,k)$};
             \end{tikzpicture}
             \item[(b)] $y=a^x$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:3.5] plot (\x,{0.75^(\x)});
+            \draw[fill,PineGreen] (0,1) circle (0.07) node[below left] {$k$};
+            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$(1,0.5)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
-            \item[(d)] $y=a^x$\\
+            \item[(d)] $y=4^x+b$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.5) -- (0,3.7) node[left] {$y$};
+            \draw[smooth,thick,domain=-2.8:2.1,yscale=0.2] plot (\x,{4^(\x)-5});
+            \draw[fill] (2,2.2) circle (0.07) node[right] {$(2,11)$};
+            \draw[dashed,thin,PineGreen] (-4,-1.1) -- (2.5,-1.1) node[right] {$y=k$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
-            \item[(f)] $y=a^x$\\
+            \item[(f)] $y=a^x+b$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:2.5] plot (\x,{1.5^(\x)+1});
+            \draw[fill] (0,2) circle (0.07) node[above left] {$2$};
+            \draw[fill] (1,2.5) circle (0.07) node[below right] {$(1,2.5)$};
+            \draw[dashed,thin] (-4,1) -- (4,1);
+            \draw[fill,PineGreen] (2,3.25) circle (0.07) node[below right] {$(2,k)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
-            \item[(h)] $y=a^x$\\
+            \item[(h)] $y=a^x+b$\\
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
-            \draw[-stealth] (0,-2) -- (0,4) node[left] {$y$};
-            \draw[smooth,thick,domain=-4:4,yscale=0.2] plot (\x,{2^(\x)+1});
-            \draw[fill] (0,0.4) circle (0.05) node[above left] {$2$};
-            \draw[fill] (2,1) circle (0.05) node[above left] {$(2,5)$};
+            \draw[-stealth] (0,-2) -- (0,3.2) node[left] {$y$};
+            \draw[smooth,thick,domain=-3:1.4] plot (\x,{3^(\x)-2});
+            \draw[fill] (0,-1) circle (0.07) node[left] {$-1$};
+            \draw[fill] (1,1) circle (0.07) node[right] {$(1,1)$};
+            \draw[dashed,thin] (-4,-2) -- (4,-2);
+            \draw[fill,PineGreen] (-1,-1.666666666) circle (0.07) node[above left] {$(-1,k)$};
+            \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
+        \end{multicols}
+    \end{enumerate}
+    \vspace{-0.5cm}
+    \item Sketch the graph of each of the following, and state the range of $y=f(x)$:
+    \vspace{-0.3cm}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $y=3^x$
+            \item $y=3^x+1$
+            \item $y=3^x-2$
+            \item $y=3^{x+2}$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $y=0.5^x$
+            \item $y=0.5^x-1$
+            \item $y=0.5^{x-3}$
+            \item $y=0.5^{1-x}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
 
 \pagebreak
 
-\section{Logarithms}\label{logarithms}
+\section{Evaluating Logarithms}\label{evaluating-logarithms}
+
+\vspace{-0.5cm}
+
+The function \(f(x)=\color{PineGreen}\log_a{\color{black}x}\), where \(a>0\) and \(x>0\), is defined as the inverse function to \(f(x)=\color{PineGreen}a^{\color{black}x}\).
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=10cm,colframe=red!70!black,height=2.2cm]
+\vspace{-0.5cm}
+
+\begin{align*}
+    \text{If }\hspace{1.9cm} x&=a^y\\[0.5em]
+    \text{ then }\hspace{0.5cm} \log_a{x}&=y \qquad (\text{where }a>0,x>0)
+\end{align*}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{-0.2cm}
+
+A numerical example will help build an understanding of how to interpret a logarithm:
+
+\vspace{-0.7cm}
+
+\begin{align*}
+    \text{Since }\hspace{1.2cm} 8&=\color{PineGreen}2^{\color{black}3}\\[0.5em]
+    \text{ then }\hspace{0.5cm}\color{PineGreen}\log_2\color{black}{8}&=3
+\end{align*}
+
+\vspace{-0.3cm}
+
+Hence \(\log_2{8}\) (``log to the base 2 of 8'') can be read as: ``2 raised to \emph{which power} gives a value of 8?''
+
+\begin{multicols}{2}
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+
+Evaluate $\log_3{81}$.
+
+\tcblower
+
+$\log_3{81}=4\color{PineGreen}\longleftarrow\text{Since }3^4=81$
+
+\end{tcolorbox}
+
+
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+
+Evaluate $\log_7{49}$.
+
+\tcblower
+
+$\log_7{49}=2\color{PineGreen}\longleftarrow\text{Since }7^2=49$
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+
+Evaluate $\log_5{1}$.
+
+\tcblower
+
+$\log_5{1}=0\color{PineGreen}\longleftarrow\text{Since }5^0=1$
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+
+Evaluate $\log_3{\frac{1}{9}}$.
+
+\tcblower
+
+$\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{1}{3^2}=\frac{1}{9}$
+
+\end{tcolorbox}
+
+\vspace{-0.4cm}
+
+\end{multicols}
+
+\vspace{-0.8cm}
+
+\subsection*{Exercise 15.2}\label{exercise-15.2}
+\addcontentsline{toc}{subsection}{Exercise 15.2}
+
+\vspace{-0.5cm}
+
+\begin{enumerate}
+    \item State the value each of the following logarithms:
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\log_6{36}$
+            \item $\log_5{125}$
+            \item $\log_4{16}$
+            \item $\log_2{16}$
+            \item $\log_9{81}$
+        \end{multicols}
+        \begin{multicols}{5}
+            \item $\log_3{81}$
+            \item $\log_2{32}$
+            \item $\log_{10}{100}$
+            \item $\log_8{64}$
+            \item $\log_4{64}$
+        \end{multicols}
+        \begin{multicols}{5}
+            \item $\log_7{7}$
+            \item $\log_3{9}$
+            \item $\log_8{1}$
+            \item $\log_5{25}$
+            \item $\log_5{5}$
+        \end{multicols}
+    \end{enumerate}
+    \item By considering negative and fractional indices as well as integers, evaluate each:
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\log_2{32}$
+            \item $\log_{4}{4}$
+            \item $\log_8{1}$
+            \item $\log_9{3}$
+            \item $\log_{49}{7}$
+        \end{multicols}
+        \begin{multicols}{5}
+            \item $\log_9{9}$
+            \item $\log_9{1}$
+            \item $\log_{2}{2}$
+            \item $\log_2{1}$
+            \item $\log_2{\frac{1}{2}}$
+        \end{multicols}
+        \begin{multicols}{5}
+            \item $\log_3{\frac{1}{9}}$
+            \item $\log_{25}{5}$
+            \item $\log_{2}{\frac{1}{8}}$
+            \item $\log_4{\frac{1}{16}}$
+            \item $\log_8{4}$
+        \end{multicols}
+    \end{enumerate}
+    \item Calculate the value of each to three significant figures: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\log_2{31}$
+            \item $\log_{7}{50}$
+            \item $\log_{10}{99}$
+            \item $\log_5{120}$
+            \item $\log_{2}{0.9}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+\section{Laws of Logarithms}\label{laws-of-logarithms}
+
+\vspace{-0.5cm}
+
+There are two key identities that can be obtained from the definition of a logarithm. For all \(a>0\):
+
+\begin{multicols}{5}
+
+\begin{center}
+\begin{tcolorbox}[colback=white,width=3.5cm,colframe=white,height=1cm]
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=3.5cm,colframe=red!70!black,height=1cm]
+
+\begin{center}
+$\log_a{1}=0$ 
+\end{center}
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=white,width=3.5cm,colframe=white,height=1cm]
+
+\begin{center}
+and
+\end{center}
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=3.5cm,colframe=red!70!black,height=1cm]
+
+\begin{center}
+$\log_a{a}=1$ 
+\end{center}
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=white,width=3.5cm,colframe=white,height=1cm]
+
+
+\end{tcolorbox}
+\end{center}
+
+\end{multicols}
+
+\vspace{-0.9cm}
+
+There also three \emph{``log laws''} that can be applied for logarithms of the \emph{same base}. For all \(a,x,y>0\):
+
+\vspace{-0.5cm}
+
+\begin{multicols}{3}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=5.8cm,colframe=red!70!black,height=2cm]
+
+The \textbf{product law}:\\[-0.2cm]
+
+$\log_a{(xy)}=\log_a{x}+\log_a{y}$ 
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=5.8cm,colframe=red!70!black,height=2cm]
+
+The \textbf{quotient law}:\\[-0.2cm]
+
+$\log_a{\left(\frac{x}{y}\right)}=\log_a{x}-\log_a{y}$ 
+
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=5.8cm,colframe=red!70!black,height=2cm]
+
+The \textbf{power law}:\\[-0.2cm]
+
+$\log_a{\left(x^y\right)}=y\log_a{x}$ 
+
+\end{tcolorbox}
+\end{center}
+
+\end{multicols}
+
+\vspace{-0.3cm}
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=9.3cm]
+
+Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
+
+\tcblower
+
+\vspace{-0.5cm}
+\begin{align*}
+    &\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}&&\color{PineGreen}\longleftarrow\text{Consider order of operations}\\[0.5em]
+    =&\log_{6}{8}+\log_{6}{\left(3^2\right)}-\log_{6}{2} && \color{PineGreen}\longleftarrow\text{Apply power law}\\[0.5em]
+    =&\log_{6}{8}+\log_{6}{9}-\log_{6}{2} &&\\[0.5em]
+    =&\log_{6}{\left(8\times 9\right)}-\log_{6}{2} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
+    =&\log_{6}{72}-\log_{6}{2} &&\\[0.3em]
+    =&\log_{6}{\left(\frac{72}{2}\right)} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.3em]
+    =&\log_{6}{36} &&\\[0.5em]
+    =&2 && \color{PineGreen}\longleftarrow\text{Evaluate}\\[0.5em]
+\end{align*}
+
+\vspace{-0.5cm}
+
+\end{tcolorbox}
+
+\vspace{-0.6cm}
+
+\subsection*{Exercise 15.3}\label{exercise-15.3}
+\addcontentsline{toc}{subsection}{Exercise 15.3}
+
+\vspace{-0.4cm}
+
+\begin{enumerate}
+    \item Evaluate each of the following:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_6{9}+\log_6{4}$
+            \item $\log_{12}{2}+\log_{12}{6}$
+            \item $\log_{2}{3}+\log_2{\frac{1}{3}}$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $\log_{3}{54}-\log_{3}{2}$
+            \item $\log_{5}{10}-\log_{5}{2}$
+            \item $\log_{5}{100}-\log_{5}{4}$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $2\log_4{6}-\log_{4}{9}$
+            \item $\log_{12}{4}+2\log_{12}{6}$
+            \item $3\log_6{2}+\log_{6}{9}-\log_{6}{2}$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $2\log_6{3}+\log_{6}{\frac{2}{3}}$
+            \item $\log_5{4}+2\log_{5}{10}$
+            \item $2\log_{2}{6}-\log_{2}{12}+\log_2{\frac{1}{6}}$
+        \end{multicols}
+    \end{enumerate}
+    \item Simplify each, giving an answer in the form $\log_p{q}$ where $p$ and $q$ are positive integers:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_7{3}+\log_7{6}-\log_{7}{9}$
+            \item $4\log_{6}{2}-\log_{6}{2}$
+            \item $2\log_{8}{9}-3\log_2{3}$
+        \end{multicols}
+    \end{enumerate}
+    \item Simplify each, giving an answer in the form $\log_a{p}$ where $p$ is a positive integer:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_a{3}+2\log_a{4}$
+            \item $3\log_{a}{2}-\log_{a}{4}$
+            \item $\log_{a}{20}-\log_a{4}+\log_a{\frac{1}{15}}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+\section{Solving Log Equations}\label{solving-log-equations}
+
+\vspace{-0.5cm}
+
+To solve a \emph{log equation}, it is typically desirable to have each side within a logarithm of the \emph{same base}:
+
+\vspace{-0.2cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=11cm,colframe=red!70!black,height=2.2cm]
+\vspace{-0.5cm}
+
+\begin{align*}
+    \text{If }\hspace{1.0cm} \log_a{x}&=\log_a{y}\\[0.5em]
+    \text{ then }\hspace{1.4cm} x&=y \qquad \qquad (\text{where }a>0,x>0,y>0)
+\end{align*}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{-0.3cm}
+
+``Cancelling the logs'', mathematically, is raising each side to an exponential base \(a\), using \(a^{\log_a{b}}=b\).
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=5.6cm]
+
+Solve the equation $\log_3{x}+\log_3{5}=\log_3{20}$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_3{x}+\log_3{5}&=\log_3{20} &&\\[0.5em]
+\log_3{5x}&=\log_3{20} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
+5x&=20 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ from both sides}\\[0.5em]
+x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
+\end{align*}
+
+\end{tcolorbox}
+
+To express any term as a logarithm, multiply it by \(\log_a{a}\) (which equals 1) and then apply the power law:
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=7cm]
+
+Solve the equation $\log_2{40}-\log_2{x}=3$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_2{40}-\log_2{x}&=3\color{PineGreen}\log_2{2} &&\color{PineGreen}\longleftarrow\text{Multiply the constant by}\log_22\\[0.5em]
+\log_2{\left(\frac{40}{x}\right)}&=\log_2{2^3} && \color{PineGreen}\longleftarrow\text{Apply quotient and power laws}\\[0.5em]
+\frac{40}{x}&=8 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_2\text{ from both sides}\\[0.5em]
+40&=8x && \color{PineGreen}\longleftarrow\text{Multiply both sides by }x\\[0.5em]
+5&=x && \color{PineGreen}\longleftarrow\text{Solve}
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
+
+\subsection*{Exercise 15.4}\label{exercise-15.4}
+\addcontentsline{toc}{subsection}{Exercise 15.4}
+
+\vspace{-0.3cm}
+
+\begin{enumerate}
+    \item Solve:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve each:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{}{}+\log{}{}=\log{}{}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+Since \(\log_a{x}\) is only defined for \(a>0\) and \(x>0\), any solutions which contradict this must be discarded.
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=8cm]
+
+Solve the equation $\log_3{x}+\log_3{(x-2)}=\log_3{8}$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_3{x}+\log_3{(x-2)}&=\log_3{8}&&\color{PineGreen}\longleftarrow\text{Note }x>0\text{ and }x-2>0\text{ therefore }x>2\\[0.5em]
+\log_3{\left(x(x-2)\right)}&=\log_3{8} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
+x^2-2x&=8 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ and expand}\\[0.5em]
+x^2-2x-8&=0 && \color{PineGreen}\longleftarrow\text{Equate quadratic equation to zero}\\[0.5em]
+(x+2)(x-4)&=0 && \color{PineGreen}\longleftarrow\text{Factorise}\\[0.5em]
+x+2=0,x-4&=0 &&\\[0.5em]
+\hcancel[PineGreen]{x=-2},x&=4 && \color{PineGreen}\longleftarrow\text{Discard }x=-2\text{ since }x>2
+\end{align*}
+
+\end{tcolorbox}
+
+\begin{enumerate}[resume]
+    \item
+\end{enumerate}
+
+\newpage
+
+\section{Graphs of Logarithmic Functions}\label{graphs-of-logarithmic-functions}
+
+\newpage
+
+\subsection*{Exercise 15.5}\label{exercise-15.5}
+\addcontentsline{toc}{subsection}{Exercise 15.5}
+
+\newpage
+
+\section{Exponential Growth and Decay}\label{exponential-growth-and-decay}
+
+\newpage
+
+\subsection*{Exercise 15.6}\label{exercise-15.6}
+\addcontentsline{toc}{subsection}{Exercise 15.6}
+
+\newpage
+
+\section{\texorpdfstring{Experimental Data of the form \(y=ab^x\)}{Experimental Data of the form y=ab\^{}x}}\label{experimental-data-of-the-form-yabx}
+
+\newpage
+
+\subsection*{Exercise 15.6}\label{exercise-15.6-1}
+\addcontentsline{toc}{subsection}{Exercise 15.6}
+
+\newpage
+
+\section{\texorpdfstring{Experimental Data of the form \(y=ax^b\)}{Experimental Data of the form y=ax\^{}b}}\label{experimental-data-of-the-form-yaxb}
+
+\newpage
+
+\subsection*{Exercise 15.7}\label{exercise-15.7}
+\addcontentsline{toc}{subsection}{Exercise 15.7}
+
+\newpage
+
+\section*{Logs and Exponentials Review Exercise}\label{logs-and-exponentials-review-exercise}
+\addcontentsline{toc}{section}{Logs and Exponentials Review Exercise}
 
 \chapterfont{\color{white}}
 
