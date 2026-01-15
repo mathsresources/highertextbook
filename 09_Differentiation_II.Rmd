@@ -6,9 +6,1164 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{Differentiation II}}};
-\node at (4,1) {\Large{\textsc{Chapter 10}}};
+\draw[NavyBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[NavyBlue,very thick] (5,1) -- (6,1);
+\draw[NavyBlue,fill=NavyBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Differentiation II}}};
+\node at (3,1) {\Large{\textsc{Chapter 9}}};
 \end{tikzpicture}
 \end{center}
+
+
+## Increasing and Decreasing Functions
+
+A function can be said to be \textit{increasing} for values of $x$ for which a tangent to the curve has a \textit{positive gradient}, and \textit{decreasing} where a tangent to the curve has a \textit{negative gradient}.
+
+\vspace{-0.3cm}
+
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick,double,green!70!black,domain=-3.7:-1.852,smooth] plot (\x,0.1*\x*\x*\x-\x+1);
+    \draw[thick,double,red!70!black,domain=-1.8:1.8,smooth] plot (\x,0.1*\x*\x*\x-\x+1);
+    \draw[thick,double,green!70!black,domain=1.852:3.7,smooth] plot (\x,0.1*\x*\x*\x-\x+1);
+    \draw[domain=-3.7:3.7,smooth] plot (\x,0.1*\x*\x*\x-\x+1) node[above] {$y=f(x)$};
+    \node[rotate=62,green!70!black] at (-3.5,1.2) {increasing};
+    \node[rotate=60,green!70!black] at (2.7,1.2) {increasing};
+    \node[rotate=-43,red!70!black] at (0.4,1.2) {decreasing};
+    \node[green!70!black] at (-3.2,-1) {$f'(x)>0$};
+    \node[red!70!black] at (0,-1) {$f'(x)<0$};
+    \node[green!70!black] at (3.2,-1) {$f'(x)>0$};
+    \draw[thin,dashed] (-1.826,2.5) -- (-1.826,-1.2);
+    \draw[thin,dashed] (1.826,2.5) -- (1.826,-1.2);
+    \node at (-1.826,-1.45) {$a$};
+    \node at (1.826,-1.45) {$b$};
+\end{tikzpicture}
+\end{center}
+\vfill\null
+\columnbreak
+\null\vfill
+\begin{center}
+    \begin{tcolorbox}[center,width=7cm,colback=red!5,colframe=red!70!black]
+        A function $f(x)$ is:\\[0.2em]
+        \begin{itemize}
+            \item Increasing when $f'(x)>0$.
+            \item Decreasing when $f'(x)<0$.
+        \end{itemize}
+    \end{tcolorbox}
+\end{center}
+\vfill\null
+
+\end{multicols}
+
+\vspace{-1cm}
+
+Function $f$ above is \textit{increasing} for $x<a,\text{ }x>b$ and \textit{decreasing} for $a<x<b$.
+
+\begin{tcolorbox}[title=Example 9.1.1,colback=blue!1, colframe=blue!70!black!70!]
+Part of the graph of a function $f(x)$ is below. State the values of $x$ for which $f(x)$ is:\\[0.1em]
+
+\begin{enumerate}
+    \item[(a)] Increasing.
+    \item[(b)] Decreasing.
+\end{enumerate}
+
+\vspace{-2.3cm}
+\begin{center}
+\begin{tikzpicture}
+    \draw[-stealth] (-4,0.6) -- (4,0.6) node[right] {$x$};
+    \draw[-stealth] (-1,-1.2) -- (-1,2.7) node[above] {$y$};
+    \node[anchor=north east] at (-0.5,0.4) {$0$};
+    \draw[domain=-4:4,smooth] plot (\x,0.08*\x*\x*\x-0.8*\x+0.8) node[above] {$y=f(x)$};
+    \draw[fill=black] (1.82,-0.086*2) circle (0.05) node[below] {$(6,-2)$};
+    \draw[fill=black] (-1.82,0.886*2) circle (0.05) node[above] {$(-2,3)$};
+\end{tikzpicture}
+\end{center}
+
+\tcblower
+
+\begin{enumerate}
+    \item[(a)] The function $f(x)$ is increasing for $x<-2$ and $x>6$.
+    \item[(b)] The function $f(x)$ is decreasing for $-2<x<6$.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+Evaluating $f'(x)$ can show whether a function is increasing or decreasing at that point:
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[title=Example 9.1.2,colback=blue!1, colframe=blue!70!black!70!]
+Determine whether the function $f(x)=5x^2-6\sqrt{x}^3$ is increasing or decreasing when $x=4$.
+
+\tcblower
+
+\vspace{-0.5cm}
+\begin{center}
+    \begin{tikzpicture}
+        \draw[blue!1] (-8.5,0) -- (8.5,0);
+        \node[below] at (0,0){
+        \begin{minipage}{8cm}
+        \begin{align*}
+            f(x)&=5x^2-6x^{\frac{3}{2}}\\
+            f'(x)&=10x-9x^{\frac{1}{2}}\\
+            &=10x-9\sqrt{x}\\
+            f'(4)&=10(4)-9\sqrt{4}\\
+            &=22
+        \end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (5,0.01){
+        \begin{minipage}{6cm}
+        \begin{align*}
+            \longleftarrow & \text{ prepare to differentiate}\\
+            \longleftarrow & \text{ differentiate}\\[0.1em]
+            \longleftarrow & \text{ write in radical form}\\[0.3em]
+            \longleftarrow & \text{ substitute}\\[0.1em]
+            \longleftarrow & \text{ evaluate}\\
+        \end{align*}
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-0.5cm}
+
+$$\text{Since }f'(4)>0,\text{ the function }f\text{ is increasing when }x=4.$$
+
+\end{tcolorbox}
+
+\pagebreak
+
+The range of values of $x$ for which a function is increasing or decreasing can also be determined:
+
+\begin{tcolorbox}[title=Example 9.1.3,colback=blue!1, colframe=blue!70!black!70!]
+Determine the range of values of $x$ for which the function $f(x)=2x^2-8x+11$ is increasing.
+
+\tcblower
+
+$$\text{Increasing}\implies f'(x)>0$$
+
+\vspace{-0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[blue!1] (-8.5,0) -- (8.5,0);
+        \node[below] at (0,0){
+        \begin{minipage}{8cm}
+        \begin{align*}
+    f'(x)=4x-8&\\
+    4x-8&>0\\
+    4x&>8\\
+    x&>2
+\end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (5,0.01){
+        \begin{minipage}{6cm}
+        \begin{align*}
+            \longleftarrow & \text{ differentiate}\\
+            \longleftarrow & \text{ apply condition}\\
+            \\
+            \longleftarrow & \text{ solve}
+        \end{align*}
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-0.5cm}
+
+$$\text{So }f'(x)\text{ is increasing when }x>2$$
+
+\end{tcolorbox}
+
+Quadratic inequations may arise when finding ranges, which require a sketch when solving.
+
+\begin{tcolorbox}[title=Example 9.1.4,colback=blue!1, colframe=blue!70!black!70!]
+Determine the range of values of $x$ for which $y=\frac{2}{3}x^3+3x^2-8x+7$ is decreasing.
+
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[blue!1] (-8.5,0) -- (8.5,0);
+        \node[below] at (-5,0){
+        \begin{minipage}{6cm}
+        \centering
+        $\text{Decreasing}\implies \dfrac{\text{d}y}{\text{d}x}<0$
+        \begin{align*}
+            \frac{\text{d}y}{\text{d}x}=2x^2+6x-8&\\
+            2x^2+6x-8&<0\\
+            x^2+3x-4&<0
+        \end{align*}
+        \end{minipage}
+        };
+        \node[below] at (5,0){
+        \begin{minipage}{6cm}
+        \begin{align*}
+            \textcolor{blue!70!black!70!}{\text{  Consider roots:}}&\\
+            x^2+3x-4&=0\\
+            (x+4)(x-1)&=0\\
+            x=-4,x=1
+        \end{align*}
+        \end{minipage}
+        };
+        \draw[blue!70!black!70!,-stealth] (-2.5,-3.2) -- (2.5,-1.2);
+        \node[blue!70!black!70!,rotate=21.5,above] at (0,-2.2) {quadratic inequation};
+    \end{tikzpicture}
+\end{center}
+
+
+
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[-stealth] (-2,0) -- (2,0) node[right] {$x$};
+    \draw[domain=-2:2,smooth] plot (\x,0.3*\x*\x-0.5);
+    \node[below left] at (-1.29,0) {\scriptsize{$-4$}};
+    \node[below right] at (1.29,0) {\scriptsize{$1$}};
+    \draw[blue!70!black!70!,thick,double distance = 0.03cm,domain=-1.29:1.29,smooth] plot (\x,0.3*\x*\x-0.5);
+\end{tikzpicture}
+\end{center}
+
+\vspace{-0.5cm}
+$$\text{So }f'(x)\text{ is decreasing when }-4<x<1$$
+
+\end{tcolorbox}
+
+A function can be said to be \textbf{strictly increasing} if $f'(x)>0$ across its domain.
+
+A function can be said to be \textbf{strictly decreasing} if $f'(x)<0$ across its domain.
+
+\begin{tcolorbox}[title=Example 9.1.5,colback=blue!1, colframe=blue!70!black!70!]
+Show that $f(x)=\frac{1}{3}x^3-4x^2+21x-10$ is strictly increasing for all values of $x$.\\[0.5em]
+\textit{Note that }$x^2-8x+1$\textit{ can be expressed as }$(x-4)^2+5$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[blue!1] (-8.5,0) -- (8.5,0);
+        \node[below] at (-1.5,0){
+        \begin{minipage}{8cm}
+        \begin{align*}
+            f'(x)&=x^2-8x+21\\
+            &=(x-4)^2+5
+        \end{align*}
+        \vspace{-0.75cm}
+        \begin{gather*}
+                \therefore\text{ minimum value of }f'(x)\text{ is }5\\[0.2em]
+                \text{Since }5>0, \text{ }f'(x)>0\text{ for all }x,\\[0.2em]
+                \text{so the function }f\text{ is strictly increasing.}
+        \end{gather*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (5.5,0.01){
+        \begin{minipage}{6cm}
+        \begin{align*}
+            \longleftarrow & \text{ differentiate}\\
+            \longleftarrow & \text{ complete the square}\\[0.45cm]
+            \longleftarrow & \text{ state minimum value of }f'\\[0.07cm]
+            \longleftarrow & \text{ compare to zero}\\[0.1cm]
+            \longleftarrow & \text{ conclusion about }f
+        \end{align*}
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+\pagebreak
+
+
+## Stationary Points
+
+\vspace{-0.5cm}
+
+A \textit{stationary point} can be found where a tangent to a curve has a \textit{gradient of zero}, or:
+
+\vspace{-1.2cm}
+
+\begin{multicols}{2}
+
+\null\vfill
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[-stealth] (-4,1) -- (4,1) node[right] {$x$};
+    \draw[-stealth] (-1,-0.5) -- (-1,3) node[above] {$y$};
+    \node[anchor=north east] at (-1,1) {$0$};
+    \draw[domain=-3.5:3.5,smooth] plot (\x,0.1*\x*\x*\x-\x+1) node[above] {$y=f(x)$};
+    \draw[fill=black] (1.82574,-0.21716) circle (0.05) node[below] {$(6,-2)$};
+    \draw[fill=black] (-1.82574,2.21716) circle (0.05) node[above] {$(-2,3)$};
+\end{tikzpicture}
+\end{center}
+
+\vfill\null
+
+\columnbreak
+
+\null\vfill
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,colframe=red!70!black]
+\textbf{Stationary points} occur where $\dfrac{\text{d}y}{\text{d}x}=0$
+\end{tcolorbox}
+\end{center}
+
+The graph of $y=f(x)$ has stationary points at $(-2,3)$ and $(6,-2)$.
+
+\vfill\null
+
+\end{multicols}
+
+\vspace{-0.7cm}
+\begin{tcolorbox}[title=Example 9.2.1,colback=blue!1, colframe=blue!70!black!70!]
+Find the coordinates of the stationary points on the curve $y=x^3-\frac{9}{2}x^2+6x$.
+\tcblower
+
+\begin{center}
+    \begin{tikzpicture}
+    \draw[blue!1] (-8.5,0) -- (8.5,0);
+    \node[below,blue!70!black!70!] at (-4.25,0) {Find $x$-coordinate(s)};
+        \node[below] at (-4.25,-0.65) {
+        \begin{minipage}{8cm}
+        \centering
+        $\text{Stationary points occur where }\dfrac{\text{d}y}{\text{d}x}=0$\\[-1em]
+            \begin{align*}
+                \dfrac{\text{d}y}{\text{d}x}=3x^2-9x+6&&\\
+                3x^2-9x+6&=0\\
+                x^2-3x+2&=0\\
+                (x-1)(x-2)&=0\\
+                x=1,x=2&\\
+            \end{align*}
+        \end{minipage}
+        };
+        \draw[blue!70!black!70!] (0,0) -- (0,-5.5);
+        \node[below,blue!70!black!70!] at (4.25,0) {Find $y$-coordinates};
+        \node[below] at (4.25,-0.2) {
+        \begin{minipage}{8cm}
+            \begin{align*}
+                \text{When }x=1,\quad y&=(1)^3-\frac{9}{2}(1)^2+6(1)&\\
+                &=\frac{5}{2}\\
+                &\\
+                \text{When }x=2,\quad y&=(2)^3-\frac{9}{2}(2)^2+6(2)&\\
+                &=2
+            \end{align*}
+        \end{minipage}
+        };
+        \node at (0,-6) {$\therefore \text{stationary points occur at }\left(1,\frac{5}{2}\right)\text{ and }\left(1,2\right)$};
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+Either Leibniz notation $\left(\dfrac{\text{d}y}{\text{d}x}\right)$ or function notation $(f'(x))$ may be used depending on the context.
+
+\textbf{Determining the nature} of a stationary point means to find out \textit{what type} it is. There are four:
+
+\begin{multicols}{4}
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        \draw[domain=-1.5:1.5,smooth] plot (\x,\x*\x);
+        \draw[fill] (0,0) circle (0.05);
+    \end{tikzpicture}\\
+    minimum\\
+    turning point
+    \begin{tikzpicture}[scale=0.9]
+        \draw[domain=-1.5:1.5,smooth] plot (\x,-\x*\x);
+        \draw[fill] (0,0) circle (0.05);
+    \end{tikzpicture}\\
+    maximum\\
+    turning point
+    \begin{tikzpicture}[scale=0.9]
+        \draw[domain=-1.5:1.5,smooth] plot (\x,0.33*\x*\x*\x);
+        \draw[fill] (0,0) circle (0.05);
+    \end{tikzpicture}\\
+    rising point\\
+    of inflection
+    \begin{tikzpicture}[scale=0.9]
+        \draw[domain=-1.5:1.5,smooth] plot (\x,-0.33*\x*\x*\x);
+        \draw[fill] (0,0) circle (0.05);
+    \end{tikzpicture}\\
+    falling point\\
+    of inflection
+\end{center}
+\end{multicols}
+
+\vspace{-0.5cm}
+
+The \textbf{second derivative}, $f''(x)$ or $\dfrac{\text{d}^2 y}{\text{d}x^2}$, is obtained by \textbf{differentiating the first derivative}.
+
+For example:
+\vspace{-0.5cm}
+\begin{align*}
+    f(x)&=4x^3-3x^2+7x-1\\
+    f'(x)&=12x^2-6x+7\\
+    f''(x)&=24x-6
+\end{align*}
+\vspace{-0.7cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,width=15cm,colframe=red!70!black]
+Stationary point $(a,b)$ is a:
+\vspace{-0.5cm}
+\begin{itemize}[leftmargin=6cm]
+    \item \textbf{maximum turning point} if $f''(a)<0$
+    \item \textbf{minimum turning point} if $f''(a)>0$
+\end{itemize}
+\end{tcolorbox}
+\end{center}
+
+\pagebreak
+
+\begin{tcolorbox}[title=Example 9.2.2,colback=blue!1, colframe=blue!70!black!70!]
+Determine the coordinates and nature of the stationary points of $f(x)=x^3-12x^2+36x$.
+\tcblower
+
+
+\begin{center}
+    \begin{tikzpicture}
+    \draw[blue!70!black!70!] (-3,0) -- (-3,-5);
+    \draw[blue!70!black!70!] (3,0) -- (3,-5);
+    \draw[blue!1] (-8.5,0) -- (8.5,0);
+    \node[below,blue!70!black!70!] at (-6,0) {Find $x$-coordinate(s)};
+        \node[below] at (-6,-0.65) {
+        \begin{minipage}{5cm}
+        \centering
+        $\text{SPs occur where }f'(x)=0$\\[-1.5em]
+            \begin{align*}
+                f'(x)=3x^2-24x+36&\\
+                3x^2-24x+36&=0\\
+                x^2-8x+12&=0\\
+                (x-2)(x-6)&=0\\
+                x=2,x=6&\\
+            \end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (0,0) {Find $y$-coordinates};
+        \node[below] at (0,-0.3) {
+        \begin{minipage}{5cm}
+            \begin{align*}
+                f(2)&=(2)(2-6)^2\\
+                &=32\\
+                &\\
+                f(6)&=(6)(6-6)^2\\
+                &=0
+            \end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (6,0) {Determine Nature};
+        \node[below] at (6,-0.05) {
+        \begin{minipage}{5cm}
+            \begin{align*}
+                f''(x)&=6x-24\\[0.5em]
+                f''(2)&=6(2)-24\\
+                &=-12\\
+                f''(2)&<0\therefore \text{max TP}\\[0.5em]
+                f''(6)&=6(6)-24\\
+                &=12\\
+                f''(6)&>0\therefore \text{min TP}
+            \end{align*}
+        \end{minipage}
+        };
+        \node at (0,-6.5) {$\therefore \text{maximum turning point at }(2,32)\text{ and minimum turning point at }(6,0)$};
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+If the second derivative is 0, a \textbf{nature table} can be used instead, where $\frac{\text{d}y}{\text{d}x}$ is evaluated ($>0$ or $<0$) for values of $x$ either side of a stationary point, to visualise its nature. For stationary point $(a,b)$:
+\vspace{-0.3cm}
+\begin{multicols}{4}
+
+\begin{tikzpicture}
+    \draw[white] (-0.1,-1.5) rectangle (4.1,3.1);
+    \draw (0,0) grid (4,3);
+    \node[rotate=45] at (0.5,0.5) {slope};
+    \node at (0.5,1.5) {$\frac{\text{d}y}{\text{d}x}$};
+    \node at (0.5,2.5) {$x$};
+    \node at (2.5,2.5) {$a$};
+    \draw[-stealth] (1.2,2.5) -- (1.8,2.5);
+    \draw[-stealth] (3.2,2.5) -- (3.8,2.5);
+    \node at (2.5,1.5) {$0$};
+    \draw[ultra thick] (2.2,0.5) -- (2.8,0.5);
+    \node[align=center,below, text width = 3.5cm] at (2,0) {minimum turning point};
+    \node at (1.5,1.5) {$-ve$};
+    \node at (3.5,1.5) {$+ve$};
+    \draw[ultra thick] (1.2,0.8) -- (1.8,0.5);
+    \draw[ultra thick] (3.2,0.5) -- (3.8,0.8);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \draw[white] (-0.1,-1.5) rectangle (4.1,3.1);
+    \draw (0,0) grid (4,3);
+    \node[rotate=45] at (0.5,0.5) {slope};
+    \node at (0.5,1.5) {$\frac{\text{d}y}{\text{d}x}$};
+    \node at (0.5,2.5) {$x$};
+    \node at (2.5,2.5) {$a$};
+    \draw[-stealth] (1.2,2.5) -- (1.8,2.5);
+    \draw[-stealth] (3.2,2.5) -- (3.8,2.5);
+    \node at (2.5,1.5) {$0$};
+    \draw[ultra thick] (2.2,0.5) -- (2.8,0.5);
+    \node[align=center,below, text width = 3.5cm] at (2,0) {maximum turning point};
+    \node at (1.5,1.5) {$+ve$};
+    \node at (3.5,1.5) {$-ve$};
+    \draw[ultra thick] (1.2,0.2) -- (1.8,0.5);
+    \draw[ultra thick] (3.2,0.5) -- (3.8,0.2);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \draw[white] (-0.1,-1.5) rectangle (4.1,3.1);
+    \draw (0,0) grid (4,3);
+    \node[rotate=45] at (0.5,0.5) {slope};
+    \node at (0.5,1.5) {$\frac{\text{d}y}{\text{d}x}$};
+    \node at (0.5,2.5) {$x$};
+    \node at (2.5,2.5) {$a$};
+    \draw[-stealth] (1.2,2.5) -- (1.8,2.5);
+    \draw[-stealth] (3.2,2.5) -- (3.8,2.5);
+    \node at (2.5,1.5) {$0$};
+    \draw[ultra thick] (2.2,0.5) -- (2.8,0.5);
+    \node[align=center,below, text width = 3.5cm] at (2,0) {rising point of inflection};
+    \node at (1.5,1.5) {$+ve$};
+    \node at (3.5,1.5) {$+ve$};
+    \draw[ultra thick] (1.2,0.2) -- (1.8,0.5);
+    \draw[ultra thick] (3.2,0.5) -- (3.8,0.8);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \draw[white] (-0.1,-1.5) rectangle (4.1,3.1);
+    \draw (0,0) grid (4,3);
+    \node[rotate=45] at (0.5,0.5) {slope};
+    \node at (0.5,1.5) {$\frac{\text{d}y}{\text{d}x}$};
+    \node at (0.5,2.5) {$x$};
+    \node at (2.5,2.5) {$a$};
+    \draw[-stealth] (1.2,2.5) -- (1.8,2.5);
+    \draw[-stealth] (3.2,2.5) -- (3.8,2.5);
+    \node at (2.5,1.5) {$0$};
+    \draw[ultra thick] (2.2,0.5) -- (2.8,0.5);
+    \node[align=center,below, text width = 3.5cm] at (2,0) {falling point of inflection};
+    \node at (1.5,1.5) {$-ve$};
+    \node at (3.5,1.5) {$-ve$};
+    \draw[ultra thick] (1.2,0.8) -- (1.8,0.5);
+    \draw[ultra thick] (3.2,0.5) -- (3.8,0.2);
+\end{tikzpicture}
+    
+\end{multicols}
+\vspace{-1cm}
+
+\begin{tcolorbox}[title=Example 9.2.3,colback=blue!1, colframe=blue!70!black!70!]
+Find the coordinates and nature of the stationary point on the curve $y=13+6x^2-12x-x^3$.
+\tcblower
+
+\begin{center}
+    \begin{tikzpicture}
+    \draw[blue!70!black!70!] (-3,0) -- (-3,-5);
+    \draw[blue!70!black!70!] (3,0) -- (3,-5);
+    \draw[blue!1] (-8.5,0) -- (8.5,0);
+    \node[below,blue!70!black!70!] at (-6,0) {Find $x$-coordinate(s)};
+        \node[below] at (-6,-0.65) {
+        \begin{minipage}{5cm}
+        \centering
+        $\text{SPs occur where }\frac{\text{d}y}{\text{d}x}=0$\\[-1.5em]
+            \begin{align*}
+                \frac{\text{d}y}{\text{d}x}=12x-12-3x^2&\\
+                12x-12x-3x^2&=0\\
+                4x-4-x^2&=0\\
+                x^2-4x-4&=0\\
+                (x-2)(x-2)&=0\\
+                x=2&\\
+            \end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (0,-0.05) {\text{Find }$y$\text{-coordinate}};
+        \node[below] at (0,-0.75) {
+        \begin{minipage}{5cm}
+            \centering
+            When $x=2$,
+            \begin{align*}
+                y&=13+6(2)^2-12(2)-(2)^3\\
+                &=13+24-24-8\\
+                &=5
+            \end{align*}
+        \end{minipage}
+        };
+        \node[below,blue!70!black!70!] at (6,-0.05) {Determine Nature};
+        \node[below] at (6,-0.15) {
+        \begin{minipage}{5cm}
+            \centering
+            \begin{equation*}
+                \dfrac{\text{d}^2 y}{\text{d}x^2}=-12-6x
+            \end{equation*}
+            When $x=2$,
+            \begin{align*}
+                \dfrac{\text{d}^2 y}{\text{d}x^2}&=-12-6(2)\\
+                &=0
+            \end{align*}
+            $\therefore \text{nature table}$
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2.5cm}
+\begin{center}
+\begin{tikzpicture}
+    \draw[white] (-0.1,-1.5) rectangle (4.1,3.1);
+    \draw (0,0) grid (4,3);
+    \node[rotate=45] at (0.5,0.5) {slope};
+    \node at (0.5,1.5) {$\frac{\text{d}y}{\text{d}x}$};
+    \node at (0.5,2.5) {$x$};
+    \node at (2.5,2.5) {$2$};
+    \draw[-stealth] (1.2,2.5) -- (1.8,2.5);
+    \draw[-stealth] (3.2,2.5) -- (3.8,2.5);
+    \node at (1.5,2.75) {\scriptsize{$1$}};
+    \node at (3.5,2.75) {\scriptsize{$3$}};
+    \node at (2.5,1.5) {$0$};
+    \draw[ultra thick] (2.2,0.5) -- (2.8,0.5);
+    \node at (1.5,1.5) {$-ve$};
+    \node at (3.5,1.5) {$-ve$};
+    \draw[ultra thick] (1.2,0.8) -- (1.8,0.5);
+    \draw[ultra thick] (3.2,0.5) -- (3.8,0.2);
+    \node[below] at (2,-0.5) {$\therefore$falling point of inflection at $(2,5)$};
+\end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+\pagebreak
+
+## Closed Intervals
+
+Given a smooth, continuous function across a \textit{closed interval}, finding the coordinates and nature of stationary points can allow the maximum and minimum values to be determined.
+
+\begin{multicols}{2}
+\begin{center}
+\begin{tikzpicture}
+    \draw[domain=-3.4:3.7,smooth,dashed] plot (\x,0.08*\x*\x*\x-0.6*\x+1) node[above] {$y=f(x)$};
+    \draw[domain=-2.8:3.5,smooth] plot (\x,0.08*\x*\x*\x-0.6*\x+1);
+    \draw[blue!70!black!70!] (-2.8,2.7) -- (-2.8,-0.4) node[black,below] {$a$};
+    \draw[blue!70!black!70!] (3.5,2.7) -- (3.5,-0.4) node[black,below] {$b$};
+    \draw[fill] (-1.58,1.63) circle (0.05);
+    \draw[fill] (1.58,0.37) circle (0.05);
+    \draw[fill] (-2.8,0.92) circle (0.05);
+    \draw[fill] (3.5,2.33) circle (0.05);
+    \draw[stealth-] (1.08,0.37) -- (0.28,0.37) node[left] {min value};
+    \draw[stealth-] (3.3,2.33) -- (2.5,2.33) node[left] {max value};
+\end{tikzpicture}
+\end{center}
+
+\columnbreak
+
+\begin{center}
+    \begin{tcolorbox}[center,width=9.5cm,colback=red!5,colframe=red!70!black]
+        Maximum and minimum values can occur at:\\
+        \begin{itemize}
+            \item Turning points
+            \item \textit{Bounds} of the interval
+        \end{itemize}
+    \end{tcolorbox}
+\end{center}
+\vspace{-0.8cm}
+For $f(x)$, the maximum value occurs when $x=b$ and the minimum at the minimum turning point.
+
+\end{multicols}
+
+\vspace{-0.5cm}
+
+\begin{tcolorbox}[title=Example 9.3.1,colback=blue!1, colframe=blue!70!black!70!]
+Function $f(x)=\frac{2}{3}x^{3}-x^{2}-4x-\frac{1}{3}$ has two stationary points, and part of the graph of $y=f(x)$ is shown below. Find the maximum and minimum values of $f$ on the interval $-3\leqslant x \leqslant 3$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[-stealth] (-3,0) -- (4,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.5) -- (0,1) node[above] {$y$};
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[domain=-2.5:3.7,smooth] plot (\x,2*0.06666*\x*\x*\x-2*0.1*\x*\x-2*0.44*\x-2*0.03333) node[above] {$y=f(x)$};
+    \draw[fill=black] (-1.06528,0.48265) circle (0.05) node[above] {$(-1,2)$};
+    \draw[fill=black] (2.06538,-1.56274) circle (0.05) node[below] {$(2,-7)$};
+\end{tikzpicture}
+\end{center}
+
+\tcblower
+
+\textcolor{blue!70!black!70!}{Check $y$-coordinates at the lower and upper bounds:}
+
+\vspace{0.1cm}
+\hspace{14cm}
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[-stealth] (-3,0) -- (2.6,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.5) -- (0,0.6) node[above] {$y$};
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[domain=-0.769*3.2:0.769*3.2,smooth,dashed] plot (\x,2.197*2*0.06666*\x*\x*\x-1.69*2*0.1*\x*\x-1.3*2*0.44*\x-2*0.03333);
+    \draw[domain=-0.769*3:0.769*3,smooth] plot (\x,2.197*2*0.06666*\x*\x*\x-1.69*2*0.1*\x*\x-1.3*2*0.44*\x-2*0.03333);
+    \node[right] at (-2.8*0.769,-3.2) {$y=f(x)$};
+    \draw[fill=black] (-0.769*1.06528,0.48265) circle (0.05) node[above] {$(-1,2)$};
+    \draw[fill=black] (0.769*2.06538,-1.56274) circle (0.05) node[below] {$(2,-7)$};
+    \draw[fill=black] (-0.769*3,-2.9) circle (0.05);
+    \draw[fill=black] (0.769*3,-0.88) circle (0.05);
+    \draw[thin,blue!70!black!70!] (-3*0.769,0.6) -- (-3*0.769,-3.7) node[black, below] {\small{$-3$}};
+    \draw[thin,blue!70!black!70!] (3*0.769,0.6) -- (3*0.769,-3.7) node[black, below] {\small{$3$}};
+\end{tikzpicture}
+
+$\text{When }x=-3,\quad y=\frac{2}{3}(-3)^3-(-3)^2-4(-3)-\frac{1}{3}=-\frac{46}{3}$\\[0.1em]
+
+$\text{When }x=3,\quad y=\frac{2}{3}(3)^3-(3)^2-4(3)-\frac{1}{3}=-\frac{10}{3}$
+
+\begin{flalign*}
+    \therefore & \text{ maximum value of }f\text{ is }2,\text{ which occurs when }x=-1&\\
+    & \text{ minimum value of }f\text{ is }-\frac{46}{3}, \text{ which occurs when }x=-3
+\end{flalign*}
+
+\end{tcolorbox}
+
+Where a function is \textit{strictly increasing} or \textit{strictly decreasing} in a closed interval, its maximum and minimum values can \textit{only} be located at the bounds of the interval.
+
+\begin{tcolorbox}[title=Example 9.3.2,colback=blue!1, colframe=blue!70!black!70!,height=5.7cm]
+Given $y=x^{3}+\frac{1}{2}x^{2}-\frac{7}{2}$ is strictly increasing, find the greatest and least values of $y$ in the interval $-1\leqslant x\leqslant 3$.
+
+\tcblower
+
+$\text{When }x=-1,\quad y=(-2)^{3}+\frac{1}{2}(-1)^{2}-\frac{7}{2}=-4$\\[0.05em]
+
+$\text{When }x=3,\quad y=(3)^{3}+\frac{1}{2}(3)^{2}-\frac{7}{2}=28$\hspace{3.5cm}
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[-stealth] (-1.2,0) -- (3.5,0) node[right] {$x$};
+    \draw[-stealth] (0,-0.8) -- (0,0.04*30) node[above] {$y$};
+    \draw[domain=-1:3,smooth] plot (\x,0.04*\x*\x*\x+0.04*0.5*\x*\x-0.04*3.5) node[right] {$y=x^{3}+\frac{1}{2}x^{2}-\frac{7}{2}$};
+    \draw[thin,blue!70!black!70!] (-1,0.04*35) -- (-1,-0.8) node[black, below] {\small{$-1$}};
+    \draw[thin,blue!70!black!70!] (3,0.04*35) -- (3,-0.8) node[black, below] {\small{$3$}};
+    \node[anchor=north east] at (0,-0.05) {\scriptsize{$0$}};
+\end{tikzpicture}
+
+\vspace{-0.5cm}
+
+\begin{flalign*}
+\therefore & \text{ the maximum value of }y\text{ is }28&\\
+\text{ and}&\text{ the minimum value of }y\text{ is }-4    
+\end{flalign*}
+
+
+\end{tcolorbox}
+
+\pagebreak
+
+\section*{9.4 Maximum and Minimum Values}
+
+If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.\\[0.1em]
+
+\begin{tcolorbox}[title=Example 9.4.1,colback=blue!1, colframe=blue!70!black!70!]
+Determine the value of $x$ for which the function $f$, defined by $f(x)=x+\frac{1}{x}$, $x>0$, has its minimum value.
+
+\tcblower
+
+\begin{center}
+    \begin{tikzpicture}
+    \draw[blue!1] (-8.5,0) -- (8.5,0);
+    \node[below,blue!70!black!70!] at (-4.25,0) {Find $x$-coordinate(s)};
+        \node[below] at (-4.25,-0.65) {
+        \begin{minipage}{8cm}
+        \centering
+        $\text{Stationary points occur where }f'(x)=0$\\[-1em]
+            \begin{align*}
+                f(x)=x+x^{-1}&\\
+                f'(x)=1-x^{-2}&\\
+                1-x^{-2}&=0\\
+                1-\frac{1}{x^2}&=0\\
+                x^2-1&=0\\
+                x^2&=1\\
+                x&=1\textcolor{blue!70!black!70!}{\text{ (Since }x>0\text{)}}
+            \end{align*}
+        \end{minipage}
+        };
+        \draw[blue!70!black!70!] (0,0) -- (0,-6.5);
+        \node[below,blue!70!black!70!] at (4.25,0) {Determine Nature};
+        \node[below] at (4.25,-0.05) {
+        \begin{minipage}{8cm}
+            \centering
+            \begin{align*}
+                f''(x)&=2x^{-3}\\
+                &=\frac{2}{x^3}\\[0.2cm]
+                f''(1)&=\frac{2}{1^3}\\[0.1cm]
+                &=2
+            \end{align*}
+            Since $f''(1)>0$, min TP when $x=1$\\[0.4cm]
+            $\therefore$ $f$ is minimised when $x=1$
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+\vspace{0.1cm}
+
+When using variables other than $x$ and $y$ (and function $f$), care should be taken with notation.
+
+\vspace{0.1cm}
+
+\begin{tcolorbox}[title=Example 9.4.2,colback=blue!1, colframe=blue!70!black!70!]
+Determine the maximum value of $P$ given $P=6t-t^3$, where $t>0$, and the value of $t$ for which it occurs.
+
+\tcblower
+
+\begin{center}
+    \begin{tikzpicture}
+    \draw[blue!1] (-8.5,0) -- (8.5,0);
+    \node[below,blue!70!black!70!] at (-4.25,0) {Find $x$-coordinate(s)};
+        \node[below] at (-4.25,-0.65) {
+        \begin{minipage}{8cm}
+        \centering
+        $\text{Stationary points occur where }\frac{\text{d}P}{\text{d}t}=0$\\[-1em]
+            \begin{align*}
+                    \frac{\text{d}P}{\text{d}t}=6-3t^2&\\[0.2em]
+                    6-3t^2&=0\\
+                    6&=3t^2\\
+                    2&=t^2\\
+                    \sqrt{2}&=t     
+            \end{align*}
+        \end{minipage}
+        };
+        \draw[blue!70!black!70!] (0,0) -- (0,-5.5);
+        \node[below,blue!70!black!70!] at (4.25,0) {Determine Nature};
+        \node[below] at (4.25,-0.05) {
+        \begin{minipage}{8cm}
+            \centering
+            \begin{align*}
+                \frac{\text{d}^2 P}{\text{d}t^2}&=-6t\\[0.5em]
+                \text{When }t=\sqrt{2},\quad \frac{\text{d}^2 P}{\text{d}t^2}&=-6\sqrt{2}\\[0.5em]
+                \frac{\text{d}^2P}{\text{d}t^2}<0\therefore&\text{ max TP when }t=\sqrt{2}\\[0.5em]
+            \end{align*}
+            \textcolor{blue!70!black!70!}{Maximum Value}\\[0.5em]
+            When $t=\sqrt{2}$, $P=6(\sqrt{2})-\sqrt{2}^3=4\sqrt{2}$\\[0.5em]
+            $\therefore$ max value of $P$ is $4\sqrt{2}$, when $t=\sqrt{2}$
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+If a function has a single stationary point within an interval, which is a maximum turning point, and the \textit{minimum} value of the function is required, then it must be located at one of the bounds, and the value of the function at each must be checked.
+
+\pagebreak
+
+## Optimisation
+
+When a mathematical equation is used to model some real-world variables, finding maximum or minimum values on an interval is often desired. This is referred to as \textit{optimisation}. 
+
+\begin{tcolorbox}[title=Example 9.5.1,colback=blue!1, colframe=blue!70!black!70!]
+A company has determined that a mathematical equation can model the amount of revenue in thousands of pounds, $R$, which may be earned by setting the price for a new product as $x$ pounds.
+    \vspace{-0.5cm}
+    \begin{multicols}{2}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.5]
+            \draw[-stealth] (-0.5,0) -- (9.5,0) node[right] {$x$};
+            \draw[-stealth] (0,-0.5) -- (0,5) node[above] {$R$}; 
+            \node[below left] {$0$};
+            \draw[smooth,domain=0:8] plot (\x,0.01*8*\x*\x*\x-0.01*\x*\x*\x*\x);
+            \node[below] at (8,0) {$8$};
+        \end{tikzpicture}
+    \end{center}
+    The diagram illustrates the model used by the company, which is:
+    $$R(x)=8x^3-x^4\text{ for }0< x \leqslant 8$$
+    Find the value of $x$ which gives the maximum revenue for the product.
+    \end{multicols}
+
+\tcblower
+
+
+\textcolor{blue!70!black!70!}{\text{Stationary Points}} occur where $R'(x)=0$\hspace{1cm}\textcolor{blue!70!black!70!}{Determine Nature}
+\vspace{-0.2cm}
+\begin{align*}
+    R'(x)=24x^2-4x^3&&\hspace{2cm}R''(x)&=48x-12x^2\\
+    24x^2-4x^3&=0&R''(6)&=48(6)-12(6)^2\\
+    6x^2-x^3&=0&&=-144\\
+    x^2(6-x)&=0&R''(6)&<0\therefore \text{maximum revenue when }x=6\\
+    x=6&\text{ since }x>0
+\end{align*}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 9.5.2,colback=blue!1, colframe=blue!70!black!70!]
+A chicken is aiming to cross a road. It can fly faster than it can walk, but doing so tires it.
+\vspace{-0.2cm}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.9]
+            \draw[fill=black!30] (1,0.5) -- (8,0.5) -- (9,1.5) -- (2,1.5) -- cycle;
+            \chicken[scale=0.5,xshift=0.5cm];
+            \chicken[baby=yellow!95!black,scale=0.5,xshift=15cm,yshift=3cm];
+            \draw[ultra thick,dashed,yellow] (1.6,1) -- (8.4,1);
+        \end{tikzpicture}
+    \end{center}
+    \vspace{-0.2cm}
+    If it flies for $x$ metres and walks the rest of the way then the amount of time $T$ it will take to reach its destination is given, in seconds, by:
+    \vspace{-0.3cm}
+    $$T(x)=x^2+\frac{16}{x}$$
+    Determine the value of $x$ which minimises the chicken's time to get to the other side.
+
+\tcblower
+
+\textcolor{blue!70!black!70!}{\text{Stationary Points}} occur where $T'(x)=0$
+\vspace{-0.1cm}
+\begin{align*}
+    T(x)=x^2+16x^{-1}&&&\textcolor{blue!70!black!70!}{Determine Nature}\\
+    T'(x)=2x-16x^{-2}&&T''(x)&=2+32x^{-3}\\
+    2x-16x^{-2}&=0&&=2+\frac{32}{x^3}\\
+    2x-\frac{16}{x^2}&=0&T''(2)&=2+\frac{32}{2^3}\\
+    2x^3-16&=0&&=2+4\\
+    x^3-8&=0&&=6\\
+    x^3&=8&T''(2)&>0\\
+    x&=2&\therefore T\text{ is }&\text{minimised when }x=2
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+It can be asked for the equation used in the mathematical model to be \textit{shown} to be correct. Establishing the equation will require an amount of problem-solving. A common context involves the volume and surface area of a 3D object.
+
+\begin{tcolorbox}[title=Example 9.5.3,colback=blue!1, colframe=blue!70!black!70!]
+A solid cuboid measures $x\text{ cm}$ by $x\text{ cm}$ by $h\text{ cm}$. The volume of this cuboid is $125\text{ cm}^3$.
+    \begin{multicols}{2}
+    \begin{center}
+    \tikzmath{\length = 2; \percbreadth=2; \breadth = 0.5*\percbreadth; \height = 4; \x=0; \y=0;}
+    \begin{tikzpicture}[scale=1.1]
+    \draw[fill=blue!10] (\x,\y) -- (\x+\length,\y) -- (\x+\length+0.866*\breadth,\y+0.5*\breadth) -- (\x+\length+0.866*\breadth,\y+0.5*\breadth+\height) -- (\x+0.866*\breadth,\y+0.5*\breadth+\height) -- (\x,\y+\height) -- cycle;
+    \draw (\x,\y) -- (\x+\length,\y) -- (\x+\length+0.866*\breadth,\y+0.5*\breadth) -- (\x+0.866*\breadth,\y+0.5*\breadth) -- cycle;
+    \draw (\x,\y) -- (\x,\y+\height);
+    \draw (\x+\length,\y) -- (\x+\length,\y+\height);
+    \draw (\x+\length+0.866*\breadth,\y+0.5*\breadth) -- (\x+\length+0.866*\breadth,\y+0.5*\breadth+\height);
+    \draw (\x+0.866*\breadth,\y+0.5*\breadth) -- (\x+0.866*\breadth,\y+0.5*\breadth+\height);
+    \draw (\x,\y+\height) -- (\x+\length,\y+\height) -- (\x+\length+0.866*\breadth,\y+0.5*\breadth+\height) -- (\x+0.866*\breadth,\y+0.5*\breadth+\height) -- cycle;
+    \draw[stealth-stealth] (\x,\y-0.14) -- (\x+\length,\y-0.14) node[anchor=north] at (\x+0.5*\length,-0.2) {$x$ cm};
+    \draw[stealth-stealth] (\x+\length+0.1,\y-0.1) -- (\x+\length+0.866*\breadth+0.1,\y+0.5*\breadth-0.1) node[anchor=north west] at (\x+\length+0.433*\breadth,\y+0.25*\breadth) {$x$ cm};
+    \draw[stealth-stealth] (\x+\length+0.866*\breadth+0.14,\y+0.5*\breadth) -- (\x+\length+0.866*\breadth+0.14,\y+0.5*\breadth+\height) node[anchor=west] at (\x+\length+0.866*\breadth+0.14,\y+0.5*\breadth+0.5*\height) {$h$ cm};
+    \end{tikzpicture}
+    \end{center}
+    \begin{enumerate}
+        \item[(a)] Show that the surface area of the cuboid can be given by: 
+        $$A(x)=2x^2+\dfrac{500}{x}$$
+        \item[(b)] Find the value of $x$ such that the surface area is minimised, and find the minimum surface area.
+    \end{enumerate}
+    \end{multicols} 
+
+\end{tcolorbox}
+
+It is recommended to first form an equation for the surface area, $A$, in terms of $x$ \textit{and} $h$. By then finding the relationship between $x$ and $h$, substitution allows $h$ to be eliminated.
+
+\begin{tcolorbox}[colback=blue!1, colframe=blue!70!black!70!]
+
+(a) 
+\vspace{-0.9cm}
+\begin{align*}
+    &\textcolor{blue!70!black!70!}{\text{Surface Area}}&&\textcolor{blue!70!black!70!}{\text{Volume}}\\
+    A&=2\times x^2+4\times xh& V&=L\times B\times H\\
+    &=2x^2+4xh& 125&=x^2h\\
+    &=2x^2+4x\left(\frac{125}{x^2}\right)&\frac{125}{x^2}&=h\\
+    &=2x^2+\frac{500}{x}\text{ as required}
+\end{align*}
+
+\end{tcolorbox}
+
+It should be noted that part (b) can be answered in full even if part (a) is not completed.
+
+\begin{tcolorbox}[colback=blue!1, colframe=blue!70!black!70!]
+
+(b) 
+\textcolor{blue!70!black!70!}{\text{Stationary Points}} occur where $A'(x)=0$
+\vspace{-0.1cm}
+\begin{align*}
+    A(x)=2x^2+500x^{-1}&&&\textcolor{blue!70!black!70!}{\text{Determine Nature}}\\
+    A'(x)=4x-500x^{-2}&&A''(x)&=4+1000x^{-3}\\
+    4x-500x^{-2}&=0&&=4+\frac{1000}{x^3}\\
+    4x-\frac{500}{x^2}&=0&A''(5)&=4+\frac{1000}{5^3}\\
+    4x^3-500&=0&&=4+8\\
+    x^3-125&=0&&=12\\
+    x^3&=125&A''(5)&>0\\
+    x&=5&\therefore A\text{ is }&\text{minimised when }x=5\\
+    &&&\textcolor{blue!70!black!70!}{\text{Minimum Area}}\\
+    &&A(5)&=2(5)^2+\frac{500}{5^2}\\
+    &&&=70\text{cm}^3
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+## The Graph of the Derivative
+
+Part of the graph of $f(x)$ for function $f$ is shown below.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[white] (-8,2.5) -- (9,2.5);
+    \node[anchor=north east] at (1,0) {$0$};
+    \draw[smooth,domain=-4:5.8] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8) node[above] {$f(x)$};
+    \draw[-stealth] (-4,0) -- (6.3,0) node[right] {$x$};
+    \draw[-stealth] (1,-1.5) -- (1,2) node[above] {$f(x)$};
+    \draw[fill] (-2.5,0.25313) circle (0.06cm);
+    \draw[fill] (0,0.8) circle (0.06cm);
+    \draw[fill] (4,-1.12) circle (0.06cm);
+    \draw[dotted] (-2.5,0.25313) -- (-2.5,0) node[below] {$-7$};
+    \draw[dotted] (0,0.8) -- (0,0) node[below] {$-2$};
+    \draw[dotted] (4,-1.12) -- (4,0) node[above] {$6$};
+\end{tikzpicture}
+\end{center}
+
+The graph of the \textit{derived function}, $f'(x)$, plots the \textit{rate of change} of $f$ against values of $x$.\\ Where $f(x)$ is \textit{increasing}, $f'(x)$ has a positive value, $f(x)$ is \textit{decreasing}, $f'(x)$ has a negative value
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[white] (-8,2.5) -- (9,2.5);
+    \node[anchor=north east] at (1,0) {$0$};
+    \draw[thick,double,red,smooth,domain=-4:-2.6] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8);
+    \draw[thick,double,green,smooth,domain=-2.4:-0.1] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8);
+    \draw[thick,double,red,smooth,domain=0.1:3.9] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8);
+    \draw[thick,double,green,smooth,domain=4.1:5.8] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8);
+    \draw[smooth,domain=-4:5.8] plot (\x,0.01*\x*\x*\x*\x-0.02*\x*\x*\x-0.2*\x*\x+0.8) node[above] {$f(x)$};
+    \draw[-stealth] (-4,0) -- (6.3,0) node[right] {$x$};
+    \draw[-stealth] (1,-1.5) -- (1,2) node[above] {$f(x)$};
+    \draw[fill] (-2.5,0.25313) circle (0.06cm);
+    \draw[fill] (0,0.8) circle (0.06cm);
+    \draw[fill] (4,-1.12) circle (0.06cm);
+    \draw[dotted] (-2.5,0.25313) -- (-2.5,0) node[below] {$-7$};
+    \draw[dotted] (0,0.8) -- (0,0) node[below] {$-2$};
+    \draw[dotted] (4,-1.12) -- (4,0) node[above] {$6$};
+    \node[green!70!black] at (-1.25,-1.5) {$f'(x)>0$};
+    \node[red!70!black] at (-3.5,-1.5) {$f'(x)<0$};
+    \node[green!70!black] at (5.5,-1.5) {$f'(x)>0$};
+    \node[red!70!black] at (2.2,-1.5) {$f'(x)<0$};
+\end{tikzpicture}
+\end{center}
+
+\textit{Stationary points} on $f(x)$, where $f'(x)=0$, give corresponding \textit{roots} on the graph of $f'(x)$.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[white] (-8,1.5) -- (9,1.5);
+    \node[anchor=north east] at (1,0) {$0$};
+    \draw[-stealth] (-4,0) -- (6.3,0) node[right] {$x$};
+    \draw[-stealth] (1,-1) -- (1,1) node[above] {$f'(x)$};
+    \draw[fill] (-2.5,0) circle (0.06cm);
+    \draw[fill] (0,0) circle (0.06cm);
+    \draw[fill] (4,0) circle (0.06cm);
+    \draw[dotted] (-2.5,0) -- (-2.5,0) node[below] {$-7$};
+    \draw[dotted] (0,0) -- (0,0) node[below] {$-2$};
+    \draw[dotted] (4,0) -- (4,0) node[below] {$6$};
+\end{tikzpicture}
+\end{center}
+
+\textit{Above} the $x$-axis when $f(x)$ is increasing, and below when $f(x)$ is decreasing, $f'(x)$ can be sketched.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[white] (-8,2.5) -- (9,2.5);
+    \node[anchor=north east] at (1,0) {$0$};
+    \draw[red,thick,double,smooth,domain=-4:-2.6] plot (\x,0.04*\x*\x*\x-0.06*\x*\x-0.4*\x);
+    \draw[green,thick,double,smooth,domain=-2.4:-0.1] plot (\x,0.04*\x*\x*\x-0.06*\x*\x-0.4*\x);
+    \draw[red,thick,double,smooth,domain=0.1:3.9] plot (\x,0.04*\x*\x*\x-0.06*\x*\x-0.4*\x);
+    \draw[green,thick,double,smooth,domain=4.1:5.2] plot (\x,0.04*\x*\x*\x-0.06*\x*\x-0.4*\x);
+    \draw[smooth,domain=-4:5.2] plot (\x,0.04*\x*\x*\x-0.06*\x*\x-0.4*\x) node[above] {$f'(x)$};
+    \draw[-stealth] (-4,0) -- (6.3,0) node[right] {$x$};
+    \draw[-stealth] (1,-2) -- (1,2) node[above] {$f'(x)$};
+    \draw[fill] (-2.5,0) circle (0.06cm);
+    \draw[fill] (0,0) circle (0.06cm);
+    \draw[fill] (4,0) circle (0.06cm);
+    \draw[dotted] (-2.5,0) -- (-2.5,0) node[below] {$-7$};
+    \draw[dotted] (0,0) -- (0,0) node[below] {$-2$};
+    \draw[dotted] (4,0) -- (4,0) node[below] {$6$};
+\end{tikzpicture}
+\end{center}
+
+\pagebreak
+
+\begin{tcolorbox}[title=Example 9.6.1,colback=blue!1, colframe=blue!70!black!70!]
+Part of the graph of $y=f(x)$ is shown below. Sketch $y=f'(x)$.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[blue!1] (-7,2.5) -- (7,2.5);
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[-stealth] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[-stealth] (0,-2) -- (0,3) node[above] {$y$};
+    \draw[smooth,domain=-3:4] plot (\x,-0.1*\x*\x*\x*\x+0.2*\x*\x*\x+1.1*\x*\x-1.2*\x-1) node[below] {$y=f(x)$};
+    \draw[fill] (-2,2.6) circle (0.06) node[above] {$(-4,5)$};
+    \draw[fill] (0.5,-1.3) circle (0.06) node[below,xshift=0.2cm] {$(1,-3)$};
+    \draw[fill] (3,2.6) circle (0.06) node[above] {$(6,5)$};
+    \draw[fill] (-2.87,0) circle (0.06) node[below left] {$-6$};
+    \draw[fill] (-0.573,0) circle (0.06) node[below left] {$-1$};
+    \draw[fill] (1.573,0) circle (0.06) node[below right] {$3$};
+    \draw[fill] (3.87,0) circle (0.06) node[below left] {$8$};
+    \draw[fill] (0,-1) circle (0.06) node[below left] {$-2$};
+\end{tikzpicture}
+\end{center}
+
+\tcblower
+
+\textcolor{blue!70!black!70!}{\textit{Stationary points on }$y=f(x)$\textit{ are roots of }$y=f'(x)$:}
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[blue!1] (-7,2.5) -- (7,2.5);
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[-stealth] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[-stealth] (0,-2) -- (0,2) node[above] {$y$};
+    \draw[smooth,domain=-2.9:3.8] plot (\x,-0.1*\x*\x*\x+0.15*\x*\x+0.55*\x-0.3) node[below] {$y=f'(x)$};
+    \draw[fill] (-2,0) circle (0.06) node[below,xshift=-0.3cm] {$-4$};
+    \draw[fill] (0.5,0) circle (0.06) node[below] {$1$};
+    \draw[fill] (3,0) circle (0.06) node[below] {$6$};
+\end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+Details such as that the derivative of a \textit{cubic} function is a \textit{quadratic} function should be observed.
+
+\begin{tcolorbox}[title=Example 9.6.2,colback=blue!1, colframe=blue!70!black!70!]
+For cubic function $g(x)$, part of the graph of $y=g(x)$ is shown below. Sketch $y=g'(x)$.
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[blue!1] (-7,2.5) -- (7,2.5);
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[-stealth] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[-stealth] (0,-1) -- (0,1.5) node[above] {$y$};
+    \draw[smooth,domain=-4.5:4.5] plot (\x,0.03333*\x*\x*\x+0.05*\x*\x-0.6*\x) node[above] {$y=g(x)$};
+    \draw[fill] (-3,1.35) circle (0.06) node[above] {$(-9,4)$};
+    \draw[fill] (2,-0.73) circle (0.06) node[below] {$(6,-2)$};
+    \draw[fill] (3.56,0) circle (0.06) node[below right] {$8$};
+    \draw[fill] (0,0) circle (0.06);
+\end{tikzpicture}
+\end{center}
+
+\tcblower
+
+\textcolor{blue!70!black!70!}{\textit{Since }$g(x)$\textit{ is cubic, }$g'(x)$\textit{ must be quadratic, and so the graph is parabolic:}}
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[blue!1] (-7,2.5) -- (7,2.5);
+    \node[anchor=north east] at (0,0) {$0$};
+    \draw[-stealth] (-5,0) -- (5,0) node[right] {$x$};
+    \draw[-stealth] (0,-2) -- (0,2) node[above] {$y$};
+    \draw[smooth,domain=-4.5:4] plot (\x,0.1*\x*\x+0.1*\x-0.6) node[above] {$y=g'(x)$};
+    \draw[fill] (-3,0) circle (0.06) node[below] {$-9$};
+    \draw[fill] (2,0) circle (0.06) node[below] {$6$};
+    \node[blue!70!black!70!] [anchor=east] at (7,-2) {\textit{(Rounding is to the nearest integer)}};
+\end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
+
+\pagebreak
+
+## Review Exercise {-}

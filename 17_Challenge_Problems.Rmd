@@ -1,0 +1,160 @@
+\chapterfont{\color{white}}
+
+# Challenge Problems {-}
+
+\vspace{-10.5cm}
+
+\begin{center}
+\begin{tikzpicture}
+\draw[white] (10,5) circle (0.01);
+\draw[white,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[black!60,fill=black!60,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Challenge Problems}}};
+\end{tikzpicture}
+\end{center}
+
+The following problems **do not** represent the kind of question expected to feature in a Higher Mathematics exam, either in the way they are presented or the level of difficulty. Instead, they aim to encourage a flexible approach towards problem-solving and an understanding that the skills covered in the course have applications beyond those featured in any typical exam. *Some questions may be solvable without using the skills covered in this chapter, and some questions may be unrelated to this chapter.*
+
+### Warm-Up Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 1 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 2 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 3 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 4 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 5 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 6 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 7 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 8 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 9 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 10 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 11 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 12 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 13 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 14 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 15 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 16 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### End of Course Problems {-}
+
+\newpage
+
+
+
+\newpage

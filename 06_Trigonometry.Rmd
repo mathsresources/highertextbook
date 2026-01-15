@@ -6,9 +6,60 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{Trigonometry}}};
-\node at (4,1) {\Large{\textsc{Chapter 6}}};
+\draw[Mulberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[Mulberry,very thick] (5,1) -- (6,1);
+\draw[Mulberry,fill=Mulberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Trigonometry}}};
+\node at (3,1) {\Large{\textsc{Chapter 6}}};
 \end{tikzpicture}
 \end{center}
+
+## Exact Values
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Solving Trig Equations using Exact Values
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Radians
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Solving Trig Equations and Radians
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Solving Phase Angle Equations
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Solving Multiple Angle Equations
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Review Exercise

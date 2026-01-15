@@ -6,8 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[NavyBlue,fill=NavyBlue] (0,0) rectangle (18.2,0.2);
-\draw[NavyBlue,fill=NavyBlue] (6,1.8) rectangle (18.2,0.2);
+\draw[NavyBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[NavyBlue,very thick] (5,1) -- (6,1);
+\draw[NavyBlue,fill=NavyBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{Integration}}};
 \node at (3,1) {\Large{\textsc{Chapter 11}}};
 \end{tikzpicture}

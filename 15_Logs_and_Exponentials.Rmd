@@ -6,8 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[PineGreen,fill=PineGreen] (0,0) rectangle (18.2,0.2);
-\draw[PineGreen,fill=PineGreen] (6,1.8) rectangle (18.2,0.2);
+\draw[PineGreen,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[PineGreen,very thick] (5,1) -- (6,1);
+\draw[PineGreen,fill=PineGreen,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{Logs and Exponentials}}};
 \node at (3,1) {\Large{\textsc{Chapter 15}}};
 \end{tikzpicture}
@@ -289,7 +290,7 @@ The function $f(x)=\color{PineGreen}\log_a{\color{black}x}$, where $a>0$ and $x>
 
 A numerical example will help build an understanding of how to interpret a logarithm:
 
-\vspace{-0.7cm}
+\vspace{-0.8cm}
 
 \begin{align*}
     \text{Since }\hspace{1.2cm} 8&=\color{PineGreen}2^{\color{black}3}\\[0.5em]
@@ -302,10 +303,11 @@ Hence $\log_2{8}$ ("log to the base 2 of 8") can be read as: "2 raised to *which
 
 \begin{multicols}{2}
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.8cm]
 
 Evaluate $\log_3{81}$.
 
+\vspace{-0.1cm}
 \tcblower
 
 $\log_3{81}=4\color{PineGreen}\longleftarrow\text{Since }3^4=81$
@@ -314,30 +316,33 @@ $\log_3{81}=4\color{PineGreen}\longleftarrow\text{Since }3^4=81$
 
 
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.8cm]
 
 Evaluate $\log_7{49}$.
 
+\vspace{-0.1cm}
 \tcblower
 
 $\log_7{49}=2\color{PineGreen}\longleftarrow\text{Since }7^2=49$
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.8cm]
 
 Evaluate $\log_5{1}$.
 
+\vspace{-0.1cm}
 \tcblower
 
 $\log_5{1}=0\color{PineGreen}\longleftarrow\text{Since }5^0=1$
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.9cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,width=8.5cm,height=2.8cm]
 
 Evaluate $\log_3{\frac{1}{9}}$.
 
+\vspace{-0.1cm}
 \tcblower
 
 $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{1}{3^2}=\frac{1}{9}$
@@ -348,11 +353,11 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \end{multicols}
 
-\vspace{-0.8cm}
+\vspace{-1.2cm}
 
 ### Exercise 15.2 {-}
 
-\vspace{-0.5cm}
+\vspace{-0.6cm}
 
 \begin{enumerate}
     \item State the value each of the following logarithms:
@@ -378,29 +383,36 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
             \item $\log_5{25}$
             \item $\log_5{5}$
         \end{multicols}
-    \end{enumerate}
-    \item By considering negative and fractional indices as well as integers, evaluate each:
-    \begin{enumerate}
         \begin{multicols}{5}
             \item $\log_2{32}$
             \item $\log_{4}{4}$
-            \item $\log_8{1}$
-            \item $\log_9{3}$
-            \item $\log_{49}{7}$
-        \end{multicols}
-        \begin{multicols}{5}
-            \item $\log_9{9}$
-            \item $\log_9{1}$
-            \item $\log_{2}{2}$
             \item $\log_2{1}$
-            \item $\log_2{\frac{1}{2}}$
+            \item $\log_6{216}$
+            \item $\log_{2}{128}$
+        \end{multicols}
+    \end{enumerate}
+    \item By considering negative and fractional indices, evaluate each:
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\log_9{3}$
+            \item $\log_{64}{8}$
+            \item $\log_{25}{5}$
+            \item $\log_100{10}$
+            \item $\log_{8}{2}$
         \end{multicols}
         \begin{multicols}{5}
-            \item $\log_3{\frac{1}{9}}$
-            \item $\log_{25}{5}$
-            \item $\log_{2}{\frac{1}{8}}$
-            \item $\log_4{\frac{1}{16}}$
-            \item $\log_8{4}$
+            \item $\log_{27}{3}$
+            \item $\log_4{2}$
+            \item $\log_{16}{2}$
+            \item $\log_{81}{3}$
+            \item $\log_{11}{121}$
+        \end{multicols}
+        \begin{multicols}{5}
+            \item $\log_5{\frac{1}{5}}$
+            \item $\log_3{\frac{1}{3}}$
+            \item $\log_{6}{\frac{1}{36}}$
+            \item $\log_2{\frac{1}{8}}$
+            \item $\log_9{\frac{1}{3}}$
         \end{multicols}
     \end{enumerate}
     \item Calculate the value of each to three significant figures: \faCalculator
@@ -568,7 +580,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_7{3}+\log_7{6}-\log_{7}{9}$
-            \item $4\log_{6}{2}-\log_{6}{2}$
+            \item $\frac{1}{2}\log_{6}{9}-\log_{6}{2}$
             \item $2\log_{8}{9}-3\log_2{3}$
         \end{multicols}
     \end{enumerate}
@@ -576,7 +588,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_a{3}+2\log_a{4}$
-            \item $3\log_{a}{2}-\log_{a}{4}$
+            \item $\frac{1}{3}\log_{a}{8}-\log_{a}{4}$
             \item $\log_{a}{20}-\log_a{4}+\log_a{\frac{1}{15}}$
         \end{multicols}
     \end{enumerate}
@@ -590,7 +602,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 To solve a *log equation*, it is typically desirable to have each side within a logarithm of the *same base*:
 
-\vspace{-0.2cm}
+\vspace{-0.4cm}
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=11cm,colframe=red!70!black,height=2.2cm]
@@ -604,11 +616,11 @@ To solve a *log equation*, it is typically desirable to have each side within a 
 \end{tcolorbox}
 \end{center}
 
-\vspace{-0.3cm}
+\vspace{-0.5cm}
 
 "Cancelling the logs", mathematically, is raising each side to an exponential base $a$, using $a^{\log_a{b}}=b$.
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=5.6cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=5.5cm]
 
 Solve the equation $\log_3{x}+\log_3{5}=\log_3{20}$.
 
@@ -627,20 +639,19 @@ x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
 
 To express any term as a logarithm, multiply it by $\log_a{a}$ (which equals 1) and then apply the power law:
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=7cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6cm]
 
-Solve the equation $\log_2{40}-\log_2{x}=3$.
+Solve the equation $\log_3{x}-\log_3{2}=2$.
 
 \tcblower
 
 \vspace{-0.5cm}
 
 \begin{align*}
-\log_2{40}-\log_2{x}&=3\color{PineGreen}\log_2{2} &&\color{PineGreen}\longleftarrow\text{Multiply the constant by}\log_22\\[0.5em]
-\log_2{\left(\frac{40}{x}\right)}&=\log_2{2^3} && \color{PineGreen}\longleftarrow\text{Apply quotient and power laws}\\[0.5em]
-\frac{40}{x}&=8 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_2\text{ from both sides}\\[0.5em]
-40&=8x && \color{PineGreen}\longleftarrow\text{Multiply both sides by }x\\[0.5em]
-5&=x && \color{PineGreen}\longleftarrow\text{Solve}
+\log_3{x}-\log_3{2}&=2\color{PineGreen}\log_3{3} &&\color{PineGreen}\longleftarrow\text{Multiply the constant by}\log_33\\[0.5em]
+\log_3{\left(\frac{x}{2}\right)}&=\log_3{3^2} && \color{PineGreen}\longleftarrow\text{Apply quotient and power laws}\\[0.5em]
+\frac{x}{2}&=9 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ from both sides}\\[0.5em]
+x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to solve}
 \end{align*}
 
 \end{tcolorbox}
@@ -649,38 +660,52 @@ Solve the equation $\log_2{40}-\log_2{x}=3$.
 
 ### Exercise 15.4 {-}
 
-\vspace{-0.3cm}
+\vspace{-0.4cm}
 
 \begin{enumerate}
     \item Solve:
-    \begin{enumerate}
-        \begin{multicols}{3}
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
+    \vspace{-0.2cm}
+    \begin{enumerate} 
+        \begin{multicols}{2}
+            \item $\log_{9}{(5x)}=\log_{9}{40}$
+            \item $\log_{7}{(2x-3)}=\log_{7}{9}$
         \end{multicols}
-        \begin{multicols}{3}
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
+        \begin{multicols}{2}
+            \item $\log_{5}{3}+\log_{5}{x}=\log_{5}{18}$
+            \item $\log_{7}{2x}+\log_{7}{4}=\log_{7}{56}$
+        \end{multicols}
+        \begin{multicols}{2}    
+            \item $\log_{6}{5}+\log_{5}{(x-1)}=\log_{6}{30}$
+            \item $\log_{a}{x}-2\log_{a}{3}=\log_{a}{18}$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{8}{2x}-\log_{8}{3}=\log_{8}{1}$
+            \item $\log_{3}{8}-\log_{3}{x}=\log_{3}{2}$
         \end{multicols}
     \end{enumerate}
     \item Solve each:
+    \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{6}{x}+\log_{6}{12}=2$
+            \item $\log_{4}{x}+\log_{4}{8}=2$
+            \item $\log_{2}{10}+\log_{2}{x}=4$
         \end{multicols}
         \begin{multicols}{3}
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
-            \item $\log_{}{}+\log{}{}=\log{}{}$
+            \item $\log_{5}{x}-\log_{5}{2}=1$
+            \item $\log_{3}{x}-2\log_{3}{2}=2$
+            \item $\log_{4}{2}+3\log_{4}{x}=2$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
 
-\newpage
+\pagebreak
+
+## Log Equations and Extraneous Solutions
+
+\vspace{-0.5cm}
+
+Some algebraic manipulations used to solve an equation may produce solutions do not, in fact, satisfy the original equation. These **extraneous solutions** can arise when solving log equations.
 
 Since $\log_a{x}$ is only defined for $a>0$ and $x>0$, any solutions which contradict this must be discarded.
 
@@ -693,7 +718,7 @@ Solve the equation $\log_3{x}+\log_3{(x-2)}=\log_3{8}$.
 \vspace{-0.5cm}
 
 \begin{align*}
-\log_3{x}+\log_3{(x-2)}&=\log_3{8}&&\color{PineGreen}\longleftarrow\text{Note }x>0\text{ and }x-2>0\text{ therefore }x>2\\[0.5em]
+\log_3{x}+\log_3{(x-2)}&=\log_3{8}&&\color{PineGreen}\longleftarrow\text{Note }x>0\text{ and }(x-2)>0\text{ therefore }x>2\\[0.5em]
 \log_3{\left(x(x-2)\right)}&=\log_3{8} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
 x^2-2x&=8 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ and expand}\\[0.5em]
 x^2-2x-8&=0 && \color{PineGreen}\longleftarrow\text{Equate quadratic equation to zero}\\[0.5em]
@@ -704,7 +729,11 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \end{tcolorbox}
 
-\begin{enumerate}[resume]
+All solutions for $x$ must be checked carefully to verify that they satisfy the *original* log equation.
+
+### Exercise 15.5 {-}
+
+\begin{enumerate}
     \item
 \end{enumerate}
 
@@ -714,7 +743,7 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \newpage
 
-### Exercise 15.5 {-}
+### Exercise 15.6 {-}
 
 \newpage
 
@@ -722,7 +751,7 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \newpage
 
-### Exercise 15.6 {-}
+### Exercise 15.7 {-}
 
 \newpage
 
@@ -730,7 +759,7 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \newpage
 
-### Exercise 15.6 {-}
+### Exercise 15.8 {-}
 
 \newpage
 
@@ -738,7 +767,7 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \newpage
 
-### Exercise 15.7 {-}
+### Exercise 15.9 {-}
 
 \newpage
 

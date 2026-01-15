@@ -6,9 +6,44 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{Sets and Functions}}};
-\node at (4,1) {\Large{\textsc{Chapter 5}}};
+\draw[purple,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[purple,very thick] (5,1) -- (6,1);
+\draw[purple,fill=purple,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Sets and Functions}}};
+\node at (3,1) {\Large{\textsc{Chapter 5}}};
 \end{tikzpicture}
 \end{center}
+
+## The Domain of a Function
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Range of a Function
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Composite Functions
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Inverse Functions
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Review Exercise {-}

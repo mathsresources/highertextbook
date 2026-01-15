@@ -6,9 +6,77 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{The Straight Line}}};
-\node at (4,1) {\Large{\textsc{Chapter 1}}};
+\draw[RoyalPurple,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[RoyalPurple,very thick] (5,1) -- (6,1);
+\draw[RoyalPurple,fill=RoyalPurple,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{The Straight Line}}};
+\node at (3,1) {\Large{\textsc{Chapter 1}}};
 \end{tikzpicture}
 \end{center}
+
+
+## Straight Line Equations
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Parallel and Perpendicular Lines
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Angle a Line Makes with the $x$-Axis
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Collinearity
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Midpoint
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Altitudes of a Triangle
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Medians of a Triangle
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Perpendicular Bisectors
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Review Exercise {-}

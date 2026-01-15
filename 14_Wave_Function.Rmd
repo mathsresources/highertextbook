@@ -7,8 +7,9 @@
 \begin{center}
     \begin{tikzpicture}
         \draw[white] (10,5) circle (0.01);
-        \draw[Mulberry,fill=Mulberry] (0,0) rectangle (18.2,0.2);
-        \draw[Mulberry,fill=Mulberry] (6,1.8) rectangle (18.2,0.2);
+        \draw[Mulberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+        \draw[Mulberry,very thick] (5,1) -- (6,1);
+        \draw[Mulberry,fill=Mulberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
         \node[white] at (12.1,1) {\Huge{\textsc{The Wave Function}}};
         \node at (3,1) {\Large{\textsc{Chapter 14}}};
     \end{tikzpicture}

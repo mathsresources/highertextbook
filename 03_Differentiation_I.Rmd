@@ -6,9 +6,60 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{Differentiation I}}};
-\node at (4,1) {\Large{\textsc{Chapter 3}}};
+\draw[NavyBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[NavyBlue,very thick] (5,1) -- (6,1);
+\draw[NavyBlue,fill=NavyBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Differentiation I}}};
+\node at (3,1) {\Large{\textsc{Chapter 3}}};
 \end{tikzpicture}
 \end{center}
+
+## The Derivative of $ax^n$
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Differentiable Form
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Leibniz Notation
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Gradient of a Tangent to a Curve
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Equation of a Tangent to a Curve
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Rate of Change of a Function
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Review Exercise {-}

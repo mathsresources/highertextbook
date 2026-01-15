@@ -1,0 +1,142 @@
+\chapterfont{\color{white}}
+
+# Answers {-}
+
+\vspace{-10.5cm}
+
+\begin{center}
+\begin{tikzpicture}
+\draw[white] (10,5) circle (0.01);
+\draw[white,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[black!60,fill=black!60,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Answers}}};
+\end{tikzpicture}
+\end{center}
+
+### Chapter 1 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 2 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 3 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 4 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 5 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 6 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 7 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 8 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 9 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 10 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 11 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 12 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 13 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 14 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 15 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 16 Answers {-}
+
+\newpage
+
+
+
+\newpage

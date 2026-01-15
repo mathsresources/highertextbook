@@ -6,9 +6,53 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[DarkOrchid,fill=DarkOrchid] (0,0) rectangle (18.2,0.2);
-\draw[DarkOrchid,fill=DarkOrchid] (8,1.8) rectangle (18.2,0.2);
-\node[white] at (13.1,1) {\Huge{\textsc{Quadratic Theory}}};
-\node at (4,1) {\Large{\textsc{Chapter 4}}};
+\draw[WildStrawberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[WildStrawberry,very thick] (5,1) -- (6,1);
+\draw[WildStrawberry,fill=WildStrawberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\node[white] at (12.1,1) {\Huge{\textsc{Quadratic Theory}}};
+\node at (3,1) {\Large{\textsc{Chapter 4}}};
 \end{tikzpicture}
 \end{center}
+
+## Solving Quadratic Inequations
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Completing the Square
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Disciminant
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## The Intersection of a Line and a Curve
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Tangency
+
+\newpage
+
+### Exercise {-}
+
+\newpage
+
+## Review Exercise {-}
+
