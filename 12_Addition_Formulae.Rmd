@@ -70,7 +70,7 @@ They can be expanded into four formulae, covering addition and subtraction for e
 
 They can be used to expand the usage of known \textit{exact values} (0\degree,30\degree,45\degree,60\degree,90\degree,180\degree,270\degree,360\degree).
 
-\begin{tcolorbox}[title=Example 12.1.1,colback=red!1!blue!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example 12.1.1,colback=Mulberry!1, colframe=Mulberry]
 
 Evaluate $\sin{105}$.
 
@@ -79,16 +79,16 @@ Evaluate $\sin{105}$.
 \vspace{-0.3cm}
 
 \begin{align*}
-   \sin{105\degree}=\;&\sin{(60\degree+45\degree)}&&\color{Fuchsia}\longleftarrow \text{Relate to known exact values}\\[0.5em]
-    =\;&\sin{60\degree}\cos{45\degree}+\cos{60\degree}\sin{45\degree}&&\color{Fuchsia}\longleftarrow \text{Expand using formula}\\[0.5em]
-    =\;&\frac{\sqrt{3}}{2}\times\frac{1}{\sqrt{2}}+\frac{1}{2}\times\frac{1}{\sqrt{2}}&&\color{Fuchsia}\longleftarrow \text{Substitute exact values}\\[0.5em]
+   \sin{105\degree}=\;&\sin{(60\degree+45\degree)}&&\color{Mulberry}\longleftarrow \text{Relate to known exact values}\\[0.5em]
+    =\;&\sin{60\degree}\cos{45\degree}+\cos{60\degree}\sin{45\degree}&&\color{Mulberry}\longleftarrow \text{Expand using formula}\\[0.5em]
+    =\;&\frac{\sqrt{3}}{2}\times\frac{1}{\sqrt{2}}+\frac{1}{2}\times\frac{1}{\sqrt{2}}&&\color{Mulberry}\longleftarrow \text{Substitute exact values}\\[0.5em]
     =\;&\frac{\sqrt{3}}{2\sqrt{2}}+\frac{1}{2\sqrt{2}}&&\\[0.5em]
-    =\;&\frac{\sqrt{3}+1}{2\sqrt{2}}&&\color{Fuchsia}\longleftarrow \text{Simplify}
+    =\;&\frac{\sqrt{3}+1}{2\sqrt{2}}&&\color{Mulberry}\longleftarrow \text{Simplify}
 \end{align*}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Example 12.1.2,colback=red!1!blue!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example 12.1.2,colback=Mulberry!1, colframe=Mulberry]
 
 Evaluate $\sin{40\degree}\cos{10}-\cos{40\degree}\sin{10\degree}$.
 
@@ -97,9 +97,9 @@ Evaluate $\sin{40\degree}\cos{10}-\cos{40\degree}\sin{10\degree}$.
 \vspace{-0.3cm}
 
 \begin{align*}
-    \sin{40\degree}\cos{10}-\cos{40\degree}\sin{10\degree}=\;&\sin{(40\degree-10\degree)}&&\color{Fuchsia}\longleftarrow \text{Recognise expanded form of }\sin{(A-B)}\\[0.5em]
+    \sin{40\degree}\cos{10}-\cos{40\degree}\sin{10\degree}=\;&\sin{(40\degree-10\degree)}&&\color{Mulberry}\longleftarrow \text{Recognise expanded form of }\sin{(A-B)}\\[0.5em]
     =\;&\sin{30\degree}&&\\[0.5em]
-    =\;&\frac{1}{2}&&\color{Fuchsia}\longleftarrow \text{State exact value}
+    =\;&\frac{1}{2}&&\color{Mulberry}\longleftarrow \text{State exact value}
 \end{align*}
 
 \end{tcolorbox}
@@ -120,7 +120,7 @@ Given a right-angled triangle containing an angle $x$, values of $\sin{x}$, $\co
         \node[right] at (5,1.5) {$3$ cm};
         \node at (1,0.3) {$x$};
         \draw (0.7,0) arc (0:31:0.7);
-        \node[left] at (2.7,1.8) {\color{Fuchsia}By Pythagoras: $\sqrt{5^2+3^2}=$\color{black}$\sqrt{34}$};
+        \node[left] at (2.7,1.8) {\color{Mulberry}By Pythagoras: $\sqrt{5^2+3^2}=$\color{black}$\sqrt{34}$};
         \node at (10,1.5) {
         \begin{minipage}{5cm}
             \begin{align*}
@@ -135,7 +135,7 @@ Given a right-angled triangle containing an angle $x$, values of $\sin{x}$, $\co
 
 These skills are often required in combination with applications of the addition formulae.
 
-\begin{tcolorbox}[title=Example 12.2.1,colback=red!1!blue!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example 12.2.1,colback=Mulberry!1, colframe=Mulberry]
 
 The diagram below shows angles $p$ and $q$ contained within right-angled. Find $\sin{(p+q)}$.
 
@@ -160,19 +160,19 @@ The diagram below shows angles $p$ and $q$ contained within right-angled. Find $
 \vspace{-0.3cm}
 
 \begin{align*}
-    \text{Opposite side for }p&=2&&\color{Fuchsia}\longleftarrow \text{By Pythagoras: }\sqrt{\sqrt{20}^2-4^2}=\sqrt{20-16}=\sqrt{4}=2\\[0.5em]
-    \text{Hypotenuse for }q&=\sqrt{40}&&\color{Fuchsia}\longleftarrow \text{By Pythagoras: }\sqrt{6^2+2^2}=\sqrt{36+4}=\sqrt{40}\\[0.5em]
+    \text{Opposite side for }p&=2&&\color{Mulberry}\longleftarrow \text{By Pythagoras: }\sqrt{\sqrt{20}^2-4^2}=\sqrt{20-16}=\sqrt{4}=2\\[0.5em]
+    \text{Hypotenuse for }q&=\sqrt{40}&&\color{Mulberry}\longleftarrow \text{By Pythagoras: }\sqrt{6^2+2^2}=\sqrt{36+4}=\sqrt{40}\\[0.5em]
 \end{align*}
 
 \centering
-\textcolor{Fuchsia}{Once all side length have been calculated, values of $\sin{p},\cos{p},\sin{q},\cos{q}$ can be obtained.}
+\textcolor{Mulberry}{Once all side length have been calculated, values of $\sin{p},\cos{p},\sin{q},\cos{q}$ can be obtained.}
 
 \begin{align*}
-    \sin{(p+q)}&=\sin{p}\cos{q}+\cos{p}\sin{q}&&\color{Fuchsia}\longleftarrow \text{Expand addition formula}\\[0.5em]
-    &=\frac{2}{\sqrt{20}}\times\frac{6}{\sqrt{40}}+\frac{4}{\sqrt{20}}\times\frac{2}{\sqrt{40}}&&\color{Fuchsia}\longleftarrow \text{Substitute using SOHCAHTOA}\\[0.5em]
+    \sin{(p+q)}&=\sin{p}\cos{q}+\cos{p}\sin{q}&&\color{Mulberry}\longleftarrow \text{Expand addition formula}\\[0.5em]
+    &=\frac{2}{\sqrt{20}}\times\frac{6}{\sqrt{40}}+\frac{4}{\sqrt{20}}\times\frac{2}{\sqrt{40}}&&\color{Mulberry}\longleftarrow \text{Substitute using SOHCAHTOA}\\[0.5em]
     &=\frac{12}{\sqrt{800}}+\frac{8}{\sqrt{800}}&&\\[0.5em]
     &=\frac{20}{20\sqrt{2}}&&\\[0.5em]
-    &=\frac{1}{\sqrt{2}}&&\color{Fuchsia}\longleftarrow \text{Simplify (and rationalise if required)}\\[0.5em]
+    &=\frac{1}{\sqrt{2}}&&\color{Mulberry}\longleftarrow \text{Simplify (and rationalise if required)}\\[0.5em]
 \end{align*}
 
 \end{tcolorbox}
@@ -186,8 +186,8 @@ Other expansions such as $\cos{(p+q)}$ can be calculated similarly, and note tha
 Expansions for $\sin{2x}$ and $\cos{2x}$ in terms of $\sin{x}$ and $\cos{x}$ can be obtained from the addition formulae:
 
 \begin{align*}
-    \sin{2x}&\color{Fuchsia}=\sin{(x+x)}&\cos{2x}&\color{Fuchsia}=\cos{(x+x)}\\
-    &\color{Fuchsia}=\sin{x}\cos{x}+\cos{x}\sin{x}&&\color{Fuchsia}=\cos{x}\cos{x}-\sin{x}\sin{x}\\
+    \sin{2x}&\color{Mulberry}=\sin{(x+x)}&\cos{2x}&\color{Mulberry}=\cos{(x+x)}\\
+    &\color{Mulberry}=\sin{x}\cos{x}+\cos{x}\sin{x}&&\color{Mulberry}=\cos{x}\cos{x}-\sin{x}\sin{x}\\
     &=2\sin{x}\cos{x}&&=\cos^2{x}-\sin^2{x}\\
     &&&=2\cos^2{x}-1\\
     &&&=1-2\sin^2{x}\\
@@ -196,7 +196,7 @@ Expansions for $\sin{2x}$ and $\cos{2x}$ in terms of $\sin{x}$ and $\cos{x}$ can
 The other arrangements of the $\cos{2x}$ expansion come from the trigonometric identify $\sin^2{x}+\cos^2{x}=1$.
 These expansions are provided in the formula sheet. Care is needed to determine \textit{whether} to expand a \textit{double angle} trig term and, in the case of $\cos{2x}$, \textit{which} expansion to use.
 
-\begin{tcolorbox}[title=Example 12.3.1,colback=red!1!blue!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example 12.3.1,colback=Mulberry!1, colframe=Mulberry]
 
 The diagram below shows angle $p$ contained within a right-angled triangle. Find $\sin{(2p)}$.
 
@@ -218,7 +218,7 @@ The diagram below shows angle $p$ contained within a right-angled triangle. Find
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Example 12.3.2,colback=red!1!blue!1!, colframe=DarkOrchid]
+\begin{tcolorbox}[title=Example 12.3.2,colback=Mulberry!1, colframe=Mulberry]
 
 Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$. 
 

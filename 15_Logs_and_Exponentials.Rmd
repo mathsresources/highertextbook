@@ -631,7 +631,7 @@ Solve the equation $\log_3{x}+\log_3{5}=\log_3{20}$.
 \begin{align*}
 \log_3{x}+\log_3{5}&=\log_3{20} &&\\[0.5em]
 \log_3{5x}&=\log_3{20} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
-5x&=20 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ from both sides}\\[0.5em]
+5x&=20 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ from both sides}\\[0.5em]
 x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
 \end{align*}
 
@@ -650,7 +650,7 @@ Solve the equation $\log_3{x}-\log_3{2}=2$.
 \begin{align*}
 \log_3{x}-\log_3{2}&=2\color{PineGreen}\log_3{3} &&\color{PineGreen}\longleftarrow\text{Multiply the constant by}\log_33\\[0.5em]
 \log_3{\left(\frac{x}{2}\right)}&=\log_3{3^2} && \color{PineGreen}\longleftarrow\text{Apply quotient and power laws}\\[0.5em]
-\frac{x}{2}&=9 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ from both sides}\\[0.5em]
+\frac{x}{2}&=9 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ from both sides}\\[0.5em]
 x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to solve}
 \end{align*}
 
@@ -666,10 +666,6 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
     \item Solve:
     \vspace{-0.2cm}
     \begin{enumerate} 
-        \begin{multicols}{2}
-            \item $\log_{9}{(5x)}=\log_{9}{40}$
-            \item $\log_{7}{(2x-3)}=\log_{7}{9}$
-        \end{multicols}
         \begin{multicols}{2}
             \item $\log_{5}{3}+\log_{5}{x}=\log_{5}{18}$
             \item $\log_{7}{2x}+\log_{7}{4}=\log_{7}{56}$
@@ -696,6 +692,11 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
             \item $\log_{3}{x}-2\log_{3}{2}=2$
             \item $\log_{4}{2}+3\log_{4}{x}=2$
         \end{multicols}
+        \begin{multicols}{3}
+            \item $\log_{2}{5}+3=\log_{2}{(x+2)}$
+            \item $\log_{3}{(2x)}-1=\log_{3}{8}$
+            \item $2-\log_{6}{(x-3)}=2\log_{6}{3}$
+        \end{multicols}
     \end{enumerate}
 \end{enumerate}
 
@@ -709,18 +710,16 @@ Some algebraic manipulations used to solve an equation may produce solutions do 
 
 Since $\log_a{x}$ is only defined for $a>0$ and $x>0$, any solutions which contradict this must be discarded.
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=8cm]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=8.6cm]
 
 Solve the equation $\log_3{x}+\log_3{(x-2)}=\log_3{8}$.
 
 \tcblower
 
-\vspace{-0.5cm}
-
 \begin{align*}
 \log_3{x}+\log_3{(x-2)}&=\log_3{8}&&\color{PineGreen}\longleftarrow\text{Note }x>0\text{ and }(x-2)>0\text{ therefore }x>2\\[0.5em]
 \log_3{\left(x(x-2)\right)}&=\log_3{8} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
-x^2-2x&=8 && \color{PineGreen}\longleftarrow\text{"Cancel" }\log_3\text{ and expand}\\[0.5em]
+x^2-2x&=8 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ and expand}\\[0.5em]
 x^2-2x-8&=0 && \color{PineGreen}\longleftarrow\text{Equate quadratic equation to zero}\\[0.5em]
 (x+2)(x-4)&=0 && \color{PineGreen}\longleftarrow\text{Factorise}\\[0.5em]
 x+2=0,x-4&=0 &&\\[0.5em]
@@ -731,15 +730,146 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 All solutions for $x$ must be checked carefully to verify that they satisfy the *original* log equation.
 
+\vspace{-0.5cm}
+
 ### Exercise 15.5 {-}
 
+\vspace{-0.4cm}
+
 \begin{enumerate}
-    \item
+    \item Solve for $x$::
+    \begin{enumerate} 
+        \begin{multicols}{2}
+            \item $\log_{a}{x}+\log_{a}{(x+1)}=\log_{a}{6}$
+            \item $\log_{4}{x}+\log_{4}{(x-3)}=\log_{4}{10}$
+        \end{multicols}
+        \begin{multicols}{2}    
+            \item $\log_{6}{(x-1)}+\log_{6}{x}=1$
+            \item $\log_{3}{(x+3)}-\log_{3}{x}=2$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{5}{(x+2)}+\log_{5}{(x-3)}=\log_{5}{6}$
+            \item $\log_{a}{3}=\log_{a}{(x+5)}+\log_{a}{2x}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve each:
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\log_{5}{x^2}+\log_{5}{4}=\log_{5}{36}$
+            \item $\log_{6}{2}+\log_{6}{x^2}=\log_{6}{50}$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{a}{7}+\log_{a}{x^2}=\log_{a}{14}$
+            \item $2\log_{a}{x}+\log_{a}{3}=\log_{a}{48}$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{9}{4}+2\log_{9}{x}=2\log_{9}{8}$
+            \item $2\log_{7}{3x}+\log_{7}{2}=\log_{7}{18}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve each for $a$:
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\log_{a}{3}+\log_{a}{2}=1$
+            \item $\log_{a}{18}-\log_{a}{2}=1$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{a}{4}+\log_{a}{2}=3$
+            \item $\log_{a}{12}-\log_{a}{4}=\frac{1}{2}$
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $\log_{a}{16}+\log_{a}{4}=2$
+            \item $\log_{a}{50}-\log_{a}{2}=2$
+        \end{multicols}
+    \end{enumerate}
 \end{enumerate}
 
-\newpage
+\pagebreak
 
 ## Graphs of Logarithmic Functions
+
+Given a function $f$, defined on a suitable domain such that an inverse function exists, the graph of its inverse function $y=f^{-1}(x)$ can be obtained by \textit{reflecting the graph of} $y=f(x)$ \textit{in the line} $y=x$.
+
+Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineGreen}{\textbf{logarithmic function}} $f^{-1}(x)=\color{PineGreen}\log_a{x}$, knowledge of exponential graphs allows log graphs to be sketched:
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        \draw[-stealth] (-4,0) -- (5,0) node[below] {$x$};
+        \draw[-stealth] (0,-4) -- (0,4) node[left] {$y$};
+        \draw[dashed,thin] (-2.5,-2.5) -- (3.5,3.5) node[above right] {$y=x$};
+        \draw[smooth,thick,domain=-4:3] plot (\x,{1.5^(\x)}) node[above left] {$y=a^x$};
+        \draw[PineGreen,smooth,thick,domain=0.2:3.36] plot (\x,{(ln(\x))/ln(1.5)}) node[below right] {$y=\log_ax$};
+        \draw[fill] (0,1) circle (0.07) node[above left] {$1$};
+        \draw[PineGreen,fill] (1,0) circle (0.07) node[below right] {$1$};
+        \draw[fill] (1,1.5) circle (0.07) node[above,xshift=-0.5em] {$(1,a)$};
+        \draw[PineGreen,fill] (1.5,1) circle (0.07) node[right] {$(a,1)$};
+        \node[below] at (11,4.5) {
+        \begin{minipage}{7.5cm}
+        The graph of $y=a^x$ passes through...
+        \vspace{0.3cm}
+        \begin{center}
+        $(0,1)$ and $(1,a)$
+        \end{center}
+        \vspace{0.2cm}
+        ...and has a \textbf{horizontal} asymptote of $x=0$.\\[0.1em]
+        \end{minipage}
+        };
+        \node[below] at (11,1) {
+        \begin{minipage}{7.5cm}
+        The graph of \textcolor{PineGreen}{$y=\log_ax$} passes through...
+        \begin{center}
+        \textcolor{PineGreen}{$(1,0)$} and \textcolor{PineGreen}{$(a,1)$}.
+        \end{center}
+        \vspace{-0.1cm}
+        ..and has a \textcolor{PineGreen}{\textbf{vertical}} asymptote of \textcolor{PineGreen}{$y=0$}.
+        \end{minipage}
+        };
+        \node[below] at (11,-2.5) {
+        \begin{minipage}{7.5cm}
+        In general, if $y=f(x)$ passes through $(x,y)$ then $y=f^{-1}(x)$ passes through $(y,x)$.
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+Knowledge of the graph of $y=\log_a{x}$ may be combined with and understanding of graph transformations.
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+Sketch the graph of $y=\log_3{(x-1)}+2$.
+
+\tcblower
+
+\textcolor{PineGreen}{Consider $y=\log_3{(x-1)}+2$ as a $f(x-1)+3$ transformation of $y=\log_3{x}$:}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        \draw[-stealth] (-1,0) -- (9,0) node[below] {$x$};
+        \draw[-stealth] (0,-2.2) -- (0,4) node[left] {$y$};
+        \draw[smooth,thin,domain=0.1:3.5,black!50] plot (\x,{(ln(\x))/(ln(3))}) node[right] {$y=\log_3{x}$};
+        \draw[black!50,fill] (1,0) circle (0.05) node[above left] {$1$};
+        \draw[black!50,fill] (3,1) circle (0.05) node[above] {$(3,1)$};
+        \draw[smooth,thick,domain=0.04:3.5,xshift=1cm,yshift=2cm] plot (\x,{(ln(\x))/(ln(3))}) node[right] {$y=\log_3{(x-1)}+2$};
+        \draw[black,fill,xshift=-0.3cm] (2,2) circle (0.05) node[above] {$(2,2)$};
+        \draw[black,fill] (4,3) circle (0.05) node[above] {$(4,3)$};
+        \draw[dashed] (1,-2) -- (1,4);
+        \node[below right,PineGreen] at (9.5,3) {
+        \begin{minipage}{7.5cm}
+        $y=\log_3{x}$: \qquad  $(1,0)$ and $(3,1)$
+        
+        \vspace{0.7cm}
+        
+        $f(x-1)+2$ translates \textit{right 1} and \textit{up 2}
+        
+        \vspace{0.7cm}
+        
+        $y=\log_3{(x-1)}+3$: \qquad $(2,2)$ and $(4,4)$
+        \end{minipage}
+        };
+    \end{tikzpicture}
+\end{center}
+
+\end{tcolorbox}
 
 \newpage
 

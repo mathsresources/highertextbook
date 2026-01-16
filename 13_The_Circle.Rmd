@@ -6,9 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[RoyalPurple,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
-\draw[RoyalPurple,very thick] (5,1) -- (6,1);
-\draw[RoyalPurple,fill=RoyalPurple,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\draw[WildStrawberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[WildStrawberry,very thick] (5,1) -- (6,1);
+\draw[WildStrawberry,fill=WildStrawberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{The Circle}}};
 \node at (3,1) {\Large{\textsc{Chapter 13}}};
 \end{tikzpicture}

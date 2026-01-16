@@ -6,9 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[WildStrawberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
-\draw[WildStrawberry,very thick] (5,1) -- (6,1);
-\draw[WildStrawberry,fill=WildStrawberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\draw[PineGreen,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[PineGreen,very thick] (5,1) -- (6,1);
+\draw[PineGreen,fill=PineGreen,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{Polynomials}}};
 \node at (3,1) {\Large{\textsc{Chapter 10}}};
 \end{tikzpicture}
@@ -26,7 +26,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
         \begin{tikzpicture}
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Constant}};
-            \node at (0,2) {\textcolor{green!60!black!80!}{\textit{Degree 0}}};
+            \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 0}}};
             \node at (0,1.5) {e.g. $7$};
             \draw[domain=-1.3:1.3,smooth] plot (\x,0);
         \end{tikzpicture}
@@ -35,7 +35,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
         \begin{tikzpicture}
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Linear}};
-            \node at (0,2) {\textcolor{green!60!black!80!}{\textit{Degree 1}}};
+            \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 1}}};
             \node at (0,1.5) {e.g. $2x+4$};
             \draw[domain=-1.3:1.3,smooth] plot (\x,0.5*\x);
         \end{tikzpicture}
@@ -44,7 +44,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
         \begin{tikzpicture}
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Quadratic}};
-            \node at (0,2) {\textcolor{green!60!black!80!}{\textit{Degree 2}}};
+            \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 2}}};
             \node at (0,1.5) {e.g. $x^2-3x+1$};
             \draw[domain=-1.4:1.4,smooth] plot (\x,0.5*\x*\x-0.5);
         \end{tikzpicture}
@@ -53,7 +53,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
         \begin{tikzpicture}
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Cubic}};
-            \node at (0,2) {\textcolor{green!60!black!80!}{\textit{Degree 3}}};
+            \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 3}}};
             \node at (0,1.5) {e.g. $4x^3-2x$};
             \draw[domain=-1.1:1.6,smooth] plot (\x,\x*\x*\x-\x*\x-\x+0.5);
         \end{tikzpicture}
@@ -62,7 +62,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
         \begin{tikzpicture}
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Quartic}};
-            \node at (0,2) {\textcolor{green!60!black!80!}{\textit{Degree 4}}};
+            \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 4}}};
             \node at (0,1.5) {e.g. $x^4-3x^3+1$};
             \draw[domain=-1.1:1.4,smooth] plot (\x,\x*\x*\x*\x-\x*\x*\x-\x*\x+\x);
         \end{tikzpicture}
@@ -100,9 +100,9 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
         \node at (5.25,1.2) {$1$};
         \node at (-0.75,1.2) {$3$};
         \node at (0.75,-0.4) {$2$};
-        \draw[stealth-,green!60!black!80!] (6.5,1.2) -- (7.5,1.2) node[right] {\text{Coefficients of }$2x^3-7x^2+4x+1$};
-        \draw[stealth-,green!60!black!80!] (-0.9,0.9) -- (-1.5,0) node[below] {$x=3$};
-        \draw[-stealth,green!60!black!80!] (0.75,0.8) -- (0.75,0.2);
+        \draw[stealth-,PineGreen] (6.5,1.2) -- (7.5,1.2) node[right] {\text{Coefficients of }$2x^3-7x^2+4x+1$};
+        \draw[stealth-,PineGreen] (-0.9,0.9) -- (-1.5,0) node[below] {$x=3$};
+        \draw[-stealth,PineGreen] (0.75,0.8) -- (0.75,0.2);
     \end{tikzpicture}
 \end{center}
 
@@ -115,7 +115,7 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
 \begin{center}
     \begin{tikzpicture}
         \draw[white] (-2,1.6) -- (14,1.6);
-        \draw[green!10,fill=green!10] (1.9,-0.7) rectangle (2.6,1.5);
+        \draw[PineGreen!10,fill=PineGreen!10] (1.9,-0.7) rectangle (2.6,1.5);
         \draw (0,1.6) -- (0,0) -- (6,0);
         \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
         \node at (0.75,1.2) {$2$};
@@ -126,10 +126,10 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
         \node at (0.75,-0.4) {$2$};
         \node at (2.25,0.4) {$\phantom{-}6$};
         \node at (2.25,-0.4) {$-1$};
-        \node[right,green!60!black!80!] at (7.5,1.2) {\textit{Multiply diagonally by 3}};
-        \node[right,green!60!black!80!] at (7.5,0.4) {\textit{Add columns}};
-        \draw[green!60!black!80!] (-0.75,1.2) circle (0.3cm);
-        \draw[-stealth,green!60!black!80!] (1.1,-0.2) -- (1.7,0.2);
+        \node[right,PineGreen] at (7.5,1.2) {\textit{Multiply diagonally by 3}};
+        \node[right,PineGreen] at (7.5,0.4) {\textit{Add columns}};
+        \draw[PineGreen] (-0.75,1.2) circle (0.3cm);
+        \draw[-stealth,PineGreen] (1.1,-0.2) -- (1.7,0.2);
     \end{tikzpicture}
 \end{center}
 
@@ -142,7 +142,7 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
 \begin{center}
     \begin{tikzpicture}
         \draw[white] (-2,1.6) -- (14,1.6);
-        \draw[green!10,fill=green!10] (4.5,-0.8) rectangle (6,0);
+        \draw[PineGreen!10,fill=PineGreen!10] (4.5,-0.8) rectangle (6,0);
         \draw (0,1.6) -- (0,0) -- (6,0);
         \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
         \node at (0.75,1.2) {$2$};
@@ -157,11 +157,11 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
         \node at (3.75,-0.4) {$\phantom{-}1$};
         \node at (5.25,0.4) {$3$};
         \node at (5.25,-0.4) {$4$};
-        \draw[stealth-,green!60!black!80!] (6.5,-0.4) -- (7.5,-0.4) node[right] {$\therefore f(3)=4$};
+        \draw[stealth-,PineGreen] (6.5,-0.4) -- (7.5,-0.4) node[right] {$\therefore f(3)=4$};
     \end{tikzpicture}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.1.1,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.1.1,colback=PineGreen!2, colframe=PineGreen]
 
 Given $f(x)=x^4-4x^3+3x^2+9$, use synthetic division to evaluate $f(2)$.
 
@@ -222,7 +222,7 @@ Note that for $f(x)=x^3-5x^2+x-1$, $f(2)=(2)^3-5(2)^2+(2)-1=7$.
 \end{tcolorbox}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.2.1,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.2.1,colback=PineGreen!2, colframe=PineGreen]
 
 Find the remainder when $3x^3-x^2+5$ is divided by $(x-1)$.
 
@@ -245,9 +245,9 @@ Find the remainder when $3x^3-x^2+5$ is divided by $(x-1)$.
         \node at (3.75,-0.4) {$2$};
         \node at (5.25,0.4) {$2$};
         \node at (5.25,-0.4) {$7$};
-        \node[right,green!60!black!80!] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,green!60!black!80!] at (-2.5,1.2) {$(x-1)$};
-        \node[left,green!60!black!80!] at (-2.5,0.4) {$\rightarrow f(1)$};
+        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
+        \node[left,PineGreen] at (-2.5,1.2) {$(x-1)$};
+        \node[left,PineGreen] at (-2.5,0.4) {$\rightarrow f(1)$};
     \end{tikzpicture}
 \end{center}
 
@@ -259,7 +259,7 @@ The \textit{quotient}, $Q(x)$, can be determined from the values to the left of 
 
 $$3x^3-x^2+5=(x-1)(3x^2+2x+2)+7$$
 
-\begin{tcolorbox}[title=Example 10.2.2,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.2.2,colback=PineGreen!2, colframe=PineGreen]
 
 Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(x)$ is divided by $(x+1)$, and hence express $f(x)$ in the form $(x+1)Q(x)+r$ where $Q(x)$ is a quadratic.
 
@@ -282,8 +282,8 @@ Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(
         \node at (3.75,-0.4) {$-6$};
         \node at (5.25,0.4) {$\phantom{-}6$};
         \node at (5.25,-0.4) {$-1$};
-        \node[right,green!60!black!80!] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,green!60!black!80!] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
+        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
+        \node[left,PineGreen] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
     \end{tikzpicture}
 \end{center}
 
@@ -317,13 +317,13 @@ Given a linear factor, synthetic division allows a cubic expression $f(x)$ to be
 \vspace{-0.1cm}
 \begin{align*}
     f(x)=&\text{ }(\textit{cubic})\\
-    \qquad \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{quadratic})&&\textcolor{green!60!black!80!}{\longleftarrow\textit{ Using synthetic division}}\\
+    \qquad \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{quadratic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
     =&\text{ }(\textit{linear})(\textit{linear})(\textit{linear})
 \end{align*}
 
 \vspace{-0.3cm}
 
-\begin{tcolorbox}[title=Example 10.3.1,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.3.1,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x+4)$ is a factor of $x^3-x^2-14x+24$, and hence factorise it fully.
 
@@ -346,12 +346,12 @@ Show that $(x+4)$ is a factor of $x^3-x^2-14x+24$, and hence factorise it fully.
         \node at (3.75,-0.4) {$\phantom{-}6$};
         \node at (5.25,0.4) {$-24$};
         \node at (5.25,-0.4) {$\phantom{-}0$};
-        \node[right,green!60!black!80!] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,green!60!black!80!] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
+        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
+        \node[left,PineGreen] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
     \end{tikzpicture}
 \end{center}
 \centering
-Remainder$=0\therefore (x+4)$ is a factor. \textcolor{green!60!black!80!}{$\longleftarrow$ \textit{``Show that..''}}
+Remainder$=0\therefore (x+4)$ is a factor. \textcolor{PineGreen}{$\longleftarrow$ \textit{``Show that..''}}
 
 \vspace{-0.3cm}
 \begin{align*}
@@ -364,7 +364,7 @@ Remainder$=0\therefore (x+4)$ is a factor. \textcolor{green!60!black!80!}{$\long
 
 For some cubic expressions, a resulting quadratic quotient may not be able to be factorised.
 
-\begin{tcolorbox}[title=Example 10.3.2,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.3.2,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $2x^3-x^2+x-14$, and hence factorise it fully.
 
@@ -390,7 +390,7 @@ Show that $(x-2)$ is a factor of $2x^3-x^2+x-14$, and hence factorise it fully.
     \end{tikzpicture}
 \end{center}
 \centering
-\textcolor{green!60!black!80!}{\textit{``Show that }$(x-2)$\textit{ is a factor...'' }$\longrightarrow$} Remainder$=0\therefore (x-2)$ is a factor.
+\textcolor{PineGreen}{\textit{``Show that }$(x-2)$\textit{ is a factor...'' }$\longrightarrow$} Remainder$=0\therefore (x-2)$ is a factor.
 
 \vspace{-0.3cm}
 \begin{align*}
@@ -406,13 +406,13 @@ Since $3^2-4\times2\times7=-65$, and $-65<0$, the quadratic quotient cannot be f
 
 Where a linear factor of a polynomial function is unknown, a suggested approach is to consider the factors of the constant term with the aim of obtaining a value such that the remainder is zero.
 
-\begin{tcolorbox}[title=Example 10.3.3,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.3.3,colback=PineGreen!2, colframe=PineGreen]
 
 Factorise $x^3-x^2-17x=15$.
 
 \tcblower
 
-\textcolor{green!60!black!80!}{\textit{Consider }$\pm1,\pm3\pm5\pm15$}\\[-0.5em]
+\textcolor{PineGreen}{\textit{Consider }$\pm1,\pm3\pm5\pm15$}\\[-0.5em]
 
 $f(1)=(1)^3-(1)^2-17(1)-15=-32\therefore$ $(x-1)$ is \textbf{not} a factor.\\[-0.5em]
 
@@ -455,14 +455,14 @@ Repeated use of synthetic dvision may allow a \textit{quartic} ($x^4$) to be exp
 
 \begin{align*}
     f(x)=&\text{ }(\textit{quartic})\\
-    =&\text{ }(\textit{linear})(\textit{cubic})&&\textcolor{green!60!black!80!}{\longleftarrow\textit{ Using synthetic division}}\\
-    \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{linear})(\textit{quadratic})&&\textcolor{green!60!black!80!}{\longleftarrow\textit{ Using synthetic division}}\\
+    =&\text{ }(\textit{linear})(\textit{cubic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
+    \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{linear})(\textit{quadratic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
     =&\text{ }(\textit{linear})(\textit{linear})(\textit{linear})(\textit{linear})
 \end{align*}
 
 \vspace{-0.1cm}
 
-\begin{tcolorbox}[title=Example 10.3.4,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.3.4,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $x^4-2x^3-7x^2+8x+12$ and hence factorise it fully.
 
@@ -513,8 +513,8 @@ $x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
         \node at (3.75,-0.4) {$\phantom{-}2$};
         \node at (5.25,0.4) {$\phantom{-}6$};
         \node at (5.25,-0.4) {$\phantom{-}0$};
-        \node[left] at (-1.5,0) {\textcolor{green!60!black!80!}{\textit{Try factors of 6}}};
-        \draw[green!60!black!80!,-stealth] (-1.5,0.3) -- (-0.9,0.9);
+        \node[left] at (-1.5,0) {\textcolor{PineGreen}{\textit{Try factors of 6}}};
+        \draw[PineGreen,-stealth] (-1.5,0.3) -- (-0.9,0.9);
     \end{tikzpicture}
 \end{center}
 
@@ -536,7 +536,7 @@ $x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
 
 An unknown coefficient of a polynomial expression may be calculated if a factor of the expression is known, or the remainder given a linear divisor is known. It may be preferred to use synthetic division, or to evaluate the expression directly.
 
-\begin{tcolorbox}[title=Example 10.4.1,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.4.1,colback=PineGreen!2, colframe=PineGreen]
 
 Given that $(x+2)$ is a factor of $2x^3+kx^2-14x+8$, determine the value of $k$.
 
@@ -546,7 +546,7 @@ Given that $(x+2)$ is a factor of $2x^3+kx^2-14x+8$, determine the value of $k$.
 \begin{center}
     \begin{tikzpicture}
         \draw[white] (-4,1.6) -- (12,1.6);
-        \fill[green!10] (5.5,-0.8) rectangle (7.5,0);
+        \fill[PineGreen!10] (5.5,-0.8) rectangle (7.5,0);
         \draw (0,1.6) -- (0,0) -- (7.5,0);
         \draw (5.5,0) -- (5.5,-0.8) -- (7.5,-0.8);
         \node at (-0.75,1.2) {$-2$};
@@ -561,7 +561,7 @@ Given that $(x+2)$ is a factor of $2x^3+kx^2-14x+8$, determine the value of $k$.
         \node at (4.25,-0.4) {$-2k-6$};
         \node at (6.55,0.4) {$4k+12$};
         \node at (6.55,-0.4) {$4k+20$};
-        \node[right] at (7.7,-0.4) {\textcolor{green!60!black!80!}{$\longleftarrow$\textit{ Remainder}}};
+        \node[right] at (7.7,-0.4) {\textcolor{PineGreen}{$\longleftarrow$\textit{ Remainder}}};
     \end{tikzpicture}
 \end{center}
 \centering
@@ -575,7 +575,7 @@ Since $(x+2)$ is a factor, remainder$=0$.
 
 Where a polynomial has \textit{two} unknown coefficients, \textit{simultaneous equations} may be formed and solved.
 
-\begin{tcolorbox}[title=Example 10.4.2,colback=green!1, colframe=green!60!black!80!]
+\begin{tcolorbox}[title=Example 10.4.2,colback=PineGreen!2, colframe=PineGreen]
 
 Find the values of $a$ and $b$ given that:\\
 \begin{itemize}
@@ -632,7 +632,7 @@ Since $(x-2)$ is a factor, remainder $=0$ $\implies$ $4a+2b+20=0$.
 Remainder $=10$ $\implies$ $a+b+13=10$.
 \vspace{-0.3cm}
 \flushleft
-\textcolor{green!60!black!80!}{\textit{Solve simultaneously:}}
+\textcolor{PineGreen}{\textit{Solve simultaneously:}}
 \vspace{-0.8cm}
 \begin{center}
     \begin{tikzpicture}
@@ -649,7 +649,7 @@ Remainder $=10$ $\implies$ $a+b+13=10$.
         \node[below right] at (1.5,-0.57) {
         \begin{minipage}{4cm}
             \centering
-            \textcolor{green!60!black!80!}{\textit{Sub }$a=-7$:}
+            \textcolor{PineGreen}{\textit{Sub }$a=-7$:}
             \vspace{-0.3cm}
             \begin{align*}
                 a+b&=-3\\[0.2em]
@@ -658,10 +658,10 @@ Remainder $=10$ $\implies$ $a+b+13=10$.
             \end{align*}
         \end{minipage}
         };
-        \draw[green!60!black!80!] (-3,-2) -- (0,-2) node[right] {\scriptsize{$(-)$}};
-        \draw [decoration={brace,amplitude=0.5em},decorate,thick,green!60!black!80!]
+        \draw[PineGreen] (-3,-2) -- (0,-2) node[right] {\scriptsize{$(-)$}};
+        \draw [decoration={brace,amplitude=0.5em},decorate,thick,PineGreen]
 (-4.5,-0.8) -- (-4.5,-1.8);
-        \node[green!60!black!80!] at (-4.2,-1.8) {\scriptsize{$\times 2$}};
+        \node[PineGreen] at (-4.2,-1.8) {\scriptsize{$\times 2$}};
     \end{tikzpicture}
 \end{center}
 \end{tcolorbox}
@@ -693,8 +693,8 @@ Given the form a polynomial function takes and its graph, showing any $x$-interc
         \draw[-stealth] (-3,0) -- (3,0) node[below] {$x$};
         \draw[smooth,domain=-2:2,yscale=0.1] plot (\x,\x*\x+4*\x);
         \draw[fill] (0,0) circle (0.05) node[below] {$a$};
-        \node[green!60!black!80!] at (0,-1) {Root when $x=a$};
-        \node[green!60!black!80!] at (0,-1.8) {Factor of $(x-a)$};
+        \node[PineGreen] at (0,-1) {Root when $x=a$};
+        \node[PineGreen] at (0,-1.8) {Factor of $(x-a)$};
     \end{tikzpicture}
 \end{center}
 
@@ -704,8 +704,8 @@ Given the form a polynomial function takes and its graph, showing any $x$-interc
         \draw[-stealth] (-3,0) -- (3,0) node[below] {$x$};
         \draw[smooth,domain=-2:2,yscale=0.2] plot (\x,\x*\x);
         \draw[fill] (0,0) circle (0.05) node[below] {$a$};
-        \node[green!60!black!80!] at (0,-1) {Repeated root when $x=a$};
-        \node[green!60!black!80!] at (0,-1.8) {Factor of $(x-a)^n$};
+        \node[PineGreen] at (0,-1) {Repeated root when $x=a$};
+        \node[PineGreen] at (0,-1.8) {Factor of $(x-a)^n$};
     \end{tikzpicture}
 \end{center}
     
@@ -723,7 +723,7 @@ The diagram below shows the graph of a quartic function with equation $y=k(x-a)(
         \draw[fill] (1,0) circle (0.05) node[below] {$1\phantom{.}$};
         \draw[fill] (3,0) circle (0.05) node[below] {$\phantom{..}3$};
         \draw[fill] (0,1.2) circle (0.05) node[above left] {$6$};
-        \draw[green!60!black!80!,stealth-] (-2.5,-0.5) -- (-3.5,-1.5) node[below left] {\textcolor{green!60!black!80!}{\textit{Repeated root}}};
+        \draw[PineGreen,stealth-] (-2.5,-0.5) -- (-3.5,-1.5) node[below left] {\textcolor{PineGreen}{\textit{Repeated root}}};
     \end{tikzpicture}
 \end{center}
 
@@ -735,12 +735,12 @@ The value of $k$ can only be found if a \textit{non-root} coordinate is also kno
 
 \begin{align*}
     y&=k(x-1)(x-3)(x+2)^2&&\\
-    6&=k(0-1)(0-3)(0+2)^2&&\textcolor{green!60!black!80!}{\textit{Substitute in }(0,6)}\\
+    6&=k(0-1)(0-3)(0+2)^2&&\textcolor{PineGreen}{\textit{Substitute in }(0,6)}\\
     6&=k(-1)(-3)(2)^2&&\\
     6&=12k&&\\
     \frac{6}{12}&=k\\
     \frac{1}{2}&=k\\
-    y&=\frac{1}{2}(x-1)(x-3)(x+2)^2&&\textcolor{green!60!black!80!}{\textit{State equation}}
+    y&=\frac{1}{2}(x-1)(x-3)(x+2)^2&&\textcolor{PineGreen}{\textit{State equation}}
 \end{align*}
 
 By comparing the form given and the final equation, it can be seen that: $k=\frac{1}{2},a=1,b=3,c=-2$
