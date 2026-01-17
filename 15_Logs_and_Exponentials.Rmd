@@ -429,7 +429,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \pagebreak
 
-## Laws of Logarithms
+## Laws of Logs
 
 \vspace{-0.5cm}
 
@@ -702,10 +702,6 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \pagebreak
 
-## Log Equations and Extraneous Solutions
-
-\vspace{-0.5cm}
-
 Some algebraic manipulations used to solve an equation may produce solutions do not, in fact, satisfy the original equation. These **extraneous solutions** can arise when solving log equations.
 
 Since $\log_a{x}$ is only defined for $a>0$ and $x>0$, any solutions which contradict this must be discarded.
@@ -730,14 +726,8 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 All solutions for $x$ must be checked carefully to verify that they satisfy the *original* log equation.
 
-\vspace{-0.5cm}
-
-### Exercise 15.5 {-}
-
-\vspace{-0.4cm}
-
-\begin{enumerate}
-    \item Solve for $x$::
+\begin{enumerate}[resume]
+    \item Solve for $x$:
     \begin{enumerate} 
         \begin{multicols}{2}
             \item $\log_{a}{x}+\log_{a}{(x+1)}=\log_{a}{6}$
@@ -788,12 +778,16 @@ All solutions for $x$ must be checked carefully to verify that they satisfy the 
 
 ## Graphs of Logarithmic Functions
 
-Given a function $f$, defined on a suitable domain such that an inverse function exists, the graph of its inverse function $y=f^{-1}(x)$ can be obtained by \textit{reflecting the graph of} $y=f(x)$ \textit{in the line} $y=x$.
+\vspace{-0.5cm}
+
+Given a function $f$, defined on a suitable domain such that an inverse function exists, the graph of its inverse function $y=f^{-1}(x)$ can be obtained by \textcolor{PineGreen}{\textbf{reflecting}} the graph of $y=f(x)$ in the line $y=x$.
 
 Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineGreen}{\textbf{logarithmic function}} $f^{-1}(x)=\color{PineGreen}\log_a{x}$, knowledge of exponential graphs allows log graphs to be sketched:
 
+\vspace{-0.6cm}
+
 \begin{center}
-    \begin{tikzpicture}[scale=0.9]
+    \begin{tikzpicture}[scale=0.8]
         \draw[-stealth] (-4,0) -- (5,0) node[below] {$x$};
         \draw[-stealth] (0,-4) -- (0,4) node[left] {$y$};
         \draw[dashed,thin] (-2.5,-2.5) -- (3.5,3.5) node[above right] {$y=x$};
@@ -803,7 +797,7 @@ Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineG
         \draw[PineGreen,fill] (1,0) circle (0.07) node[below right] {$1$};
         \draw[fill] (1,1.5) circle (0.07) node[above,xshift=-0.5em] {$(1,a)$};
         \draw[PineGreen,fill] (1.5,1) circle (0.07) node[right] {$(a,1)$};
-        \node[below] at (11,4.5) {
+        \node[below] at (12,4.5) {
         \begin{minipage}{7.5cm}
         The graph of $y=a^x$ passes through...
         \vspace{0.3cm}
@@ -814,7 +808,7 @@ Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineG
         ...and has a \textbf{horizontal} asymptote of $x=0$.\\[0.1em]
         \end{minipage}
         };
-        \node[below] at (11,1) {
+        \node[below] at (12,1) {
         \begin{minipage}{7.5cm}
         The graph of \textcolor{PineGreen}{$y=\log_ax$} passes through...
         \begin{center}
@@ -824,7 +818,7 @@ Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineG
         ..and has a \textcolor{PineGreen}{\textbf{vertical}} asymptote of \textcolor{PineGreen}{$y=0$}.
         \end{minipage}
         };
-        \node[below] at (11,-2.5) {
+        \node[below] at (12,-2.5) {
         \begin{minipage}{7.5cm}
         In general, if $y=f(x)$ passes through $(x,y)$ then $y=f^{-1}(x)$ passes through $(y,x)$.
         \end{minipage}
@@ -832,60 +826,365 @@ Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineG
     \end{tikzpicture}
 \end{center}
 
+\vspace{-0.5cm}
+
 Knowledge of the graph of $y=\log_a{x}$ may be combined with and understanding of graph transformations.
 
-\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
 
 Sketch the graph of $y=\log_3{(x-1)}+2$.
+
+\vspace{-0.2cm}
 
 \tcblower
 
 \textcolor{PineGreen}{Consider $y=\log_3{(x-1)}+2$ as a $f(x-1)+3$ transformation of $y=\log_3{x}$:}
 
+\vspace{-0.4cm}
+
 \begin{center}
-    \begin{tikzpicture}[scale=0.9]
-        \draw[-stealth] (-1,0) -- (9,0) node[below] {$x$};
+    \begin{tikzpicture}[scale=0.6]
+        \draw[-stealth,xshift=-12cm] (-0.5,0) -- (5,0) node[below] {$x$};
+        \draw[-stealth,xshift=-12cm] (0,-2.2) -- (0,4) node[left] {$y$};
+        \draw[smooth,thin,domain=0.1:3.5,PineGreen,xshift=-12cm] plot (\x,{(ln(\x))/(ln(3))}) node[right] {$y=\log_3{x}$};
+        \draw[PineGreen,fill,xshift=-12cm] (1,0) circle (0.05) node[below] {$1$};
+        \draw[PineGreen,fill,xshift=-12cm] (3,1) circle (0.05) node[above] {$(3,1)$};
+        \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
         \draw[-stealth] (0,-2.2) -- (0,4) node[left] {$y$};
-        \draw[smooth,thin,domain=0.1:3.5,black!50] plot (\x,{(ln(\x))/(ln(3))}) node[right] {$y=\log_3{x}$};
-        \draw[black!50,fill] (1,0) circle (0.05) node[above left] {$1$};
-        \draw[black!50,fill] (3,1) circle (0.05) node[above] {$(3,1)$};
         \draw[smooth,thick,domain=0.04:3.5,xshift=1cm,yshift=2cm] plot (\x,{(ln(\x))/(ln(3))}) node[right] {$y=\log_3{(x-1)}+2$};
-        \draw[black,fill,xshift=-0.3cm] (2,2) circle (0.05) node[above] {$(2,2)$};
+        \draw[black,fill] (2,2) circle (0.05) node[below right] {$(2,2)$};
         \draw[black,fill] (4,3) circle (0.05) node[above] {$(4,3)$};
-        \draw[dashed] (1,-2) -- (1,4);
-        \node[below right,PineGreen] at (9.5,3) {
-        \begin{minipage}{7.5cm}
-        $y=\log_3{x}$: \qquad  $(1,0)$ and $(3,1)$
-        
-        \vspace{0.7cm}
-        
-        $f(x-1)+2$ translates \textit{right 1} and \textit{up 2}
-        
-        \vspace{0.7cm}
-        
-        $y=\log_3{(x-1)}+3$: \qquad $(2,2)$ and $(4,4)$
-        \end{minipage}
-        };
+        \draw[dashed] (1,-2) -- (1,3.5) node[above] {\scriptsize{$x=1$}};
+        \draw[PineGreen,-stealth] (-4.5,1) -- (-1.5,1);
+        \node[above,PineGreen] at (-3,1) {\textit{``Right 1''}};
+        \node[below,PineGreen] at (-3,1) {\textit{``Up 2''}};
     \end{tikzpicture}
 \end{center}
 
 \end{tcolorbox}
 
-\newpage
+\vspace{-0.5cm}
+
+### Exercise 15.5 {-}
+
+\vspace{-0.5cm}
+
+\begin{enumerate}
+    \item Sketch each of the following:
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $y=\log_{5}{x}$
+        \item $y=\log_{2}{x}$
+        \item $y=\log_{9}{x}$
+    \end{multicols}
+    \end{enumerate}
+    \item Sketch each of the following, showing clearly where any asymptote is not along an axis:
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $y=\log_{4}{x}+1$
+        \item $y=\log_{7}{x}-2$
+        \item $y=\log_{5}{x}+3$
+    \end{multicols}
+    \begin{multicols}{3}
+        \item $y=\log_{8}{(x+5)}$
+        \item $y=\log_{2}{(x-3)}$
+        \item $y=\log_{6}{(x+2)}$
+    \end{multicols}
+    \begin{multicols}{3}
+        \item $y=\log_{7}{(x+3)}+2$
+        \item $y=\log_{5}{(x-3)}-1$
+        \item $y=\log_{6}{(x+2)}+1$
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+As in section 15.1 (Graphs of Exponential Functions), substitution of known coordinates on the graph of a log function  into its equation can allow unknown constants it contains to be determined.
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+The graph of $y=\log_a{(x+b)}$ is below. Find the values of $a$ and $b$.
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        \draw[-stealth] (-4,0) -- (5,0) node[below] {$x$};
+        \draw[-stealth] (0,-1.5) -- (0,1.5) node[left] {$y$};
+        \draw[smooth,thick,domain=0.1:7,xshift=-3cm] plot (\x,{ln(\x)/ln(5)}) node[right] {$y=\log_a{(x+b)}$};
+        \draw[fill] (-2,0) circle (0.05) node[below] {$-2$};
+        \draw[fill] (2,1) circle (0.05) node[below] {$(2,1)$};
+        \draw[dashed] (-3,-1.5) -- (-3,1.1) node[above] {$x=-3$};
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-0.3cm}
+
+\tcblower
+
+\vspace{-0.6cm}
+\begin{align*}
+    0&=\log_a{(-2+b)} && \color{PineGreen}\longleftarrow\text{Substitute }(-2,0)\\[0.5em]
+    -2+b&=1 &&\color{PineGreen}\longleftarrow\text{Since }\log_a{1}=0\text{ for all }a\\[0.5em]
+    b&=3 && \color{PineGreen}\longleftarrow\text{Solve to obtain }b\\[1em]
+    1&=\log_a{(2+3)} && \color{PineGreen}\longleftarrow\text{Substitute }(2,1)\text{ and }b=3\\[0.5em]
+    a&=5 &&\color{PineGreen}\longleftarrow\text{Since }\log_a{a}=1\text{ for all }a\\[1em]
+    y&=\log_5{(x+3)}&&\color{PineGreen}\longleftarrow\text{State equation}
+\end{align*}
+
+\end{tcolorbox}
+
+\begin{enumerate}[resume]
+    \item Determine the equation of each, using the form given:
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $y=\log_4{(x+a)}$\\
+                \begin{tikzpicture}
+                    \draw[white] (-2,-2) rectangle (5.5,3);
+                    \draw[-stealth] (-2,0) -- (5,0) node [above] {$x$};
+                    \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
+                    \draw[smooth,thick,domain=0.1:6,xshift=-2cm,yshift=0cm] plot (\x,{ln(\x)/ln(4)});
+                    \draw[fill] (-1,0) circle (0.05) node[below] {$-1$};
+                    \draw[fill] (2,1) circle (0.05) node[above] {$(2,1)$};
+                    \draw[dashed] (-2,-2) -- (-2,3);
+                \end{tikzpicture}
+            \item $y=\log_a{(x-2)}$\\
+                \begin{tikzpicture}
+                    \draw[white] (-2,-2) rectangle (5.5,3);
+                    \draw[-stealth] (-2,0) -- (5,0) node [above] {$x$};
+                    \draw[-stealth] (-2,-2) -- (-2,3) node[left] {$y$};
+                    \draw[smooth,thick,domain=0.1:4,xshift=0cm,yshift=0cm] plot (\x,{ln(\x)/ln(3)});
+                    \draw[fill] (1,0) circle (0.05) node[below] {$3$};
+                    \draw[fill] (3,1) circle (0.05) node[above] {$(5,1)$};
+                    \draw[dashed] (0,-2) -- (0,3);
+                \end{tikzpicture}
+        \end{multicols}
+        \begin{multicols}{2}
+            \item $y=\log_a{(x+b)}$\\
+                \begin{tikzpicture}
+                    \draw[white] (-0.5,-2) rectangle (5.5,3);
+                    \draw[-stealth] (-0.5,0) -- (6,0) node [above] {$x$};
+                    \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
+                    \draw[smooth,thick,domain=0.1:5.5,xshift=1cm,yshift=0cm] plot (\x,{ln(\x)/ln(5)});
+                    \draw[fill] (2,0) circle (0.05) node[below] {$2$};
+                    \draw[fill] (6,1) circle (0.05) node[above] {$(6,1)$};
+                    \draw[dashed] (1,-2) -- (1,3);
+                \end{tikzpicture}
+            \item $y=\log_a{(bx)}$\\
+                \begin{tikzpicture}
+                    \draw[white] (-2,-2) rectangle (5.5,3);
+                    \draw[-stealth] (-2,0) -- (5,0) node [above] {$x$};
+                    \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
+                    \draw[smooth,thick,domain=0.1:9,xshift=0cm,yshift=0cm,xscale=0.5] plot (\x,{ln(\x)/ln(6)});
+                    \draw[fill] (0.5,0) circle (0.05) node[below right] {$0.5$};
+                    \draw[fill] (3,1) circle (0.05) node[above] {$(3,1)$};
+                \end{tikzpicture}
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+## Solving Exponential Equations
+
+\vspace{-0.5cm}
+
+To solve an \textcolor{PineGreen}{\textit{exponential equation}} such as $10=2^{\color{PineGreen}x}$, which has a non-integer solution, the relationship between a log and an exponential of the same base, stated in section 15.2, can be used as follows:
+
+\vspace{-0.3cm}
+
+\begin{align*}
+    \text{If }\hspace{1.9cm} 10&=2^{\color{PineGreen}x}\\[0.5em]
+    \text{ then }\hspace{0.5cm} \color{PineGreen}\log_2{\color{black}10}&=x
+\end{align*}
+
+\vspace{-0.3cm}
+
+The solution, using a calculator and correct to three significant figures, is $x=3.32$. This makes use of the property $\color{PineGreen}\log_a{a^{\color{black}x}}\color{black}=x$, which follows from the inverse relationship between a log and exponential.
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+Solve the equation $14=3\times5^x$, giving the answer correct to three significant figures. \faCalculator
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+14&=3\times 5^x &&\\[0.5em]
+\frac{14}{3}&=5^x && \color{PineGreen}\longleftarrow\text{Divide both sides by 3}\\[0.5em]
+\log_5{\left(\frac{14}{3}\right)}&=x && \color{PineGreen}\longleftarrow\text{Take }\log_5\text{ of both sides}\\[0.5em]
+x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the solution}
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.3cm}
 
 ### Exercise 15.6 {-}
 
-\newpage
+\vspace{-0.3cm}
 
-## Exponential Growth and Decay
+\begin{enumerate}
+    \item Solve, giving the answers to three significant figures: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $30=5^x$
+            \item $6=3^x$
+            \item $13=8^x$
+            \item $3=7^x$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $2^x=11$
+            \item $10^x=500$
+            \item $6^x=3$
+            \item $4^x=65$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $19=2.1^t$
+            \item $1.3^{2y}=0.7$
+            \item $7^{4p}=\frac{1}{2}$
+            \item $\frac{2}{3}=4^{0.7k}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve, giving the answers to three significant figures: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $12=4\times8^x$
+            \item $24=6\times7^x$
+            \item $2=7\times5^x$
+            \item $21=4\times3^x$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $6\times8^x=5$
+            \item $3\times4^x=45$
+            \item $0.03\times8^x=0.7$
+            \item $18\times5^x=0.7$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $5=3\times4^q$
+            \item $7\times6^{0.03t}=5$
+            \item $10\times10^{-3y}=9$
+            \item $10=9\times10^{-0.037k}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve, giving the answer to three significant figures: \faCalculator
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $20=4\times7^x+3$
+            \item $7=\frac{1}{2}\times3^x-6$
+            \item $5+3\times4^x=23$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $3\times\left(\frac{1}{2}\right)^x=7$
+            \item $6\times1.4^x-2.3=31.4$
+            \item $0.4=3\times0.3^x-0.5$
+        \end{multicols}
+        \begin{multicols}{3}
+            \item $3\times4^{0.0723k}=21$
+            \item $11\times3^{-0.104x}=6$
+            \item $3=5\times2^{-0.00562k}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
 
-\newpage
+\pagebreak
+
+## Natural Logarithms
+
+\vspace{-0.5cm}
+
+Some logarithms with particular *bases* are routinely used in various fields, such as the *binary logarithm* $\left(\log_2\right)$ in computer science, or the the *decimal* or *common logarithm* $\left(\log_{10}\text{ or just }\log\right)$ in engineering.
+
+The most useful logarithm in mathematics is the \textcolor{PineGreen}{\textbf{natural logarithm}} ($\log_{\color{PineGreen}e}$ or more often just \textcolor{PineGreen}{$\ln$}), which takes Euler's Number \textcolor{PineGreen}{$e$} as its base, where \textcolor{PineGreen}{$e\approx 2.719$}. (Its lies in the ease which which exponentials in base $e$ can be used together with calculus, which is beyond the scope of this course.)
+
+The *laws of logs* apply to natural logarithms since they apply to *all* $\log_a$ where $a>0$:
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
+
+Simplify $\ln{48}-3\ln{2}$, giving the answer in the form $\ln{p}$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+&\ln{48}-2\ln{2} &&\\[0.5em]
+=&\ln{48}-\ln{\left(2^3\right)} && \color{PineGreen}\longleftarrow\text{Apply the power law}\\[0.5em]
+=&\ln{48}-\ln{8} &&\\[0.5em]
+=&\ln{\left(\frac{48}{8}\right)}&& \color{PineGreen}\longleftarrow\text{Apply the quotient law}\\[0.5em]
+=&\ln{6} && \color{PineGreen}\longleftarrow\text{Simplify}
+\end{align*}
+
+\vspace{-0.2cm}
+
+\end{tcolorbox}
+
+Exponential equations in base $\color{PineGreen}e$ are solved using the natural logarithm $\color{PineGreen}\ln$, since $\color{PineGreen}\ln{\left(e^{\color{black}x}\right)}=x$:
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=7.6cm]
+
+Given $37=21e^{-0.48x}$, find the value of $k$ to three significant figures. \faCalculator
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+37&=21e^{-0.48k} &&\\[0.5em]
+\frac{37}{21}&=e^{-0.48k} && \color{PineGreen}\longleftarrow\text{Divide both sides by 21}\\[0.5em]
+\ln{\left(\frac{37}{21}\right)}&=-0.48k && \color{PineGreen}\longleftarrow\text{Take }\ln\text{ of both sides}\\[0.5em]
+\frac{\ln{\left(\frac{37}{21}\right)}}{-0.48}&=k && \color{PineGreen}\longleftarrow\text{Divide both sides by }-0.48\\[0.5em]
+k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the solution}
+\end{align*}
+
+\vspace{-0.2cm}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
 
 ### Exercise 15.7 {-}
 
-\newpage
+\vspace{-0.5cm}
 
-## Experimental Data of the form $y=ab^x$
+\begin{enumerate}
+    \item Fo each, find the value of $k$ to three significant figures: \faCalculator
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $0.7=e^{k}$
+            \item $1.8=e^{k}$
+            \item $3e^{k}=24$
+            \item $4=7e^{x}$
+        \end{multicols}
+        \begin{multicols}{4}
+            \item $125=5e^{2k}$
+            \item $50=7e^{4k}$
+            \item $10=12e^{-3k}$
+            \item $17=100^{-5k}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve each for $x$, giving the answers to three significant figures: \faCalculator
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $120=85e^{0.475x}$
+            \item $50=32e^{0.0273x}$
+            \item $14=23e^{-0.381x}$
+            \item $3P=Pe^{0.045x}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{-0.2cm}
+
+\pagebreak
+
+## Exponential Growth and Decay
+
+\vspace{-0.5cm}
+
+The behaviour of many real-world things are described by \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}}:
 
 \newpage
 
@@ -893,7 +1192,7 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \newpage
 
-## Experimental Data of the form $y=ax^b$
+## Experimental Data
 
 \newpage
 
