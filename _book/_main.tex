@@ -5382,7 +5382,84 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \vspace{-0.5cm}
 
-The behaviour of many real-world things are described by \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}}:
+The behaviour of many real-world things are described by \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}}.
+
+Time, \(t\), is a common variable for such a function in place of \(x\), and it typically describes the behaviour of some real-world variable which is named suitably in place of \(y\) of \(f(x)\), such as \(V\) for \emph{``value''}, \(P\) for \emph{``population size''} or \(M\) for \emph{``mass''}. Where \(\color{PineGreen}k>0\):
+
+\setlength{\columnsep}{30pt}
+
+\begin{multicols}{2}
+
+\vspace{-0.2cm}
+
+$V=V_0e^{\color{PineGreen}k\color{black}t}$ describes the \textcolor{PineGreen}{\textbf{exponential growth}} of $V$ from some initial value $V_0$ as $t$ increases.
+
+\vspace{-0.5cm}
+\begin{center}
+    \begin{tikzpicture}[scale=0.7]
+        \draw[-stealth] (0,0) -- (8,0) node[below] {$t$};
+        \draw[-stealth] (0,0) -- (0,6) node[left] {$V$};
+        \node[below left] {O};
+        \draw[smooth,thick,PineGreen,domain=0:5] plot (\x,{0.5*1.6^(\x)}) node[right] {$\color{black}V=V_0e^{\color{PineGreen}k\color{black}t}$};
+        \draw[fill] (0,0.5) circle (0.05) node[left] {$V_0$};
+    \end{tikzpicture}
+\end{center}
+
+\columnbreak
+
+\vspace{-0.2cm}
+
+$V=V_0e^{\color{PineGreen}-k\color{black}t}$ describes the \textcolor{PineGreen}{\textbf{exponential decay}} of $V$ from some initial value $V_0$ as $t$ increases.
+
+\vspace{-0.5cm}
+\begin{center}
+    \begin{tikzpicture}[scale=0.7]
+        \draw[-stealth] (0,0) -- (8,0) node[below] {$t$};
+        \draw[-stealth] (0,0) -- (0,6) node[left] {$V$};
+        \node[below left] {O};
+        \draw[smooth,thick,PineGreen,domain=0:5] plot (\x,{4*0.7^(\x)}) node[right] {$\color{black}V=V_0e^{\color{PineGreen}-k\color{black}t}$};
+        \draw[fill] (0,4) circle (0.05) node[left] {$V_0$};
+    \end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+\vspace{-0.5cm}
+
+\setlength{\columnsep}{10pt}
+
+Constant \(k\) may be found through substitution if initial value \(V_0\) is known and the value of \(V\) at time \(t\).
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+80 micrograms of a radioactive substance, which decays over time, is obtained. The mass $M$ micrograms of the substance remaining after $t$ hours can be modelled by the equation:
+
+\vspace{-0.3cm}
+
+\[M=M_0e^{-kt}\]
+
+\vspace{-0.1cm}
+
+After 5 hours, only 50.7 micrograms of the substance remains.
+
+\begin{enumerate}
+    \item[(a)] State the value of $V_0$.
+    \item[(b)] Determine the value of $k$.
+    \item[(c)] Find the time it will take for only half of the original substance to remain (its \textit{half-life}).
+\end{enumerate}
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_3{x}+\log_3{5}&=\log_3{20} &&\\[0.5em]
+\log_3{5x}&=\log_3{20} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
+5x&=20 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ from both sides}\\[0.5em]
+x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
+\end{align*}
+
+\end{tcolorbox}
 
 \newpage
 
