@@ -1230,8 +1230,6 @@ $V=V_0e^{\color{PineGreen}-k\color{black}t}$ describes the \textcolor{PineGreen}
 
 \setlength{\columnsep}{10pt}
 
-Constant $k$ may be found through substitution if initial value $V_0$ is known and the value of $V$ at time $t$.
-
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
 80 micrograms of a radioactive substance, which decays over time, is obtained. The mass $M$ micrograms of the substance remaining after $t$ hours can be modelled by the equation:
@@ -1242,11 +1240,49 @@ Constant $k$ may be found through substitution if initial value $V_0$ is known a
 
 \vspace{-0.1cm}
 
-After 5 hours, only 50.7 micrograms of the substance remains.
-
 \begin{enumerate}
     \item[(a)] State the value of $M_0$.
-    \item[(b)] Determine the value of $k$.
+\end{enumerate}
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+M_0&=80 && \color{PineGreen}\longleftarrow M_0\text{ is the initial value}
+\end{align*}
+
+\end{tcolorbox}
+
+Constant $k$ may be found through substitution if initial value $V_0$ is known and the value of $V$ at time $t$.
+
+\begin{tcolorbox}[colback=PineGreen!2!, colframe=PineGreen]
+
+\begin{enumerate}
+    \item[(b)] After 5 hours, only 50.7 micrograms of the substance remains.\newline Determine the value of $k$, rounded to three significant figures.
+\end{enumerate}
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+50.7&=80e^{-k\times 5} && \color{PineGreen}\longleftarrow \text{Substitute }M_0=80\text{, }M=50.7\text{ and }t=5\\[0.5em]
+\frac{50.7}{80}&=e^{-5k} && \color{PineGreen}\longleftarrow \text{Divide by }80\\[0.5em]
+\ln{\left(\frac{50.7}{80}\right)}&=-5k && \color{PineGreen}\longleftarrow \text{Take natural log of both sides }\\[0.5em]
+\frac{\ln{\left(\frac{50.7}{80}\right)}}{-5}&=k && \color{PineGreen}\longleftarrow \text{Divide both sides by }(-5)\\[0.5em]
+k&=0.1 && \color{PineGreen}\longleftarrow \text{Calculate and round as required}k
+\end{align*}
+
+\end{tcolorbox}
+
+A feature of exponential functions is that the time taken for the value to grow or decay by a any given proportion is always constant. For example the time taken for exponential growth to double a value from 20 to 40 will be the same time it will take to double from 50 to 100.
+
+\pagebreak
+
+\begin{tcolorbox}[colback=PineGreen!2!, colframe=PineGreen]
+
+\begin{enumerate}
     \item[(c)] Find the time it will take for only half of the original substance to remain (its \textit{half-life}).
 \end{enumerate}
 
@@ -1255,10 +1291,11 @@ After 5 hours, only 50.7 micrograms of the substance remains.
 \vspace{-0.5cm}
 
 \begin{align*}
-\log_3{x}+\log_3{5}&=\log_3{20} &&\\[0.5em]
-\log_3{5x}&=\log_3{20} && \color{PineGreen}\longleftarrow\text{Apply product law}\\[0.5em]
-5x&=20 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ from both sides}\\[0.5em]
-x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
+50.7&=80e^{-k\times 5} && \color{PineGreen}\longleftarrow \text{Substitute }M_0=80\text{, }M=50.7\text{ and }t=5\\[0.5em]
+\frac{50.7}{80}&=e^{-5k} && \color{PineGreen}\longleftarrow \text{Divide by }80\\[0.5em]
+\ln{\left(\frac{50.7}{80}\right)}&=-5k && \color{PineGreen}\longleftarrow \text{Take natural log of both sides }\\[0.5em]
+\frac{\ln{\left(\frac{50.7}{80}\right)}}{-5}&=k && \color{PineGreen}\longleftarrow \text{Divide both sides by }(-5)\\[0.5em]
+k&=0.1 && \color{PineGreen}\longleftarrow \text{Calculate and round as required}k
 \end{align*}
 
 \end{tcolorbox}
@@ -1278,3 +1315,4 @@ x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
 \newpage
 
 ## Logs and Exponentials Review Exercise {-}
+
