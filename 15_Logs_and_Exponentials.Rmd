@@ -1354,58 +1354,271 @@ All questions: \faCalculator
 
 \pagebreak
 
-## Experimental Data
+## Experimental Data of the form $y=ax^b$
 
 \vspace{-0.5cm}
 
 Where a relationship between variables $x$ and $y$ is a \textcolor{PineGreen}{power} function in the form
-$\color{PineGreen}y=k\color{PineGreen}x^{\color{PineGreen}n}$, taking any $\log_a$ of both sides will reveal a \textcolor{PineGreen}{linear relationship} will exist between $\color{PineGreen}\log_ax$ and $\color{PineGreen}\log_ay$.
+$\color{PineGreen}y=a\color{PineGreen}x^{\color{PineGreen}b}$, taking any $\log$ of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between $\color{PineGreen}\log{x}$ and $\color{PineGreen}\log{y}$.
 
-\begin{multicols}{3}
+\vspace{-0.4cm}
 
+\begin{minipage}{0.33\textwidth}
 \begin{center}
-    \begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
           \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}x$};
           \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}y$};
           \node[below left] {\scriptsize{O}};
-    \end{tikzpicture}
+          \draw[PineGreen,thick,smooth,domain=0:2.6] plot (\x,{0.5*(\x)^2}) node[above] {$y\color{black}=a\color{PineGreen}x^{\color{black}b}$};
+\end{tikzpicture}
 \end{center}
-
-\vfill\null
-\columnbreak
-\null\vfill
-
+\end{minipage}\begin{minipage}{0.33\textwidth}
 \begin{align*}
-    \color{PineGreen}y&=k\color{PineGreen}x^{\color{black}n}\\[0.5em]
-    log_a{y}&=log_a{\left(kx^n\right)}\\[0.5em]
-    log_a{y}&=log_a{x^n}+log_a{k}\\[0.5em]
-    \color{PineGreen}log_a{y}&=n\color{PineGreen}log_a{x}\color{black}+log_a{k}\\
-    &\hspace{1cm} \downarrow\\
-    \color{PineGreen}log_a{y}&=m\color{PineGreen}log_a{x}\color{black}+c
+    \color{PineGreen}y&=a\color{PineGreen}x^{\color{black}b}\\[0.3em]
+    \log{y}&=\log{\left(ax^b\right)}\\[0.5em]
+    \log{y}&=\log{x^b}+\log{a}\\[0.5em]
+    \color{PineGreen}\log{y}&=b\color{PineGreen}\log{x}\color{black}+\log{a}\\
+    &\hspace{0.45cm} \downarrow\hspace{1.6cm}\downarrow\\
+    \color{PineGreen}\log{y}&=m\color{PineGreen}\log{x}\color{black}+c
 \end{align*}
+\end{minipage}\begin{minipage}{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}\log{x}$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}\log{y}$};
+          \node[below left] {\scriptsize{O}};
+          \draw[PineGreen,thick,smooth,domain=0:3] plot (\x,{0.8*(\x)+1});
+          \draw[fill] (0,1) circle (0.05) node[left] {$\log{a}$};
+          \node[rotate=38.66] at (1.8,2) {gradient $=b$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
 
-\vfill\null
-\columnbreak
-\null\vfill
+Drawing such a plot of $\color{PineGreen}\log{y}$ against $\color{PineGreen}\log{x}$ and obtaining a straight line can be used to check for a power relationship. Where a relationship is of the form $y=ax^b$, determining the values of $a$ and $b$ is possible by first finding the *gradient* and $y$*-intercept* on the $\color{PineGreen}\log{y}\sim\log{x}$ graph. 
 
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+Two variables, $x$ and $y$, are connected by the equation $y=kx^n$. The graph of $\log_3{y}$ against $\log_3{x}$ is a straight line as shown. Determine the values of $k$ and $n$.
+
+\vspace{-0.3cm}
 
 \begin{center}
-    \begin{tikzpicture}
-          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}\log_a{x}$};
-          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}\log_a{y}$};
+\begin{tikzpicture}[scale=0.8]
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\log_3{x}$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\log_3{y}$};
           \node[below left] {\scriptsize{O}};
-    \end{tikzpicture}
+          \draw[thick] plot (0,1) -- (3,2.5);
+          \draw[fill] (0,1) circle (0.05) node[left] {$(0,3)$};
+          \draw[fill] (2,2) circle (0.05) node[below right] {$(2,6)$};
+\end{tikzpicture}
 \end{center}
 
-\end{multicols}
+\vspace{-0.6cm}
 
-\newpage
+\tcblower
 
-or an \textcolor{PineGreen}{exponential} function such as $y=ab^{\color{PineGreen}x}$, takin
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_{3}y&=\log_3{\left(kx^n\right)} && \color{PineGreen}\longleftarrow \text{Take }\log_3\text{ of both sides}\\[0.5em]
+\log_{3}y&=\log_3{x^n}+\log_3{k} && \color{PineGreen}\longleftarrow \text{Apply product law}\\[0.5em]
+\log_{3}y&=n\log_3{x}+\log_3{k} && \color{PineGreen}\longleftarrow \text{Apply power law}\\[1em]
+\text{gradient}&=\frac{6-3}{2-0}=\frac{3}{2} && \color{PineGreen}\longleftarrow \text{Find gradient}\\[0.5em]
+n&=\frac{3}{2} && \color{PineGreen}\longleftarrow \text{Equate to }n\\[1em]
+y\text{-intercept}&=3 && \color{PineGreen}\longleftarrow \text{Find }y\text{-intercept}\\[0.5em]
+\log_{3}k&=3 && \color{PineGreen}\longleftarrow \text{Equate to }\log_3{k}\\[0.5em]
+\log_{3}k&=3\color{PineGreen}\log_3{3} && \color{PineGreen}\longleftarrow \text{Solve for }k\\[0.5em]
+\log_{3}k&=\log_3{3^3} &&\\[0.5em]
+k&=27 &&
+\end{align*}
+
+\end{tcolorbox}
+
+Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
+
+\pagebreak
+
 
 \newpage
 
 ### Exercise 15.9 {-}
+
+\begin{enumerate}
+    \item For each graph where the relationship between $x$ and $y$ is $y=kx^n$, determine the values of $k$ and $n$:
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(a)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(b)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(c)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(d)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \item For each graph where the relationship between $x$ and $y$ is $y=ax^b$, determine the values of $a$ and $b$:
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(a)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(b)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(c)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(d)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+\end{enumerate}
+
+\newpage
+
+## Experimental Data of the form $y=ab^x$
+
+\vspace{-0.5cm}
+
+Where a relationship between variables $x$ and $y$ is an \textcolor{PineGreen}{exponential} function in the form
+$\color{PineGreen}y=ab^{\color{PineGreen}x}$, taking any $\log$ of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between $\color{PineGreen}x$ and $\color{PineGreen}\log y$.
+
+\vspace{-0.3cm}
+
+\begin{minipage}{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}x$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}y$};
+          \node[below left] {\scriptsize{O}};
+          \draw[PineGreen,thick,smooth,domain=0:3.1] plot (\x,{0.5*1.8^(\x)}) node[above] {$y\color{black}=ab^{\color{PineGreen}x}$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}\begin{minipage}{0.33\textwidth}
+\begin{align*}
+    \color{PineGreen}y&=ab^{\color{PineGreen}x}\\[0.5em]
+    \log{y}&=\log{\left(ab^x\right)}\\[0.5em]
+    \log{y}&=\log{b^x}+\log{a}\\[0.5em]
+    \color{PineGreen}\log{y}&=\color{PineGreen}x\color{black}\log{b}\color{black}+\log{a}\\
+    &\hspace{0.75cm} \downarrow\hspace{1.1cm}\downarrow\\
+    \color{PineGreen}\log{y}&=\color{PineGreen}x\color{black}m\hspace{0.3cm}+\hspace{0.2cm}c
+\end{align*}
+\end{minipage}\begin{minipage}{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$x$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}\log{y}$};
+          \node[below left] {\scriptsize{O}};
+          \draw[PineGreen,thick,smooth,domain=0:3] plot (\x,{0.8*(\x)+1});
+          \draw[fill] (0,1) circle (0.05) node[left] {$\log{a}$};
+          \node[rotate=38.66] at (1.8,2) {gradient $=\log{b}$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+Drawing such a plot of $\color{PineGreen}\log{y}$ against $\color{PineGreen}x$ and obtaining a straight line can be used to check for an exponential relationship. Where a relationship is of the form $y=ab^x$, determining the values of $a$ and $b$ is possible by first finding the *gradient* and $y$*-intercept* on the $\color{PineGreen}\log{y}\sim x$ graph. 
+
+\begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
+
+Two variables, $x$ and $y$, are connected by the equation $y=ab^x$. The graph of $\log_9{y}$ against $x$ is a straight line as shown. Determine the values of $a$ and $b$.
+
+\vspace{-0.3cm}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$x$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\log_9{y}$};
+          \node[below left] {\scriptsize{O}};
+          \draw[thick] plot (0,1) -- (3,2.5);
+          \draw[fill] (0,1) circle (0.05) node[left] {$(0,2)$};
+          \draw[fill] (2,2) circle (0.05) node[below right] {$(4,4)$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{-0.6cm}
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+\log_{9}y&=\log_9{\left(ab^x\right)} && \color{PineGreen}\longleftarrow \text{Take }\log_9\text{ of both sides}\\[0.5em]
+\log_{9}y&=\log_9{b^x}+\log_9{a} && \color{PineGreen}\longleftarrow \text{Apply product law}\\[0.5em]
+\log_{9}y&=x\log_9{b}+\log_9{a} && \color{PineGreen}\longleftarrow \text{Apply power law}\\[1em]
+\text{gradient}&=\frac{4-2}{4-0}=\frac{2}{4}=\frac{1}{2} && \color{PineGreen}\longleftarrow \text{Find gradient}\\[0.5em]
+\log_9{b}&=\frac{1}{2} && \color{PineGreen}\longleftarrow \text{Equate to }\log_9{b}\\[0.5em]
+b&=3 && \color{PineGreen}\longleftarrow \text{Solve for }b\\[1em]
+y\text{-intercept}&=2 && \color{PineGreen}\longleftarrow \text{Find }y\text{-intercept}\\[0.5em]
+\log_{9}a&=2 && \color{PineGreen}\longleftarrow \text{Equate to }\log_9{a}\\[0.5em]
+a&=81 && \color{PineGreen}\longleftarrow \text{Solve for }a
+\end{align*}
+
+\end{tcolorbox}
+
+Therefore the relationship between $x$ and $y$ is $y=81\times3^x$.
+
+Note the the process of solving for $a$ and solving for $b$ may require solving each log equation step-by-step.
+
+\pagebreak
+
+
+\newpage
+
+### Exercise 15.10 {-}
 
 \newpage
 
