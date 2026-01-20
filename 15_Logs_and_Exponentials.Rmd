@@ -1259,7 +1259,7 @@ Constant $k$ may be found through substitution if initial value $V_0$ is known a
 \begin{tcolorbox}[colback=PineGreen!2!, colframe=PineGreen]
 
 \begin{enumerate}
-    \item[(b)] After 5 hours, only 50.7 micrograms of the substance remains.\newline Determine the value of $k$, rounded to three significant figures.
+    \item[(b)] After 5 hours, only 50.7 micrograms of the substance remains.\newline Determine the value of $k$, rounded to three significant figures. \faCalculator
 \end{enumerate}
 
 \tcblower
@@ -1271,19 +1271,19 @@ Constant $k$ may be found through substitution if initial value $V_0$ is known a
 \frac{50.7}{80}&=e^{-5k} && \color{PineGreen}\longleftarrow \text{Divide by }80\\[0.5em]
 \ln{\left(\frac{50.7}{80}\right)}&=-5k && \color{PineGreen}\longleftarrow \text{Take natural log of both sides }\\[0.5em]
 \frac{\ln{\left(\frac{50.7}{80}\right)}}{-5}&=k && \color{PineGreen}\longleftarrow \text{Divide both sides by }(-5)\\[0.5em]
-k&=0.1 && \color{PineGreen}\longleftarrow \text{Calculate and round as required}k
+k&=0.0912 && \color{PineGreen}\longleftarrow \text{Calculate and round as required}
 \end{align*}
 
 \end{tcolorbox}
 
-A feature of exponential functions is that the time taken for the value to grow or decay by a any given proportion is always constant. For example the time taken for exponential growth to double a value from 20 to 40 will be the same time it will take to double from 50 to 100.
+A feature of exponential functions is that the time taken for the value to grow or decay by any given proportion is always constant. For example the time taken for an exponential growth function to double a value from 20 to 40 will be the same time it will take to double from 50 to 100.
 
 \pagebreak
 
 \begin{tcolorbox}[colback=PineGreen!2!, colframe=PineGreen]
 
 \begin{enumerate}
-    \item[(c)] Find the time it will take for only half of the original substance to remain (its \textit{half-life}).
+    \item[(c)] Find the time it will take for only half of the original substance to remain (its \textit{half-life}). \faCalculator
 \end{enumerate}
 
 \tcblower
@@ -1291,22 +1291,117 @@ A feature of exponential functions is that the time taken for the value to grow 
 \vspace{-0.5cm}
 
 \begin{align*}
-50.7&=80e^{-k\times 5} && \color{PineGreen}\longleftarrow \text{Substitute }M_0=80\text{, }M=50.7\text{ and }t=5\\[0.5em]
-\frac{50.7}{80}&=e^{-5k} && \color{PineGreen}\longleftarrow \text{Divide by }80\\[0.5em]
-\ln{\left(\frac{50.7}{80}\right)}&=-5k && \color{PineGreen}\longleftarrow \text{Take natural log of both sides }\\[0.5em]
-\frac{\ln{\left(\frac{50.7}{80}\right)}}{-5}&=k && \color{PineGreen}\longleftarrow \text{Divide both sides by }(-5)\\[0.5em]
-k&=0.1 && \color{PineGreen}\longleftarrow \text{Calculate and round as required}k
+40&=80e^{-0.0912t} && \color{PineGreen}\longleftarrow \text{Substitute }M=40\text{ and }k=0.0912\text{ is now known}\\[0.5em]
+\frac1{2}&=e^{-0.0912t} && \color{PineGreen}\longleftarrow \text{Divide by }80\text{ and simplify}\\[0.5em]
+\ln{\left(\frac{1}{2}\right)}&=-0.0912t && \color{PineGreen}\longleftarrow \text{Take natural log of both sides }\\[0.5em]
+\frac{\ln{\left(\frac{1}{2}\right)}}{-0.0912}&=t && \color{PineGreen}\longleftarrow \text{Divide both sides by }(-5)\\[0.5em]
+t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 \end{align*}
 
 \end{tcolorbox}
 
-\newpage
+\vspace{-0.5cm}
 
 ### Exercise 15.8 {-}
 
-\newpage
+\vspace{-0.3cm}
+
+All questions: \faCalculator
+
+\vspace{-0.2cm}
+
+\begin{enumerate}
+    \item For each \textit{exponential growth} function, find the value of $t$ it will take for the value to double:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $V=40e^{0.3t}$
+            \item $P(t)=25e^{0.08t}$
+            \item $M=M_0e^{0.00572t}$
+        \end{multicols}
+    \end{enumerate}
+    \item The number of bacteria in a population, $B$, can be modelled using the equation $B=400e^{0.0376t}$ where $t$ is time measured in minutes.
+    \begin{enumerate}
+        \item State the number of bacteria in the population initially.
+        \item Find, to the nearest thousand, the number of bacteria after 45 minutes.
+        \item Determine the time it takes for the population of bacteria to double in size.
+    \end{enumerate}
+    \item A population of deer is growing exponentially in an area, and the size of the population, $P$, can be described by the equation $P=860e^{0.173t}$, where $t$ is the number of years from 2026.
+    \begin{enumerate}
+        \item State the number of deer in the population in 2026.
+        \item Find, to the nearest ten, the number of deer expected to be in the population in 2028.
+        \item Determine the time it will take for the population of deer to double in size.
+    \end{enumerate}
+    \item For each \textit{exponential decay} function, find the value of $t$ it will take for the value to halve:
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $T=20e^{-0.8t}$
+            \item $V(t)=360e^{-0.072t}$
+            \item $P=P_0e^{-0.00197t}$
+        \end{multicols}
+    \end{enumerate}
+    \item The temperature $T$ (in $\degree\text{C}$) of a substance $t$ minutes after the end of an experiment can be modelled by the equation $T=T_0e^{-kt}$. After 7 minutes, the substance has cooled from $140\degree\text{C}$ to $55\degree\text{C}$.
+    \begin{enumerate}
+        \item Determine the value of $k$ to three significant figures.
+        \item Find the time taken for the substance to cool to $30\degree\text{C}$.
+    \end{enumerate}
+    \item The concentration $C$ of a drug in a patient's blood $t$ hours after being given a dose can be modelled by the equation $C=28e^{-kt}$.
+    \begin{enumerate}
+        \item If the concentration is 23 after 90 minutes, calculate the value of $k$ to three significant figures.
+        \item Find the time taken for the concentrate to reduce by half.
+        \item Find the time taken for the concentration to be only 15\% of its original value.
+    \end{enumerate}
+\end{enumerate}
+
+\pagebreak
 
 ## Experimental Data
+
+\vspace{-0.5cm}
+
+Where a relationship between variables $x$ and $y$ is a \textcolor{PineGreen}{power} function in the form
+$\color{PineGreen}y=k\color{PineGreen}x^{\color{PineGreen}n}$, taking any $\log_a$ of both sides will reveal a \textcolor{PineGreen}{linear relationship} will exist between $\color{PineGreen}\log_ax$ and $\color{PineGreen}\log_ay$.
+
+\begin{multicols}{3}
+
+\begin{center}
+    \begin{tikzpicture}
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}x$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}y$};
+          \node[below left] {\scriptsize{O}};
+    \end{tikzpicture}
+\end{center}
+
+\vfill\null
+\columnbreak
+\null\vfill
+
+\begin{align*}
+    \color{PineGreen}y&=k\color{PineGreen}x^{\color{black}n}\\[0.5em]
+    log_a{y}&=log_a{\left(kx^n\right)}\\[0.5em]
+    log_a{y}&=log_a{x^n}+log_a{k}\\[0.5em]
+    \color{PineGreen}log_a{y}&=n\color{PineGreen}log_a{x}\color{black}+log_a{k}\\
+    &\hspace{1cm} \downarrow\\
+    \color{PineGreen}log_a{y}&=m\color{PineGreen}log_a{x}\color{black}+c
+\end{align*}
+
+\vfill\null
+\columnbreak
+\null\vfill
+
+
+\begin{center}
+    \begin{tikzpicture}
+          \draw[-stealth] (-0.2,0) -- (4,0) node[below] {$\color{PineGreen}\log_a{x}$};
+          \draw[-stealth] (0,-0.2) -- (0,4) node[left] {$\color{PineGreen}\log_a{y}$};
+          \node[below left] {\scriptsize{O}};
+    \end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+\newpage
+
+or an \textcolor{PineGreen}{exponential} function such as $y=ab^{\color{PineGreen}x}$, takin
 
 \newpage
 
