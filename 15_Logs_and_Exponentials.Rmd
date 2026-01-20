@@ -1620,6 +1620,91 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 
 ### Exercise 15.10 {-}
 
+\begin{enumerate}
+    \item For each graph where the relationship between $x$ and $y$ is $y=ab^x$, determine the values of $a$ and $b$:
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(a)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(b)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(c)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(d)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \item For each graph where the relationship between $x$ and $y$ is $y=ka^x$, determine the values of $a$ and $k$:
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(a)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(b)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(c)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(d)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+    \end{multicols}
+\end{enumerate}
+
 \newpage
 
 ## Logs and Exponentials Review Exercise {-}
