@@ -1450,8 +1450,11 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
             \begin{tikzpicture}
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(a)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_7{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_7{y}$};
+                \draw[thick] (0,0.5) node[left] {$(0,2)$} -- (3,3) node[below right] {$(2,12)$} -- (3.3,3.25);
+                \draw[fill] (0,0.5) circle (0.05);
+                \draw[fill] (3,3) circle (0.05);
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1459,8 +1462,11 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
             \begin{tikzpicture}
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(b)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_2{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_2{y}$};
+                \draw[thick] (0,0.8) node[left] {$(0,4)$} -- (4,2.4) node[below right] {$(16,12)$} -- (4.2,2.48);
+                \draw[fill] (0,0.8) circle (0.05);
+                \draw[fill] (4,2.4) circle (0.05);
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1470,8 +1476,11 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
             \begin{tikzpicture}
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(c)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_5{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_5{y}$};
+                \draw[thick] (0,3) node[below left] {$(0,3)$} -- (3,1) node[above right] {$(3,1)$} -- (3.75,0.5);
+                \draw[fill] (0,3) circle (0.05);
+                \draw[fill] (3,1) circle (0.05);
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1479,8 +1488,11 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
             \begin{tikzpicture}
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(d)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_8{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_8{y}$};
+                \draw[thick] (0,2) node[left] {$2$} -- (4,0) node[below] {$4$};
+                \draw[fill] (0,2) circle (0.05);
+                \draw[fill] (4,0) circle (0.05);
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1489,19 +1501,24 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
     \begin{multicols}{2}
         \begin{center}
             \begin{tikzpicture}
-                \draw[white] (-3,-1) rectangle (6,4);
-                \node[below right] at (-3,4) {(a)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[white] (-3,-2.5) rectangle (6,2.5);
+                \node[below right] at (-3,2.5) {(a)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_3{x}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_3{y}$};
+                \draw[thick] (0,-1) -- (4.4,1.2);
+                \draw[fill] (0,-1) circle (0.05);
+                \draw[fill] (4,1) circle (0.05);
+                \node[left] at (0,-1) {$(0,-1)$};
+                \node[below right] at (4,1) {$(4,1)$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
         \begin{center}
             \begin{tikzpicture}
-                \draw[white] (-3,-1) rectangle (6,4);
-                \node[below right] at (-3,4) {(b)};
+                \draw[white] (-3,-2.5) rectangle (6,2.5);
+                \node[below right] at (-3,2.5) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1509,19 +1526,19 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
     \begin{multicols}{2}
         \begin{center}
             \begin{tikzpicture}
-                \draw[white] (-3,-1) rectangle (6,4);
-                \node[below right] at (-3,4) {(c)};
+                \draw[white] (-3,-2.5) rectangle (6,2.5);
+                \node[below right] at (-3,2.5) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
         \begin{center}
             \begin{tikzpicture}
-                \draw[white] (-3,-1) rectangle (6,4);
-                \node[below right] at (-3,4) {(d)};
+                \draw[white] (-3,-2.5) rectangle (6,2.5);
+                \node[below right] at (-3,2.5) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
