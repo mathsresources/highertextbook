@@ -1452,7 +1452,8 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
                 \node[below right] at (-3,4) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_7{x}$};
                 \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_7{y}$};
-                \draw[thick] (0,0.5) node[left] {$(0,2)$} -- (3,3) node[below right] {$(2,12)$} -- (3.3,3.25);
+                \draw[thick] (0,0.5) node[left] {$(0,2)$} -- (3,3) -- (3.3,3.25);
+                \node[below right,xshift=-0.1cm,yshift=0.1cm] at (3,3) {$(2,12)$};
                 \draw[fill] (0,0.5) circle (0.05);
                 \draw[fill] (3,3) circle (0.05);
                 \node[below left] {\scriptsize{O}};
@@ -1464,7 +1465,8 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
                 \node[below right] at (-3,4) {(b)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_2{x}$};
                 \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_2{y}$};
-                \draw[thick] (0,0.8) node[left] {$(0,4)$} -- (4,2.4) node[below right] {$(16,12)$} -- (4.2,2.48);
+                \draw[thick] (0,0.8) node[left] {$(0,4)$} -- (4,2.4) -- (4.2,2.48);
+                \node[below right,xshift=-0.1cm,yshift=0.1cm] at (4,2.4) {$(16,12)$};
                 \draw[fill] (0,0.8) circle (0.05);
                 \draw[fill] (4,2.4) circle (0.05);
                 \node[below left] {\scriptsize{O}};
@@ -1478,9 +1480,10 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
                 \node[below right] at (-3,4) {(c)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_5{x}$};
                 \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_5{y}$};
-                \draw[thick] (0,3) node[below left] {$(0,3)$} -- (3,1) node[above right] {$(3,1)$} -- (3.75,0.5);
-                \draw[fill] (0,3) circle (0.05);
-                \draw[fill] (3,1) circle (0.05);
+                \draw[thick] (0,2.4) node[left] {$(0,3)$} -- (3,0.8) -- (3.75,0.4);
+                \node[above right,xshift=-0.1cm,yshift=-0.1cm] at (3,0.8) {$(3,1)$};
+                \draw[fill] (0,2.4) circle (0.05);
+                \draw[fill] (3,0.8) circle (0.05);
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1508,18 +1511,22 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
                 \draw[thick] (0,-1) -- (4.4,1.2);
                 \draw[fill] (0,-1) circle (0.05);
                 \draw[fill] (4,1) circle (0.05);
-                \node[left] at (0,-1) {$(0,-1)$};
-                \node[below right] at (4,1) {$(4,1)$};
+                \node[left] at (0,-1) {$-1$};
+                \node[below right,xshift=-0.1cm,yshift=0.1cm] at (4,1) {$(4,1)$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
         \begin{center}
             \begin{tikzpicture}
                 \draw[white] (-3,-2.5) rectangle (6,2.5);
-                \node[below right] at (-3,2.5) {(a)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
+                \node[below right] at (-3,2.5) {(b)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_5{x}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_5{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick] (0,-2) -- (2.25,1);
+                \draw[fill] (0,-2) circle (0.05) node[left] {$\left(0,-2\right)$};
+                \draw[fill] (2.25,1) circle (0.05);
+                \node[right] at (2.25,1) {$(3,1)$};
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1527,19 +1534,24 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
         \begin{center}
             \begin{tikzpicture}
                 \draw[white] (-3,-2.5) rectangle (6,2.5);
-                \node[below right] at (-3,2.5) {(a)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
+                \node[below right] at (-3,2.5) {(c)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_9{x}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_9{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[fill] (0,1) circle (0.05);
+                \draw[thick] (0,1) node[left] {$\frac{1}{2}$} -- (3,-1) node[below] {gradient $=-2$};
             \end{tikzpicture}
         \end{center}
         \begin{center}
             \begin{tikzpicture}
                 \draw[white] (-3,-2.5) rectangle (6,2.5);
-                \node[below right] at (-3,2.5) {(a)};
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_a{x}$};
-                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_a{y}$};
+                \node[below right] at (-3,2.5) {(d)};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_8{x}$};
+                \draw[-stealth] (0,-2.5) -- (0,2) node[left] {$\log_8{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick] (0,-1) node[left] {$-\frac{1}{3}$} -- (2.5,1.5);
+                \draw[fill] (0,-1) circle (0.05);
+                \draw[fill] (1,0) circle (0.05) node[below] {$6$};
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1645,8 +1657,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_5{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,1) node[left] {$2$} circle (0.05) -- (3,2) node[above] {gradient $=3$}; 
             \end{tikzpicture}
         \end{center}
         \begin{center}
@@ -1654,8 +1667,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(b)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_4{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,0.5) node[left] {$\frac{1}{2}$} circle (0.05) -- (2.5,3) node[above] {gradient $=2$};
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1665,8 +1679,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(c)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_2{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,2.4) node[left] {$(0,3)$} circle (0.05) -- (3,0.8) node[right] {$(2,1)$} circle (0.05);
             \end{tikzpicture}
         \end{center}
         \begin{center}
@@ -1674,8 +1689,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(d)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
-                \node[below left] {\scriptsize{O}};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_3{y}$};
+                \draw[thick,fill] (0,-0.5) node[left] {$-1$} circle (0.05) -- (4,1.5) node[right] {$(2,3)$} circle (0.05);
+                \node[above left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1686,8 +1702,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(a)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_{10}{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,2) node[left] {$(0,3)$} circle (0.05) -- (2,-0.7) node[right] {gradient $=-1$};
             \end{tikzpicture}
         \end{center}
         \begin{center}
@@ -1695,8 +1712,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(b)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_{8}{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,0.5) node[left] {$\frac{1}{3}$} circle (0.05) -- (2.5,3) node[above] {gradient $=1$};
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1706,8 +1724,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(c)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_3{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,2.4) node[left] {$4$} circle (0.05) -- (1.2,0) node[below] {$2$} circle (0.05);
             \end{tikzpicture}
         \end{center}
         \begin{center}
@@ -1715,8 +1734,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \draw[white] (-3,-1) rectangle (6,4);
                 \node[below right] at (-3,4) {(d)};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_a{y}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_{64}{y}$};
                 \node[below left] {\scriptsize{O}};
+                \draw[thick,fill] (0,2) node[left] {$\frac{1}{2}$} circle (0.05) -- (3.5,0) node[below] {$\frac{3}{2}$} circle (0.05);
             \end{tikzpicture}
         \end{center}
     \end{multicols}
@@ -1725,4 +1745,53 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 \newpage
 
 ## Logs and Exponentials Review Exercise {-}
+
+\vspace{-0.5cm}
+
+\begin{enumerate}
+    \item Express $2\log_p{10}+\log_p{2}-\log_p{50}$ in the form $\log_p{q}$, where $q$ is a positive integer.
+    \item Evaluate the following:
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\log_{3}{\frac{1}{4}}+2\log_{3}{6}$
+            \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve the equation $\log_3{x}-\log_3{5}=\log_3{2}$.
+    \item Solve $\log_2{x}+\log_2{(x+7)}=3$, where $x>0$.
+    \item Given that $\log_{p}{4}+3=\log_p{32}$, find the value of $p$.
+    \item A population of mice is discovered living in some woodland, and number of mice can be modelled by:
+    \[M=80e^{kt}\]
+    where $M$ is the estimated number of mice in the population, $t$ is the number of weeks since the population was discovered and $k$ is a constant.
+    \begin{enumerate}
+        \item State the estimated number of mice in the population when it was first discovered.
+        \item It is estimated there will be 120 mice in the population after 3 weeks. Find the value of $k$.
+        \item Calculate the time taken for the population to double in size.
+    \end{enumerate}
+    \item Variables $x$ and $y$ are linked by the equation $y=ax^b$. The graph of $\log_7{y}$ against $\log_7{x}$ is below:
+    \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_7{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_7{y}$};
+                \draw[thick] (0,2.4) node[left] {$(0,2)$} -- (3,0.8) -- (3.75,0.4);
+                \node[above right,xshift=-0.1cm,yshift=-0.1cm] at (3,1.2) {$(3,1)$};
+                \draw[fill] (0,2.4) circle (0.05);
+                \draw[fill] (3,0.8) circle (0.05);
+                \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+        \end{center}
+        Find the values of $a$ and $b$.
+        \item A logarithmic function, $f$, is defined for $x>1$. The diagram shows the graph of $y=f(x)$.
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+                    \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
+                    \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
+                    \draw[smooth,thick,domain=0.1:5.5,xshift=1cm,yshift=0cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
+                    \draw[fill] (2,0) circle (0.05) node[below] {$2$};
+                    \draw[fill] (4,1) circle (0.05) node[above] {$(4,1)$};
+                    \draw[dashed] (1,-2) -- (1,3);
+                \end{tikzpicture}
+                \end{center}
+                \item
+\end{enumerate}
 
