@@ -1,197 +1,36 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-\documentclass[
-  12pt,
-  openany]{book}
-\usepackage{xcolor}
-\usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{5}
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-  \setmainfont[]{Times New Roman}
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
-\usepackage{booktabs}
-\usepackage[top=1cm,bottom=1cm,left=1.5cm,right=1.5cm,includehead,a4paper]{geometry}
-\usepackage{fancyhdr}
-  \pagestyle{fancy}
-  \fancypagestyle{plain}{%
-  \renewcommand{\headrulewidth}{0pt}%
-  \fancyhf{}%
-}
-  \fancyhf{}
-  \fancyhf[HRO,HLE]{\thepage}
-  \fancyhf[HC]{\leftmark}
+--- 
+site: bookdown::bookdown_site
+documentclass: book
+classoption: openany
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+mainfont: Times New Roman
+fontsize: 12pt
+url: https://mathsresources.github.io
+description: |
+  This textbook is designed to support the Higher Mathematics course.
+link-citations: no
+header-includes:
+- \AtBeginDocument{\frontmatter}
+---
 
-%% Book Structure
-\usepackage{booktabs}
-\usepackage{titlesec}
-\usepackage{caption}
-\usepackage{subcaption}
-
-\usepackage[no-math]{fontspec}
-\usepackage{lmodern}
-\renewcommand{\familydefault}{lmss}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{unicode-math}
-
-%% Utilities
-\usepackage{tcolorbox}
-\usepackage{hyperref}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{wrapfig}
-\graphicspath{ {images/} }
-\usepackage{exsheets}
-\usepackage{setspace}
-\usepackage{etoolbox}
-\usepackage{enumitem}
-\usepackage{graphbox,graphicx}
-\usepackage{float}
-\usepackage{adjustbox}
-\usepackage{quotchap}
-\usepackage{dirtytalk}
-\usepackage{setspace}
-\usepackage{multicol}
-\usepackage{epigraph}
-\usepackage[switch, modulo]{lineno}
-\usepackage{vwcol}
-
-%% Maths and Tikz
-\usepackage{tikz}
-\usepackage{tikzlings}
-\usetikzlibrary{math}
-\usetikzlibrary{patterns}
-\usetikzlibrary{decorations.pathreplacing,angles,quotes}
-\usetikzlibrary{fadings}
-\usepackage{units}
-\usepackage{amssymb}
-\usepackage{pifont}
-\usepackage{nth}
-\usepackage{mathtools}
-\usepackage[draft]{tikzpeople}
-\usepackage{gensymb}
-\usepackage{bm}
-\usepackage{pgfplots}
-\usepackage{pgfmath}
-\pgfplotsset{compat=1.8}
-\usetikzlibrary{shapes.geometric}
-
-%% Defining Stuff
-\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
-\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
-\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
-\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
-\newenvironment{cols}[1][]{}{}
-\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
-\end{minipage}
-\ifhmode\unskip\fi
-\aftergroup\useignorespacesandallpars}
-
-\def\useignorespacesandallpars#1\ignorespaces\fi{%
-#1\fi\ignorespacesandallpars}
-\makeatletter
-\def\ignorespacesandallpars{%
-  \@ifnextchar\par
-    {\expandafter\ignorespacesandallpars\@gobble}%
-    {}%
-}
-\makeatother
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-\setlist{topsep=0pt, leftmargin=*}
-\setlist[2]{itemsep=5pt}
-
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
-
-\tcbuselibrary{skins}
-
-
-\usepackage[dvipsnames]{xcolor}
-
-\usepackage{cancel}
-\newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
-\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
-
-\usepackage{sectsty}
-\usepackage{fontawesome5}
-
-\def\doubleunderline#1{\underline{\underline{#1}}}
-\AtBeginDocument{\frontmatter}
-\usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-\hypersetup{
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-
-\author{}
-\date{\vspace{-2.5em}}
-
-\begin{document}
-
-{
-\setcounter{tocdepth}{1}
-\tableofcontents
-}
 \mainmatter
 
-\chapter*{Introduction}\label{introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+# Introduction {-}
 
 Intro
 
+
+
+
+
+
+
+<!--chapter:end:index.Rmd-->
+
 \chapterfont{\color{white}}
 
-\chapter{The Straight Line}\label{the-straight-line}
+# The Straight Line
 
 \vspace{-12cm}
 \begin{center}
@@ -205,84 +44,78 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Straight Line Equations}\label{straight-line-equations}
+
+## Straight Line Equations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Parallel and Perpendicular Lines}\label{parallel-and-perpendicular-lines}
+## Parallel and Perpendicular Lines
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-1}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{\texorpdfstring{The Angle a Line Makes with the \(x\)-Axis}{The Angle a Line Makes with the x-Axis}}\label{the-angle-a-line-makes-with-the-x-axis}
+## The Angle a Line Makes with the $x$-Axis
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-2}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Collinearity}\label{collinearity}
+## Collinearity
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-3}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Midpoint}\label{the-midpoint}
+## The Midpoint
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-4}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Altitudes of a Triangle}\label{altitudes-of-a-triangle}
+## Altitudes of a Triangle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-5}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Medians of a Triangle}\label{medians-of-a-triangle}
+## Medians of a Triangle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-6}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Perpendicular Bisectors}\label{perpendicular-bisectors}
+## Perpendicular Bisectors
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-7}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:01_Straight_Line.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Recurrence Relations}\label{recurrence-relations}
+# Recurrence Relations
 
 \vspace{-12cm}
 \begin{center}
@@ -295,40 +128,38 @@ Intro
 \node at (3,1) {\Large{\textsc{Chapter 2}}};
 \end{tikzpicture}
 \end{center}
-
-\section{Finding Terms in a Sequence}\label{finding-terms-in-a-sequence}
-
-\newpage
-
-\subsection*{Exercise}\label{exercise-8}
-\addcontentsline{toc}{subsection}{Exercise}
+ 
+## Finding Terms in a Sequence
 
 \newpage
 
-\section{Determining a Recurrence Relation}\label{determining-a-recurrence-relation}
+### Exercise {-}
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-9}
-\addcontentsline{toc}{subsection}{Exercise}
+## Determining a Recurrence Relation
 
 \newpage
 
-\section{The Limit of a Recurrence Relation}\label{the-limit-of-a-recurrence-relation}
+### Exercise {-}
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-10}
-\addcontentsline{toc}{subsection}{Exercise}
+## The Limit of a Recurrence Relation
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-1}
-\addcontentsline{toc}{section}{Review Exercise}
+### Exercise {-}
+
+\newpage
+
+## Review Exercise {-}
+
+<!--chapter:end:02_Recurrence_Relations.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Differentiation I}\label{differentiation-i}
+# Differentiation I
 
 \vspace{-12cm}
 \begin{center}
@@ -342,66 +173,61 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{\texorpdfstring{The Derivative of \(ax^n\)}{The Derivative of ax\^{}n}}\label{the-derivative-of-axn}
+## The Derivative of $ax^n$
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-11}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Differentiable Form}\label{differentiable-form}
+## Differentiable Form
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-12}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Leibniz Notation}\label{leibniz-notation}
+## Leibniz Notation
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-13}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Gradient of a Tangent to a Curve}\label{the-gradient-of-a-tangent-to-a-curve}
+## The Gradient of a Tangent to a Curve
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-14}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Equation of a Tangent to a Curve}\label{the-equation-of-a-tangent-to-a-curve}
+## The Equation of a Tangent to a Curve
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-15}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Rate of Change of a Function}\label{the-rate-of-change-of-a-function}
+## The Rate of Change of a Function
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-16}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-2}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:03_Differentiation_I.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Quadratic Theory}\label{quadratic-theory}
+# Quadratic Theory
 
 \vspace{-12cm}
 \begin{center}
@@ -415,57 +241,54 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Solving Quadratic Inequations}\label{solving-quadratic-inequations}
+## Solving Quadratic Inequations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-17}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Completing the Square}\label{completing-the-square}
+## Completing the Square
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-18}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Disciminant}\label{the-disciminant}
+## The Disciminant
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-19}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Intersection of a Line and a Curve}\label{the-intersection-of-a-line-and-a-curve}
+## The Intersection of a Line and a Curve
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-20}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Tangency}\label{tangency}
+## Tangency
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-21}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-3}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+
+<!--chapter:end:04_Quadratic_Theory.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Sets and Functions}\label{sets-and-functions}
+# Sets and Functions
 
 \vspace{-12cm}
 \begin{center}
@@ -479,48 +302,45 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{The Domain of a Function}\label{the-domain-of-a-function}
+## The Domain of a Function
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-22}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Range of a Function}\label{the-range-of-a-function}
+## The Range of a Function
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-23}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Composite Functions}\label{composite-functions}
+## Composite Functions
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-24}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Inverse Functions}\label{inverse-functions}
+## Inverse Functions
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-25}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-4}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:05_Sets_and_Functions.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Trigonometry}\label{trigonometry}
+# Trigonometry
 
 \vspace{-12cm}
 \begin{center}
@@ -534,65 +354,61 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Exact Values}\label{exact-values}
+## Exact Values
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-26}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Solving Trig Equations using Exact Values}\label{solving-trig-equations-using-exact-values}
+## Solving Trig Equations using Exact Values
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-27}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Radians}\label{radians}
+## Radians
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-28}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Solving Trig Equations and Radians}\label{solving-trig-equations-and-radians}
+## Solving Trig Equations and Radians
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-29}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Solving Phase Angle Equations}\label{solving-phase-angle-equations}
+## Solving Phase Angle Equations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-30}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Solving Multiple Angle Equations}\label{solving-multiple-angle-equations}
+## Solving Multiple Angle Equations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-31}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Review Exercise}\label{review-exercise-5}
+## Review Exercise
+
+<!--chapter:end:06_Trigonometry.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Graph Transformations}\label{graph-transformations}
+# Graph Transformations
 
 \vspace{-10cm}
 \begin{center}
@@ -606,48 +422,45 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Translations}\label{translations}
+## Translations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-32}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Stretches and Compressions}\label{stretches-and-compressions}
+## Stretches and Compressions
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-33}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Reflections}\label{reflections}
+## Reflections
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-34}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Composite Transformations}\label{composite-transformations}
+## Composite Transformations
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-35}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-6}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:07_Graph_Transformations.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Vectors}\label{vectors}
+# Vectors
 
 \vspace{-12cm}
 \begin{center}
@@ -661,84 +474,77 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Parallel Vectors}\label{parallel-vectors}
+## Parallel Vectors
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-36}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Collinearity using Vectors}\label{collinearity-using-vectors}
+## Collinearity using Vectors
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-37}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Division of a Line in a Ratio}\label{the-division-of-a-line-in-a-ratio}
+## The Division of a Line in a Ratio
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-38}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{\texorpdfstring{Unit Vectors \(i\), \(j\) and \(k\)}{Unit Vectors i, j and k}}\label{unit-vectors-i-j-and-k}
+## Unit Vectors $i$, $j$ and $k$
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-39}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Scalar Product}\label{the-scalar-product}
+## The Scalar Product
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-40}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Angle Between Two Vectors}\label{the-angle-between-two-vectors}
+## The Angle Between Two Vectors
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-41}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Properties of the Scalar Product}\label{properties-of-the-scalar-product}
+## Properties of the Scalar Product
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-42}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Vector Pathways}\label{vector-pathways}
+## Vector Pathways
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-43}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-7}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:08_Vectors.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Differentiation II}\label{differentiation-ii}
+# Differentiation II
 
 \vspace{-12cm}
 \begin{center}
@@ -752,9 +558,10 @@ Intro
 \end{tikzpicture}
 \end{center}
 
-\section{Increasing and Decreasing Functions}\label{increasing-and-decreasing-functions}
 
-A function can be said to be \textit{increasing} for values of \(x\) for which a tangent to the curve has a \textit{positive gradient}, and \textit{decreasing} where a tangent to the curve has a \textit{negative gradient}.
+## Increasing and Decreasing Functions
+
+A function can be said to be \textit{increasing} for values of $x$ for which a tangent to the curve has a \textit{positive gradient}, and \textit{decreasing} where a tangent to the curve has a \textit{negative gradient}.
 
 \vspace{-0.3cm}
 
@@ -795,7 +602,7 @@ A function can be said to be \textit{increasing} for values of \(x\) for which a
 
 \vspace{-1cm}
 
-Function \(f\) above is \textit{increasing} for \(x<a,\text{ }x>b\) and \textit{decreasing} for \(a<x<b\).
+Function $f$ above is \textit{increasing} for $x<a,\text{ }x>b$ and \textit{decreasing} for $a<x<b$.
 
 \begin{tcolorbox}[title=Example 9.1.1,colback=blue!1, colframe=blue!70!black!70!]
 Part of the graph of a function $f(x)$ is below. State the values of $x$ for which $f(x)$ is:\\[0.1em]
@@ -828,7 +635,7 @@ Part of the graph of a function $f(x)$ is below. State the values of $x$ for whi
 
 \vspace{0.5cm}
 
-Evaluating \(f'(x)\) can show whether a function is increasing or decreasing at that point:
+Evaluating $f'(x)$ can show whether a function is increasing or decreasing at that point:
 
 \vspace{0.5cm}
 
@@ -874,7 +681,7 @@ $$\text{Since }f'(4)>0,\text{ the function }f\text{ is increasing when }x=4.$$
 
 \pagebreak
 
-The range of values of \(x\) for which a function is increasing or decreasing can also be determined:
+The range of values of $x$ for which a function is increasing or decreasing can also be determined:
 
 \begin{tcolorbox}[title=Example 9.1.3,colback=blue!1, colframe=blue!70!black!70!]
 Determine the range of values of $x$ for which the function $f(x)=2x^2-8x+11$ is increasing.
@@ -973,9 +780,9 @@ $$\text{So }f'(x)\text{ is decreasing when }-4<x<1$$
 
 \end{tcolorbox}
 
-A function can be said to be \textbf{strictly increasing} if \(f'(x)>0\) across its domain.
+A function can be said to be \textbf{strictly increasing} if $f'(x)>0$ across its domain.
 
-A function can be said to be \textbf{strictly decreasing} if \(f'(x)<0\) across its domain.
+A function can be said to be \textbf{strictly decreasing} if $f'(x)<0$ across its domain.
 
 \begin{tcolorbox}[title=Example 9.1.5,colback=blue!1, colframe=blue!70!black!70!]
 Show that $f(x)=\frac{1}{3}x^3-4x^2+21x-10$ is strictly increasing for all values of $x$.\\[0.5em]
@@ -1020,7 +827,8 @@ Show that $f(x)=\frac{1}{3}x^3-4x^2+21x-10$ is strictly increasing for all value
 
 \pagebreak
 
-\section{Stationary Points}\label{stationary-points}
+
+## Stationary Points
 
 \vspace{-0.5cm}
 
@@ -1102,7 +910,7 @@ Find the coordinates of the stationary points on the curve $y=x^3-\frac{9}{2}x^2
 
 \end{tcolorbox}
 
-Either Leibniz notation \(\left(\dfrac{\text{d}y}{\text{d}x}\right)\) or function notation \((f'(x))\) may be used depending on the context.
+Either Leibniz notation $\left(\dfrac{\text{d}y}{\text{d}x}\right)$ or function notation $(f'(x))$ may be used depending on the context.
 
 \textbf{Determining the nature} of a stationary point means to find out \textit{what type} it is. There are four:
 
@@ -1137,7 +945,7 @@ Either Leibniz notation \(\left(\dfrac{\text{d}y}{\text{d}x}\right)\) or functio
 
 \vspace{-0.5cm}
 
-The \textbf{second derivative}, \(f''(x)\) or \(\dfrac{\text{d}^2 y}{\text{d}x^2}\), is obtained by \textbf{differentiating the first derivative}.
+The \textbf{second derivative}, $f''(x)$ or $\dfrac{\text{d}^2 y}{\text{d}x^2}$, is obtained by \textbf{differentiating the first derivative}.
 
 For example:
 \vspace{-0.5cm}
@@ -1217,9 +1025,8 @@ Determine the coordinates and nature of the stationary points of $f(x)=x^3-12x^2
 
 \end{tcolorbox}
 
-If the second derivative is 0, a \textbf{nature table} can be used instead, where \(\frac{\text{d}y}{\text{d}x}\) is evaluated (\(>0\) or \(<0\)) for values of \(x\) either side of a stationary point, to visualise its nature. For stationary point \((a,b)\):
+If the second derivative is 0, a \textbf{nature table} can be used instead, where $\frac{\text{d}y}{\text{d}x}$ is evaluated ($>0$ or $<0$) for values of $x$ either side of a stationary point, to visualise its nature. For stationary point $(a,b)$:
 \vspace{-0.3cm}
-
 \begin{multicols}{4}
 
 \begin{tikzpicture}
@@ -1378,7 +1185,7 @@ Find the coordinates and nature of the stationary point on the curve $y=13+6x^2-
 
 \pagebreak
 
-\section{Closed Intervals}\label{closed-intervals}
+## Closed Intervals
 
 Given a smooth, continuous function across a \textit{closed interval}, finding the coordinates and nature of stationary points can allow the maximum and minimum values to be determined.
 
@@ -1495,7 +1302,7 @@ $\text{When }x=3,\quad y=(3)^{3}+\frac{1}{2}(3)^{2}-\frac{7}{2}=28$\hspace{3.5cm
 
 \section*{9.4 Maximum and Minimum Values}
 
-If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.\textbackslash{[}0.1em{]}
+If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.\\[0.1em]
 
 \begin{tcolorbox}[title=Example 9.4.1,colback=blue!1, colframe=blue!70!black!70!]
 Determine the value of $x$ for which the function $f$, defined by $f(x)=x+\frac{1}{x}$, $x>0$, has its minimum value.
@@ -1543,7 +1350,7 @@ Determine the value of $x$ for which the function $f$, defined by $f(x)=x+\frac{
 
 \vspace{0.1cm}
 
-When using variables other than \(x\) and \(y\) (and function \(f\)), care should be taken with notation.
+When using variables other than $x$ and $y$ (and function $f$), care should be taken with notation.
 
 \vspace{0.1cm}
 
@@ -1593,9 +1400,9 @@ If a function has a single stationary point within an interval, which is a maxim
 
 \pagebreak
 
-\section{Optimisation}\label{optimisation}
+## Optimisation
 
-When a mathematical equation is used to model some real-world variables, finding maximum or minimum values on an interval is often desired. This is referred to as \textit{optimisation}.
+When a mathematical equation is used to model some real-world variables, finding maximum or minimum values on an interval is often desired. This is referred to as \textit{optimisation}. 
 
 \begin{tcolorbox}[title=Example 9.5.1,colback=blue!1, colframe=blue!70!black!70!]
 A company has determined that a mathematical equation can model the amount of revenue in thousands of pounds, $R$, which may be earned by setting the price for a new product as $x$ pounds.
@@ -1695,7 +1502,7 @@ A solid cuboid measures $x\text{ cm}$ by $x\text{ cm}$ by $h\text{ cm}$. The vol
 
 \end{tcolorbox}
 
-It is recommended to first form an equation for the surface area, \(A\), in terms of \(x\) \textit{and} \(h\). By then finding the relationship between \(x\) and \(h\), substitution allows \(h\) to be eliminated.
+It is recommended to first form an equation for the surface area, $A$, in terms of $x$ \textit{and} $h$. By then finding the relationship between $x$ and $h$, substitution allows $h$ to be eliminated.
 
 \begin{tcolorbox}[colback=blue!1, colframe=blue!70!black!70!]
 
@@ -1736,9 +1543,9 @@ It should be noted that part (b) can be answered in full even if part (a) is not
 
 \pagebreak
 
-\section{The Graph of the Derivative}\label{the-graph-of-the-derivative}
+## The Graph of the Derivative
 
-Part of the graph of \(f(x)\) for function \(f\) is shown below.
+Part of the graph of $f(x)$ for function $f$ is shown below.
 
 \begin{center}
 \begin{tikzpicture}
@@ -1756,7 +1563,7 @@ Part of the graph of \(f(x)\) for function \(f\) is shown below.
 \end{tikzpicture}
 \end{center}
 
-The graph of the \textit{derived function}, \(f'(x)\), plots the \textit{rate of change} of \(f\) against values of \(x\).\textbackslash{} Where \(f(x)\) is \textit{increasing}, \(f'(x)\) has a positive value, \(f(x)\) is \textit{decreasing}, \(f'(x)\) has a negative value
+The graph of the \textit{derived function}, $f'(x)$, plots the \textit{rate of change} of $f$ against values of $x$.\\ Where $f(x)$ is \textit{increasing}, $f'(x)$ has a positive value, $f(x)$ is \textit{decreasing}, $f'(x)$ has a negative value
 
 \begin{center}
 \begin{tikzpicture}
@@ -1782,7 +1589,7 @@ The graph of the \textit{derived function}, \(f'(x)\), plots the \textit{rate of
 \end{tikzpicture}
 \end{center}
 
-\textit{Stationary points} on \(f(x)\), where \(f'(x)=0\), give corresponding \textit{roots} on the graph of \(f'(x)\).
+\textit{Stationary points} on $f(x)$, where $f'(x)=0$, give corresponding \textit{roots} on the graph of $f'(x)$.
 
 \begin{center}
 \begin{tikzpicture}
@@ -1799,7 +1606,7 @@ The graph of the \textit{derived function}, \(f'(x)\), plots the \textit{rate of
 \end{tikzpicture}
 \end{center}
 
-\textit{Above} the \(x\)-axis when \(f(x)\) is increasing, and below when \(f(x)\) is decreasing, \(f'(x)\) can be sketched.
+\textit{Above} the $x$-axis when $f(x)$ is increasing, and below when $f(x)$ is decreasing, $f'(x)$ can be sketched.
 
 \begin{center}
 \begin{tikzpicture}
@@ -1903,12 +1710,13 @@ For cubic function $g(x)$, part of the graph of $y=g(x)$ is shown below. Sketch 
 
 \pagebreak
 
-\section*{Review Exercise}\label{review-exercise-8}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:09_Differentiation_II.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Polynomials}\label{polynomials}
+# Polynomials
 
 \vspace{-12cm}
 \begin{center}
@@ -1922,11 +1730,12 @@ For cubic function $g(x)$, part of the graph of $y=g(x)$ is shown below. Sketch 
 \end{tikzpicture}
 \end{center}
 
-\section{Polynomials and Synthetic Division}\label{polynomials-and-synthetic-division}
+
+## Polynomials and Synthetic Division
 
 \vspace{-0.5cm}
 
-Expressions comprised of sums of \textit{positive, integer} powers of \(x\) are referred to as \textit{polynomials in }\(x\).
+Expressions comprised of sums of \textit{positive, integer} powers of $x$ are referred to as \textit{polynomials in }$x$.
 
 \begin{multicols}{5}
     \begin{center}
@@ -1978,7 +1787,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of \(x\) are 
 
 \vspace{-1.3cm}
 
-A polynomial function such as \(f(x)=2x^3-7x^2+4x-1\) can be evaluated for some value of \(x\):
+A polynomial function such as $f(x)=2x^3-7x^2+4x-1$ can be evaluated for some value of $x$:
 
 \vspace{-0.6cm}
 
@@ -1990,14 +1799,9 @@ A polynomial function such as \(f(x)=2x^3-7x^2+4x-1\) can be evaluated for some 
 
 \vspace{-0.4cm}
 
-Another way to evaluate \(f(3)\) is to use synthetic division, as follows:
+Another way to evaluate $f(3)$ is to use synthetic division, as follows:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\tightlist
-\item
-  Draw a table as below and fill in the first row, then bring the first coefficient down:
-\end{enumerate}
+1) Draw a table as below and fill in the first row, then bring the first coefficient down:
 
 \vspace{-0.2cm}
 
@@ -2020,13 +1824,7 @@ Another way to evaluate \(f(3)\) is to use synthetic division, as follows:
 
 \vspace{-0.2cm}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  The 6 is obtained by \textit{multiplying} 2 by 3, and the -1 by \textit{adding} the two values above:
-\end{enumerate}
+2) The 6 is obtained by \textit{multiplying} 2 by 3, and the -1 by \textit{adding} the two values above:
 
 \vspace{-0.2cm}
 
@@ -2053,13 +1851,7 @@ Another way to evaluate \(f(3)\) is to use synthetic division, as follows:
 
 \vspace{-0.2cm}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  By continuing this \textit{multiplying then adding} pattern, the value of \(f(3)=4\) can be obtained:
-\end{enumerate}
+3) By continuing this \textit{multiplying then adding} pattern, the value of $f(3)=4$ can be obtained:
 
 \vspace{-0.2cm}
 
@@ -2117,25 +1909,25 @@ Given $f(x)=x^4-4x^3+3x^2+9$, use synthetic division to evaluate $f(2)$.
 
 \end{tcolorbox}
 
-The top line within a synthetic division box should be \textit{ordered in decreasing powers of }\(x\).\textbackslash Any missing powers are included with a coefficient of \textit{zero}.
+The top line within a synthetic division box should be \textit{ordered in decreasing powers of }$x$.\\Any missing powers are included with a coefficient of \textit{zero}.
 
 \pagebreak
 
-\section{Remainder Theorem}\label{remainder-theorem}
+## Remainder Theorem
 
 \vspace{-0.5cm}
 
 Addition, subtraction and multiplication of polynomials were all required for the National 5 course.
 
-Since \(3\times 4 + 1=13\), this implies that:
+Since $3\times 4 + 1=13$, this implies that:
 
-\[\dfrac{13}{3}=4\textbf{ Remainder }1\]
+$$\dfrac{13}{3}=4\textbf{ Remainder }1$$
 
-Since \((x-2)(x^2-3x+4)+7=x^3-5x^2+x-1\), this implies that:
+Since $(x-2)(x^2-3x+4)+7=x^3-5x^2+x-1$, this implies that:
 
-\[\dfrac{x^3-5x^2+x-1}{x-2}=x^2-3x+4\textbf{ Remainder }7\]
+$$\dfrac{x^3-5x^2+x-1}{x-2}=x^2-3x+4\textbf{ Remainder }7$$
 
-Note that for \(f(x)=x^3-5x^2+x-1\), \(f(2)=(2)^3-5(2)^2+(2)-1=7\).
+Note that for $f(x)=x^3-5x^2+x-1$, $f(2)=(2)^3-5(2)^2+(2)-1=7$.
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=18cm,colframe=red!70!black]
@@ -2179,9 +1971,9 @@ So the remainder is $7$.
 
 \end{tcolorbox}
 
-The \textit{quotient}, \(Q(x)\), can be determined from the values to the left of the remainder.\textbackslash{} Since \(3x^3-x^2+5\) is a \textit{cubic}, the quotient \(Q(x)\) is \textit{quadratic}:\quad \(3x^2+2x+2\).
+The \textit{quotient}, $Q(x)$, can be determined from the values to the left of the remainder.\\ Since  $3x^3-x^2+5$ is a \textit{cubic}, the quotient $Q(x)$ is \textit{quadratic}:\quad $3x^2+2x+2$.
 
-\[3x^3-x^2+5=(x-1)(3x^2+2x+2)+7\]
+$$3x^3-x^2+5=(x-1)(3x^2+2x+2)+7$$
 
 \begin{tcolorbox}[title=Example 10.2.2,colback=PineGreen!2, colframe=PineGreen]
 
@@ -2237,7 +2029,7 @@ Since 20 can be divided by 5 to give 4 \textbf{with no remainder}, this means 5 
 
 \vspace{-0.3cm}
 
-Given a linear factor, synthetic division allows a cubic expression \(f(x)\) to be expressed as a the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially by further factorised:
+Given a linear factor, synthetic division allows a cubic expression $f(x)$ to be expressed as a the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially by further factorised:
 \vspace{-0.1cm}
 \begin{align*}
     f(x)=&\text{ }(\textit{cubic})\\
@@ -2373,7 +2165,7 @@ $f(-1)=(-1)^3-(-1)^2-17(-1)-15=0\therefore$ $(x+1)$ \textbf{is} a factor.
 
 \end{tcolorbox}
 
-Repeated use of synthetic dvision may allow a \textit{quartic} (\(x^4\)) to be expressed as a product of up to four linear factors.
+Repeated use of synthetic dvision may allow a \textit{quartic} ($x^4$) to be expressed as a product of up to four linear factors.
 
 \vspace{-1cm}
 
@@ -2452,9 +2244,9 @@ $x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
 
 \end{tcolorbox}
 
-\pagebreak
+\pagebreak 
 
-\section{Finding Unknown Coefficients}\label{finding-unknown-coefficients}
+## Finding Unknown Coefficients
 
 \vspace{-0.5cm}
 
@@ -2592,17 +2384,17 @@ Remainder $=10$ $\implies$ $a+b+13=10$.
 
 \pagebreak
 
-\section{Solving Polynomial Equations}\label{solving-polynomial-equations}
+## Solving Polynomial Equations
 
 \vspace{-0.5cm}
 
-\textit{Quadratic} equations such as \(x^2-4x-21=0\) are typically solved through factorising, or using the quadratic formula. There is no equivalent \textit{general formula} for solving polynomial equations of degree 3 (\textit{cubic}) or higher. Instead, such polynomial equations are solved through \textit{factorising}.
+\textit{Quadratic} equations such as $x^2-4x-21=0$ are typically solved through factorising, or using the quadratic formula. There is no equivalent \textit{general formula} for solving polynomial equations of degree 3 (\textit{cubic}) or higher. Instead, such polynomial equations are solved through \textit{factorising}.
 
 \newpage
 
-\section{Identifying Polynomial Functions}\label{identifying-polynomial-functions}
+## Identifying Polynomial Functions
 
-Given the form a polynomial function takes and its graph, showing any \(x\)-intercepts and at least one other coordinate, the factorised form of the polynomial may be deduced.
+Given the form a polynomial function takes and its graph, showing any $x$-intercepts and at least one other coordinate, the factorised form of the polynomial may be deduced.
 
 \begin{itemize}
     \item An $x$-intercept (or \textit{root}) when $x=a$ implies that a polynomial has a \textit{factor} of $(x-a)$.
@@ -2635,7 +2427,7 @@ Given the form a polynomial function takes and its graph, showing any \(x\)-inte
     
 \end{multicols}
 
-The diagram below shows the graph of a quartic function with equation \(y=k(x-a)(x-b)(x-c)^2\).
+The diagram below shows the graph of a quartic function with equation $y=k(x-a)(x-b)(x-c)^2$.
 
 \begin{center}
     \begin{tikzpicture}
@@ -2651,11 +2443,11 @@ The diagram below shows the graph of a quartic function with equation \(y=k(x-a)
     \end{tikzpicture}
 \end{center}
 
-With roots at \(x=1\) and \(x=3\), and a \textit{repeated root} at \(x=-2\), the quartic can be expressed as:
+With roots at $x=1$ and $x=3$, and a \textit{repeated root} at $x=-2$, the quartic can be expressed as:
 
-\[y=k(x-1)(x-3)(x+2)^2\]
+$$y=k(x-1)(x-3)(x+2)^2$$
 
-The value of \(k\) can only be found if a \textit{non-root} coordinate is also known. By substitution:
+The value of $k$ can only be found if a \textit{non-root} coordinate is also known. By substitution:
 
 \begin{align*}
     y&=k(x-1)(x-3)(x+2)^2&&\\
@@ -2667,16 +2459,17 @@ The value of \(k\) can only be found if a \textit{non-root} coordinate is also k
     y&=\frac{1}{2}(x-1)(x-3)(x+2)^2&&\textcolor{PineGreen}{\textit{State equation}}
 \end{align*}
 
-By comparing the form given and the final equation, it can be seen that: \(k=\frac{1}{2},a=1,b=3,c=-2\)
+By comparing the form given and the final equation, it can be seen that: $k=\frac{1}{2},a=1,b=3,c=-2$
 
 \pagebreak
 
-\section*{Review Exercise}\label{review-exercise-9}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:10_Polynomials.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Integration}\label{integration}
+# Integration
 
 \vspace{-12cm}
 \begin{center}
@@ -2690,10 +2483,9 @@ By comparing the form given and the final equation, it can be seen that: \(k=\fr
 \end{tikzpicture}
 \end{center}
 
-\subsection*{Introduction and Overview}\label{introduction-and-overview}
-\addcontentsline{toc}{subsection}{Introduction and Overview}
+### Introduction and Overview {-}
 
-In mathematics, \textit{integration} can be thought of as the process of calculating some kind of \emph{``sum''}, such as the total area under a curve, by breaking it down into sums of increasingly small parts. This technique was known about and used thousands of years ago in both Ancient Greece and other parts of the world.
+In mathematics, \textit{integration} can be thought of as the process of calculating some kind of *"sum"*, such as the total area under a curve, by breaking it down into sums of increasingly small parts. This technique was known about and used thousands of years ago in both Ancient Greece and other parts of the world.
 
 \begin{center}
     \begin{multicols}{3}
@@ -2734,7 +2526,7 @@ In mathematics, \textit{integration} can be thought of as the process of calcula
     \end{multicols}
 \end{center}
 
-In the 17th century both Gottfried Wilhelm Leibniz and Isaac Newton independently discovered the \emph{fundamental theorem of calculus}, showing that \emph{integration} can be performed using \emph{antidifferentiation}, which is the `reverse' of differentiation. Now, \emph{integration} is used to refer to both the idea of calculating such a `sum', and to the process of antidifferentiation.
+In the 17th century both Gottfried Wilhelm Leibniz and Isaac Newton independently discovered the *fundamental theorem of calculus*, showing that *integration* can be performed using *antidifferentiation*, which is the 'reverse' of differentiation. Now, *integration* is used to refer to both the idea of calculating such a 'sum', and to the process of antidifferentiation. 
 
 \begin{center}
     \begin{tikzpicture}
@@ -2743,10 +2535,9 @@ In the 17th century both Gottfried Wilhelm Leibniz and Isaac Newton independentl
     \end{tikzpicture}
 \end{center}
 
-This chapter will first introduce the use of integration to calculate an \emph{antiderivative}, before moving on to using this concept to calculating area enclosed using curves.
+This chapter will first introduce the use of integration to calculate an *antiderivative*, before moving on to using this concept to calculating area enclosed using curves. 
 
-\subsection*{Chapter Contents}\label{chapter-contents}
-\addcontentsline{toc}{subsection}{Chapter Contents}
+### Chapter Contents {-}
 
 \begin{itemize}
     \setlength\itemsep{2em}
@@ -2761,9 +2552,9 @@ Integration skills covered in this chapter will be extended upon in the later ch
 
 \newpage
 
-\section{Indefinite Integrals}\label{indefinite-integrals}
+## Indefinite Integrals
 
-The \textit{derivative} of the function \(f(x)=x^3-4x^2-7x+3\) is obtained by \textit{multiplying by the power} and then \textit{reducing the power by one} for each term.
+The \textit{derivative} of the function $f(x)=x^3-4x^2-7x+3$ is obtained by \textit{multiplying by the power} and then \textit{reducing the power by one} for each term.
 
 \vspace{-0.5cm}
 
@@ -2774,7 +2565,7 @@ The \textit{derivative} of the function \(f(x)=x^3-4x^2-7x+3\) is obtained by \t
 
 \vspace{-0.5cm}
 
-\textit{Integration} can be considered the \textit{inverse} of differentiation, with the aim of taking the \textit{derivative} \(f'(x)\) and determining the \textit{original function} \(f(x)\). However, given only the derivative \(f'(x)=3x^2-8x\) it would not be possible to know any constant term the original function \(f(x)\) contained. Finding the \textit{indefinite integral} of a function requires the inclusion of a \textcolor{NavyBlue}{\textbf{Constant of Integration}, $C$}:
+\textit{Integration} can be considered the \textit{inverse} of differentiation, with the aim of taking the \textit{derivative} $f'(x)$ and determining the \textit{original function} $f(x)$. However, given only the derivative $f'(x)=3x^2-8x$ it would not be possible to know any constant term the original function $f(x)$ contained. Finding the \textit{indefinite integral} of a function requires the inclusion of a \textcolor{NavyBlue}{\textbf{Constant of Integration}, $C$}:
 
 \vspace{-0.5cm}
 
@@ -2796,9 +2587,9 @@ The \textit{derivative} of the function \(f(x)=x^3-4x^2-7x+3\) is obtained by \t
 \end{tcolorbox}
 \end{center}
 
-The \textit{integral sign}, \(\displaystyle\int\), should always appear accompanied by \(dx\), for a function in \(x\).
+The \textit{integral sign}, $\displaystyle\int$, should always appear accompanied by $dx$, for a function in $x$.
 
-Note: \(\displaystyle{\int (f(x)+g(x))}\;dx=\displaystyle{\int f(x)\;dx+\int g(x\;dx)}\)
+Note: $\displaystyle{\int (f(x)+g(x))}\;dx=\displaystyle{\int f(x)\;dx+\int g(x\;dx)}$
 
 \begin{tcolorbox}[title=Example 11.1.1,colback=NavyBlue!2, colframe=NavyBlue]
 
@@ -2855,7 +2646,7 @@ Find $\displaystyle{\int \left((2x-1)(x+3)\right)}\,dx$.
 
 \end{tcolorbox}
 
-Integration \textit{with respect to variables other than} \(x\) should not use \(dx\), and the notation used should match the variable of the function instead.
+Integration \textit{with respect to variables other than} $x$ should not use $dx$, and the notation used should match the variable of the function instead. 
 
 \begin{tcolorbox}[title=Example 11.1.4,colback=NavyBlue!2, colframe=NavyBlue]
 
@@ -2875,19 +2666,19 @@ Find $\displaystyle{\int \left(3t^2-5\right)}\,dt$.
 
 \pagebreak
 
-\section{Differential Equations}\label{differential-equations}
+## Differential Equations
 
 \pagebreak
 
-\section{Definite Integrals}\label{definite-integrals}
+## Definite Integrals
 
 \vspace{-0.5cm}
 
-The indefinite integral of the function \(f(x)\) can be notated as \(F(x)\):
+The indefinite integral of the function $f(x)$ can be notated as $F(x)$:
 
 \[\int f(x)\;dx=F(x)\]
 
-The \textit{definite integral} of \(f(x)\) from \(a\) to \(b\) is the difference between \(F(b)\) and \(F(a)\):
+The \textit{definite integral} of $f(x)$ from $a$ to $b$ is the difference between $F(b)$ and $F(a)$:
 
 \[\int_a^b f(x)\;dx=F(b)-F(a)\]
 
@@ -2905,7 +2696,7 @@ where
 \end{tcolorbox}
 \end{center}
 
-Since any \textit{constant of integration} within \(F(x)\) will cancel through subtraction (\(C-C\)), it is \textit{not included} when calculating a \textit{definite integral}.
+Since any \textit{constant of integration} within $F(x)$ will cancel through subtraction ($C-C$), it is \textit{not included} when calculating a \textit{definite integral}.
 
 \begin{tcolorbox}[title=Example 11.3.1,colback=NavyBlue!2, colframe=NavyBlue]
 
@@ -2928,11 +2719,11 @@ Find $\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx$.
 
 \pagebreak
 
-\section{The Area Under a Curve}\label{the-area-under-a-curve}
+## The Area Under a Curve
 
 \vspace{-0.5cm}
 
-The area shaded below, with each \textit{"bar"} having width \(1\) unit, is given by the \textit{sum} \(1+2+3+1+2\).
+The area shaded below, with each \textit{"bar"} having width $1$ unit, is given by the \textit{sum} $1+2+3+1+2$.
 
 \begin{center}
     \begin{tikzpicture}
@@ -2953,7 +2744,8 @@ The area shaded below, with each \textit{"bar"} having width \(1\) unit, is give
     \end{tikzpicture}
 \end{center}
 
-An integral, \(\displaystyle{\int}\), can be seen as \textit{"sum"}, but for a continuous function. Given a function \(f(x)\), the area enclosed between a section of the curve \(y=f(x)\) and the \(x\)-axis can be calculated using a definite integral.
+
+An integral, $\displaystyle{\int}$, can be seen as \textit{"sum"}, but for a continuous function. Given a function $f(x)$, the area enclosed between a section of the curve $y=f(x)$ and the $x$-axis can be calculated using a definite integral.
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=16cm,colframe=red!70!black]
@@ -2980,7 +2772,7 @@ An integral, \(\displaystyle{\int}\), can be seen as \textit{"sum"}, but for a c
 \end{tcolorbox}
 \end{center}
 
-The values of \(a\) and \(b\) can be referred to as the \textit{bounds} of the integration.
+The values of $a$ and $b$ can be referred to as the \textit{bounds} of the integration.
 
 \begin{tcolorbox}[title=Example 11.4.1,colback=NavyBlue!2, colframe=NavyBlue]
 
@@ -3016,7 +2808,7 @@ Part of the graph of $y=5+2x-x^2$ is shown. Calculate the shaded area.
 
 \newpage
 
-Where the area between a curve and the \(x\)-axis lies \textit{under} the \(x\)-axis, the definite integral will be negative.
+Where the area between a curve and the $x$-axis lies \textit{under} the $x$-axis, the definite integral will be negative. 
 
 \begin{center}
     \begin{tikzpicture}
@@ -3081,7 +2873,7 @@ $\therefore\text{ Area }=\dfrac{16}{3}+\dfrac{63}{4}=\dfrac{253}{12}\text{ squar
 
 \pagebreak
 
-\section{The Area Between Two Curves}\label{the-area-between-two-curves}
+## The Area Between Two Curves
 
 \vspace{-0.5cm}
 
@@ -3148,7 +2940,7 @@ The area \textbf{between} two curves can be calculated using the subtraction of 
 
 \vspace{-0.2cm}
 
-Note that \(\displaystyle{\int_a^b f(x)\;dx-\int_a^b g(x)\;dx=\int_a^b (f(x)-g(x))\;dx}\), leading to the following formula:
+Note that $\displaystyle{\int_a^b f(x)\;dx-\int_a^b g(x)\;dx=\int_a^b (f(x)-g(x))\;dx}$, leading to the following formula:
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=16cm,colframe=red!70!black]
@@ -3217,12 +3009,13 @@ Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-10}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:11_Integration.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Compound Angles}\label{compound-angles}
+# Compound Angles
 
 \vspace{-12cm}
 \begin{center}
@@ -3236,11 +3029,12 @@ Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area
 \end{tikzpicture}
 \end{center}
 
-\section{The Addition Formulae}\label{the-addition-formulae}
+
+## The Addition Formulae
 
 \vspace{-0.5cm}
 
-It should be noted that \(\sin{(A+B)}\ne \sin{A}+\sin{B}\):
+It should be noted that $\sin{(A+B)}\ne \sin{A}+\sin{B}$:
 
 \vspace{-0.3cm}
 
@@ -3269,7 +3063,7 @@ Instead, the following expansions are provided in the formula sheet, known as th
 
 \vspace{-0.3cm}
 
-They can be expanded into four formulae, covering addition and subtraction for each of \(\sin\) and \(\cos\):
+They can be expanded into four formulae, covering addition and subtraction for each of $\sin$ and $\cos$:
 
 \vspace{-0.5cm}
 
@@ -3327,11 +3121,11 @@ Evaluate $\sin{40\degree}\cos{10}-\cos{40\degree}\sin{10\degree}$.
 
 \pagebreak
 
-\section{Applications to Right-Angled Triangles}\label{applications-to-right-angled-triangles}
+## Applications to Right-Angled Triangles
 
 \vspace{-0.5cm}
 
-Given a right-angled triangle containing an angle \(x\), values of \(\sin{x}\), \(\cos{x}\) and \(\tan{x}\) can be stated using \textbf{SOHCATOA}. For example with Pythagoras' Theorem used to find a missing side length if needed.
+Given a right-angled triangle containing an angle $x$, values of $\sin{x}$, $\cos{x}$ and $\tan{x}$ can be stated using \textbf{SOHCATOA}. For example with Pythagoras' Theorem used to find a missing side length if needed.
 
 \begin{center}
     \begin{tikzpicture}
@@ -3398,13 +3192,13 @@ The diagram below shows angles $p$ and $q$ contained within right-angled. Find $
 
 \end{tcolorbox}
 
-Other expansions such as \(\cos{(p+q)}\) can be calculated similarly, and note that \(\tan{(p+q)}=\dfrac{\sin{(p+q)}}{\cos{(p+q)}}\).
+Other expansions such as $\cos{(p+q)}$ can be calculated similarly, and note that $\tan{(p+q)}=\dfrac{\sin{(p+q)}}{\cos{(p+q)}}$.
 
 \pagebreak
 
-\section{The Double Angle Formulae}\label{the-double-angle-formulae}
+## The Double Angle Formulae
 
-Expansions for \(\sin{2x}\) and \(\cos{2x}\) in terms of \(\sin{x}\) and \(\cos{x}\) can be obtained from the addition formulae:
+Expansions for $\sin{2x}$ and $\cos{2x}$ in terms of $\sin{x}$ and $\cos{x}$ can be obtained from the addition formulae:
 
 \begin{align*}
     \sin{2x}&\color{Mulberry}=\sin{(x+x)}&\cos{2x}&\color{Mulberry}=\cos{(x+x)}\\
@@ -3414,8 +3208,8 @@ Expansions for \(\sin{2x}\) and \(\cos{2x}\) in terms of \(\sin{x}\) and \(\cos{
     &&&=1-2\sin^2{x}\\
 \end{align*}
 
-The other arrangements of the \(\cos{2x}\) expansion come from the trigonometric identify \(\sin^2{x}+\cos^2{x}=1\).
-These expansions are provided in the formula sheet. Care is needed to determine \textit{whether} to expand a \textit{double angle} trig term and, in the case of \(\cos{2x}\), \textit{which} expansion to use.
+The other arrangements of the $\cos{2x}$ expansion come from the trigonometric identify $\sin^2{x}+\cos^2{x}=1$.
+These expansions are provided in the formula sheet. Care is needed to determine \textit{whether} to expand a \textit{double angle} trig term and, in the case of $\cos{2x}$, \textit{which} expansion to use.
 
 \begin{tcolorbox}[title=Example 12.3.1,colback=Mulberry!1, colframe=Mulberry]
 
@@ -3445,12 +3239,13 @@ Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$.
 
 \end{tcolorbox}
 
-\section*{Review Exercise}\label{review-exercise-11}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:12_Addition_Formulae.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{The Circle}\label{the-circle}
+# The Circle
 
 \vspace{-12cm}
 \begin{center}
@@ -3464,66 +3259,65 @@ Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$.
 \end{tikzpicture}
 \end{center}
 
-\section{The Equation of a Circle}\label{the-equation-of-a-circle}
+## The Equation of a Circle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-44}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The General Equation of a Circle}\label{the-general-equation-of-a-circle}
+## The General Equation of a Circle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-45}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Intersection of a Line and a Circle}\label{the-intersection-of-a-line-and-a-circle}
+## The Intersection of a Line and a Circle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-46}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Finding the Equation of a Tangent to a Circle}\label{finding-the-equation-of-a-tangent-to-a-circle}
+## Finding the Equation of a Tangent to a Circle
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-47}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Points Inside and Outside Circles}\label{points-inside-and-outside-circles}
+## Points Inside and Outside Circles
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-48}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Intersections of Circles}\label{the-intersections-of-circles}
+## The Intersections of Circles
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-49}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-12}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+
+
+
+
+<!--chapter:end:13_The_Circle.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{The Wave Function}\label{the-wave-function}
+# The Wave Function
 
 \vspace{-12cm}
 
@@ -3538,11 +3332,11 @@ Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$.
     \end{tikzpicture}
 \end{center}
 
-In this chapter, the sums and differences of \emph{equal-angled} trigonometric operations will be explored.
+In this chapter, the sums and differences of *equal-angled* trigonometric operations will be explored.
 
 \[\text{e.g. }3\sin{x}\degree+4\cos{x}\degree\]
 
-The graphs of basic trigonometric functions such as \(y=3\sin{x}\degree\) and \(y=4\cos{x}\degree\) should be familiar:
+The graphs of basic trigonometric functions such as $y=3\sin{x}\degree$ and $y=4\cos{x}\degree$ should be familiar:
 
 \begin{center}
     \begin{tikzpicture}
@@ -3559,7 +3353,7 @@ The graphs of basic trigonometric functions such as \(y=3\sin{x}\degree\) and \(
     \end{tikzpicture}
 \end{center}
 
-The graph of \(\color{Mulberry}y=3\sin{x}\degree+4\cos{x}\degree\) is the same as that of \(\color{Mulberry}y=5\cos{(x-36.9)}\degree\).
+The graph of $\color{Mulberry}y=3\sin{x}\degree+4\cos{x}\degree$ is the same as that of $\color{Mulberry}y=5\cos{(x-36.9)}\degree$.
 
 \begin{center}
     \begin{tikzpicture}
@@ -3579,25 +3373,25 @@ The graph of \(\color{Mulberry}y=3\sin{x}\degree+4\cos{x}\degree\) is the same a
     \end{tikzpicture}
 \end{center}
 
-Determining that \(3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree\) allows the maximum values and minimum values of \(3\sin{x}\degree+4\cos{x}\degree\) to be determined and the values of \(x\) which produce them, and allow equations such as \(3\sin{x}\degree+4\cos{x}\degree=2\) to be solved.
+Determining that $3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$ allows the maximum values and minimum values of $3\sin{x}\degree+4\cos{x}\degree$ to be determined and the values of $x$ which produce them, and allow equations such as $3\sin{x}\degree+4\cos{x}\degree=2$ to be solved.
 
-\emph{Any} trigonometric expression \(k_1\sin{x}\pm k_2\cos{x}\) can be written as either \(k\sin{(x\pm a)}\) or \(k\cos{(x\pm a)}\).
+*Any* trigonometric expression $k_1\sin{x}\pm k_2\cos{x}$ can be written as either $k\sin{(x\pm a)}$ or $k\cos{(x\pm a)}$.
 
 This chapter will cover how to do this and explore the various applications of this property.
 
 \pagebreak
 
-\section{\texorpdfstring{The Wave Function using \(k\cos{(x-a)}\)}{The Wave Function using k\textbackslash cos\{(x-a)\}}}\label{the-wave-function-using-kcosx-a}
+## The Wave Function using $k\cos{(x-a)}$
 
 \vspace{-0.5cm}
 
-Whilst any of \(k\sin{(x\pm a)}\) or \(k\cos{(x\pm a)}\) may be used in general, any Higher exam question is likely to specify a particular form to use. The simplest is often \(k\cos{(x-a)}\).
+Whilst any of $k\sin{(x\pm a)}$ or $k\cos{(x\pm a)}$ may be used in general, any Higher exam question is likely to specify a particular form to use. The simplest is often $k\cos{(x-a)}$.
 
-To express \(3\sin{x}\degree+4\cos{x}\degree\) in the form \(k\cos{(x-a)}\degree\), two key \emph{trigonometric identities} are needed:
+To express $3\sin{x}\degree+4\cos{x}\degree$ in the form $k\cos{(x-a)}\degree$, two key *trigonometric identities* are needed:
 
 \[\sin^2{x}+\cos^2{x}=1\hspace{2cm}\text{and}\hspace{2cm}\tan{x}=\frac{\sin{x}}{\cos{x}}\]
 
-First, \(k\cos{(x-a)}\degree\) can be expanded using the the formula \(\cos{(A\pm B)}=\cos{A}\cos{B}\mp \sin{A}\sin{B}\):
+First, $k\cos{(x-a)}\degree$ can be expanded using the the formula $\cos{(A\pm B)}=\cos{A}\cos{B}\mp \sin{A}\sin{B}$:
 
 \[k\cos{(x-a)}\degree=k\cos{x}\degree\cos{a}\degree+k\sin{x}\degree\sin{a}\degree\]
 
@@ -3605,14 +3399,14 @@ It is required that this expansion is equal to the original expression:
 
 \[3\underline{\sin{x}\degree}+4\doubleunderline{\cos{x}\degree}=k\doubleunderline{\cos{x}\degree}\cos{a}\degree+k\underline{\sin{x}\degree}\sin{a}\degree\]
 
-Equating the coefficients of \(\underline{\sin{x}\degree}\) and \(\doubleunderline{\cos{x}\degree}\) gives a set of simultaneous equations in \(k\) and \(a\):
+Equating the coefficients of $\underline{\sin{x}\degree}$ and $\doubleunderline{\cos{x}\degree}$ gives a set of simultaneous equations in $k$ and $a$:
 
 \begin{align*}
     k\sin{a}\degree&=3&&\color{Mulberry}\longleftarrow \text{Coefficients of }\underline{\sin{x}\degree}\\
     k\cos{a}\degree&=4&&\color{Mulberry}\longleftarrow \text{Coefficients of }\doubleunderline{\cos{x}\degree}
 \end{align*}
 
-Squaring both sides of each equation and adding allows \(k\) to be determined using \(\sin^2{x}+\cos^2{x}=1\):
+Squaring both sides of each equation and adding allows $k$ to be determined using $\sin^2{x}+\cos^2{x}=1$:
 
 \begin{align*}
     k^2\sin^2{a}\degree+k^2\cos^2{a}\degree&=3^2+4^2\\
@@ -3623,7 +3417,7 @@ Squaring both sides of each equation and adding allows \(k\) to be determined us
     k&=5
 \end{align*}
 
-Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\) to be calculated, noting \(k\sin{a}\degree\) and \(k\cos{a}\degree\) are both positive:
+Dividing $k\sin{a}\degree$ by $k\cos{a}\degree$ allows $a$ to be calculated, noting $k\sin{a}\degree$ and $k\cos{a}\degree$ are both positive:
 
 \vspace{2.8cm}
 \hspace{14cm}
@@ -3641,7 +3435,6 @@ Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\) to be calculate
 \end{tikzpicture}
 
 \vspace{-3.8cm}
-
 \begin{align*}
     \color{Mulberry}\frac{k\sin{a}\degree}{k\cos{a}\degree}&\color{Mulberry}=\frac{3}{4}\\
     \tan{a}\degree&=\frac{3}{4}\\
@@ -3649,7 +3442,7 @@ Dividing \(k\sin{a}\degree\) by \(k\cos{a}\degree\) allows \(a\) to be calculate
     a\degree&=36.9\degree
 \end{align*}
 
-Hence \(3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree\). Here it has been assumed that \(k>0\) and \(0<a<360\).
+Hence $3\sin{x}\degree+4\cos{x}\degree=5\cos{(x-36.9)}\degree$. Here it has been assumed that $k>0$ and $0<a<360$.
 
 \pagebreak
 
@@ -3704,8 +3497,7 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
 
 \vspace{-0.5cm}
 
-\subsubsection*{Exercise 14.1}\label{exercise-14.1}
-\addcontentsline{toc}{subsubsection}{Exercise 14.1}
+#### Exercise 14.1 {-}
 
 \vspace{-0.3cm}
 
@@ -3741,11 +3533,11 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
 
 \pagebreak
 
-\section{Other Forms of the The Wave Function}\label{other-forms-of-the-the-wave-function}
+## Other Forms of the The Wave Function
 
 \vspace{-0.5cm}
 
-As well as \(k\cos{(x-a)}\), three other forms may be used, shown below including their expansions:
+As well as $k\cos{(x-a)}$, three other forms may be used, shown below including their expansions:
 
 \vspace{-1.0cm}
 
@@ -3805,8 +3597,7 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \vspace{-0.5cm}
 
-\subsubsection*{Exercise 14.2}\label{exercise-14.2}
-\addcontentsline{toc}{subsubsection}{Exercise 14.2}
+#### Exercise 14.2 {-}
 
 \vspace{-0.3cm}
 
@@ -3842,11 +3633,11 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \pagebreak
 
-\section{Maximum and Minimum Values using the Wave Function}\label{maximum-and-minimum-values-using-the-wave-function}
+## Maximum and Minimum Values using the Wave Function
 
 \vspace{-0.5cm}
 
-The graphs of \(y=\sin{x}\degree\) and \(y=\cos{x}\degree\), including their turning points, should already be familiar:
+The graphs of $y=\sin{x}\degree$ and $y=\cos{x}\degree$, including their turning points, should already be familiar:
 
 \begin{multicols}{2}
     \begin{center}
@@ -3882,7 +3673,7 @@ The graphs of \(y=\sin{x}\degree\) and \(y=\cos{x}\degree\), including their tur
     \end{center}
 \end{multicols}
 
-Graphs of the form \(k\sin{(x\pm a)}\) and \(k\cos{(x\pm a)}\) have maximum/minimum values of \(\pm k\), and their \emph{horizontal translation} is described by \(\pm a\) following the rules covered in the Graph Transformations chapter.
+Graphs of the form $k\sin{(x\pm a)}$ and $k\cos{(x\pm a)}$ have maximum/minimum values of $\pm k$, and their *horizontal translation* is described by $\pm a$ following the rules covered in the Graph Transformations chapter.
 
 \begin{tcolorbox}[title=Example,colback=Mulberry!1!, colframe=Mulberry]
 
@@ -3928,8 +3719,7 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \vspace{-0.5cm}
 
-\subsubsection*{Exercise 14.3}\label{exercise-14.3}
-\addcontentsline{toc}{subsubsection}{Exercise 14.3}
+#### Exercise 14.3 {-}
 
 \vspace{-0.3cm}
 
@@ -3970,11 +3760,11 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \pagebreak
 
-\section{Solving Equations using the Wave Function}\label{solving-equations-using-the-wave-function}
+## Solving Equations using the Wave Function
 
 \vspace{-0.5cm}
 
-Solving an equation like \(3\sin{x}\degree+4\cos{x}\degree=2\) can be approached by using the wave function to rewrite it as \(5\cos{(x-36.9)}\degree=2\), before solving it in the manner covered in Chapter 6.
+Solving an equation like $3\sin{x}\degree+4\cos{x}\degree=2$ can be approached by using the wave function to rewrite it as $5\cos{(x-36.9)}\degree=2$, before solving it in the manner covered in Chapter 6.
 
 \begin{tcolorbox}[title=Example,colback=Mulberry!1!, colframe=Mulberry]
 
@@ -4014,12 +3804,11 @@ Hence, solve the equation $5\sin{x}\degree-2\cos{x}\degree=4$ where $0<x<360$.
 
 \end{tcolorbox}
 
-Note that any solutions outwith the domain (often \(0<x<360\)) should have \(360\degree\) added or subtracted to bring it back within the domain, where possible.
+Note that any solutions outwith the domain (often $0<x<360$) should have $360\degree$ added or subtracted to bring it back within the domain, where possible.
 
 \vspace{-0.5cm}
 
-\subsubsection*{Exercise 14.4}\label{exercise-14.4}
-\addcontentsline{toc}{subsubsection}{Exercise 14.4}
+#### Exercise 14.4 {-}
 
 \vspace{-0.3cm}
 
@@ -4055,11 +3844,11 @@ Note that any solutions outwith the domain (often \(0<x<360\)) should have \(360
 
 \pagebreak
 
-\section{Multiple Angles and Different Variables}\label{multiple-angles-and-different-variables}
+## Multiple Angles and Different Variables
 
 \vspace{-0.5cm}
 
-The techniques covered in this chapter can be applied to trigonometric expressions beyond those containing only \(\sin{x}\) and \(\cos{x}\); they work for any sum or difference of \emph{equal-angled} trigonometric operations.
+The techniques covered in this chapter can be applied to trigonometric expressions beyond those containing only $\sin{x}$ and $\cos{x}$; they work for any sum or difference of *equal-angled* trigonometric operations.
 
 \vspace{-0.2cm}
 
@@ -4113,8 +3902,7 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \vspace{-0.5cm}
 
-\subsubsection*{Exercise 14.5}\label{exercise-14.5}
-\addcontentsline{toc}{subsubsection}{Exercise 14.5}
+#### Exercise 14.5 {-}
 
 \vspace{-0.3cm}
 
@@ -4140,8 +3928,7 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
-\section*{Wave Function Review Exercise}\label{wave-function-review-exercise}
-\addcontentsline{toc}{section}{Wave Function Review Exercise}
+## Wave Function Review Exercise {-}
 
 \begin{enumerate}
     \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
@@ -4189,9 +3976,11 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
+<!--chapter:end:14_Wave_Function.Rmd-->
+
 \chapterfont{\color{white}}
 
-\chapter{Logs and Exponentials}\label{logs-and-exponentials}
+# Logs and Exponentials
 
 \vspace{-12cm}
 \begin{center}
@@ -4205,7 +3994,7 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 \end{tikzpicture}
 \end{center}
 
-Each part of an operation of the form \(a^n\) can be described using the following terminology:
+Each part of an operation of the form $a^n$ can be described using the following terminology:
 
 \begin{center}
     \begin{tikzpicture}
@@ -4215,15 +4004,15 @@ Each part of an operation of the form \(a^n\) can be described using the followi
     \end{tikzpicture}
 \end{center}
 
-\emph{Power functions} take the form \(f(x)=x^n\), with \(x\) as the \textcolor{PineGreen}{\textit{base}} and a constant power, \(n\).
+*Power functions* take the form $f(x)=x^n$, with $x$ as the \textcolor{PineGreen}{\textit{base}} and a constant power, $n$.
 
 \[\text{e.g.}\quad f(x)=x^3\]
 
-\emph{Exponential functions} take the form \(f(x)=a^x\), with \(x\) as the \textcolor{PineGreen}{\textit{exponent}} and a constant base, \(a>0,a\ne 1\).
+*Exponential functions* take the form $f(x)=a^x$, with $x$ as the \textcolor{PineGreen}{\textit{exponent}} and a constant base, $a>0,a\ne 1$.
 
 \[\text{e.g.}\quad f(x)=3^x\]
 
-An example of an exponential function in everyday life is that of something \emph{appreciating} by a percentage of its value, such as an antique vase of value £4000 increasing by 20\% each year. Its value after \(0\) years, \(1\) years, \(2\) years, and so on, can be calculated as follows:
+An example of an exponential function in everyday life is that of something *appreciating* by a percentage of its value, such as an antique vase of value £4000 increasing by 20\% each year. Its value after $0$ years, $1$ years, $2$ years, and so on, can be calculated as follows:
 
 \begin{align*}
     \color{black!25}4000\times 1.2^0\;=\;&4000 && \color{PineGreen}\longleftarrow\text{After 0 years}\\[0.5em]
@@ -4233,7 +4022,7 @@ An example of an exponential function in everyday life is that of something \emp
     4000\times 1.2^{\color{PineGreen}4}\color{black}\;=\;&8294.40 && \color{PineGreen}\longleftarrow\text{After 4 years}
 \end{align*}
 
-The function to describe its value \(V\) after \(\color{PineGreen}x\) years is given by: \(V(\color{PineGreen}x\color{black})=4000\times1.2^{\color{PineGreen}x}\)
+The function to describe its value $V$ after $\color{PineGreen}x$ years is given by: $V(\color{PineGreen}x\color{black})=4000\times1.2^{\color{PineGreen}x}$
 
 One advantage of defining this function is the ability to calculate the value at times other that after whole years. For example, the value after \textcolor{PineGreen}{three and a half years} can be calculated as:
 
@@ -4243,7 +4032,7 @@ This chapter will introduce a range of skills required when working with exponen
 
 \pagebreak
 
-\section{Graphs of Exponential Functions}\label{graphs-of-exponential-functions}
+## Graphs of Exponential Functions
 
 \vspace{-0.5cm}
 
@@ -4301,13 +4090,13 @@ This describes \textbf{exponential decay}.
 
 \setlength{\columnsep}{10pt}
 
-Since \(a^0=1\), any graph of the form \(y=a^x\) will pass through the point \((0,1)\) for all \(a\ne 0\).
+Since $a^0=1$, any graph of the form $y=a^x$ will pass through the point $(0,1)$ for all $a\ne 0$.
 
-Since \(a^1=a\), any graph of the form \(y=a^x\) will pass through the point \((1,a)\) for all \(a\).
+Since $a^1=a$, any graph of the form $y=a^x$ will pass through the point $(1,a)$ for all $a$.
 
-The graph of \(y=a^x\) has the \(x\)-axis as a \emph{horizontal asymptote} - a line that it approaches but never meets.
+The graph of $y=a^x$ has the $x$-axis as a *horizontal asymptote* - a line that it approaches but never meets.
 
-Determining the equation of the graph of an exponential function can typically be achieved using substitution or consideration of graph transformations, along with knowledge of points \((0,1)\) and \((1,a)\).
+Determining the equation of the graph of an exponential function can typically be achieved using substitution or consideration of graph transformations, along with knowledge of points $(0,1)$ and $(1,a)$.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
@@ -4346,8 +4135,7 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
 
 \pagebreak
 
-\subsection*{Exercise 15.1}\label{exercise-15.1}
-\addcontentsline{toc}{subsection}{Exercise 15.1}
+### Exercise 15.1 {-}
 
 \vspace{-0.5cm}
 
@@ -4460,11 +4248,11 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
 
 \pagebreak
 
-\section{Evaluating Logarithms}\label{evaluating-logarithms}
+## Evaluating Logarithms
 
 \vspace{-0.5cm}
 
-The function \(f(x)=\color{PineGreen}\log_a{\color{black}x}\), where \(a>0\) and \(x>0\), is defined as the inverse function to \(f(x)=\color{PineGreen}a^{\color{black}x}\).
+The function $f(x)=\color{PineGreen}\log_a{\color{black}x}$, where $a>0$ and $x>0$, is defined as the inverse function to $f(x)=\color{PineGreen}a^{\color{black}x}$.
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=10cm,colframe=red!70!black,height=2.2cm]
@@ -4491,7 +4279,7 @@ A numerical example will help build an understanding of how to interpret a logar
 
 \vspace{-0.3cm}
 
-Hence \(\log_2{8}\) (``log to the base 2 of 8'') can be read as: ``2 raised to \emph{which power} gives a value of 8?''
+Hence $\log_2{8}$ ("log to the base 2 of 8") can be read as: "2 raised to *which power* gives a value of 8?"
 
 \begin{multicols}{2}
 
@@ -4547,8 +4335,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \vspace{-1.2cm}
 
-\subsection*{Exercise 15.2}\label{exercise-15.2}
-\addcontentsline{toc}{subsection}{Exercise 15.2}
+### Exercise 15.2 {-}
 
 \vspace{-0.6cm}
 
@@ -4622,11 +4409,11 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \pagebreak
 
-\section{Laws of Logs}\label{laws-of-logs}
+## Laws of Logs
 
 \vspace{-0.5cm}
 
-There are two key identities that can be obtained from the definition of a logarithm. For all \(a>0\):
+There are two key identities that can be obtained from the definition of a logarithm. For all $a>0$:
 
 \begin{multicols}{5}
 
@@ -4677,7 +4464,7 @@ $\log_a{a}=1$
 
 \vspace{-0.9cm}
 
-There also three \emph{``log laws''} that can be applied for logarithms of the \emph{same base}. For all \(a,x,y>0\):
+There also three *"log laws"* that can be applied for logarithms of the *same base*. For all $a,x,y>0$:
 
 \vspace{-0.5cm}
 
@@ -4741,8 +4528,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \vspace{-0.6cm}
 
-\subsection*{Exercise 15.3}\label{exercise-15.3}
-\addcontentsline{toc}{subsection}{Exercise 15.3}
+### Exercise 15.3 {-}
 
 \vspace{-0.4cm}
 
@@ -4790,11 +4576,11 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \pagebreak
 
-\section{Solving Log Equations}\label{solving-log-equations}
+## Solving Log Equations
 
 \vspace{-0.5cm}
 
-To solve a \emph{log equation}, it is typically desirable to have each side within a logarithm of the \emph{same base}:
+To solve a *log equation*, it is typically desirable to have each side within a logarithm of the *same base*:
 
 \vspace{-0.4cm}
 
@@ -4812,7 +4598,7 @@ To solve a \emph{log equation}, it is typically desirable to have each side with
 
 \vspace{-0.5cm}
 
-``Cancelling the logs'', mathematically, is raising each side to an exponential base \(a\), using \(a^{\log_a{b}}=b\).
+"Cancelling the logs", mathematically, is raising each side to an exponential base $a$, using $a^{\log_a{b}}=b$.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=5.5cm]
 
@@ -4831,7 +4617,7 @@ x&=4 && \color{PineGreen}\longleftarrow\text{Solve}
 
 \end{tcolorbox}
 
-To express any term as a logarithm, multiply it by \(\log_a{a}\) (which equals 1) and then apply the power law:
+To express any term as a logarithm, multiply it by $\log_a{a}$ (which equals 1) and then apply the power law:
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6cm]
 
@@ -4852,8 +4638,7 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.4}\label{exercise-15.4}
-\addcontentsline{toc}{subsection}{Exercise 15.4}
+### Exercise 15.4 {-}
 
 \vspace{-0.4cm}
 
@@ -4897,9 +4682,9 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \pagebreak
 
-Some algebraic manipulations used to solve an equation may produce solutions do not, in fact, satisfy the original equation. These \textbf{extraneous solutions} can arise when solving log equations.
+Some algebraic manipulations used to solve an equation may produce solutions do not, in fact, satisfy the original equation. These **extraneous solutions** can arise when solving log equations.
 
-Since \(\log_a{x}\) is only defined for \(a>0\) and \(x>0\), any solutions which contradict this must be discarded.
+Since $\log_a{x}$ is only defined for $a>0$ and $x>0$, any solutions which contradict this must be discarded.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=8.6cm]
 
@@ -4919,7 +4704,7 @@ x+2=0,x-4&=0 &&\\[0.5em]
 
 \end{tcolorbox}
 
-All solutions for \(x\) must be checked carefully to verify that they satisfy the \emph{original} log equation.
+All solutions for $x$ must be checked carefully to verify that they satisfy the *original* log equation.
 
 \begin{enumerate}[resume]
     \item Solve for $x$:
@@ -4971,13 +4756,13 @@ All solutions for \(x\) must be checked carefully to verify that they satisfy th
 
 \pagebreak
 
-\section{Graphs of Logarithmic Functions}\label{graphs-of-logarithmic-functions}
+## Graphs of Logarithmic Functions
 
 \vspace{-0.5cm}
 
-Given a function \(f\), defined on a suitable domain such that an inverse function exists, the graph of its inverse function \(y=f^{-1}(x)\) can be obtained by \textcolor{PineGreen}{\textbf{reflecting}} the graph of \(y=f(x)\) in the line \(y=x\).
+Given a function $f$, defined on a suitable domain such that an inverse function exists, the graph of its inverse function $y=f^{-1}(x)$ can be obtained by \textcolor{PineGreen}{\textbf{reflecting}} the graph of $y=f(x)$ in the line $y=x$.
 
-Since the inverse to the exponential function \(f(x)=a^x\) is the \textcolor{PineGreen}{\textbf{logarithmic function}} \(f^{-1}(x)=\color{PineGreen}\log_a{x}\), knowledge of exponential graphs allows log graphs to be sketched:
+Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineGreen}{\textbf{logarithmic function}} $f^{-1}(x)=\color{PineGreen}\log_a{x}$, knowledge of exponential graphs allows log graphs to be sketched:
 
 \vspace{-0.6cm}
 
@@ -5023,7 +4808,7 @@ Since the inverse to the exponential function \(f(x)=a^x\) is the \textcolor{Pin
 
 \vspace{-0.5cm}
 
-Knowledge of the graph of \(y=\log_a{x}\) may be combined with and understanding of graph transformations.
+Knowledge of the graph of $y=\log_a{x}$ may be combined with and understanding of graph transformations.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
 
@@ -5060,8 +4845,7 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.5}\label{exercise-15.5}
-\addcontentsline{toc}{subsection}{Exercise 15.5}
+### Exercise 15.5 {-}
 
 \vspace{-0.5cm}
 
@@ -5096,7 +4880,7 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \pagebreak
 
-As in section 15.1 (Graphs of Exponential Functions), substitution of known coordinates on the graph of a log function into its equation can allow unknown constants it contains to be determined.
+As in section 15.1 (Graphs of Exponential Functions), substitution of known coordinates on the graph of a log function  into its equation can allow unknown constants it contains to be determined.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
@@ -5180,11 +4964,11 @@ The graph of $y=\log_a{(x+b)}$ is below. Find the values of $a$ and $b$.
 
 \pagebreak
 
-\section{Solving Exponential Equations}\label{solving-exponential-equations}
+## Solving Exponential Equations
 
 \vspace{-0.5cm}
 
-To solve an \textcolor{PineGreen}{\textit{exponential equation}} such as \(10=2^{\color{PineGreen}x}\), which has a non-integer solution, the relationship between a log and an exponential of the same base, stated in section 15.2, can be used as follows:
+To solve an \textcolor{PineGreen}{\textit{exponential equation}} such as $10=2^{\color{PineGreen}x}$, which has a non-integer solution, the relationship between a log and an exponential of the same base, stated in section 15.2, can be used as follows:
 
 \vspace{-0.3cm}
 
@@ -5195,7 +4979,7 @@ To solve an \textcolor{PineGreen}{\textit{exponential equation}} such as \(10=2^
 
 \vspace{-0.3cm}
 
-The solution, using a calculator and correct to three significant figures, is \(x=3.32\). This makes use of the property \(\color{PineGreen}\log_a{a^{\color{black}x}}\color{black}=x\), which follows from the inverse relationship between a log and exponential.
+The solution, using a calculator and correct to three significant figures, is $x=3.32$. This makes use of the property $\color{PineGreen}\log_a{a^{\color{black}x}}\color{black}=x$, which follows from the inverse relationship between a log and exponential.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
@@ -5216,8 +5000,7 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.3cm}
 
-\subsection*{Exercise 15.6}\label{exercise-15.6}
-\addcontentsline{toc}{subsection}{Exercise 15.6}
+### Exercise 15.6 {-}
 
 \vspace{-0.3cm}
 
@@ -5286,15 +5069,15 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \pagebreak
 
-\section{Natural Logarithms}\label{natural-logarithms}
+## Natural Logarithms
 
 \vspace{-0.5cm}
 
-Some logarithms with particular \emph{bases} are routinely used in various fields, such as the \emph{binary logarithm} \(\left(\log_2\right)\) in computer science, or the the \emph{decimal} or \emph{common logarithm} \(\left(\log_{10}\text{ or just }\log\right)\) in engineering.
+Some logarithms with particular *bases* are routinely used in various fields, such as the *binary logarithm* $\left(\log_2\right)$ in computer science, or the the *decimal* or *common logarithm* $\left(\log_{10}\text{ or just }\log\right)$ in engineering.
 
-The most useful logarithm in mathematics is the \textcolor{PineGreen}{\textbf{natural logarithm}} (\(\log_{\color{PineGreen}e}\) or more often just \textcolor{PineGreen}{$\ln$}), which takes Euler's Number \textcolor{PineGreen}{$e$} as its base, where \textcolor{PineGreen}{$e\approx 2.719$}. (Its lies in the ease which which exponentials in base \(e\) can be used together with calculus, which is beyond the scope of this course.)
+The most useful logarithm in mathematics is the \textcolor{PineGreen}{\textbf{natural logarithm}} ($\log_{\color{PineGreen}e}$ or more often just \textcolor{PineGreen}{$\ln$}), which takes Euler's Number \textcolor{PineGreen}{$e$} as its base, where \textcolor{PineGreen}{$e\approx 2.719$}. (Its lies in the ease which which exponentials in base $e$ can be used together with calculus, which is beyond the scope of this course.)
 
-The \emph{laws of logs} apply to natural logarithms since they apply to \emph{all} \(\log_a\) where \(a>0\):
+The *laws of logs* apply to natural logarithms since they apply to *all* $\log_a$ where $a>0$:
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
 
@@ -5316,7 +5099,7 @@ Simplify $\ln{48}-3\ln{2}$, giving the answer in the form $\ln{p}$.
 
 \end{tcolorbox}
 
-Exponential equations in base \(\color{PineGreen}e\) are solved using the natural logarithm \(\color{PineGreen}\ln\), since \(\color{PineGreen}\ln{\left(e^{\color{black}x}\right)}=x\):
+Exponential equations in base $\color{PineGreen}e$ are solved using the natural logarithm $\color{PineGreen}\ln$, since $\color{PineGreen}\ln{\left(e^{\color{black}x}\right)}=x$:
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=7.6cm]
 
@@ -5340,8 +5123,7 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.7}\label{exercise-15.7}
-\addcontentsline{toc}{subsection}{Exercise 15.7}
+### Exercise 15.7 {-}
 
 \vspace{-0.5cm}
 
@@ -5378,13 +5160,13 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \pagebreak
 
-\section{Exponential Growth and Decay}\label{exponential-growth-and-decay}
+## Exponential Growth and Decay
 
 \vspace{-0.5cm}
 
 The behaviour of many real-world things are described by \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}}.
 
-Time, \(t\), is a common variable for such a function in place of \(x\), and it typically describes the behaviour of some real-world variable which is named suitably in place of \(y\) of \(f(x)\), such as \(V\) for \emph{``value''}, \(P\) for \emph{``population size''} or \(M\) for \emph{``mass''}. Where \(\color{PineGreen}k>0\):
+Time, $t$, is a common variable for such a function in place of $x$, and it typically describes the behaviour of some real-world variable which is named suitably in place of $y$ of $f(x)$, such as $V$ for *"value"*, $P$ for *"population size"* or $M$ for *"mass"*. Where $\color{PineGreen}k>0$:
 
 \setlength{\columnsep}{30pt}
 
@@ -5452,7 +5234,7 @@ M_0&=80 && \color{PineGreen}\longleftarrow M_0\text{ is the initial value}
 
 \end{tcolorbox}
 
-Constant \(k\) may be found through substitution if initial value \(V_0\) is known and the value of \(V\) at time \(t\).
+Constant $k$ may be found through substitution if initial value $V_0$ is known and the value of $V$ at time $t$.
 
 \begin{tcolorbox}[colback=PineGreen!2!, colframe=PineGreen]
 
@@ -5500,8 +5282,7 @@ t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.8}\label{exercise-15.8}
-\addcontentsline{toc}{subsection}{Exercise 15.8}
+### Exercise 15.8 {-}
 
 \vspace{-0.3cm}
 
@@ -5553,12 +5334,12 @@ All questions: \faCalculator
 
 \pagebreak
 
-\section{\texorpdfstring{Experimental Data of the form \(y=ax^b\)}{Experimental Data of the form y=ax\^{}b}}\label{experimental-data-of-the-form-yaxb}
+## Experimental Data of the form $y=ax^b$
 
 \vspace{-0.5cm}
 
-Where a relationship between variables \(x\) and \(y\) is a \textcolor{PineGreen}{power} function in the form
-\(\color{PineGreen}y=a\color{PineGreen}x^{\color{PineGreen}b}\), taking any \(\log\) of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between \(\color{PineGreen}\log{x}\) and \(\color{PineGreen}\log{y}\).
+Where a relationship between variables $x$ and $y$ is a \textcolor{PineGreen}{power} function in the form
+$\color{PineGreen}y=a\color{PineGreen}x^{\color{PineGreen}b}$, taking any $\log$ of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between $\color{PineGreen}\log{x}$ and $\color{PineGreen}\log{y}$.
 
 \vspace{-0.4cm}
 
@@ -5593,7 +5374,7 @@ Where a relationship between variables \(x\) and \(y\) is a \textcolor{PineGreen
 \end{center}
 \end{minipage}
 
-Drawing such a plot of \(\color{PineGreen}\log{y}\) against \(\color{PineGreen}\log{x}\) and obtaining a straight line can be used to check for a power relationship. Where a relationship is of the form \(y=ax^b\), determining the values of \(a\) and \(b\) is possible by first finding the \emph{gradient} and \(y\)\emph{-intercept} on the \(\color{PineGreen}\log{y}\sim\log{x}\) graph.
+Drawing such a plot of $\color{PineGreen}\log{y}$ against $\color{PineGreen}\log{x}$ and obtaining a straight line can be used to check for a power relationship. Where a relationship is of the form $y=ax^b$, determining the values of $a$ and $b$ is possible by first finding the *gradient* and $y$*-intercept* on the $\color{PineGreen}\log{y}\sim\log{x}$ graph. 
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
@@ -5633,14 +5414,14 @@ k&=27 &&
 
 \end{tcolorbox}
 
-Therefore the relationship between \(x\) and \(y\) is \(y=27x^{\frac{3}{2}}\).
+Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
 
 \pagebreak
 
+
 \newpage
 
-\subsection*{Exercise 15.9}\label{exercise-15.9}
-\addcontentsline{toc}{subsection}{Exercise 15.9}
+### Exercise 15.9 {-}
 
 \begin{enumerate}
     \item For each graph where the relationship between $x$ and $y$ is $y=kx^n$, determine the values of $k$ and $n$:
@@ -5758,12 +5539,12 @@ Therefore the relationship between \(x\) and \(y\) is \(y=27x^{\frac{3}{2}}\).
 
 \newpage
 
-\section{\texorpdfstring{Experimental Data of the form \(y=ab^x\)}{Experimental Data of the form y=ab\^{}x}}\label{experimental-data-of-the-form-yabx}
+## Experimental Data of the form $y=ab^x$
 
 \vspace{-0.5cm}
 
-Where a relationship between variables \(x\) and \(y\) is an \textcolor{PineGreen}{exponential} function in the form
-\(\color{PineGreen}y=ab^{\color{PineGreen}x}\), taking any \(\log\) of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between \(\color{PineGreen}x\) and \(\color{PineGreen}\log y\).
+Where a relationship between variables $x$ and $y$ is an \textcolor{PineGreen}{exponential} function in the form
+$\color{PineGreen}y=ab^{\color{PineGreen}x}$, taking any $\log$ of both sides will reveal the \textcolor{PineGreen}{linear relationship} that therefore exists between $\color{PineGreen}x$ and $\color{PineGreen}\log y$.
 
 \vspace{-0.3cm}
 
@@ -5798,7 +5579,7 @@ Where a relationship between variables \(x\) and \(y\) is an \textcolor{PineGree
 \end{center}
 \end{minipage}
 
-Drawing such a plot of \(\color{PineGreen}\log{y}\) against \(\color{PineGreen}x\) and obtaining a straight line can be used to check for an exponential relationship. Where a relationship is of the form \(y=ab^x\), determining the values of \(a\) and \(b\) is possible by first finding the \emph{gradient} and \(y\)\emph{-intercept} on the \(\color{PineGreen}\log{y}\sim x\) graph.
+Drawing such a plot of $\color{PineGreen}\log{y}$ against $\color{PineGreen}x$ and obtaining a straight line can be used to check for an exponential relationship. Where a relationship is of the form $y=ab^x$, determining the values of $a$ and $b$ is possible by first finding the *gradient* and $y$*-intercept* on the $\color{PineGreen}\log{y}\sim x$ graph. 
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen]
 
@@ -5837,16 +5618,16 @@ a&=81 && \color{PineGreen}\longleftarrow \text{Solve for }a
 
 \end{tcolorbox}
 
-Therefore the relationship between \(x\) and \(y\) is \(y=81\times3^x\).
+Therefore the relationship between $x$ and $y$ is $y=81\times3^x$.
 
-Note the the process of solving for \(a\) and solving for \(b\) may require solving each log equation step-by-step.
+Note the the process of solving for $a$ and solving for $b$ may require solving each log equation step-by-step.
 
 \pagebreak
 
+
 \newpage
 
-\subsection*{Exercise 15.10}\label{exercise-15.10}
-\addcontentsline{toc}{subsection}{Exercise 15.10}
+### Exercise 15.10 {-}
 
 \begin{enumerate}
     \item For each graph where the relationship between $x$ and $y$ is $y=ab^x$, determine the values of $a$ and $b$:
@@ -5943,15 +5724,14 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\section*{Logs and Exponentials Review Exercise}\label{logs-and-exponentials-review-exercise}
-\addcontentsline{toc}{section}{Logs and Exponentials Review Exercise}
+## Logs and Exponentials Review Exercise {-}
 
 \vspace{-0.5cm}
 
 \begin{enumerate}
     \item Sketch each of the following:
     \begin{enumerate}
-        \begin{multicols}{2}
+        \begin{multicols}{3}
             \item $y=4^x+2$
             \item $y=5^{x+2}$
             \item $\log_3{(x-2)}+4$
@@ -5965,8 +5745,13 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
             \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
         \end{multicols}
     \end{enumerate}
-    \item Solve the equation $\log_3{x}-\log_3{5}=\log_3{2}$.
-    \item Solve $\log_2{x}+\log_2{(x+7)}=3$, where $x>0$.
+    \item Solve each equation: 
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item }$\log_3{x}-\log_3{5}=\log_3{2}$.
+            \item $\log_2{x}+\log_2{(x+7)}=3$
+        \end{multicols}
+    \end{enumerate}
     \item Given that $\log_{p}{4}+3=\log_p{32}$, find the value of $p$.
     \item A population of mice is discovered living in some woodland, and number of mice can be modelled by:
     \[M=80e^{kt}\]
@@ -5990,14 +5775,15 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
         \end{center}
         Find the values of $a$ and $b$.
         \item The graph of $y=f(x)$ is shown below where $f(x)=\log_3{(x+a)}+b$.
+        \begin{multicols}{2}
         \begin{center}
         \begin{tikzpicture}[scale=0.8]
                     \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
                     \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
                     \draw[smooth,thick,domain=0.1:5.5,xshift=2cm,yshift=1cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
-                    \draw[fill] (2,1) circle (0.05) node[above left] {$(2,1)$};
+                    \draw[fill] (3,1) circle (0.05) node[above left] {$(3,1)$};
                     \draw[fill] (5,2) circle (0.05) node[above] {$(5,2)$};
-                    \draw[dashed] (1,-2) -- (1,3);
+                    \draw[dashed] (2,-2) -- (2,3);
                 \end{tikzpicture}
                 \end{center}
                 \begin{enumerate}
@@ -6005,11 +5791,15 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
                     \item Find the values of $a$ and $b$.
                     \item Skech the graph of $y=f^{-1}(x)$.
                 \end{enumerate}
+                \end{multicols}
 \end{enumerate}
+
+
+<!--chapter:end:15_Logs_and_Exponentials.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter{Further Calculus}\label{further-calculus}
+# Further Calculus
 
 \vspace{-12cm}
 \begin{center}
@@ -6023,49 +5813,45 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 \end{tikzpicture}
 \end{center}
 
-\section{Differentiating Trig Functions}\label{differentiating-trig-functions}
+## Differentiating Trig Functions
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-50}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{Integrating Trig Functions}\label{integrating-trig-functions}
+## Integrating Trig Functions
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-51}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{The Chain Rule for Differentiation}\label{the-chain-rule-for-differentiation}
+## The Chain Rule for Differentiation
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-52}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section{\texorpdfstring{Integrating \((ax+b)^n\)}{Integrating (ax+b)\^{}n}}\label{integrating-axbn}
+## Integrating $(ax+b)^n$
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-53}
-\addcontentsline{toc}{subsection}{Exercise}
+### Exercise {-}
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-13}
-\addcontentsline{toc}{section}{Review Exercise}
+## Review Exercise {-}
+
+<!--chapter:end:16_Further_Calculus.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter*{Challenge Problems}\label{challenge-problems}
-\addcontentsline{toc}{chapter}{Challenge Problems}
+# Challenge Problems {-}
 
 \vspace{-10.5cm}
 
@@ -6078,138 +5864,157 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 \end{tikzpicture}
 \end{center}
 
-The following problems \textbf{do not} represent the kind of question expected to feature in a Higher Mathematics exam, either in the way they are presented or the level of difficulty. Instead, they aim to encourage a flexible approach towards problem-solving and an understanding that the skills covered in the course have applications beyond those featured in any typical exam. \emph{Some questions may be solvable without using the skills covered in this chapter, and some questions may be unrelated to this chapter.}
+The following problems **do not** represent the kind of question expected to feature in a Higher Mathematics exam, either in the way they are presented or the level of difficulty. Instead, they aim to encourage a flexible approach towards problem-solving and an understanding that the skills covered in the course have applications beyond those featured in any typical exam. *Some questions may be solvable without using the skills covered in this chapter, and some questions may be unrelated to this chapter.*
 
-\subsection*{Warm-Up Problems}\label{warm-up-problems}
-\addcontentsline{toc}{subsection}{Warm-Up Problems}
-
-\newpage
+### Warm-Up Problems {-}
 
 \newpage
 
-\subsection*{Chapter 1 Problems}\label{chapter-1-problems}
-\addcontentsline{toc}{subsection}{Chapter 1 Problems}
+
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 2 Problems}\label{chapter-2-problems}
-\addcontentsline{toc}{subsection}{Chapter 2 Problems}
+### Chapter 1 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 3 Problems}\label{chapter-3-problems}
-\addcontentsline{toc}{subsection}{Chapter 3 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 4 Problems}\label{chapter-4-problems}
-\addcontentsline{toc}{subsection}{Chapter 4 Problems}
+### Chapter 2 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 5 Problems}\label{chapter-5-problems}
-\addcontentsline{toc}{subsection}{Chapter 5 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 6 Problems}\label{chapter-6-problems}
-\addcontentsline{toc}{subsection}{Chapter 6 Problems}
+### Chapter 3 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 7 Problems}\label{chapter-7-problems}
-\addcontentsline{toc}{subsection}{Chapter 7 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 8 Problems}\label{chapter-8-problems}
-\addcontentsline{toc}{subsection}{Chapter 8 Problems}
+### Chapter 4 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 9 Problems}\label{chapter-9-problems}
-\addcontentsline{toc}{subsection}{Chapter 9 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 10 Problems}\label{chapter-10-problems}
-\addcontentsline{toc}{subsection}{Chapter 10 Problems}
+### Chapter 5 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 11 Problems}\label{chapter-11-problems}
-\addcontentsline{toc}{subsection}{Chapter 11 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 12 Problems}\label{chapter-12-problems}
-\addcontentsline{toc}{subsection}{Chapter 12 Problems}
+### Chapter 6 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 13 Problems}\label{chapter-13-problems}
-\addcontentsline{toc}{subsection}{Chapter 13 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 14 Problems}\label{chapter-14-problems}
-\addcontentsline{toc}{subsection}{Chapter 14 Problems}
+### Chapter 7 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 15 Problems}\label{chapter-15-problems}
-\addcontentsline{toc}{subsection}{Chapter 15 Problems}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 16 Problems}\label{chapter-16-problems}
-\addcontentsline{toc}{subsection}{Chapter 16 Problems}
+### Chapter 8 Problems {-}
 
 \newpage
 
-\newpage
 
-\subsection*{End of Course Problems}\label{end-of-course-problems}
-\addcontentsline{toc}{subsection}{End of Course Problems}
 
 \newpage
 
+### Chapter 9 Problems {-}
+
 \newpage
+
+
+
+\newpage
+
+### Chapter 10 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 11 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 12 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 13 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 14 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 15 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 16 Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+### End of Course Problems {-}
+
+\newpage
+
+
+
+\newpage
+
+<!--chapter:end:17_Challenge_Problems.Rmd-->
 
 \chapterfont{\color{white}}
 
-\chapter*{Answers}\label{answers}
-\addcontentsline{toc}{chapter}{Answers}
+# Answers {-}
 
 \vspace{-10.5cm}
 
@@ -6222,118 +6027,133 @@ The following problems \textbf{do not} represent the kind of question expected t
 \end{tikzpicture}
 \end{center}
 
-\subsection*{Chapter 1 Answers}\label{chapter-1-answers}
-\addcontentsline{toc}{subsection}{Chapter 1 Answers}
+### Chapter 1 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 2 Answers}\label{chapter-2-answers}
-\addcontentsline{toc}{subsection}{Chapter 2 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 3 Answers}\label{chapter-3-answers}
-\addcontentsline{toc}{subsection}{Chapter 3 Answers}
+### Chapter 2 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 4 Answers}\label{chapter-4-answers}
-\addcontentsline{toc}{subsection}{Chapter 4 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 5 Answers}\label{chapter-5-answers}
-\addcontentsline{toc}{subsection}{Chapter 5 Answers}
+### Chapter 3 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 6 Answers}\label{chapter-6-answers}
-\addcontentsline{toc}{subsection}{Chapter 6 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 7 Answers}\label{chapter-7-answers}
-\addcontentsline{toc}{subsection}{Chapter 7 Answers}
+### Chapter 4 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 8 Answers}\label{chapter-8-answers}
-\addcontentsline{toc}{subsection}{Chapter 8 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 9 Answers}\label{chapter-9-answers}
-\addcontentsline{toc}{subsection}{Chapter 9 Answers}
+### Chapter 5 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 10 Answers}\label{chapter-10-answers}
-\addcontentsline{toc}{subsection}{Chapter 10 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 11 Answers}\label{chapter-11-answers}
-\addcontentsline{toc}{subsection}{Chapter 11 Answers}
+### Chapter 6 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 12 Answers}\label{chapter-12-answers}
-\addcontentsline{toc}{subsection}{Chapter 12 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 13 Answers}\label{chapter-13-answers}
-\addcontentsline{toc}{subsection}{Chapter 13 Answers}
+### Chapter 7 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 14 Answers}\label{chapter-14-answers}
-\addcontentsline{toc}{subsection}{Chapter 14 Answers}
 
 \newpage
 
-\newpage
-
-\subsection*{Chapter 15 Answers}\label{chapter-15-answers}
-\addcontentsline{toc}{subsection}{Chapter 15 Answers}
+### Chapter 8 Answers {-}
 
 \newpage
 
-\newpage
 
-\subsection*{Chapter 16 Answers}\label{chapter-16-answers}
-\addcontentsline{toc}{subsection}{Chapter 16 Answers}
 
 \newpage
 
+### Chapter 9 Answers {-}
+
 \newpage
 
-\bibliography{book.bib,packages.bib}
 
-\end{document}
+
+\newpage
+
+### Chapter 10 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 11 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 12 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 13 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 14 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 15 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+### Chapter 16 Answers {-}
+
+\newpage
+
+
+
+\newpage
+
+<!--chapter:end:18_Answers.Rmd-->
+

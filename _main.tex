@@ -5951,7 +5951,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 \begin{enumerate}
     \item Sketch each of the following:
     \begin{enumerate}
-        \begin{multicols}{2}
+        \begin{multicols}{3}
             \item $y=4^x+2$
             \item $y=5^{x+2}$
             \item $\log_3{(x-2)}+4$
@@ -5965,8 +5965,13 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
             \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
         \end{multicols}
     \end{enumerate}
-    \item Solve the equation $\log_3{x}-\log_3{5}=\log_3{2}$.
-    \item Solve $\log_2{x}+\log_2{(x+7)}=3$, where $x>0$.
+    \item Solve each equation: 
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item }$\log_3{x}-\log_3{5}=\log_3{2}$.
+            \item $\log_2{x}+\log_2{(x+7)}=3$
+        \end{multicols}
+    \end{enumerate}
     \item Given that $\log_{p}{4}+3=\log_p{32}$, find the value of $p$.
     \item A population of mice is discovered living in some woodland, and number of mice can be modelled by:
     \[M=80e^{kt}\]
@@ -5990,14 +5995,15 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
         \end{center}
         Find the values of $a$ and $b$.
         \item The graph of $y=f(x)$ is shown below where $f(x)=\log_3{(x+a)}+b$.
+        \begin{multicols}{2}
         \begin{center}
         \begin{tikzpicture}[scale=0.8]
                     \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
                     \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
                     \draw[smooth,thick,domain=0.1:5.5,xshift=2cm,yshift=1cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
-                    \draw[fill] (2,1) circle (0.05) node[above left] {$(2,1)$};
+                    \draw[fill] (3,1) circle (0.05) node[above left] {$(3,1)$};
                     \draw[fill] (5,2) circle (0.05) node[above] {$(5,2)$};
-                    \draw[dashed] (1,-2) -- (1,3);
+                    \draw[dashed] (2,-2) -- (2,3);
                 \end{tikzpicture}
                 \end{center}
                 \begin{enumerate}
@@ -6005,6 +6011,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
                     \item Find the values of $a$ and $b$.
                     \item Skech the graph of $y=f^{-1}(x)$.
                 \end{enumerate}
+                \end{multicols}
 \end{enumerate}
 
 \chapterfont{\color{white}}
