@@ -627,7 +627,7 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 ## [Wave Function Review Exercise](#ex14Ra) {-}
 
 \begin{enumerate}
-    \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
+    \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x+a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
     \item Express $\sqrt{5}\sin{x}+\cos{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator\\[0.5em]
     \item Express $\sqrt{3}\cos{t}\degree-\sin{t}\degree$ in the form $k\sin{(t+a)}\degree$ where $k>0$ and $0<a<360$.\\[0.5em]
     \item Part of the graphs of $y=3\cos{x}\degree-5\sin{x}\degree$ and $y=-4$ are shown in the diagram below: \faCalculator
@@ -643,29 +643,33 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
             \draw[fill] (2.92604,-0.8) circle (0.04) node[below right] {Q};
         \end{tikzpicture}
     \end{center}
-    Points P and Q are points of intersection.\\
+    Points P and Q are points of intersection.
     \begin{enumerate}
-        \item Express $y=3\cos{x}\degree-5\sin{x}\degree$ in the form $k\cos{(x+a)}\degree$ where $k>0$ and $0<a<360$.\\[0.1em]
+        \item Express $y=3\cos{x}\degree-5\sin{x}\degree$ in the form $k\cos{(x+a)}\degree$ where $k>0$ and $0<a<360$.
         \item Hence determine the coordinates of P and Q.\\[0.5em]
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item Express $2\sin{x}\degree-4\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<x<360$. \faCalculator\\[0.1em]
-        \item Hence sketch the graph of $y=2\sin{x}\degree-4\cos{x}\degree$ for $0<x<360$.\\[0.5em]
+        \item Express $2\sin{x}\degree-4\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<x<360$. \faCalculator
+        \item Hence state:
+        \begin{enumerate}
+            \item The maximum value of $2\sin{x}\degree-4\cos{x}\degree$.
+            \item The value of $x$ for which it occurs, where $0<x<360$.\\[0.5em]
+        \end{enumerate}
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item Express $\cos{x}+\sqrt{3}\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$.\\[0.1em]
+        \item Express $\cos{x}+\sqrt{3}\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$.
         \item Hence sketch the graph of $y=2\cos{x}+2\sqrt{3}\sin{x}$ for $0<x<2\pi$.\\[0.5em]
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item Express $6\cos{t}-3\sin{t}$ in the form $k\cos{(t+a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator\\[0.1em]
-        \item Hence solve $2\cos{t}-\sin{t}+2=1$ where $0<t<2\pi$. \faCalculator\\[0.5em]
+        \item Express $6\cos{t}\degree-3\sin{t}\degree$ in the form $k\cos{(t+a)\degree}$ where $k>0$ and $0<a<360$. \faCalculator
+        \item Hence solve $2\cos{t}\degree-\sin{t}\degree+2=1$ where $0<t<360$. \faCalculator\\[0.5em]
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item Express $\sin{2x}\degree-\cos{2x}\degree$ in the form $k\sin{(2x-a)}$ where $k>0$ and $0<a<360$.\\[0.1em]
+        \item Express $\sin{2x}\degree-\cos{2x}\degree$ in the form $k\sin{(2x-a)}$ where $k>0$ and $0<a<360$.
         \item Hence solve the equation $\sin{2x}\degree=\cos{2x}\degree$ where $0<x<360$.
     \end{enumerate}
 \end{enumerate}

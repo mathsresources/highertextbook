@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  25 JAN 2026 12:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  25 JAN 2026 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3348,7 +3348,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [165]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 4155.
+(hyperref)                removing `\@ifnextchar' on input line 4157.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3360,25 +3360,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [166]
 Chapter 15.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.83438pt on input line 4223.
+(Font)              scaled to size 14.83438pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.21117pt on input line 4223.
+(Font)              scaled to size 7.21117pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 4223.
+(Font)              scaled to size 14.4pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 4223.
+(Font)              scaled to size 7.0pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.83571pt on input line 4223.
+(Font)              scaled to size 14.83571pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.2118pt on input line 4223.
+(Font)              scaled to size 7.2118pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.83284pt on input line 4223.
+(Font)              scaled to size 14.83284pt on input line 4229.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.21042pt on input line 4223.
+(Font)              scaled to size 7.21042pt on input line 4229.
 [167
 
 ]
-Overfull \hbox (8.71014pt too wide) in paragraph at lines 4303--4304
+Overfull \hbox (8.71014pt too wide) in paragraph at lines 4309--4310
  [] 
  []
 
@@ -3406,57 +3406,57 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [170]
-Overfull \hbox (5.15472pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 4653--4653
  [] 
  []
 
 
-Overfull \hbox (5.15472pt too wide) in paragraph at lines 4657--4657
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 4663--4663
  [] 
  []
 
 
-Overfull \hbox (5.15472pt too wide) in paragraph at lines 4667--4667
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 4673--4673
  [] 
  []
 
 
-Overfull \hbox (5.15472pt too wide) in paragraph at lines 4677--4677
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 4683--4683
  [] 
  []
 
 
-Overfull \hbox (5.15472pt too wide) in paragraph at lines 4684--4684
+Overfull \hbox (5.15472pt too wide) in paragraph at lines 4690--4690
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4700--4701
+Underfull \hbox (badness 10000) in paragraph at lines 4706--4707
 
  []
 
 
-Overfull \hbox (0.9762pt too wide) in paragraph at lines 4704--4704
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 4710--4710
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4710--4711
+Underfull \hbox (badness 10000) in paragraph at lines 4716--4717
 
  []
 
 
-Overfull \hbox (0.9762pt too wide) in paragraph at lines 4714--4714
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 4720--4720
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4720--4721
+Underfull \hbox (badness 10000) in paragraph at lines 4726--4727
 
  []
 
 
-Overfull \hbox (0.9762pt too wide) in paragraph at lines 4724--4724
+Overfull \hbox (0.9762pt too wide) in paragraph at lines 4730--4730
  [] 
  []
 
@@ -3468,7 +3468,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [171]
-Overfull \hbox (6.4425pt too wide) detected at line 4819
+Overfull \hbox (6.4425pt too wide) detected at line 4825
 []
  []
 
@@ -3544,42 +3544,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [180]
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5672--5673
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5678--5679
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5685--5686
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5691--5692
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5700--5701
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5706--5707
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5712--5713
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5718--5719
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5729--5730
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5735--5736
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5742--5743
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5748--5749
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5755--5756
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5761--5762
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5767--5768
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5773--5774
  [] 
  []
 
@@ -3601,42 +3601,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [182]
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5877--5878
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5883--5884
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5887--5888
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5893--5894
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5899--5900
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5905--5906
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5909--5910
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5915--5916
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5922--5923
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5928--5929
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5932--5933
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5938--5939
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5944--5945
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5950--5951
  [] 
  []
 
 
-Overfull \hbox (12.97188pt too wide) in paragraph at lines 5954--5955
+Overfull \hbox (12.97188pt too wide) in paragraph at lines 5960--5961
  [] 
  []
 
@@ -4000,10 +4000,10 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 62149 strings out of 470190
- 1455257 string characters out of 5477670
+ 62180 strings out of 470190
+ 1455894 string characters out of 5477670
  2183513 words of memory out of 5000000
- 89701 multiletter control sequences out of 15000+600000
+ 89732 multiletter control sequences out of 15000+600000
  675084 words of font info for 183 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,18n,128p,1686b,1094s stack positions out of 10000i,1000n,20000p,200000b,200000s
