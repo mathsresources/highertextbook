@@ -505,6 +505,7 @@ Note that any solutions outwith the domain (often $0<x<360$) should have $360\de
 
 \begin{enumerate}
     \item Solve each equation for $0<x<360$: \faCalculator
+    \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
             \item $7\sin{(x-18)}\degree=4$
@@ -515,10 +516,11 @@ Note that any solutions outwith the domain (often $0<x<360$) should have $360\de
     \item Given $6\sin{x}\degree-8\cos{x}\degree=10\sin{(x-53.1)}\degree$, solve $6\sin{x}\degree-8\cos{x}\degree=5$ where $0<x<360$.
     \item 
     \begin{enumerate}
-        \item Express $\sqrt{3}\sin{x}\degree+\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. 
-        \item Hence solve the equation $\sqrt{3}\sin{x}\degree+\cos{x}\degree=1$ where $0<x<360$.
+        \item Express $\sqrt{3}\sin{x}\degree+\cos{x}\degree$ in the form $k\cos{(x-a)}\degree$ where $k>0$ and $0<a<360$. 
+        \item Hence solve the equation $\sqrt{3}\sin{x}\degree+\cos{x}\degree=-1$ where $0<x<360$.
     \end{enumerate}
     \item Solve each equation for $0<x<2\pi$: \faCalculator
+    \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
             \item $4\sin{(x+0.31)}+2=1$
@@ -528,8 +530,8 @@ Note that any solutions outwith the domain (often $0<x<360$) should have $360\de
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \item Express $3\cos{x}+2\c{sinx}$ in the form $k\cos{(x+a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator
-        \item Hence solve the equation $2+6\sin{x}+4\cos{x}=5$ where $0<x<2\pi$. \faCalculator
+        \item Express $3\cos{x}+2\sin{x}$ in the form $k\sin{(x+a)}$ where $k>0$ and $0<a<2\pi$. \faCalculator
+        \item Hence solve the equation $2+6\cos{x}+4\sin{x}=5$ where $0<x<2\pi$. \faCalculator
     \end{enumerate}
 \end{enumerate}
 
@@ -615,7 +617,6 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
     \begin{enumerate}
         \item Express $\sin{2x}-\sqrt{3}\cos{2x}$ in the form $k\cos{(2x-a)}$ where $k>0$, $0<a<2\pi$.
         \item Hence solve $\sin{2x}-\sqrt{3}\cos{2x}-1=0$, $0<x<2\pi$.
-        \item Sketch $y=-\sin{2x}+\sqrt{3}\cos{2x}-1=0$ for $0\leqslant x \leqslant 2\pi$.
     \end{enumerate}
 \end{enumerate}
 

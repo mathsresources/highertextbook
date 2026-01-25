@@ -291,9 +291,9 @@
     \item
     \begin{enumerate}
     \begin{multicols}{3}
-        \item max value $8$ when $x=140\degree$
-        \item max value $\sqrt{2}$ when $x=333\degree$
-        \item max value $7$ when $x=47.7\degree$
+        \item max value $8$ when $x\degree=140\degree$
+        \item max value $\sqrt{2}$ when $x\degree=333\degree$
+        \item max value $7$ when $x\degree=47.7\degree$
     \end{multicols}
     \end{enumerate}
     \item
@@ -333,27 +333,27 @@
         \item $x\degree=79.4\degree,312.6\degree$
     \end{multicols}
     \end{enumerate}
-    \item
-    \item
+    \item $x\degree=83.1\degree,203.1\degree$
+    \item 
     \begin{enumerate}
     \begin{multicols}{3}
-        \item 
-        \item
+        \item $2\cos{(x-60)\degree}$
+        \item $x\degree=180\degree,300\degree$
     \end{multicols}
     \end{enumerate}
     \item
     \begin{enumerate}
     \begin{multicols}{3}
-        \item 
-        \item
-        \item
+        \item $x=3.08,5.72$
+        \item $x=4.06,6.02$
+        \item $x=1.52,3.26$
     \end{multicols}
     \end{enumerate}
     \item
     \begin{enumerate}
     \begin{multicols}{3}
-        \item 
-        \item
+        \item $\sqrt{13}\sin{(x+0.98)}$
+        \item $x=1.73,5.73$
     \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -363,21 +363,20 @@
 #### [Exercise 14.5](#ex145q) {-}
 
 \begin{enumerate}
-    \item
-    \item
-    \item
+    \item $5\sin{(t-233.1)\degree}$
+    \item $\sqrt{5}\cos{(2x-2.04)}$
+    \item 
     \begin{enumerate}
     \begin{multicols}{3}
-        \item 
-        \item
+        \item $13\sin{(t+67.4)\degree}$ 
+        \item max value of $13$ occurs when $t=22.6$
     \end{multicols}
     \end{enumerate}
     \item
     \begin{enumerate}
     \begin{multicols}{3}
-        \item 
-        \item
-        \item
+        \item $2\cos{\left(2x-\frac{5\pi}{6}\right)}$
+        \item $x=\frac{\pi}{4},\frac{7\pi}{12},\frac{5\pi}{4},\frac{19\pi}{12}$
     \end{multicols}
     \end{enumerate}
 \end{enumerate}
