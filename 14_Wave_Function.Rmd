@@ -180,7 +180,9 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
 
 \vspace{-0.5cm}
 
-#### Exercise 14.1 {-}
+[]{#ex141q}
+
+#### [Exercise 14.1](#ex141a) {-}
 
 \vspace{-0.3cm}
 
@@ -194,13 +196,13 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
             \item $6\cos{x}\degree+\sin{x}\degree$
         \end{multicols}
     \end{enumerate}
-    \item Express each of the following in the form $k\cos{(x-a)}$, where $k>0$ and $0<a<2\pi$. \faCalculator
+    \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$. \faCalculator
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $8\sin{x}-6\cos{x}$
-            \item $\cos{x}-3\sin{x}$
-            \item $-2\sin{x}-\cos{x}$
+            \item $8\sin{x}\degree-6\cos{x}\degree$
+            \item $\cos{x}\degree-3\sin{x}\degree$
+            \item $-2\sin{x}\degree-\cos{x}\degree$
         \end{multicols}
     \end{enumerate}
     \item Express each of the following in the form $k\cos{(x-a)}\degree$, where $k>0$ and $0<a<360$.
@@ -280,7 +282,9 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \vspace{-0.5cm}
 
-#### Exercise 14.2 {-}
+[]{#ex142q}
+
+#### [Exercise 14.2](#ex142a) {-}
 
 \vspace{-0.3cm}
 
@@ -402,7 +406,9 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \vspace{-0.5cm}
 
-#### Exercise 14.3 {-}
+[]{#ex143q}
+
+#### [Exercise 14.3](#ex143a) {-}
 
 \vspace{-0.3cm}
 
@@ -411,9 +417,9 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $7\cos{(x-10)}\degree$
-            \item $3\sin{(x-20)}\degree$
-            \item $\sqrt{5}\cos{(x+40)}\degree$
+            \item $y=7\cos{(x-35)}\degree$
+            \item $y=3\sin{(x-23)}\degree$
+            \item $y=\sqrt{5}\cos{(x+41)}\degree$
         \end{multicols}
     \end{enumerate}
     \item Find the maximum value of each and the value(s) of $x$ for which they occur for $0<x<360$:
@@ -491,7 +497,9 @@ Note that any solutions outwith the domain (often $0<x<360$) should have $360\de
 
 \vspace{-0.5cm}
 
-#### Exercise 14.4 {-}
+[]{#ex144q}
+
+#### [Exercise 14.4](#ex144a) {-}
 
 \vspace{-0.3cm}
 
@@ -500,7 +508,7 @@ Note that any solutions outwith the domain (often $0<x<360$) should have $360\de
     \begin{enumerate}
         \begin{multicols}{3}
             \item $7\sin{(x-18)}\degree=4$
-            \item $3\cos{(x+34.1)}\degree=-2$
+            \item $3\cos{(x+34)}\degree=-2$
             \item $\sqrt{5}\sin{(x-106)}\degree+1=0$
         \end{multicols}
     \end{enumerate}
@@ -585,7 +593,9 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \vspace{-0.5cm}
 
-#### Exercise 14.5 {-}
+[]{#ex145q}
+
+#### [Exercise 14.5](#ex145a) {-}
 
 \vspace{-0.3cm}
 
@@ -611,7 +621,9 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
-## Wave Function Review Exercise {-}
+[]{#ex14Rq}
+
+## [Wave Function Review Exercise](#ex14Ra) {-}
 
 \begin{enumerate}
     \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x-a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]

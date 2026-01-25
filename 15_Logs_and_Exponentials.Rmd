@@ -79,7 +79,7 @@ $y=a^x$ is \textit{strictly increasing} on $x\in\mathbb{R}$:
 \end{center}
 
 \vspace{-0.5cm}
-This describes \textbf{exponential growth}.
+This describes \textcolor{PineGreen}{\textbf{exponential growth}}.
 
 \columnbreak
 
@@ -102,7 +102,7 @@ $y=a^x$ is \textit{strictly decreasing} on $x\in\mathbb{R}$:
 \end{center}
 
 \vspace{-0.5cm}
-This describes \textbf{exponential decay}.
+This describes \textcolor{PineGreen}{\textbf{exponential decay}}.
 
 \end{multicols}
 
@@ -1443,6 +1443,8 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
 
 ### Exercise 15.9 {-}
 
+\vspace{-0.5cm}
+
 \begin{enumerate}
     \item For each graph where the relationship between $x$ and $y$ is $y=kx^n$, determine the values of $k$ and $n$:
     \begin{multicols}{2}
@@ -1649,6 +1651,8 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 
 ### Exercise 15.10 {-}
 
+\vspace{-0.5cm}
+
 \begin{enumerate}
     \item For each graph where the relationship between $x$ and $y$ is $y=ab^x$, determine the values of $a$ and $b$:
     \begin{multicols}{2}
@@ -1748,6 +1752,7 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 
 \vspace{-0.5cm}
 
+
 \begin{enumerate}
     \item Sketch each of the following:
     \begin{enumerate}
@@ -1760,15 +1765,17 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
     \item Express $2\log_p{10}+\log_p{2}-\log_p{50}$ in the form $\log_p{q}$, where $q$ is a positive integer.
     \item Evaluate the following:
     \begin{enumerate}
-        \begin{multicols}{2}
+        \begin{multicols}{3}
+            \item $\log_{8}{}+\log_{8}{}-\log_{8}{}$
             \item $\log_{3}{\frac{1}{4}}+2\log_{3}{6}$
             \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
         \end{multicols}
     \end{enumerate}
     \item Solve each equation: 
     \begin{enumerate}
-        \begin{multicols}{2}
-            \item }$\log_3{x}-\log_3{5}=\log_3{2}$.
+        \begin{multicols}{3}
+            \item $\ln{x}-\ln{5}=\ln{2}$
+            \item $\log_{6}{x}+\log_{6}{4}=2$
             \item $\log_2{x}+\log_2{(x+7)}=3$
         \end{multicols}
     \end{enumerate}
@@ -1781,36 +1788,52 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
         \item It is estimated there will be 120 mice in the population after 3 weeks. Find the value of $k$.
         \item Calculate the time taken for the population to double in size.
     \end{enumerate}
-    \item Variables $x$ and $y$ are linked by the equation $y=ax^b$. The graph of $\log_7{y}$ against $\log_7{x}$ is below:
-    \begin{center}
+    \item Variables $x$ and $y$ are linked by the equations given below. Find the values of $a$ and $b$ for each:
+    \begin{multicols}{2}
+        \begin{center}
             \begin{tikzpicture}[scale=0.8]
-                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_7{x}$};
-                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_7{y}$};
-                \draw[thick] (0,2.4) node[left] {$(0,2)$} -- (3,0.8) -- (3.75,0.4);
-                \node[above right,xshift=-0.1cm,yshift=-0.1cm] at (3,1.2) {$(3,1)$};
-                \draw[fill] (0,2.4) circle (0.05);
-                \draw[fill] (3,0.8) circle (0.05);
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(a)};
+                \node[below left] at (6,4) {$y=ax^b$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_3{x}$};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_3{y}$};
+                \draw[thick] (0,1) circle (0.05) node[left] {$(0,2)$} -- (2,2) circle (0.05) node[right] {$(4,2)$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
-        Find the values of $a$ and $b$.
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[white] (-3,-1) rectangle (6,4);
+                \node[below right] at (-3,4) {(b)};
+                \node[below left] at (6,4) {$y=ab^x$};
+                \draw[-stealth] (-2,0) -- (5,0) node[below] {$x$};
+                \node[above left] {\scriptsize{O}};
+                \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_9{y}$};
+                \draw[thick] (0,-0.5) circle (0.05) node[left] {$(0,-1)$} -- (2.5,2.5) circle (0.05) node[right] {$(3,5)$};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
         \item The graph of $y=f(x)$ is shown below where $f(x)=\log_3{(x+a)}+b$.
-        \begin{multicols}{2}
+         \begin{multicols}{2}
         \begin{center}
             \begin{tikzpicture}[scale=0.8]
                     \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
-                    \draw[-stealth] (0,-2) -- (0,3) node[left] {$y$};
+                    \draw[-stealth] (0,-1) -- (0,3) node[left] {$y$};
                     \draw[smooth,thick,domain=0.1:5.5,xshift=2cm,yshift=1cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
                     \draw[fill] (3,1) circle (0.05) node[above left] {$(3,1)$};
                     \draw[fill] (5,2) circle (0.05) node[above] {$(5,2)$};
-                    \draw[dashed] (2,-2) -- (2,3);
+                    \draw[dashed] (2,-1) -- (2,3);
                 \end{tikzpicture}
                 \end{center}
+                \columnbreak
+                \begin{center}
                 \begin{enumerate}
-                    \item State the domain of $f(x)$.
-                    \item Find the values of $a$ and $b$.
-                    \item Skech the graph of $y=f^{-1}(x)$.
+                    \item State the domain of $f(x)$.\\[2em]
+                    \item Find the values of $a$ and $b$.\\[2em]
+                    \item Sketch the graph of $y=f^{-1}(x)$.
                 \end{enumerate}
+                \end{center}
                 \end{multicols}
 \end{enumerate}
 
+\pagebreak

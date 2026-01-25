@@ -119,6 +119,316 @@
 
 ### Chapter 14 Answers {-}
 
+\vspace{-0.2cm}
+
+\begingroup
+\footnotesize
+
+\vspace{-0.2cm}
+
+[]{#ex141a}
+
+#### [Exercise 14.1](#ex141q) {-}
+
+\vspace{-0.2cm}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $13\cos{(x-67.4)\degree}$
+        \item $\sqrt{41}\cos{(x-38.7)\degree}$
+        \item $\sqrt{37}\cos{(x-9.5)\degree}$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $10\cos{(x-126.9)\degree}$
+        \item $\sqrt{10}\cos{(x-288.4)\degree}$
+        \item $\sqrt{5}\cos{(x-243.4)\degree}$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $\sqrt{2}\cos{(x-45)\degree}$
+        \item $2\cos{(x-300)\degree}$
+        \item $2\cos{(x-210)\degree}$
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{-0.3cm}
+
+[]{#ex142a}
+
+#### [Exercise 14.2](#ex142q) {-}
+
+\vspace{-0.2cm}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $\sqrt{13}\sin{(x+56.3)\degree}$
+        \item $5\sin{(x+36.9)\degree}$
+        \item $5\sqrt{2}\sin{(x+98.1)\degree}$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $\sqrt{73}\cos{(x+5.92)}$
+        \item $5\cos{(x+2.21)}$
+        \item $2\sqrt{10}\cos{(x+1.25)}$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $2\sin{\left(x-\frac{5\pi}{6}\right)}$
+        \item $\sqrt{2}\sin{\left(x-\frac{5\pi}{4}\right)}$
+        \item $4\sin{\left(x-\frac{\pi}{6}\right)}$
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{-0.3cm}
+
+[]{#ex143a}
+
+#### [Exercise 14.3](#ex143q) {-}
+
+\vspace{-0.2cm}
+
+\begin{enumerate}
+    \item Sketches showing turning points and roots:
+    \begin{multicols}{2}
+            \begin{tikzpicture}
+            \draw[white] (-0.5,-2) rectangle (6.6,2);
+            \draw[-stealth] (0,0) -- (6.4,0) node[above] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,1.6) node[left] {$y$};
+            \draw[thick,smooth,xshift=0.61cm,domain=-0.61:5.673] plot (\x,{cos(\x r)});
+            \node[below] at (2*3.141592,0) {$360$};
+            \node[below] at (3.141592,0) {$180$};
+            \draw[fill] (0.61,1) circle (0.05) node[above right] {$(35\degree,7)$};
+            \draw[fill] (3.141592+0.61,-1) circle (0.05) node[below] {$(215\degree,-7)$};
+            \draw[fill] (0.5*3.141592+0.61,0) circle (0.05) node[above right] {$125\degree$};
+            \draw[fill] (1.5*3.141592+0.61,0) circle (0.05) node[above left] {$305\degree$};
+            \node[left] at (0,1) {$7$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1) {$-7$};
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+            \end{tikzpicture}
+        \columnbreak  
+        \vfill
+        a) $y=7\cos{(x-35)}\degree$:
+        \begin{itemize}
+            \item maximum turning point at $(35\degree,7)$
+            \item minimum turning point at $(215\degree,-7)$
+            \item $x$-intercepts at $(125\degree,0)$ and $(305\degree,0)$
+        \end{itemize}
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{tikzpicture}
+            \draw[white] (-0.5,-2) rectangle (6.6,2);
+            \draw[-stealth] (0,0) -- (6.4,0) node[above] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,1.6) node[left] {$y$};
+            \draw[thick,smooth,xshift=0.4cm,domain=-0.4:5.883] plot (\x,{sin(\x r)});
+            \draw[fill] (0.5*3.141592+0.4,1) circle (0.05) node[above] {$(113\degree,3)$};
+            \draw[fill] (1.5*3.141592+0.4,-1) circle (0.05) node[below] {$(293\degree,-3)$};
+            \draw[fill] (3.141592+0.4,0) circle (0.05) node[above right] {$203\degree$};
+            \draw[fill] (0*3.141592+0.4,0) circle (0.05) node[below right] {$23\degree$};
+            \node[below] at (2*3.141592,0) {$360$};
+            \node[below] at (3.141592,0) {$180$};
+            \node[left] at (0,1) {$3$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1) {$-3$};
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+            \end{tikzpicture}
+        \columnbreak    
+        \vfill
+        b) $y=3\sin{(x-23)}\degree$:
+        \begin{itemize}
+            \item maximum turning point at $(113\degree,3)$
+            \item minimum turning point at $(293\degree,-3)$
+            \item $x$-intercepts at $(23\degree,0)$ and $(203\degree,0)$
+        \end{itemize}
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{tikzpicture}
+            \draw[white] (-0.5,-2) rectangle (6.6,2);
+            \draw[-stealth] (0,0) -- (6.4,0) node[above] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,1.6) node[left] {$y$};
+            \draw[thick,smooth,xshift=-0.716cm,domain=0.716:6.999] plot (\x,{cos(\x r)});
+            \draw[fill] (2*3.141592-0.716,1) circle (0.05) node[above] {$(319\degree,\sqrt{5})$};
+            \draw[fill] (1*3.141592-0.716,-1) circle (0.05) node[below] {$(139\degree,-\sqrt{5})$};
+            \draw[fill] (0.5*3.141592-0.716,0) circle (0.05) node[above right] {$49\degree$};
+            \draw[fill] (1.5*3.141592-0.716,0) circle (0.05) node[above left] {$229\degree$};
+            \node[below] at (2*3.141592,0) {$360$};
+            \node[below] at (3.141592,0) {$180$};
+            \node[left] at (0,1) {$7$};
+            \node[left] at (0,0) {$0$};
+            \node[left] at (0,-1) {$-7$};
+            \foreach \x in {0.5,1,1.5,2}{
+            \draw (3.141592*\x,0) -- (3.141592*\x,-0.1);
+}
+            \end{tikzpicture}
+        \columnbreak
+        \vfill
+        c) $y=\sqrt{5}\cos{(x+41)}\degree$:
+        \begin{itemize}
+            \item maximum turning point at $(319\degree,\sqrt{5})$
+            \item minimum turning point at $(139\degree,-\sqrt{5})$
+            \item $x$-intercepts at $(49\degree,0)$ and $(229\degree,0)$
+        \end{itemize}
+    \end{multicols}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item max value $8$ when $x=140\degree$
+        \item max value $\sqrt{2}$ when $x=333\degree$
+        \item max value $7$ when $x=47.7\degree$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item min value $-3$ when $x=\frac{7\pi}{6}$
+        \item min value $-3$ when $x=\frac{7\pi}{6}$
+        \item min value $-12$ when $x=\frac{\pi}{4}$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $\sqrt{85}\sin{(x-49.4)\degree}$
+        \item max TP at $(139.4\degree,2\sqrt{85})$, min TP at $(219.4\degree,-2\sqrt{85})$
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\endgroup
+
+\pagebreak
+
+\begingroup
+\footnotesize
+
+[]{#ex144a}
+
+#### [Exercise 14.4](#ex144q) {-}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item $x\degree=52.8\degree,163.2\degree$
+        \item $x\degree=97.8\degree,194.2\degree$
+        \item $x\degree=79.4\degree,312.6\degree$
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item 
+        \item
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+[]{#ex145a}
+
+#### [Exercise 14.5](#ex145q) {-}
+
+\begin{enumerate}
+    \item
+    \item
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{3}
+        \item 
+        \item
+        \item
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+[]{#ex14Ra}
+
+#### [Review Exercise](#ex14Rq) {-}
+
+\begin{enumerate}
+    \item
+    \item
+    \item
+    \item
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item 
+        \item
+    \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\endgroup
+
 \newpage
 
 
