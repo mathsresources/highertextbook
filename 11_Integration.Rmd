@@ -6,9 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[NavyBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
-\draw[NavyBlue,very thick] (5,1) -- (6,1);
-\draw[NavyBlue,fill=NavyBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\draw[RoyalBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[RoyalBlue,very thick] (5,1) -- (6,1);
+\draw[RoyalBlue,fill=RoyalBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{Integration}}};
 \node at (3,1) {\Large{\textsc{Chapter 11}}};
 \end{tikzpicture}
@@ -61,8 +61,8 @@ In the 17th century both Gottfried Wilhelm Leibniz and Isaac Newton independentl
 
 \begin{center}
     \begin{tikzpicture}
-        \draw[very thick,NavyBlue,-stealth] (120:6) arc (120:60:6);
-        \draw[very thick,NavyBlue,-stealth] (120:6) arc (120:60:6);
+        \draw[very thick,RoyalBlue,-stealth] (120:6) arc (120:60:6);
+        \draw[very thick,RoyalBlue,-stealth] (120:6) arc (120:60:6);
     \end{tikzpicture}
 \end{center}
 
@@ -72,11 +72,11 @@ This chapter will first introduce the use of integration to calculate an *antide
 
 \begin{itemize}
     \setlength\itemsep{2em}
-    \item[\textcolor{NavyBlue}{\textbullet}] 11.1 Indefinite Integrals
-    \item[\textcolor{NavyBlue}{\textbullet}] 11.2 Differential Equations
-    \item[\textcolor{NavyBlue}{\textbullet}] 11.3 Definite Integrals
-    \item[\textcolor{NavyBlue}{\textbullet}] 11.4 The Area Under a Curve
-    \item[\textcolor{NavyBlue}{\textbullet}] 11.5 The Area Between Two Curves
+    \item[\textcolor{RoyalBlue}{\textbullet}] 11.1 Indefinite Integrals
+    \item[\textcolor{RoyalBlue}{\textbullet}] 11.2 Differential Equations
+    \item[\textcolor{RoyalBlue}{\textbullet}] 11.3 Definite Integrals
+    \item[\textcolor{RoyalBlue}{\textbullet}] 11.4 The Area Under a Curve
+    \item[\textcolor{RoyalBlue}{\textbullet}] 11.5 The Area Between Two Curves
 \end{itemize}
 
 Integration skills covered in this chapter will be extended upon in the later chapter of \textbf{Further Calculus}.
@@ -96,13 +96,13 @@ The \textit{derivative} of the function $f(x)=x^3-4x^2-7x+3$ is obtained by \tex
 
 \vspace{-0.5cm}
 
-\textit{Integration} can be considered the \textit{inverse} of differentiation, with the aim of taking the \textit{derivative} $f'(x)$ and determining the \textit{original function} $f(x)$. However, given only the derivative $f'(x)=3x^2-8x$ it would not be possible to know any constant term the original function $f(x)$ contained. Finding the \textit{indefinite integral} of a function requires the inclusion of a \textcolor{NavyBlue}{\textbf{Constant of Integration}, $C$}:
+\textit{Integration} can be considered the \textit{inverse} of differentiation, with the aim of taking the \textit{derivative} $f'(x)$ and determining the \textit{original function} $f(x)$. However, given only the derivative $f'(x)=3x^2-8x$ it would not be possible to know any constant term the original function $f(x)$ contained. Finding the \textit{indefinite integral} of a function requires the inclusion of a \textcolor{RoyalBlue}{\textbf{Constant of Integration}, $C$}:
 
 \vspace{-0.5cm}
 
 \begin{flalign*}
     \text{If }f'(x)&=3x^2-8x\\
-    \text{Then }f(x)&=x^3-4x^2\color{NavyBlue}+C
+    \text{Then }f(x)&=x^3-4x^2\color{RoyalBlue}+C
 \end{flalign*}
 
 \vspace{-0.5cm}
@@ -122,7 +122,7 @@ The \textit{integral sign}, $\displaystyle\int$, should always appear accompanie
 
 Note: $\displaystyle{\int (f(x)+g(x))}\;dx=\displaystyle{\int f(x)\;dx+\int g(x\;dx)}$
 
-\begin{tcolorbox}[title=Example 11.1.1,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.1.1,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Find $\displaystyle{\int (6x^2+8x)}\,dx $.
 
@@ -132,8 +132,8 @@ Find $\displaystyle{\int (6x^2+8x)}\,dx $.
 
 \begin{align*}
     &\int (6x^2+8x)\,dx&&\\[0.5em]
-    =\;&\frac{6x^3}{3}+\frac{8x^2}{2}+C&&\color{NavyBlue}\longleftarrow \text{Constant of integration}\\[0.5em]
-    =\;&2x^3+4x^2+C&&\color{NavyBlue}\longleftarrow \text{Simplify}
+    =\;&\frac{6x^3}{3}+\frac{8x^2}{2}+C&&\color{RoyalBlue}\longleftarrow \text{Constant of integration}\\[0.5em]
+    =\;&2x^3+4x^2+C&&\color{RoyalBlue}\longleftarrow \text{Simplify}
 \end{align*}
 
 \end{tcolorbox}
@@ -142,7 +142,7 @@ Find $\displaystyle{\int (6x^2+8x)}\,dx $.
 
 As with differentiation, \textit{preparation for integration} may be needed.
 
-\begin{tcolorbox}[title=Example 11.1.2,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.1.2,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Find $\displaystyle{\int \left(4\sqrt{x}-\frac{3}{x^2}\right)}\,dx,\;,x>0$.
 
@@ -152,16 +152,16 @@ Find $\displaystyle{\int \left(4\sqrt{x}-\frac{3}{x^2}\right)}\,dx,\;,x>0$.
 
 \begin{align*}
     &\int \left(4\sqrt{x}-\frac{3}{x^2}\right)\,dx&&\\[0.5em]
-    =\;&\int \left(4x^{\frac{1}{2}}-3x^{-2}\right)\,dx&&\color{NavyBlue}\longleftarrow \text{Preparing to integrate}\\[0.5em]
-    =\;&\frac{4x^{\frac{3}{2}}}{\frac{3}{2}}-\frac{3x^{-1}}{-1}+C&&\color{NavyBlue}\longleftarrow \text{Integrate: }\frac{1}{2}+1=\frac{1}{2}+\frac{2}{2}=\frac{3}{2}\\[0.5em]
-    =\;&\frac{8}{3}x^{\frac{3}{2}}+3x^{-1}+C&&\color{NavyBlue}\longleftarrow \text{Simplify: }4\div\frac{3}{2}=\frac{4}{1}\times\frac{2}{3}=\frac{8}{3}
+    =\;&\int \left(4x^{\frac{1}{2}}-3x^{-2}\right)\,dx&&\color{RoyalBlue}\longleftarrow \text{Preparing to integrate}\\[0.5em]
+    =\;&\frac{4x^{\frac{3}{2}}}{\frac{3}{2}}-\frac{3x^{-1}}{-1}+C&&\color{RoyalBlue}\longleftarrow \text{Integrate: }\frac{1}{2}+1=\frac{1}{2}+\frac{2}{2}=\frac{3}{2}\\[0.5em]
+    =\;&\frac{8}{3}x^{\frac{3}{2}}+3x^{-1}+C&&\color{RoyalBlue}\longleftarrow \text{Simplify: }4\div\frac{3}{2}=\frac{4}{1}\times\frac{2}{3}=\frac{8}{3}
 \end{align*}
 
 \end{tcolorbox}
 
 The \textit{derivative} of a \textit{linear} term is a \textit{constant}, so the integral of a \textit{constant} is \textit{linear}.
 
-\begin{tcolorbox}[title=Example 11.1.3,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.1.3,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Find $\displaystyle{\int \left((2x-1)(x+3)\right)}\,dx$.
 
@@ -171,15 +171,15 @@ Find $\displaystyle{\int \left((2x-1)(x+3)\right)}\,dx$.
 
 \begin{align*}
     &\int \left((2x-1)(x+3)\right)\,dx&&\\[0.5em]
-    =\;&\int \left(2x^2-5x-3\right)\,dx&&\color{NavyBlue}\longleftarrow \text{Preparing to integrate}\\[0.5em]
-    =\;&\frac{2x^3}{3}-\frac{5x^2}{2}-3x+C&&\color{NavyBlue}\longleftarrow \text{Integral of }-3\text{ is }-3x
+    =\;&\int \left(2x^2-5x-3\right)\,dx&&\color{RoyalBlue}\longleftarrow \text{Preparing to integrate}\\[0.5em]
+    =\;&\frac{2x^3}{3}-\frac{5x^2}{2}-3x+C&&\color{RoyalBlue}\longleftarrow \text{Integral of }-3\text{ is }-3x
 \end{align*}
 
 \end{tcolorbox}
 
 Integration \textit{with respect to variables other than} $x$ should not use $dx$, and the notation used should match the variable of the function instead. 
 
-\begin{tcolorbox}[title=Example 11.1.4,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.1.4,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Find $\displaystyle{\int \left(3t^2-5\right)}\,dt$.
 
@@ -229,7 +229,7 @@ where
 
 Since any \textit{constant of integration} within $F(x)$ will cancel through subtraction ($C-C$), it is \textit{not included} when calculating a \textit{definite integral}.
 
-\begin{tcolorbox}[title=Example 11.3.1,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.3.1,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Find $\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx$.
 
@@ -239,11 +239,11 @@ Find $\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx$.
 
 \begin{align*}
     &\displaystyle{\int_1^2 \left(3x^2+6x-2\right)}\,dx&&\\[0.5em]
-    =\;&\left[\frac{3x^3}{3}+\frac{6x^2}{2}-2x\right]_1^2&&\color{NavyBlue}\longleftarrow \text{Integrate}\\[0.5em]
-    =\;&\left[x^3+3x^2-2x\right]_1^2&&\color{NavyBlue}\longleftarrow \text{Simplify}\\[0.5em]
-    =\;&\left((2)^3+3(2)^2-2(2)\right)-\left((1)^3+5(1)^2-2(1)\right)&&\color{NavyBlue}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&\left[\frac{3x^3}{3}+\frac{6x^2}{2}-2x\right]_1^2&&\color{RoyalBlue}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left[x^3+3x^2-2x\right]_1^2&&\color{RoyalBlue}\longleftarrow \text{Simplify}\\[0.5em]
+    =\;&\left((2)^3+3(2)^2-2(2)\right)-\left((1)^3+5(1)^2-2(1)\right)&&\color{RoyalBlue}\longleftarrow \text{Substitute}\\[0.5em]
     =\;&16-4\\[0.5em]
-    =\;&12&&\color{NavyBlue}\longleftarrow \text{Evaluate}
+    =\;&12&&\color{RoyalBlue}\longleftarrow \text{Evaluate}
 \end{align*}
 
 \end{tcolorbox}
@@ -305,7 +305,7 @@ An integral, $\displaystyle{\int}$, can be seen as \textit{"sum"}, but for a con
 
 The values of $a$ and $b$ can be referred to as the \textit{bounds} of the integration.
 
-\begin{tcolorbox}[title=Example 11.4.1,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.4.1,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Part of the graph of $y=5+2x-x^2$ is shown. Calculate the shaded area.
 
@@ -328,10 +328,10 @@ Part of the graph of $y=5+2x-x^2$ is shown. Calculate the shaded area.
 
 
 \begin{align*}
-    &\displaystyle{\int_{-1}^2 \left(5+2x-x^2\right)}\,dx&&\color{NavyBlue}\longleftarrow \text{Area}\\[0.5em]
-    =\;&\left[5x+x^2-\frac{x^3}{3}\right]_{-1}^2&&\color{NavyBlue}\longleftarrow \text{Integrate}\\[0.5em]
-    =\;&\left(5(2)+(2)^2-\frac{(2)^3}{3}\right)-\left(5(-1)+(-1)^2-\frac{(-1)^3}{3}\right)&&\color{NavyBlue}\longleftarrow \text{Substitute}\\[0.5em]
-    =\;&\frac{34}{3}-\left(-\frac{11}{3}\right)&&\color{NavyBlue}\longleftarrow \text{Evaluate}\\[0.5em]
+    &\displaystyle{\int_{-1}^2 \left(5+2x-x^2\right)}\,dx&&\color{RoyalBlue}\longleftarrow \text{Area}\\[0.5em]
+    =\;&\left[5x+x^2-\frac{x^3}{3}\right]_{-1}^2&&\color{RoyalBlue}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left(5(2)+(2)^2-\frac{(2)^3}{3}\right)-\left(5(-1)+(-1)^2-\frac{(-1)^3}{3}\right)&&\color{RoyalBlue}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&\frac{34}{3}-\left(-\frac{11}{3}\right)&&\color{RoyalBlue}\longleftarrow \text{Evaluate}\\[0.5em]
     =\;&15\text{ square units}
 \end{align*}
 
@@ -365,7 +365,7 @@ To avoid \textit{"positve"} and \textit{"negative"} areas cancelling each other 
 
 \[\text{Area }=A_1+A_2\]
 
-\begin{tcolorbox}[title=Example 11.4.2,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.4.2,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Part of the graph of $y=x^3-10x^2+27x-18$ is shown. Calculate the shaded area.
 
@@ -433,7 +433,7 @@ The area \textbf{between} two curves can be calculated using the subtraction of 
     \begin{center}
     \begin{tikzpicture}
         \fill[blue!20,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
-        \fill[pattern color = NavyBlue,pattern=north west lines,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
+        \fill[pattern color = RoyalBlue,pattern=north west lines,domain=1:3,smooth] (3,0) -- (1,0) -- (1,1) -- (3,1.6) -- cycle;
         \fill[white,domain=1:3,smooth] plot (\x,0.1*\x*\x-0.1*\x+1);
         \draw[-stealth] (-0.5,0) -- (4.5,0) node[below] {$x$};
         \draw[=stealth] (0,-0.5) -- (0,2.5) node[left] {$y$};
@@ -502,7 +502,7 @@ Note that $\displaystyle{\int_a^b f(x)\;dx-\int_a^b g(x)\;dx=\int_a^b (f(x)-g(x)
 \end{tcolorbox}
 \end{center}
 
-\begin{tcolorbox}[title=Example 11.5.1,colback=NavyBlue!2, colframe=NavyBlue]
+\begin{tcolorbox}[title=Example 11.5.1,colback=RoyalBlue!2, colframe=RoyalBlue]
 
 Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area.
 
@@ -528,11 +528,11 @@ Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area
 \vspace{-0.2cm}
 
 \begin{align*}
-    &\displaystyle{\int_{-1}^4 \left(4-x^2-(-3x)\right)}\,dx&&\color{NavyBlue}\longleftarrow \text{Upper}-\text{Lower}\\[0.5em]
-    &\displaystyle{\int_{-1}^4 \left(4-x^2+3x\right)}\,dx&&\color{NavyBlue}\longleftarrow \text{Simplify}\\[0.5em]
-    =\;&\left[4x-\frac{x^3}{3}+\frac{3x^2}{2}\right]_{-1}^4&&\color{NavyBlue}\longleftarrow \text{Integrate}\\[0.5em]
-    =\;&\left(4(4)-\frac{(4)^3}{3}+\frac{3(4)^2}{2}\right)-\left(4(-1)-\frac{(-1)^3}{3}+\frac{3(-1)^2}{2}\right)&&\color{NavyBlue}\longleftarrow \text{Substitute}\\[0.5em]
-    =\;&\frac{56}{3}-\left(-\frac{13}{6}\right)&&\color{NavyBlue}\longleftarrow \text{Evaluate}\\[0.5em]
+    &\displaystyle{\int_{-1}^4 \left(4-x^2-(-3x)\right)}\,dx&&\color{RoyalBlue}\longleftarrow \text{Upper}-\text{Lower}\\[0.5em]
+    &\displaystyle{\int_{-1}^4 \left(4-x^2+3x\right)}\,dx&&\color{RoyalBlue}\longleftarrow \text{Simplify}\\[0.5em]
+    =\;&\left[4x-\frac{x^3}{3}+\frac{3x^2}{2}\right]_{-1}^4&&\color{RoyalBlue}\longleftarrow \text{Integrate}\\[0.5em]
+    =\;&\left(4(4)-\frac{(4)^3}{3}+\frac{3(4)^2}{2}\right)-\left(4(-1)-\frac{(-1)^3}{3}+\frac{3(-1)^2}{2}\right)&&\color{RoyalBlue}\longleftarrow \text{Substitute}\\[0.5em]
+    =\;&\frac{56}{3}-\left(-\frac{13}{6}\right)&&\color{RoyalBlue}\longleftarrow \text{Evaluate}\\[0.5em]
     =\;&\frac{125}{6}\text{ square units}
 \end{align*}
 

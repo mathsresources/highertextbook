@@ -6,9 +6,9 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[WildStrawberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
-\draw[WildStrawberry,very thick] (5,1) -- (6,1);
-\draw[WildStrawberry,fill=WildStrawberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\draw[MidnightBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[MidnightBlue,very thick] (5,1) -- (6,1);
+\draw[MidnightBlue,fill=MidnightBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{The Straight Line}}};
 \node at (3,1) {\Large{\textsc{Chapter 1}}};
 \end{tikzpicture}

@@ -6,23 +6,210 @@
 \begin{center}
 \begin{tikzpicture}
 \draw[white] (10,5) circle (0.01);
-\draw[WildStrawberry,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
-\draw[WildStrawberry,very thick] (5,1) -- (6,1);
-\draw[WildStrawberry,fill=WildStrawberry,rounded corners] (6,1.8) rectangle (18.2,0.2);
+\draw[MidnightBlue,rounded corners,very thick] (1,0.2) rectangle (5,1.8);
+\draw[MidnightBlue,very thick] (5,1) -- (6,1);
+\draw[MidnightBlue,fill=MidnightBlue,rounded corners] (6,1.8) rectangle (18.2,0.2);
 \node[white] at (12.1,1) {\Huge{\textsc{The Circle}}};
 \node at (3,1) {\Large{\textsc{Chapter 13}}};
 \end{tikzpicture}
 \end{center}
 
-## The Equation of a Circle
+The circle the most fundamental mathematical shape, and in this chapter its equation will be introduced.
+
+For all points $(x,y)$ on a circle, the distance to the *centre* is the same, and that distance is the *radius*.
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[thick] (0,0) circle (2cm);
+        \draw[MidnightBlue,fill,thick] (0,0) circle (0.03) node[below] {$\color{black}\text{centre}$} -- (30:2) circle (0.03) node[pos=1.3] {$\color{black}(x,y)$};
+        \node[MidnightBlue,rotate=30,above] at (30:1) {radius};
+    \end{tikzpicture}
+\end{center}
+
+In order to fully define a circle lying on an $x$-$y$ Cartesian plane, only two properties are required:
+
+\begin{itemize}
+    \item The \textcolor{MidnightBlue}{\textbf{radius}} of the circle.
+    \item The \textcolor{MidnightBlue}{\textbf{centre}} of the circle.
+\end{itemize}
+
+For any point $(x,y)$ on a circle with \textcolor{MidnightBlue}{\textbf{radius}} $\color{MidnightBlue}r$ and \textcolor{MidnightBlue}{\textbf{centre}} $\color{MidnightBlue}(a,b)$, a right-angle triangle can be constructed:
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.2]
+        \draw[thick] (0,0) circle (2cm);
+        \draw[MidnightBlue,fill,thick] (0,0) circle (0.03) -- (30:2) circle (0.03) node[pos=1.25] {$\color{black}(x,y)$} node[pos=-0.25] {$\color{black}(a,b)$};
+        \node[MidnightBlue,rotate=30,above] at (30:1) {$r$};
+        \draw (30:2) -- ++(0,-1) -- (0,0);
+        \draw (30:2) -- ++(0,-0.9) -- ++(-0.1,0) -- ++(0,-0.1);
+        \draw[very thick,-stealth,MidnightBlue] (4,0) -- (5,0);
+        \draw (7,-1) -- ++(30:4) -- ++(0,-2) -- (7,-1);
+        \draw (7,-1) -- ++(30:4) -- ++(0,-1.8) -- ++(-0.2,0) -- ++(0,-0.2);
+        \draw[thick,MidnightBlue] (7,-1) -- ++(30:4) node[pos=0.5,rotate=30,above] {$r$};
+        \node[right] at (10.5,0) {$y-b$};
+        \node[below] at (8.75,-1) {$x-a$};
+    \end{tikzpicture}
+\end{center}
+
+By Pythagoras' Theorem, the set of points $(x,y)$ which lie on the circle satisfy the relationship:
+
+\[\color{MidnightBlue}(x-a)^2+(y-b)^2=r^2\]
+
+This is known as the \textcolor{MidnightBlue}{\textbf{equation of the circle}}.
+
+\pagebreak
+
+## The Equation of the Circle
+
+\vspace{-0.5cm}
+
+The equation of the circle, introduced on the previous page, is given in the formula list:
+
+\vspace{-0.3cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,colframe=red!70!black]
+\centering
+\textbf{The Equation of the Circle} \textit{(as provided on the formula sheet)}:
+\begin{equation*}
+    \text{The circle with centre }(a,b)\text{ and radius }r\text{ has equation: }
+    (x-a)^2+(y-b)^2=r^2
+\end{equation*}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{-0.3cm}
+
+When stating the equation of a circle, it is not necessary to expand the brackets unless specified.
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
+
+State the equation of the circle with centre $(5,-2)$ and diameter $6\sqrt{2}$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+   &\text{Centre }=(5,-2)&&\color{MidnightBlue}\longleftarrow \text{State centre }(a,b)\\[0.5em]
+    &\text{Radius }=3\sqrt{2}&&\color{MidnightBlue}\longleftarrow \text{State radius }r\\[0.5em]
+    &\text{Equation: }(x-5)^2+\left(y-(-2)\right)^2=\left(3\sqrt{2}\right)^2&&\color{MidnightBlue}\longleftarrow \text{Substitute into equation}\\[0.5em]
+    &\hspace{2.5cm}(x-5)^2+(y+2)^2=18&&\color{MidnightBlue}\longleftarrow \text{Simplify}
+\end{align*}
+
+\end{tcolorbox}
+
+The radius and centre of a circle may be quickly stated given its equation:
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue,height=3.9cm]
+
+State the radius and centre of the circle with equation $(x+4)^2+(y-1)^2=25$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+   &\text{Centre }=(-4,1)&&\color{MidnightBlue}\longleftarrow \text{State centre }(a,b)\\[0.5em]
+    &\text{Radius }=5&&\color{MidnightBlue}\longleftarrow \text{State radius }r\\[0.5em]
+\end{align*}
+
+\end{tcolorbox}
+
+Knowledge from the earlier chapters such as *Straight Lines* and *Vectors* may be required, such as:
+
+\begin{multicols}{2}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,colframe=red!70!black,height=3.3cm]
+\centering
+\textbf{The Distance Formula}:
+\begin{equation*}
+    \text{The distance between }(x_1,y_1)\text{ and  }(x_2,y_2)\text{: }
+\end{equation*}
+\begin{equation*}
+    \textbf{distance}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+\end{equation*}
+\end{tcolorbox}
+\end{center}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,colframe=red!70!black,height=3.3cm]
+\centering
+\textbf{The Midpoint Formula}:
+\begin{equation*}
+    \text{The midpoint between }(x_1,y_1)\text{ and  }(x_2,y_2)\text{: }
+\end{equation*}
+\begin{equation*}
+    \textbf{midpoint}=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)
+\end{equation*}
+\end{tcolorbox}
+\end{center}
+
+\end{multicols}
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
+
+Find the equation of the circle with line PQ as its diameter, where P$(-1,2)$ and Q$(7,-4)$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+   \text{Centre }&=\left(\frac{-1+7}{2},\frac{2+(-4)}{2}\right)=(3,-1)&&\color{MidnightBlue}\longleftarrow \text{Find centre as midpoint of diameter}\\[0.5em]
+    \text{Radius }&=\sqrt{(3-(-1))^2+(-1-2)^2}=\sqrt{25}=5&&\color{MidnightBlue}\longleftarrow \text{Calculate radius using distance formula}\\[1em]
+    &\hspace{1.5cm}(x-3)^2+(y+1)^2=25&&\color{MidnightBlue}\longleftarrow \text{Substitute into equation and simplify}
+\end{align*}
+
+\end{tcolorbox}
+
+\pagebreak
+
+### Exercise 13.1 {-}
 
 \newpage
 
-### Exercise {-}
+## The General Equation of the Circle
 
-\newpage
+\vspace{-0.5cm}
 
-## The General Equation of a Circle
+The equation of the circle with centre $(3,-4)$ and radius $7$ can be expanded:
+
+\vspace{-0.7cm}
+
+\begin{align*}
+    (x-3)^2+(y+4)^2&=49\\[0.5em]
+    (x^2-6x+9)+(y^2+8y+16)&=49\\[0.5em]
+    x^2+y^2-6x+8y+9+16-49&=0\\[0.5em]
+    x^2+y^2-6x+8y-24&=0
+\end{align*}
+
+\vspace{-0.5cm}
+
+This expanded form is called the \textcolor{MidnightBlue}{\textbf{general equation of the circle}}.
+
+\vspace{-0.3cm}
+
+\begin{center}
+\begin{tcolorbox}[colback=red!5,colframe=red!70!black]
+\centering
+\textbf{General Equation of the Circle} \textit{(as provided on the formula sheet)}:
+\begin{equation*}
+    \text{The circle with centre }(-g,-f)\text{ and radius }\sqrt{g^2+f^2-c}\text{ has equation:}
+\end{equation*}
+\vspace{-0.6cm}
+\begin{equation*}
+    x^2+y^2+2gx+2fy+c=0
+\end{equation*}
+
+\end{tcolorbox}
+\end{center}
+
+\vspace{-0.3cm}
+
+By equating $x$ and $y$ coefficients, and constant terms, the radius and centre can be found from this form:
 
 \newpage
 
