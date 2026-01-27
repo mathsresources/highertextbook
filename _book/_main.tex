@@ -3615,6 +3615,8 @@ Find the equation of the circle with line PQ as its diameter, where P$(-1,2)$ an
 
 \end{tcolorbox}
 
+Note that \textcolor{MidnightBlue}{\textbf{concentric}} circles have the same centre and \textcolor{MidnightBlue}{\textbf{congruent}} circles have the same radius.
+
 \pagebreak
 
 \subsection*{Exercise 13.1}\label{exercise-13.1}
@@ -3701,7 +3703,11 @@ Note that the equation \(x^2+y^2+2gx+2fy+c=0\) only defines a circle where \(g^2
 
 \section{The Intersection of a Line and a Circle}\label{the-intersection-of-a-line-and-a-circle}
 
+\vspace{-0.5cm}
+
 Given a circle and a line lying on the \(x\)-\(y\) Cartesian plane, one of three possible relationships must apply:
+
+\vspace{-0.5cm}
 
 \begin{multicols}{3}
 
@@ -3740,54 +3746,190 @@ Given a circle and a line lying on the \(x\)-\(y\) Cartesian plane, one of three
 
 \end{multicols}
 
-Whether seeking to \emph{find points of intersection}, \emph{find the point of contact for a tangent}, or \emph{show that the line and circle do not intersect}, the process should begin with preparing to solve simultaneous equations. Since the equation of a circle does not lend itself to being written in the form ``\(y=\dots\)'', solving simultaneous equations to find points of intersection between a line and a circle will require the \textcolor{MidnightBlue}{\textbf{substitution method}}.
+\vspace{-0.5cm}
+
+Whether seeking to \emph{find points of intersection}, \emph{find the point of contact for a tangent}, or \emph{show that the line and circle do not intersect}, the process should begin with preparing to solve simultaneous equations.
+
+Since the equation of a circle is difficult to write in the form ``\(y=\dots\)'', solving simultaneous equations to find points of intersection between a line and a circle will require the \textcolor{MidnightBlue}{\textbf{substitution method}}.
 
 \begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
 
-Show that the line with equation $y\ -x=-7$ is a tangent to the circle with equation $x^{2}+y^{2}-4x+2y-3=0$, and find the point of contact.
+Show that the line with the equation $y-x=-7$ is a tangent to the circle with the equation $x^{2}+y^{2}-4x+2y-3=0$, and find the point of contact.
 
 \tcblower
 
 \vspace{-0.5cm}
 
 \begin{align*}
-    x^2+y^2+2gx+2fy+c&=0&&\color{MidnightBlue}\longleftarrow \text{Write down general equation in }g,f,c\\[0.5em]
-    x^2+y^2+14x-12y+9&=0&&\color{MidnightBlue}\longleftarrow \text{Align equation of circle given}\\[1em]
-    g=7\hspace{0.5cm}f=-6\hspace{0.5cm}c=9&&&\color{MidnightBlue}\longleftarrow \text{Find the values of }g,f,c\\[1em]
-    \text{centre}&=(-g,-f)&&\color{MidnightBlue}\longleftarrow \text{Find centre}\\[0.5em]
-    &=(-7,-(-6))&&\\[0.5em]
-    &=(-7,6)&&\\[1em]
-    \text{radius}&=\sqrt{g^2+f^2-c}&&\color{MidnightBlue}\longleftarrow \text{Find radius}\\[0.5em]
-    &=\sqrt{7^2+(-6)^2-9}&&\\[0.5em]
-    &=\sqrt{49+36-9}&&\\[0.5em]
-    &=\sqrt{76}&&\\[0.5em]
-    &=2\sqrt{19}&&
+    y=\color{MidnightBlue}x-7&&&\color{MidnightBlue}\longleftarrow \text{Prepare the equation of the line}\\[1em]
+    x^2+\color{MidnightBlue}(x-7)\color{black}^2-4x+2\color{MidnightBlue}(x-7)\color{black}-3&=0&&\color{MidnightBlue}\longleftarrow \text{Substitute into the circle's equation}\\[0.5em]
+    x^2+\color{MidnightBlue}(x^2-14x+49)\color{black}-4x+2x-14-3&=0&&\color{MidnightBlue}\longleftarrow \text{Expand the brackets}\\[0.5em]
+    2x^2-16x+32&=0&&\color{MidnightBlue}\longleftarrow \text{Collect like terms}\\[0.5em]
+    x^2-8x+16&=0&&\color{MidnightBlue}\longleftarrow \text{Divide through by common factor of}\\[0.5em]
+    (x-4)(x-4)&=0&&\color{MidnightBlue}\longleftarrow \text{Factorise}\\[1em]
+    \text{Repeated factor}\implies \text{tangency}&&&\color{MidnightBlue}\longleftarrow \textit{``Show that...''}\\[1em]
+    x&=4&&\color{MidnightBlue}\longleftarrow \text{Solve to find }x\text{-coordinate}\\[1em]
+    y&=4-7&&\color{MidnightBlue}\longleftarrow \text{Substitute to find }y\text{-coordinate}\\[0.5em]
+    &=-3&&\\[0.5em]
+    \text{Point of contact is }(4,-3)&&&
 \end{align*}
 
 \end{tcolorbox}
 
-\newpage
+Tangency could also be shown by considering the \emph{discriminant} (\(b^2-4ac\)) of the equation \(x^2-8x+16=0\). However, when the point of contact is required it is quicker to use the \emph{repeated factor} instead.
 
-\subsection*{Exercise}\label{exercise-44}
-\addcontentsline{toc}{subsection}{Exercise}
+To show that a line and circle do not intersect, the disciminant must be considered, as it is not sufficient to make a conclusion based on being unable to solve through factorising.
+
+\pagebreak
+
+\subsection*{Exercise 13.3}\label{exercise-13.3}
+\addcontentsline{toc}{subsection}{Exercise 13.3}
 
 \newpage
 
 \section{Finding the Equation of a Tangent to a Circle}\label{finding-the-equation-of-a-tangent-to-a-circle}
 
-\newpage
+\vspace{-0.5cm}
 
-\subsection*{Exercise}\label{exercise-45}
-\addcontentsline{toc}{subsection}{Exercise}
+To find the equation of a tangent to a circle, or the tangent to any form of curve, required are a \textcolor{MidnightBlue}{\textbf{point}} which lies on the tangent, and its \textcolor{MidnightBlue}{\textbf{gradient}}. For tangents to circles, a geometric approach can be used:
+
+\vspace{-0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[thick] (0,0) circle (2.5cm);
+        \draw[thick] (0,0) -- (20:2.5);
+        \draw[fill] circle (0.06) node[below] {centre};
+        \draw[thick,MidnightBlue] (20:2.5) -- ++(110:2) --++(-70:3.5) node[rotate=-70,MidnightBlue,above] {tangent} --++(-70:1.5);
+        \node[rotate=20,above] at (20:1.25) {radius};
+        \draw[MidnightBlue,fill] (20:2.5) circle (0.06) node[right] {point of tangency};
+        \node[above,text width=9cm] at (13,2) {The radius and tangent are perpendicular:};
+        \node[below,MidnightBlue] at (13,2) {$m_{\text{radius}}\times m_{\text{tangent}}=-1$};
+        \node[below, text width=9cm] at (13,1) {
+        Given the point of contact (or \textit{point of tangency}) at which a tangent meets a circle, the gradient of the radius from the centre to that point should be first determined. A tangent is \textcolor{MidnightBlue}{\textbf{perpendicular to the radius}} which meets it at the point of contact.
+        };
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-0.5cm}
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
+
+Find the equation of the line which meets the circle with equation $x^{2}+y^{2}-4x+6y+3=0$ at a tangent at the point P$(5,-2)$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+    &g=-2\hspace{0.5cm}f=3\hspace{0.5cm}c=3&&\\[0.5em]
+    \text{Centre}&=(2,-3)&&\color{MidnightBlue}\longleftarrow \text{Find the centre of the circle}\\[0.5em]
+    m_{\text{radius}}&=\frac{-3-(-2)}{2-5}=\frac{-1}{-3}=\frac{1}{3}&&\color{MidnightBlue}\longleftarrow \text{Find the gradient of the radius}\\[0.5em]
+    m_{\text{tangent}}&=-3&&\color{MidnightBlue}\longleftarrow \text{State the gradient of the tangent}\\[1em]
+    y-b&=m(x-a)&&\\[0.5em]
+    y-(-2)&=-3(x-5)&&\color{MidnightBlue}\longleftarrow \text{Substitude point of contact and }m_{\text{tangent}}\\[0.5em]
+    y+2&=-3x+15&&\\[0.5em]
+    y&=-3x+17&&
+\end{align*}
+
+\end{tcolorbox}
+
+\vspace{-0.3cm}
+
+\subsection*{Exercise 13.4}\label{exercise-13.4}
+\addcontentsline{toc}{subsection}{Exercise 13.4}
+
+\vspace{-0.3cm}
+
+\begin{enumerate}
+    \item
+\end{enumerate}
 
 \newpage
 
 \section{Points Inside and Outside Circles}\label{points-inside-and-outside-circles}
 
-\newpage
+\vspace{-0.5cm}
 
-\subsection*{Exercise}\label{exercise-46}
-\addcontentsline{toc}{subsection}{Exercise}
+Given a circle and a point lying on the \(x\)-\(y\) Cartesian plane, one of three possible relationships must apply, depending on the \textcolor{MidnightBlue}{\textit{distance from the centre of the circle to the point}} and the \textit{radius}:
+
+\vspace{-0.5cm}
+
+\begin{multicols}{3}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the point is outside the circle};
+        \draw[thick] (0,0) -- (20:1.7);
+        \node[rotate=20,above] at (20:0.85) {radius};
+        \draw[thick] (0,0) circle (1.7cm);
+        \draw[MidnightBlue,fill,thick] (0,0) circle (0.06) node[left] {C} -- (2.2,0) circle (0.06) node[right] {P};
+        \node[below,MidnightBlue] at (0.85,0) {$\text{distance}$};
+        \node[below,MidnightBlue] at (0,-2) {$\text{distance}>\color{black}\text{radius}$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the point lies on the circle};
+        \draw[thick] (0,0) -- (20:1.7);
+        \node[rotate=20,above] at (20:0.85) {radius};
+        \draw[thick] (0,0) circle (1.7cm);
+        \draw[MidnightBlue,fill,thick] (0,0) circle (0.06) node[left] {C} -- (1.7,0) circle (0.06) node[right] {P};
+        \node[below,MidnightBlue] at (0.85,0) {$\text{distance}$};
+        \node[below,MidnightBlue] at (0,-2) {$\text{distance}=\color{black}\text{radius}$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the point lies outside the circle};
+        \draw[thick] (0,0) -- (20:1.7);
+        \node[rotate=20,above] at (20:0.85) {radius};
+        \draw[thick] (0,0) circle (1.7cm);
+        \draw[MidnightBlue,fill,thick] (0,0) circle (0.06) node[left] {C} -- (1.25,0) circle (0.06) node[right] {P};
+        \node[below,MidnightBlue] at (0.85,0) {$\text{distance}$};
+        \node[below,MidnightBlue] at (0,-2) {$\text{distance}<\color{black}\text{radius}$};
+    \end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+\vspace{-0.5cm}
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
+
+Show that the point Q$(-1,7)$ lies outside of the circle with equation $(x-3)^2+(y+5)^2=17$.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+    \text{Centre}&=(3,-5)&&\color{MidnightBlue}\longleftarrow \text{Find the centre of the circle}\\[0.5em]
+    \text{Radius}&=\sqrt{17}&&\color{MidnightBlue}\longleftarrow \text{Find the radius of the circle}\\[0.5em]
+    \text{Distance}&=\sqrt{(-1-3)^2+(7-(-5))^2}&&\color{MidnightBlue}\longleftarrow \text{Find the distance from centre to point}\\[0.5em]
+    &=\sqrt{(-4)^2+(12)^2}&&\\[0.5em]
+    &=\sqrt{16+144}&&\\[0.5em]
+    &=\sqrt{160}&&\\[1em]
+    \text{Since }\sqrt{160}>\sqrt{17}&\text{ the point lies outside the circle}&&\color{MidnightBlue}\longleftarrow \text{State conclusion}
+\end{align*}
+
+\vspace{-0.5cm}
+
+\end{tcolorbox}
+
+\vspace{-0.5cm}
+
+\subsection*{Exercise 13.5}\label{exercise-13.5}
+\addcontentsline{toc}{subsection}{Exercise 13.5}
+
+\begin{enumerate}
+    \item
+\end{enumerate}
 
 \newpage
 
@@ -3795,7 +3937,7 @@ Show that the line with equation $y\ -x=-7$ is a tangent to the circle with equa
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-47}
+\subsection*{Exercise}\label{exercise-44}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6356,7 +6498,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-48}
+\subsection*{Exercise}\label{exercise-45}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6365,7 +6507,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-49}
+\subsection*{Exercise}\label{exercise-46}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6374,7 +6516,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-50}
+\subsection*{Exercise}\label{exercise-47}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6383,7 +6525,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-51}
+\subsection*{Exercise}\label{exercise-48}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
