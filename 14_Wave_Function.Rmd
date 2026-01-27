@@ -228,8 +228,8 @@ As well as $k\cos{(x-a)}$, three other forms may be used, shown below including 
 
 \begin{align*}
     k\cos{(x+a)}&\color{DarkOrchid}=k\cos{x}\cos{a}-k\sin{x}\sin{a}\\
-    k\sin{(x+a)}&\color{DarkOrchid}=k\sin{x}\cos{a}+k\sin{x}\cos{a}\\
-    k\sin{(x-a)}&\color{DarkOrchid}=k\sin{x}\cos{a}-k\sin{x}\cos{a}
+    k\sin{(x+a)}&\color{DarkOrchid}=k\sin{x}\cos{a}+k\cos{x}\sin{a}\\
+    k\sin{(x-a)}&\color{DarkOrchid}=k\sin{x}\cos{a}-k\cos{x}\sin{a}
 \end{align*}
 
 \vspace{-0.3cm}

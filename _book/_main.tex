@@ -3464,7 +3464,7 @@ Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$.
 \end{tikzpicture}
 \end{center}
 
-The circle the most fundamental mathematical shape, and in this chapter its equation will be introduced.
+The circle a fundamental mathematical shape, and in this chapter its equation will be introduced.
 
 For all points \((x,y)\) on a circle, the distance to the \emph{centre} is the same, and that distance is the \emph{radius}.
 
@@ -3694,16 +3694,81 @@ Note that the equation \(x^2+y^2+2gx+2fy+c=0\) only defines a circle where \(g^2
 
 \pagebreak
 
-\subsection*{Exercise}\label{exercise-44}
-\addcontentsline{toc}{subsection}{Exercise}
+\subsection*{Exercise 13.2}\label{exercise-13.2}
+\addcontentsline{toc}{subsection}{Exercise 13.2}
 
 \newpage
 
 \section{The Intersection of a Line and a Circle}\label{the-intersection-of-a-line-and-a-circle}
 
+Given a circle and a line lying on the \(x\)-\(y\) Cartesian plane, one of three possible relationships must apply:
+
+\begin{multicols}{3}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the line and circle intersect at two points};
+        \draw[thick] (0,0) circle (1.2cm);
+        \draw[thick] (-85:1.4) -- ++(60:2.4);
+        \draw[MidnightBlue,fill] (0.25,-1.174) circle (0.06);
+        \draw[MidnightBlue,fill] (1.14,0.37) circle (0.06);
+        \node[below,MidnightBlue] at (0,-1.5) {$b^2-4ac>0$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the line meets the circle at a tangent};
+        \draw[thick] (0,0) circle (1.2cm);
+        \draw[thick] (-30:1.2) -- ++(60:1.2) --++(-120:2.4);
+        \draw[MidnightBlue,fill] (-30:1.2) circle (0.06);
+        \node[below,MidnightBlue] at (0,-1.5) {$b^2-4ac=0$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[white] (-3,-2.2) rectangle (3,2.5);
+        \node[below,text width=5.5cm,MidnightBlue,align=center] at (0,2.5) {the line does not intersect the circle};
+        \draw[thick] (0,0) circle (1.2cm);
+        \draw[thick] (-60:1.6) -- ++(60:2.4);
+        \node[below,MidnightBlue] at (0,-1.5) {$b^2-4ac<0$};
+    \end{tikzpicture}
+\end{center}
+
+\end{multicols}
+
+Whether seeking to \emph{find points of intersection}, \emph{find the point of contact for a tangent}, or \emph{show that the line and circle do not intersect}, the process should begin with preparing to solve simultaneous equations. Since the equation of a circle does not lend itself to being written in the form ``\(y=\dots\)'', solving simultaneous equations to find points of intersection between a line and a circle will require the \textcolor{MidnightBlue}{\textbf{substitution method}}.
+
+\begin{tcolorbox}[title=Example,colback=MidnightBlue!1, colframe=MidnightBlue]
+
+Show that the line with equation $y\ -x=-7$ is a tangent to the circle with equation $x^{2}+y^{2}-4x+2y-3=0$, and find the point of contact.
+
+\tcblower
+
+\vspace{-0.5cm}
+
+\begin{align*}
+    x^2+y^2+2gx+2fy+c&=0&&\color{MidnightBlue}\longleftarrow \text{Write down general equation in }g,f,c\\[0.5em]
+    x^2+y^2+14x-12y+9&=0&&\color{MidnightBlue}\longleftarrow \text{Align equation of circle given}\\[1em]
+    g=7\hspace{0.5cm}f=-6\hspace{0.5cm}c=9&&&\color{MidnightBlue}\longleftarrow \text{Find the values of }g,f,c\\[1em]
+    \text{centre}&=(-g,-f)&&\color{MidnightBlue}\longleftarrow \text{Find centre}\\[0.5em]
+    &=(-7,-(-6))&&\\[0.5em]
+    &=(-7,6)&&\\[1em]
+    \text{radius}&=\sqrt{g^2+f^2-c}&&\color{MidnightBlue}\longleftarrow \text{Find radius}\\[0.5em]
+    &=\sqrt{7^2+(-6)^2-9}&&\\[0.5em]
+    &=\sqrt{49+36-9}&&\\[0.5em]
+    &=\sqrt{76}&&\\[0.5em]
+    &=2\sqrt{19}&&
+\end{align*}
+
+\end{tcolorbox}
+
 \newpage
 
-\subsection*{Exercise}\label{exercise-45}
+\subsection*{Exercise}\label{exercise-44}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -3712,7 +3777,7 @@ Note that the equation \(x^2+y^2+2gx+2fy+c=0\) only defines a circle where \(g^2
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-46}
+\subsection*{Exercise}\label{exercise-45}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -3721,7 +3786,7 @@ Note that the equation \(x^2+y^2+2gx+2fy+c=0\) only defines a circle where \(g^2
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-47}
+\subsection*{Exercise}\label{exercise-46}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -3730,7 +3795,7 @@ Note that the equation \(x^2+y^2+2gx+2fy+c=0\) only defines a circle where \(g^2
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-48}
+\subsection*{Exercise}\label{exercise-47}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -3970,8 +4035,8 @@ As well as \(k\cos{(x-a)}\), three other forms may be used, shown below includin
 
 \begin{align*}
     k\cos{(x+a)}&\color{DarkOrchid}=k\cos{x}\cos{a}-k\sin{x}\sin{a}\\
-    k\sin{(x+a)}&\color{DarkOrchid}=k\sin{x}\cos{a}+k\sin{x}\cos{a}\\
-    k\sin{(x-a)}&\color{DarkOrchid}=k\sin{x}\cos{a}-k\sin{x}\cos{a}
+    k\sin{(x+a)}&\color{DarkOrchid}=k\sin{x}\cos{a}+k\cos{x}\sin{a}\\
+    k\sin{(x-a)}&\color{DarkOrchid}=k\sin{x}\cos{a}-k\cos{x}\sin{a}
 \end{align*}
 
 \vspace{-0.3cm}
@@ -6291,7 +6356,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-49}
+\subsection*{Exercise}\label{exercise-48}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6300,7 +6365,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-50}
+\subsection*{Exercise}\label{exercise-49}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6309,7 +6374,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-51}
+\subsection*{Exercise}\label{exercise-50}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
@@ -6318,7 +6383,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise}\label{exercise-52}
+\subsection*{Exercise}\label{exercise-51}
 \addcontentsline{toc}{subsection}{Exercise}
 
 \newpage
