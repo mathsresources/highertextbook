@@ -44,7 +44,7 @@ An example of an exponential function in everyday life is that of something *app
 
 The function to describe its value $V$ after $\color{PineGreen}x$ years is given by: $V(\color{PineGreen}x\color{black})=4000\times1.2^{\color{PineGreen}x}$
 
-One advantage of defining this function is the ability to calculate the value at times other that after whole years. For example, the value after \textcolor{PineGreen}{three and a half years} can be calculated as:
+One advantage of defining this function is the ability to calculate the value at times other than after a whole number of years. For example, the value after \textcolor{PineGreen}{three and a half years} can be calculated as:
 
 \[V(\color{PineGreen}3.5\color{black})=4000\times1.2^{\color{PineGreen}3.5}=7571.72\]
 
@@ -148,14 +148,16 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
     4&=a^2 &&\\[0.5em]
     2&=a && \color{PineGreen}\longleftarrow\text{Solve to obtain }a\\[1em]
     y&=2^x+1&&\color{PineGreen}\longleftarrow\text{State equation}\\[0.5em]
-    f(x)&\geqslant 1&&\color{PineGreen}\longleftarrow\text{State range}
+    f(x)&> 1&&\color{PineGreen}\longleftarrow\text{State range}
 \end{align*}
 
 \end{tcolorbox}
 
 \pagebreak
 
-### Exercise 15.1 {-}
+[]{#ex151q}
+
+#### [Exercise 15.1](#ex151a) {-}
 
 \vspace{-0.5cm}
 
@@ -198,12 +200,12 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
             \draw[-stealth] (0,-1.5) -- (0,3.7) node[left] {$y$};
-            \draw[smooth,thick,domain=-3:1.3] plot (\x,{3^(\x)-1});
+            \draw[smooth,thick,domain=-3:1.32] plot (\x,{3^(\x)-1});
             \draw[fill] (0,0) circle (0.07);
-            \draw[fill] (1,2) circle (0.07) node[below right] {$(1,2)$};
+            \draw[fill] (1.262,3) circle (0.07) node[right] {$(1,3)$};
             \node[above left] {\scriptsize{O}};
             \draw[dashed,thin] (-4,-1) -- (2.5,-1) node[right] {$y=-1$};
-            \draw[fill,PineGreen] (0.5,0.732) circle (0.07) node[below right] {$(0.5,k)$};
+            \draw[fill,PineGreen] (0.631,1) circle (0.07) node[right] {$\left(\frac{1}{2},k\right)$};
             \end{tikzpicture}
             \item[(b)] $y=a^x$\\
             \begin{tikzpicture}[scale=0.8]
@@ -211,7 +213,7 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
             \draw[smooth,thick,domain=-3.5:3.5] plot (\x,{0.75^(\x)});
             \draw[fill,PineGreen] (0,1) circle (0.07) node[below left] {$k$};
-            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$(1,0.5)$};
+            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$\left(1,\frac{1}{2}\right)$};
             \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
             \item[(d)] $y=4^x+b$\\
@@ -228,8 +230,8 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
             \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
             \draw[smooth,thick,domain=-3.5:2.5] plot (\x,{1.5^(\x)+1});
-            \draw[fill] (0,2) circle (0.07) node[above left] {$2$};
-            \draw[fill] (1,2.5) circle (0.07) node[below right] {$(1,2.5)$};
+            \draw[fill] (0,2) circle (0.07) node[above left] {$4$};
+            \draw[fill] (1,2.5) circle (0.07) node[below right] {$(1,5)$};
             \draw[dashed,thin] (-4,1) -- (4,1);
             \draw[fill,PineGreen] (2,3.25) circle (0.07) node[below right] {$(2,k)$};
             \node[below left] {\scriptsize{O}};
@@ -258,10 +260,10 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \item $y=3^{x+2}$
         \end{multicols}
         \begin{multicols}{4}
-            \item $y=0.5^x$
-            \item $y=0.5^x-1$
-            \item $y=0.5^{x-3}$
-            \item $y=0.5^{1-x}$
+            \item $y=\left(\frac{1}{2}\right)^x$
+            \item $y=\left(\frac{1}{2}\right)^x-1$
+            \item $y=\left(\frac{1}{2}\right)^{x-2}$
+            \item $y=\left(\frac{1}{2}\right)^{1-x}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -355,12 +357,14 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \vspace{-1.2cm}
 
-### Exercise 15.2 {-}
+[]{#ex152q}
+
+#### [Exercise 15.2](#ex152a) {-}
 
 \vspace{-0.6cm}
 
 \begin{enumerate}
-    \item State the value each of the following logarithms:
+    \item State the value of each of the following logarithms:
     \begin{enumerate}
         \begin{multicols}{5}
             \item $\log_6{36}$
@@ -384,7 +388,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
             \item $\log_5{5}$
         \end{multicols}
         \begin{multicols}{5}
-            \item $\log_2{32}$
+            \item $\log_2{64}$
             \item $\log_{4}{4}$
             \item $\log_2{1}$
             \item $\log_6{216}$
@@ -397,7 +401,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
             \item $\log_9{3}$
             \item $\log_{64}{8}$
             \item $\log_{25}{5}$
-            \item $\log_100{10}$
+            \item $\log_{100}{10}$
             \item $\log_{8}{2}$
         \end{multicols}
         \begin{multicols}{5}
@@ -420,7 +424,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
         \begin{multicols}{5}
             \item $\log_2{31}$
             \item $\log_{7}{50}$
-            \item $\log_{10}{99}$
+            \item $\log_{10}{98}$
             \item $\log_5{120}$
             \item $\log_{2}{0.9}$
         \end{multicols}
@@ -548,7 +552,9 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \vspace{-0.6cm}
 
-### Exercise 15.3 {-}
+[]{#ex153q}
+
+#### [Exercise 15.3](#ex153a) {-}
 
 \vspace{-0.4cm}
 
@@ -572,7 +578,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
         \end{multicols}
         \begin{multicols}{3}
             \item $2\log_6{3}+\log_{6}{\frac{2}{3}}$
-            \item $\log_5{4}+2\log_{5}{10}$
+            \item $\log_5{\frac{1}{4}}+2\log_{5}{10}$
             \item $2\log_{2}{6}-\log_{2}{12}+\log_2{\frac{1}{6}}$
         \end{multicols}
     \end{enumerate}
@@ -580,16 +586,16 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_7{3}+\log_7{6}-\log_{7}{9}$
-            \item $\frac{1}{2}\log_{6}{9}-\log_{6}{2}$
-            \item $2\log_{8}{9}-3\log_2{3}$
+            \item $\frac{1}{2}\log_{6}{9}+\log_{6}{5}$
+            \item $2\log_{2}{9}-3\log_2{3}$
         \end{multicols}
     \end{enumerate}
     \item Simplify each, giving an answer in the form $\log_a{p}$ where $p$ is a positive integer:
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_a{3}+2\log_a{4}$
-            \item $\frac{1}{3}\log_{a}{8}-\log_{a}{4}$
-            \item $\log_{a}{20}-\log_a{4}+\log_a{\frac{1}{15}}$
+            \item $\log_{a}{12}-\frac{1}{3}\log_{a}{8}$
+            \item $\log_{a}{120}-\log_a{4}+\log_a{\frac{1}{15}}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -658,7 +664,9 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \vspace{-0.5cm}
 
-### Exercise 15.4 {-}
+[]{#ex154q}
+
+#### [Exercise 15.4](#ex154a) {-}
 
 \vspace{-0.4cm}
 
@@ -865,7 +873,9 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \vspace{-0.5cm}
 
-### Exercise 15.5 {-}
+[]{#ex155q}
+
+#### [Exercise 15.5](#ex155a) {-}
 
 \vspace{-0.5cm}
 
@@ -1020,7 +1030,9 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.3cm}
 
-### Exercise 15.6 {-}
+[]{#ex156q}
+
+#### [Exercise 15.6](#ex156a) {-}
 
 \vspace{-0.3cm}
 
@@ -1143,7 +1155,9 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \vspace{-0.5cm}
 
-### Exercise 15.7 {-}
+[]{#ex157q}
+
+#### [Exercise 15.7](#ex157a) {-}
 
 \vspace{-0.5cm}
 
@@ -1302,7 +1316,9 @@ t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 
 \vspace{-0.5cm}
 
-### Exercise 15.8 {-}
+[]{#ex158q}
+
+#### [Exercise 15.8](#ex158a) {-}
 
 \vspace{-0.3cm}
 
@@ -1441,7 +1457,9 @@ Therefore the relationship between $x$ and $y$ is $y=27x^{\frac{3}{2}}$.
 
 \newpage
 
-### Exercise 15.9 {-}
+[]{#ex159q}
+
+#### [Exercise 15.9](#ex159a) {-}
 
 \vspace{-0.5cm}
 
@@ -1649,7 +1667,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 
 \newpage
 
-### Exercise 15.10 {-}
+[]{#ex1510q}
+
+#### [Exercise 15.10](#ex1510a) {-}
 
 \vspace{-0.5cm}
 

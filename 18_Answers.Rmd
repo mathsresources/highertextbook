@@ -458,6 +458,325 @@
 
 ### Chapter 15 Answers {-}
 
+\vspace{-0.2cm}
+
+\begingroup
+\footnotesize
+
+\vspace{-0.2cm}
+
+[]{#ex151a}
+
+#### [Exercise 15.1](#ex151q) {-}
+
+\vspace{-0.3cm}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $y=3^x$\newline$k=9$
+            \item $y=\left(\frac{1}{2}\right)^x$\newline$k=1$
+            \item $y=2^x$\newline$k=8$
+            \item $y=4^x-5$\newline$k=-5$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{4}
+            \item $y=2^x+2$\newline$k=2$
+            \item $y=2^x+3$\newline$k=7$
+            \item $y=4^x-1$\newline$k=1$
+            \item $y=3^x-2$\newline$k=-\frac{5}{3}$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $y=3^x$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,0.4) circle (0.07) node[above left] {$1$};
+            \draw[fill] (1,1.2) circle (0.07) node[right,xshift=0.1cm] {$(1,3)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=3^x+1$, range $f(x)>1$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:1.8,yshift=0.4cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,0.8) circle (0.07) node[above left] {$2$};
+            \draw[fill] (1,1.6) circle (0.07) node[right,xshift=0.1cm] {$(1,4)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,0.4) -- (2,0.4) node[right] {$y=1$};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=3^x-2$, range $f(x)>-2$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2.1,yshift=-0.8cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,-0.4) circle (0.07) node[right] {$-1$};
+            \draw[fill] (1,0.4) circle (0.07) node[right,xshift=0.1cm] {$(1,1)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,-0.8) -- (2,-0.8) node[right] {$y=-2$};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=3^{x+2}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2,xshift=-2cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (-2,0.4) circle (0.07) node[above left] {$(-2,2)$};
+            \draw[fill] (-1,1.2) circle (0.07) node[above left] {$(-1,4)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=\left(\frac{1}{2}\right)^x$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.8) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:3.5] plot (\x,{0.75^(\x)});
+            \draw[fill] (0,1) circle (0.07) node[below left] {$1$};
+            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$\left(1,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=\left(\frac{1}{2}\right)^x-1$, range $f(x)>-1$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.8) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:3.5,yshift=-1cm] plot (\x,{0.75^(\x)});
+            \draw[fill] (0,0) circle (0.07);
+            \draw[fill] (2.40942,-0.5) circle (0.07) node[above,yshift=0.4cm] {$\left(1,-\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,-1) -- (2,-1) node[right] {$y=-1$};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=\left(\frac{1}{2}\right)^{x-2}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (1,-1) -- (1,3) node[left] {$y$};
+            \draw[smooth,thick,domain=-2.5:4.5,xshift=-1cm] plot (\x,{0.75^(\x)});
+            \draw[fill] (-1,1) circle (0.07) node[below left] {$(-2,1)$};
+            \draw[fill] (0.2,0.7) circle (0.07) node[above] {$\left(-1,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=\left(\frac{1}{2}\right)^{1-x}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1) -- (0,3) node[left] {$y$};
+            \draw[smooth,thick,domain=-5:1.2,xshift=2.409cm] plot (\x,{0.75^(-\x)});
+            \draw[fill] (2.409,1) circle (0.07) node[below] {$(1,1)$};
+            \draw[fill] (0,0.5) circle (0.07) node[above left] {$\left(0,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\endgroup
+
+\pagebreak
+
+\begingroup
+\footnotesize
+
+[]{#ex152a}
+
+#### [Exercise 15.2](#ex152q) {-}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $2$
+            \item $3$
+            \item $2$
+            \item $4$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $4$
+            \item $5$
+            \item $2$
+            \item $2$
+            \item $3$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $1$
+            \item $2$
+            \item $0$
+            \item $2$
+            \item $1$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $6$
+            \item $1$
+            \item $0$
+            \item $3$
+            \item $7$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{3}$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $\frac{1}{3}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{4}$
+            \item $\frac{1}{4}$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $-1$
+            \item $-1$
+            \item $-2$
+            \item $-3$
+            \item $-\frac{1}{2}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $4.95$
+            \item $2.01$
+            \item $1.99$
+            \item $2.97$
+            \item $-0.152$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+[]{#ex153a}
+
+#### [Exercise 15.3](#ex153q) {-}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $2$
+            \item $1$
+            \item $0$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $3$
+            \item $1$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $1$
+            \item $2$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $1$
+            \item $2$
+            \item $-1$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_7{2}$
+            \item $\log_{6}{15}$
+            \item $\log_2{3}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_a{48}$
+            \item $\log_{a}{6}$
+            \item $\log_{a}{2}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+[]{#ex154a}
+
+#### [Exercise 15.4](#ex154q) {-}
+
+
+[]{#ex155a}
+
+#### [Exercise 15.5](#ex155q) {-}
+
+[]{#ex156a}
+
+#### [Exercise 15.6](#ex156q) {-}
+
+[]{#ex157a}
+
+#### [Exercise 15.7](#ex157q) {-}
+
+[]{#ex158a}
+
+#### [Exercise 15.8](#ex158q) {-}
+
+[]{#ex159a}
+
+#### [Exercise 15.9](#ex159q) {-}
+
+[]{#ex1510a}
+
+#### [Exercise 15.10](#ex1510q) {-}
+
+[]{#ex15Ra}
+
+#### [Review Exercise](#ex15Rq) {-}
+
+
+
+\endgroup
+
 \newpage
 
 

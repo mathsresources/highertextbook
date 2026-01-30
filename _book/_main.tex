@@ -4815,7 +4815,7 @@ An example of an exponential function in everyday life is that of something \emp
 
 The function to describe its value \(V\) after \(\color{PineGreen}x\) years is given by: \(V(\color{PineGreen}x\color{black})=4000\times1.2^{\color{PineGreen}x}\)
 
-One advantage of defining this function is the ability to calculate the value at times other that after whole years. For example, the value after \textcolor{PineGreen}{three and a half years} can be calculated as:
+One advantage of defining this function is the ability to calculate the value at times other than after a whole number of years. For example, the value after \textcolor{PineGreen}{three and a half years} can be calculated as:
 
 \[V(\color{PineGreen}3.5\color{black})=4000\times1.2^{\color{PineGreen}3.5}=7571.72\]
 
@@ -4919,15 +4919,17 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
     4&=a^2 &&\\[0.5em]
     2&=a && \color{PineGreen}\longleftarrow\text{Solve to obtain }a\\[1em]
     y&=2^x+1&&\color{PineGreen}\longleftarrow\text{State equation}\\[0.5em]
-    f(x)&\geqslant 1&&\color{PineGreen}\longleftarrow\text{State range}
+    f(x)&> 1&&\color{PineGreen}\longleftarrow\text{State range}
 \end{align*}
 
 \end{tcolorbox}
 
 \pagebreak
 
-\subsection*{Exercise 15.1}\label{exercise-15.1}
-\addcontentsline{toc}{subsection}{Exercise 15.1}
+\phantomsection\label{ex151q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex151a]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex151a]{Exercise 15.1}}
 
 \vspace{-0.5cm}
 
@@ -4970,12 +4972,12 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \begin{tikzpicture}[scale=0.8]
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
             \draw[-stealth] (0,-1.5) -- (0,3.7) node[left] {$y$};
-            \draw[smooth,thick,domain=-3:1.3] plot (\x,{3^(\x)-1});
+            \draw[smooth,thick,domain=-3:1.32] plot (\x,{3^(\x)-1});
             \draw[fill] (0,0) circle (0.07);
-            \draw[fill] (1,2) circle (0.07) node[below right] {$(1,2)$};
+            \draw[fill] (1.262,3) circle (0.07) node[right] {$(1,3)$};
             \node[above left] {\scriptsize{O}};
             \draw[dashed,thin] (-4,-1) -- (2.5,-1) node[right] {$y=-1$};
-            \draw[fill,PineGreen] (0.5,0.732) circle (0.07) node[below right] {$(0.5,k)$};
+            \draw[fill,PineGreen] (0.631,1) circle (0.07) node[right] {$\left(\frac{1}{2},k\right)$};
             \end{tikzpicture}
             \item[(b)] $y=a^x$\\
             \begin{tikzpicture}[scale=0.8]
@@ -4983,7 +4985,7 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
             \draw[smooth,thick,domain=-3.5:3.5] plot (\x,{0.75^(\x)});
             \draw[fill,PineGreen] (0,1) circle (0.07) node[below left] {$k$};
-            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$(1,0.5)$};
+            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$\left(1,\frac{1}{2}\right)$};
             \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
             \item[(d)] $y=4^x+b$\\
@@ -5000,8 +5002,8 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
             \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
             \draw[smooth,thick,domain=-3.5:2.5] plot (\x,{1.5^(\x)+1});
-            \draw[fill] (0,2) circle (0.07) node[above left] {$2$};
-            \draw[fill] (1,2.5) circle (0.07) node[below right] {$(1,2.5)$};
+            \draw[fill] (0,2) circle (0.07) node[above left] {$4$};
+            \draw[fill] (1,2.5) circle (0.07) node[below right] {$(1,5)$};
             \draw[dashed,thin] (-4,1) -- (4,1);
             \draw[fill,PineGreen] (2,3.25) circle (0.07) node[below right] {$(2,k)$};
             \node[below left] {\scriptsize{O}};
@@ -5030,10 +5032,10 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
             \item $y=3^{x+2}$
         \end{multicols}
         \begin{multicols}{4}
-            \item $y=0.5^x$
-            \item $y=0.5^x-1$
-            \item $y=0.5^{x-3}$
-            \item $y=0.5^{1-x}$
+            \item $y=\left(\frac{1}{2}\right)^x$
+            \item $y=\left(\frac{1}{2}\right)^x-1$
+            \item $y=\left(\frac{1}{2}\right)^{x-2}$
+            \item $y=\left(\frac{1}{2}\right)^{1-x}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -5127,13 +5129,15 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \vspace{-1.2cm}
 
-\subsection*{Exercise 15.2}\label{exercise-15.2}
-\addcontentsline{toc}{subsection}{Exercise 15.2}
+\phantomsection\label{ex152q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex152a]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex152a]{Exercise 15.2}}
 
 \vspace{-0.6cm}
 
 \begin{enumerate}
-    \item State the value each of the following logarithms:
+    \item State the value of each of the following logarithms:
     \begin{enumerate}
         \begin{multicols}{5}
             \item $\log_6{36}$
@@ -5157,7 +5161,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
             \item $\log_5{5}$
         \end{multicols}
         \begin{multicols}{5}
-            \item $\log_2{32}$
+            \item $\log_2{64}$
             \item $\log_{4}{4}$
             \item $\log_2{1}$
             \item $\log_6{216}$
@@ -5170,7 +5174,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
             \item $\log_9{3}$
             \item $\log_{64}{8}$
             \item $\log_{25}{5}$
-            \item $\log_100{10}$
+            \item $\log_{100}{10}$
             \item $\log_{8}{2}$
         \end{multicols}
         \begin{multicols}{5}
@@ -5193,7 +5197,7 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
         \begin{multicols}{5}
             \item $\log_2{31}$
             \item $\log_{7}{50}$
-            \item $\log_{10}{99}$
+            \item $\log_{10}{98}$
             \item $\log_5{120}$
             \item $\log_{2}{0.9}$
         \end{multicols}
@@ -5321,8 +5325,10 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \vspace{-0.6cm}
 
-\subsection*{Exercise 15.3}\label{exercise-15.3}
-\addcontentsline{toc}{subsection}{Exercise 15.3}
+\phantomsection\label{ex153q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex153a]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex153a]{Exercise 15.3}}
 
 \vspace{-0.4cm}
 
@@ -5346,7 +5352,7 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
         \end{multicols}
         \begin{multicols}{3}
             \item $2\log_6{3}+\log_{6}{\frac{2}{3}}$
-            \item $\log_5{4}+2\log_{5}{10}$
+            \item $\log_5{\frac{1}{4}}+2\log_{5}{10}$
             \item $2\log_{2}{6}-\log_{2}{12}+\log_2{\frac{1}{6}}$
         \end{multicols}
     \end{enumerate}
@@ -5354,16 +5360,16 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_7{3}+\log_7{6}-\log_{7}{9}$
-            \item $\frac{1}{2}\log_{6}{9}-\log_{6}{2}$
-            \item $2\log_{8}{9}-3\log_2{3}$
+            \item $\frac{1}{2}\log_{6}{9}+\log_{6}{5}$
+            \item $2\log_{2}{9}-3\log_2{3}$
         \end{multicols}
     \end{enumerate}
     \item Simplify each, giving an answer in the form $\log_a{p}$ where $p$ is a positive integer:
     \begin{enumerate}
         \begin{multicols}{3}
             \item $\log_a{3}+2\log_a{4}$
-            \item $\frac{1}{3}\log_{a}{8}-\log_{a}{4}$
-            \item $\log_{a}{20}-\log_a{4}+\log_a{\frac{1}{15}}$
+            \item $\log_{a}{12}-\frac{1}{3}\log_{a}{8}$
+            \item $\log_{a}{120}-\log_a{4}+\log_a{\frac{1}{15}}$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -5432,8 +5438,10 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.4}\label{exercise-15.4}
-\addcontentsline{toc}{subsection}{Exercise 15.4}
+\phantomsection\label{ex154q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex154a]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex154a]{Exercise 15.4}}
 
 \vspace{-0.4cm}
 
@@ -5640,8 +5648,10 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.5}\label{exercise-15.5}
-\addcontentsline{toc}{subsection}{Exercise 15.5}
+\phantomsection\label{ex155q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex155a]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex155a]{Exercise 15.5}}
 
 \vspace{-0.5cm}
 
@@ -5796,8 +5806,10 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.3cm}
 
-\subsection*{Exercise 15.6}\label{exercise-15.6}
-\addcontentsline{toc}{subsection}{Exercise 15.6}
+\phantomsection\label{ex156q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex156a]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex156a]{Exercise 15.6}}
 
 \vspace{-0.3cm}
 
@@ -5920,8 +5932,10 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.7}\label{exercise-15.7}
-\addcontentsline{toc}{subsection}{Exercise 15.7}
+\phantomsection\label{ex157q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex157a]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex157a]{Exercise 15.7}}
 
 \vspace{-0.5cm}
 
@@ -6080,8 +6094,10 @@ t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 
 \vspace{-0.5cm}
 
-\subsection*{Exercise 15.8}\label{exercise-15.8}
-\addcontentsline{toc}{subsection}{Exercise 15.8}
+\phantomsection\label{ex158q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex158a]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex158a]{Exercise 15.8}}
 
 \vspace{-0.3cm}
 
@@ -6219,8 +6235,10 @@ Therefore the relationship between \(x\) and \(y\) is \(y=27x^{\frac{3}{2}}\).
 
 \newpage
 
-\subsection*{Exercise 15.9}\label{exercise-15.9}
-\addcontentsline{toc}{subsection}{Exercise 15.9}
+\phantomsection\label{ex159q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex159a]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex159a]{Exercise 15.9}}
 
 \vspace{-0.5cm}
 
@@ -6427,8 +6445,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\subsection*{Exercise 15.10}\label{exercise-15.10}
-\addcontentsline{toc}{subsection}{Exercise 15.10}
+\phantomsection\label{ex1510q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex1510a]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex1510a]{Exercise 15.10}}
 
 \vspace{-0.5cm}
 
@@ -7269,6 +7289,333 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \subsection*{Chapter 15 Answers}\label{chapter-15-answers}
 \addcontentsline{toc}{subsection}{Chapter 15 Answers}
+
+\vspace{-0.2cm}
+
+\begingroup
+\footnotesize
+
+\vspace{-0.2cm}
+
+\phantomsection\label{ex151a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex151q]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex151q]{Exercise 15.1}}
+
+\vspace{-0.3cm}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $y=3^x$\newline$k=9$
+            \item $y=\left(\frac{1}{2}\right)^x$\newline$k=1$
+            \item $y=2^x$\newline$k=8$
+            \item $y=4^x-5$\newline$k=-5$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{4}
+            \item $y=2^x+2$\newline$k=2$
+            \item $y=2^x+3$\newline$k=7$
+            \item $y=4^x-1$\newline$k=1$
+            \item $y=3^x-2$\newline$k=-\frac{5}{3}$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $y=3^x$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,0.4) circle (0.07) node[above left] {$1$};
+            \draw[fill] (1,1.2) circle (0.07) node[right,xshift=0.1cm] {$(1,3)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=3^x+1$, range $f(x)>1$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:1.8,yshift=0.4cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,0.8) circle (0.07) node[above left] {$2$};
+            \draw[fill] (1,1.6) circle (0.07) node[right,xshift=0.1cm] {$(1,4)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,0.4) -- (2,0.4) node[right] {$y=1$};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=3^x-2$, range $f(x)>-2$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2.1,yshift=-0.8cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (0,-0.4) circle (0.07) node[right] {$-1$};
+            \draw[fill] (1,0.4) circle (0.07) node[right,xshift=0.1cm] {$(1,1)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,-0.8) -- (2,-0.8) node[right] {$y=-2$};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=3^{x+2}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.2) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-2:2,xshift=-2cm] plot (\x,{0.4*3^(\x)});
+            \draw[fill] (-2,0.4) circle (0.07) node[above left] {$(-2,2)$};
+            \draw[fill] (-1,1.2) circle (0.07) node[above left] {$(-1,4)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=\left(\frac{1}{2}\right)^x$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.8) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:3.5] plot (\x,{0.75^(\x)});
+            \draw[fill] (0,1) circle (0.07) node[below left] {$1$};
+            \draw[fill] (2.40942,0.5) circle (0.07) node[above right] {$\left(1,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=\left(\frac{1}{2}\right)^x-1$, range $f(x)>-1$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1.8) -- (0,4) node[left] {$y$};
+            \draw[smooth,thick,domain=-3.5:3.5,yshift=-1cm] plot (\x,{0.75^(\x)});
+            \draw[fill] (0,0) circle (0.07);
+            \draw[fill] (2.40942,-0.5) circle (0.07) node[above,yshift=0.4cm] {$\left(1,-\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \draw[dashed] (-2.5,-1) -- (2,-1) node[right] {$y=-1$};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{2}
+            \item $y=\left(\frac{1}{2}\right)^{x-2}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (1,-1) -- (1,3) node[left] {$y$};
+            \draw[smooth,thick,domain=-2.5:4.5,xshift=-1cm] plot (\x,{0.75^(\x)});
+            \draw[fill] (-1,1) circle (0.07) node[below left] {$(-2,1)$};
+            \draw[fill] (0.2,0.7) circle (0.07) node[above] {$\left(-1,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+            \item $y=\left(\frac{1}{2}\right)^{1-x}$, range $f(x)>0$\\
+            \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+            \draw[-stealth] (-4,0) -- (4,0) node[below] {$x$};
+            \draw[-stealth] (0,-1) -- (0,3) node[left] {$y$};
+            \draw[smooth,thick,domain=-5:1.2,xshift=2.409cm] plot (\x,{0.75^(-\x)});
+            \draw[fill] (2.409,1) circle (0.07) node[below] {$(1,1)$};
+            \draw[fill] (0,0.5) circle (0.07) node[above left] {$\left(0,\frac{1}{2}\right)$};
+            \node[below left] {\scriptsize{O}};
+            \end{tikzpicture}
+            \end{center}
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\endgroup
+
+\pagebreak
+
+\begingroup
+\footnotesize
+
+\phantomsection\label{ex152a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex152q]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex152q]{Exercise 15.2}}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $2$
+            \item $3$
+            \item $2$
+            \item $4$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $4$
+            \item $5$
+            \item $2$
+            \item $2$
+            \item $3$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $1$
+            \item $2$
+            \item $0$
+            \item $2$
+            \item $1$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $6$
+            \item $1$
+            \item $0$
+            \item $3$
+            \item $7$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{3}$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $\frac{1}{3}$
+            \item $\frac{1}{2}$
+            \item $\frac{1}{4}$
+            \item $\frac{1}{4}$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{5}
+            \item $-1$
+            \item $-1$
+            \item $-2$
+            \item $-3$
+            \item $-\frac{1}{2}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $4.95$
+            \item $2.01$
+            \item $1.99$
+            \item $2.97$
+            \item $-0.152$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\phantomsection\label{ex153a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex153q]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex153q]{Exercise 15.3}}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $2$
+            \item $1$
+            \item $0$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $3$
+            \item $1$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $1$
+            \item $2$
+            \item $2$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $1$
+            \item $2$
+            \item $-1$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_7{2}$
+            \item $\log_{6}{15}$
+            \item $\log_2{3}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\log_a{48}$
+            \item $\log_{a}{6}$
+            \item $\log_{a}{2}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\phantomsection\label{ex154a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex154q]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex154q]{Exercise 15.4}}
+
+\phantomsection\label{ex155a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex155q]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex155q]{Exercise 15.5}}
+
+\phantomsection\label{ex156a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex156q]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex156q]{Exercise 15.6}}
+
+\phantomsection\label{ex157a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex157q]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex157q]{Exercise 15.7}}
+
+\phantomsection\label{ex158a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex158q]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex158q]{Exercise 15.8}}
+
+\phantomsection\label{ex159a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex159q]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex159q]{Exercise 15.9}}
+
+\phantomsection\label{ex1510a}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex1510q]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10-1}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex1510q]{Exercise 15.10}}
+
+\phantomsection\label{ex15Ra}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex15Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-15}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex15Rq]{Review Exercise}}
+
+\endgroup
 
 \newpage
 
