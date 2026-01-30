@@ -450,11 +450,7 @@
 
 \endgroup
 
-\newpage
-
-
-
-\newpage
+\pagebreak
 
 ### Chapter 15 Answers {-}
 
@@ -745,9 +741,236 @@
 #### [Exercise 15.4](#ex154q) {-}
 
 
+\begin{enumerate}
+    \item Solve:
+    \vspace{-0.2cm}
+    \begin{enumerate} 
+        \begin{multicols}{6}
+            \item $x=6$
+            \item $x=7$
+            \item $x=7$
+            \item $x=54$
+            \item $x=\frac{3}{2}$
+            \item $x=4$
+        \end{multicols}
+    \end{enumerate}
+    \item Solve each:
+    \vspace{-0.2cm}
+    \begin{enumerate}
+        \begin{multicols}{5}
+            \item $x=3$
+            \item $x=2$
+            \item $x=1.6$
+            \item $x=10$
+            \item $x=36$
+            \end{multicols}
+            \end{enumerate}
+            \begin{enumerate}[resume]
+            \begin{multicols}{5}
+            \item $x=2$
+            \item $x=38$
+            \item $x=12$
+            \item $x=7$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate} 
+        \begin{multicols}{6}
+            \item $x=2$
+            \item $x=5$
+            \item $x=3$
+            \item $x=2$
+            \item $x=4$
+            \item $x=\frac{1}{2}$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{6}
+            \item $x=3$
+            \item $x=5$
+            \item $x=\sqrt{2}$
+            \item $x=4$
+            \item $x=4$
+            \item $x=1$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{6}
+            \item $a=6$
+            \item $a=9$
+            \item $a=2$
+            \item $a=9$
+            \item $a=8$
+            \item $a=5$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\endgroup
+
+\pagebreak
+
+\begingroup
+\footnotesize
+
 []{#ex155a}
 
 #### [Exercise 15.5](#ex155q) {-}
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:8,xscale=0.8] plot (\x,{(ln(\x))/(ln(5))});
+            \draw[black,fill] (0.8,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.8*5,1) circle (0.05) node[above] {$(5,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.22:3,xscale=2] plot (\x,{(ln(\x))/(ln(2))});
+            \draw[black,fill] (2,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (2*2,1) circle (0.05) node[above] {$(2,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:15,xscale=0.5] plot (\x,{(ln(\x))/(ln(9))});
+            \draw[black,fill] (0.5,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.5*9,1) circle (0.05) node[above] {$(9,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:8,xscale=0.8] plot (\x,{(ln(\x))/(ln(5))});
+            \draw[black,fill] (0.8,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.8*5,1) circle (0.05) node[above] {$(5,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.22:3,xscale=2] plot (\x,{(ln(\x))/(ln(2))});
+            \draw[black,fill] (2,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (2*2,1) circle (0.05) node[above] {$(2,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:15,xscale=0.5] plot (\x,{(ln(\x))/(ln(9))});
+            \draw[black,fill] (0.5,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.5*9,1) circle (0.05) node[above] {$(9,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
+    \end{enumerate}
+    \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:8,xscale=0.8] plot (\x,{(ln(\x))/(ln(5))});
+            \draw[black,fill] (0.8,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.8*5,1) circle (0.05) node[above] {$(5,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.22:3,xscale=2] plot (\x,{(ln(\x))/(ln(2))});
+            \draw[black,fill] (2,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (2*2,1) circle (0.05) node[above] {$(2,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:15,xscale=0.5] plot (\x,{(ln(\x))/(ln(9))});
+            \draw[black,fill] (0.5,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.5*9,1) circle (0.05) node[above] {$(9,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
+    \end{enumerate}
+    \begin{enumerate}[resume]
+        \begin{multicols}{3}
+            \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:8,xscale=0.8] plot (\x,{(ln(\x))/(ln(5))});
+            \draw[black,fill] (0.8,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.8*5,1) circle (0.05) node[above] {$(5,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.22:3,xscale=2] plot (\x,{(ln(\x))/(ln(2))});
+            \draw[black,fill] (2,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (2*2,1) circle (0.05) node[above] {$(2,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_{5}x$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
+            \draw[-stealth] (0,-2.2) -- (0,2) node[left] {$y$};
+            \draw[smooth,thick,domain=0.1:15,xscale=0.5] plot (\x,{(ln(\x))/(ln(9))});
+            \draw[black,fill] (0.5,0) circle (0.05) node[below right] {$1$};
+            \draw[black,fill] (0.5*9,1) circle (0.05) node[above] {$(9,1)$};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
 
 []{#ex156a}
 

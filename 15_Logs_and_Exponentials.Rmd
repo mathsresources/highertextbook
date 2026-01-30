@@ -654,7 +654,7 @@ Solve the equation $\log_3{x}-\log_3{2}=2$.
 \vspace{-0.5cm}
 
 \begin{align*}
-\log_3{x}-\log_3{2}&=2\color{PineGreen}\log_3{3} &&\color{PineGreen}\longleftarrow\text{Multiply the constant by}\log_33\\[0.5em]
+\log_3{x}-\log_3{2}&=2\color{PineGreen}\log_3{3} &&\color{PineGreen}\longleftarrow\text{Multiply the 2 by}\log_33\\[0.5em]
 \log_3{\left(\frac{x}{2}\right)}&=\log_3{3^2} && \color{PineGreen}\longleftarrow\text{Apply quotient and power laws}\\[0.5em]
 \frac{x}{2}&=9 && \color{PineGreen}\longleftarrow\text{``Cancel'' }\log_3\text{ from both sides}\\[0.5em]
 x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to solve}
@@ -679,7 +679,7 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
             \item $\log_{7}{2x}+\log_{7}{4}=\log_{7}{56}$
         \end{multicols}
         \begin{multicols}{2}    
-            \item $\log_{6}{5}+\log_{5}{(x-1)}=\log_{6}{30}$
+            \item $\log_{6}{5}+\log_{6}{(x-1)}=\log_{6}{30}$
             \item $\log_{a}{x}-2\log_{a}{3}=\log_{a}{18}$
         \end{multicols}
         \begin{multicols}{2}
@@ -743,7 +743,7 @@ All solutions for $x$ must be checked carefully to verify that they satisfy the 
         \end{multicols}
         \begin{multicols}{2}    
             \item $\log_{6}{(x-1)}+\log_{6}{x}=1$
-            \item $\log_{3}{(x+3)}-\log_{3}{x}=2$
+            \item $\log_{2}{(x+6)}-\log_{2}{x}=2$
         \end{multicols}
         \begin{multicols}{2}
             \item $\log_{5}{(x+2)}+\log_{5}{(x-3)}=\log_{5}{6}$
@@ -836,7 +836,7 @@ Since the inverse to the exponential function $f(x)=a^x$ is the \textcolor{PineG
 
 \vspace{-0.5cm}
 
-Knowledge of the graph of $y=\log_a{x}$ may be combined with and understanding of graph transformations.
+Knowledge of the graph of $y=\log_a{x}$ may be combined with an understanding of graph transformations.
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
 
@@ -892,8 +892,8 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
     \begin{enumerate}
     \begin{multicols}{3}
         \item $y=\log_{4}{x}+1$
-        \item $y=\log_{7}{x}-2$
-        \item $y=\log_{5}{x}+3$
+        \item $y=\log_{7}{x}-1$
+        \item $y=\log_{5}{x}+2$
     \end{multicols}
     \begin{multicols}{3}
         \item $y=\log_{8}{(x+5)}$
