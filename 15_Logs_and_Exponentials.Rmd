@@ -897,8 +897,8 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
     \end{multicols}
     \begin{multicols}{3}
         \item $y=\log_{8}{(x+5)}$
-        \item $y=\log_{2}{(x-3)}$
-        \item $y=\log_{6}{(x+2)}$
+        \item $y=\log_{2}{(x+3)}$
+        \item $y=\log_{3}{(x-2)}$
     \end{multicols}
     \begin{multicols}{3}
         \item $y=\log_{7}{(x+3)}+2$
