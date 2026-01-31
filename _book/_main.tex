@@ -5884,9 +5884,9 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 Some logarithms with particular \emph{bases} are routinely used in various fields, such as the \emph{binary logarithm} \(\left(\log_2\right)\) in computer science, or the the \emph{decimal} or \emph{common logarithm} \(\left(\log_{10}\text{ or just }\log\right)\) in engineering.
 
-The most useful logarithm in mathematics is the \textcolor{PineGreen}{\textbf{natural logarithm}} (\(\log_{\color{PineGreen}e}\) or more often just \textcolor{PineGreen}{$\ln$}), which takes Euler's Number \textcolor{PineGreen}{$e$} as its base, where \textcolor{PineGreen}{$e\approx 2.719$}. (Its lies in the ease which which exponentials in base \(e\) can be used together with calculus, which is beyond the scope of this course.)
+The most useful logarithm in mathematics is the \textcolor{PineGreen}{\textbf{natural logarithm}} (\(\log_{\color{PineGreen}e}\) or more often just \textcolor{PineGreen}{$\ln$}), which takes Euler's Number \textcolor{PineGreen}{$e$} as its base, where \textcolor{PineGreen}{$e\approx 2.719$}. (Its usefulness lies in the ease which which calculus can be performed when working exponentials in base \(e\), which is beyond the scope of this course.)
 
-The \emph{laws of logs} apply to natural logarithms since they apply to \emph{all} \(\log_a\) where \(a>0\):
+The \emph{laws of logs} apply to natural logarithms, since they apply to \emph{all} \(\log_a\) where \(a>0\):
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=6.7cm]
 
@@ -5912,7 +5912,7 @@ Exponential equations in base \(\color{PineGreen}e\) are solved using the natura
 
 \begin{tcolorbox}[title=Example,colback=PineGreen!2!, colframe=PineGreen,height=7.6cm]
 
-Given $37=21e^{-0.48x}$, find the value of $k$ to three significant figures. \faCalculator
+Given $37=21e^{-0.48k}$, find the value of $k$ to three significant figures. \faCalculator
 
 \tcblower
 
@@ -5923,7 +5923,7 @@ Given $37=21e^{-0.48x}$, find the value of $k$ to three significant figures. \fa
 \frac{37}{21}&=e^{-0.48k} && \color{PineGreen}\longleftarrow\text{Divide both sides by 21}\\[0.5em]
 \ln{\left(\frac{37}{21}\right)}&=-0.48k && \color{PineGreen}\longleftarrow\text{Take }\ln\text{ of both sides}\\[0.5em]
 \frac{\ln{\left(\frac{37}{21}\right)}}{-0.48}&=k && \color{PineGreen}\longleftarrow\text{Divide both sides by }-0.48\\[0.5em]
-k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the solution}
+k&=-1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the solution}
 \end{align*}
 
 \vspace{-0.2cm}
@@ -5940,7 +5940,7 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 \vspace{-0.5cm}
 
 \begin{enumerate}
-    \item Fo each, find the value of $k$ to three significant figures: \faCalculator
+    \item For each, find the value of $k$ to three significant figures: \faCalculator
     \vspace{-0.2cm}
     \begin{enumerate}
         \begin{multicols}{4}
@@ -5976,9 +5976,9 @@ k&=1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the s
 
 \vspace{-0.5cm}
 
-The behaviour of many real-world things are described by \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}}.
+The behaviour of many things in the real-world can be appropriately modelled using \textcolor{PineGreen}{\textbf{exponential growth}} or \textcolor{PineGreen}{\textbf{exponential decay}} functions.
 
-Time, \(t\), is a common variable for such a function in place of \(x\), and it typically describes the behaviour of some real-world variable which is named suitably in place of \(y\) of \(f(x)\), such as \(V\) for \emph{``value''}, \(P\) for \emph{``population size''} or \(M\) for \emph{``mass''}. Where \(\color{PineGreen}k>0\):
+Time, \(t\), is a common variable for such a function in place of \(x\). Such functions are often named suitably to match the variable they describe (rather than using \(y\) or \(f(x)\)), such as \(V\) for \emph{``value''}, \(P\) for \emph{``population size''} or \(M\) for \emph{``mass''}. Where \(\color{PineGreen}k>0\):
 
 \setlength{\columnsep}{30pt}
 
@@ -6117,7 +6117,7 @@ All questions: \faCalculator
     \item The number of bacteria in a population, $B$, can be modelled using the equation $B=400e^{0.0376t}$ where $t$ is time measured in minutes.
     \begin{enumerate}
         \item State the number of bacteria in the population initially.
-        \item Find, to the nearest thousand, the number of bacteria after 45 minutes.
+        \item Find, to the nearest hundred, the number of bacteria after 45 minutes.
         \item Determine the time it takes for the population of bacteria to double in size.
     \end{enumerate}
     \item A population of deer is growing exponentially in an area, and the size of the population, $P$, can be described by the equation $P=860e^{0.173t}$, where $t$ is the number of years from 2026.
@@ -7594,7 +7594,7 @@ The following problems \textbf{do not} represent the kind of question expected t
     \item Solve each:
     \vspace{-0.2cm}
     \begin{enumerate}
-        \begin{multicols}{5}
+        \begin{multicols}{6}
             \item $x=3$
             \item $x=2$
             \item $x=1.6$
@@ -7603,7 +7603,7 @@ The following problems \textbf{do not} represent the kind of question expected t
             \end{multicols}
             \end{enumerate}
             \begin{enumerate}[resume]
-            \begin{multicols}{5}
+            \begin{multicols}{6}
             \item $x=2$
             \item $x=38$
             \item $x=12$
@@ -7842,61 +7842,61 @@ The following problems \textbf{do not} represent the kind of question expected t
     \item 
     \begin{enumerate}
         \begin{multicols}{6}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+            \item $x=2.11$
+            \item $x=1.63$
+            \item $x=1.23$
+            \item $x=0.565$
+            \item $x=3.46$
+            \item $x=2.70$
         \end{multicols}
         \end{enumerate}
         \begin{enumerate}[resume]
         \begin{multicols}{6}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+            \item $x=0.613$
+            \item $x=3.01$
+            \item $t=3.97$
+            \item $y=-0.680$
+            \item $p=-0.0891$
+            \item $k=-0.418$
         \end{multicols}
     \end{enumerate}
     \item 
     \begin{enumerate}
         \begin{multicols}{6}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+            \item $x=0.528$
+            \item $x=0.712$
+            \item $x=-0.778$
+            \item $x=1.51$
+            \item $x=-0.0877$
+            \item $x=1.95$
             \end{multicols}
         \end{enumerate}
         \begin{enumerate}[resume]
         \begin{multicols}{6}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+            \item $x=1.51$
+            \item $x=-2.02$
+            \item $q=0.368$
+            \item $t=-6.26$
+            \item $y=0.0153$
+            \item $k=-1.24$
         \end{multicols}
     \end{enumerate}
     \item 
     \begin{enumerate}
-        \begin{multicols}{5}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+        \begin{multicols}{6}
+            \item $x=0.744$
+            \item $x=2.97$
+            \item $x=1.29$
+            \item $x=-1.22$
+            \item $x=5.13$
         \end{multicols}
         \end{enumerate}
         \begin{enumerate}[resume]
-        \begin{multicols}{5}
-            \item $x=$
-            \item $x=$
-            \item $x=$
-            \item $x=$
+        \begin{multicols}{6}
+            \item $x=1$
+            \item $k=19.4$
+            \item $x=5.31$
+            \item $k=131.1$
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
@@ -7913,20 +7913,141 @@ The following problems \textbf{do not} represent the kind of question expected t
 \subsubsection*{\texorpdfstring{\hyperref[ex157q]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7-1}
 \addcontentsline{toc}{subsubsection}{\hyperref[ex157q]{Exercise 15.7}}
 
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $k=-0.357$
+            \item $k=0.588$
+            \item $k=2.08$
+            \item $k=-0.560$
+        \end{multicols}
+        \end{enumerate}
+        \begin{enumerate}[resume]
+        \begin{multicols}{4}
+            \item $k=1.61$
+            \item $k=0.492$
+            \item $k=0.0608$
+            \item $k=0.354$
+        \end{multicols}
+    \end{enumerate}
+    \item 
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $x=0.726$
+            \item $x=16.3$
+            \item $x=1.30$
+            \item $x=24.4$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
 \phantomsection\label{ex158a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158q]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8-1}
 \addcontentsline{toc}{subsubsection}{\hyperref[ex158q]{Exercise 15.8}}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $t=2.31$
+            \item $t=866$
+            \item $t=121$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $400$
+            \item $2200$
+            \item $18.4$ mins
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $860$
+            \item $1220$
+            \item $4.01$ years
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $t=0.866$
+            \item $t=9.63$
+            \item $t=352$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $k=0.133$
+            \item $11.6$ mins
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $k=0.131$
+            \item $5.29$ hours
+            \item $14.5$ hours
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
 
 \phantomsection\label{ex159a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159q]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9-1}
 \addcontentsline{toc}{subsubsection}{\hyperref[ex159q]{Exercise 15.9}}
 
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $k=49$,$n=5$
+            \item $k=16$,$n=\frac{1}{2}$
+            \item $k=125$,$n=-\frac{2}{3}$
+            \item $k=64$,$n=-\frac{1}{2}$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $a=\frac{1}{3}$,$b=\frac{1}{2}$
+            \item $a=\frac{1}{25}$,$b=1$
+            \item $a=3$,$b=-2$
+            \item $a=\frac{1}{2}$,$b=\frac{1}{18}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
 \phantomsection\label{ex1510a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex1510q]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10-1}
 \addcontentsline{toc}{subsubsection}{\hyperref[ex1510q]{Exercise 15.10}}
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $a=25$,$b=125$
+            \item $a=2$,$b=16$
+            \item $a=8$,$b=\frac{1}{2}$
+            \item $a=\frac{1}{3}$,$b=9$
+        \end{multicols}
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $k=1000$,$a=\frac{1}{10}$
+            \item $k=2$,$a=8$
+            \item $k=81$,$a=\frac{1}{9}$
+            \item $k=8$,$a=\frac{1}{4}$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
 
 \phantomsection\label{ex15Ra}{}
 
