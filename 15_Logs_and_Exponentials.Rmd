@@ -902,8 +902,8 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
     \end{multicols}
     \begin{multicols}{3}
         \item $y=\log_{7}{(x+3)}+2$
-        \item $y=\log_{5}{(x-3)}-1$
-        \item $y=\log_{6}{(x+2)}+1$
+        \item $y=\log_{5}{(x-3)}+1$
+        \item $y=\log_{6}{(x+2)}-1$
     \end{multicols}
     \end{enumerate}
 \end{enumerate}
