@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.27)  30 JAN 2026 22:22
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.27)  31 JAN 2026 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4106,127 +4106,109 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [229]
-Underfull \hbox (badness 10000) in paragraph at lines 7664--7665
+Underfull \hbox (badness 10000) in paragraph at lines 7668--7669
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7673--7674
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7677--7678
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7675--7676
+Underfull \hbox (badness 10000) in paragraph at lines 7679--7680
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7684--7685
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7688--7689
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7686--7687
+Underfull \hbox (badness 10000) in paragraph at lines 7690--7691
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7695--7696
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7699--7700
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7702--7703
+Underfull \hbox (badness 10000) in paragraph at lines 7706--7707
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7711--7712
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7715--7716
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7713--7714
+Underfull \hbox (badness 10000) in paragraph at lines 7717--7718
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7722--7723
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7726--7727
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7724--7725
+Underfull \hbox (badness 10000) in paragraph at lines 7728--7729
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7733--7734
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7737--7738
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7739--7740
+Underfull \hbox (badness 10000) in paragraph at lines 7743--7744
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7748--7749
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7753--7754
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7750--7751
+Underfull \hbox (badness 10000) in paragraph at lines 7755--7756
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7759--7760
+Underfull \hbox (badness 10000) in paragraph at lines 7767--7768
+
+ []
+
+
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7777--7778
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7761--7762
+Underfull \hbox (badness 10000) in paragraph at lines 7783--7784
 
  []
 
 
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7770--7771
+Underfull \hbox (badness 10000) in paragraph at lines 7795--7796
+
+ []
+
+
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7805--7806
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7776--7777
+Underfull \hbox (badness 10000) in paragraph at lines 7807--7808
 
  []
-
-
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7785--7786
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7787--7788
-
- []
-
-
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7796--7797
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7798--7799
-
- []
-
-
-Overfull \hbox (3.95206pt too wide) in paragraph at lines 7807--7808
- [] 
- []
-
-
-LaTeX Warning: Hyper reference `ex15Rq' on page 230 undefined on input line 7840.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4237,6 +4219,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [230]
 
+LaTeX Warning: Hyper reference `ex15Rq' on page 231 undefined on input line 7933.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -4244,6 +4229,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [231]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[232]
 No file _main.bbl.
 (./_main.aux)
  ***********
@@ -4255,12 +4248,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 62468 strings out of 470190
- 1461447 string characters out of 5477670
- 2195113 words of memory out of 5000000
- 90020 multiletter control sequences out of 15000+600000
+ 63664 strings out of 470190
+ 1486428 string characters out of 5477670
+ 2290299 words of memory out of 5000000
+ 91216 multiletter control sequences out of 15000+600000
  675084 words of font info for 183 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,18n,128p,1686b,1094s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (237 pages).
+Output written on _main.pdf (238 pages).
