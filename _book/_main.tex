@@ -6134,7 +6134,7 @@ All questions: \faCalculator
             \item $P=P_0e^{-0.00197t}$
         \end{multicols}
     \end{enumerate}
-    \item The temperature $T$ (in $\degree\text{C}$) of a substance $t$ minutes after the end of an experiment can be modelled by the equation $T=T_0e^{-kt}$. After 7 minutes, the substance has cooled from $140\degree\text{C}$ to $55\degree\text{C}$.
+    \item The temperature $T$ (in $\degree\text{C}$) of a substance $t$ minutes after a chemical reaction can be modelled by the equation $T=T_0e^{-kt}$. After 7 minutes, the substance has cooled from $140\degree\text{C}$ to $55\degree\text{C}$.
     \begin{enumerate}
         \item Determine the value of $k$ to three significant figures.
         \item Find the time taken for the substance to cool to $30\degree\text{C}$.
@@ -6142,7 +6142,7 @@ All questions: \faCalculator
     \item The concentration $C$ of a drug in a patient's blood $t$ hours after being given a dose can be modelled by the equation $C=28e^{-kt}$.
     \begin{enumerate}
         \item If the concentration is 23 after 90 minutes, calculate the value of $k$ to three significant figures.
-        \item Find the time taken for the concentrate to reduce by half.
+        \item Find the time taken for the concentration to reduce by half.
         \item Find the time taken for the concentration to be only 15\% of its original value.
     \end{enumerate}
 \end{enumerate}
@@ -6547,8 +6547,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\section*{Logs and Exponentials Review Exercise}\label{logs-and-exponentials-review-exercise}
-\addcontentsline{toc}{section}{Logs and Exponentials Review Exercise}
+\phantomsection\label{ex15Rq}{}
+
+\section*{\texorpdfstring{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}{Logs and Exponentials Review Exercise}}\label{logs-and-exponentials-review-exercise}
+\addcontentsline{toc}{section}{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}
 
 \vspace{-0.5cm}
 
@@ -6565,7 +6567,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
     \item Evaluate the following:
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\log_{8}{}+\log_{8}{}-\log_{8}{}$
+            \item $\log_{8}{6}+\log_{8}{12}-\log_{8}{9}$
             \item $\log_{3}{\frac{1}{4}}+2\log_{3}{6}$
             \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
         \end{multicols}
@@ -6579,7 +6581,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
         \end{multicols}
     \end{enumerate}
     \item Given that $\log_{p}{4}+3=\log_p{32}$, find the value of $p$.
-    \item A population of mice is discovered living in some woodland, and number of mice can be modelled by:
+    \item A population of mice is discovered living in some woodland. The number of mice can be modelled by:
     \[M=80e^{kt}\]
     where $M$ is the estimated number of mice in the population, $t$ is the number of weeks since the population was discovered and $k$ is a constant.
     \begin{enumerate}
@@ -6596,7 +6598,7 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
                 \node[below left] at (6,4) {$y=ax^b$};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_3{x}$};
                 \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_3{y}$};
-                \draw[thick] (0,1) circle (0.05) node[left] {$(0,2)$} -- (2,2) circle (0.05) node[right] {$(4,2)$};
+                \draw[thick] (0,1) circle (0.05) node[left] {$(0,2)$} -- (2,2) circle (0.05) node[right] {$(4,4)$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -6619,9 +6621,9 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
                     \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
                     \draw[-stealth] (0,-1) -- (0,3) node[left] {$y$};
                     \draw[smooth,thick,domain=0.1:5.5,xshift=2cm,yshift=1cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
-                    \draw[fill] (3,1) circle (0.05) node[above left] {$(3,1)$};
+                    \draw[fill] (3,1) circle (0.05) node[below right] {$(3,1)$};
                     \draw[fill] (5,2) circle (0.05) node[above] {$(5,2)$};
-                    \draw[dashed] (2,-1) -- (2,3);
+                    \draw[dashed] (2,-1) -- (2,2) node[above] {$x=2$};
                 \end{tikzpicture}
                 \end{center}
                 \columnbreak
@@ -7672,8 +7674,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.1:8,xscale=0.8] plot (\x,{(ln(\x))/(ln(5))});
-            \draw[black,fill] (0.8,0) circle (0.05) node[below right] {$1$};
-            \draw[black,fill] (0.8*5,1) circle (0.05) node[above] {$(5,1)$};
+            \draw[black,fill] (0.8,0) circle (0.08) node[below right] {$1$};
+            \draw[black,fill] (0.8*5,1) circle (0.08) node[above] {$(5,1)$};
             \end{tikzpicture}
         \end{center}
         \item $y=\log_{2}x$\\
@@ -7683,8 +7685,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.22:3,xscale=2] plot (\x,{(ln(\x))/(ln(2))});
-            \draw[black,fill] (2,0) circle (0.05) node[below right] {$1$};
-            \draw[black,fill] (2*2,1) circle (0.05) node[above] {$(2,1)$};
+            \draw[black,fill] (2,0) circle (0.08) node[below right] {$1$};
+            \draw[black,fill] (2*2,1) circle (0.08) node[above] {$(2,1)$};
             \end{tikzpicture}
         \end{center}
         \item $y=\log_{9}x$\\
@@ -7694,8 +7696,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.05:15,xscale=0.5] plot (\x,{(ln(\x))/(ln(9))});
-            \draw[black,fill] (0.5,0) circle (0.05) node[below right] {$1$};
-            \draw[black,fill] (0.5*9,1) circle (0.05) node[above] {$(9,1)$};
+            \draw[black,fill] (0.5,0) circle (0.08) node[below right] {$1$};
+            \draw[black,fill] (0.5*9,1) circle (0.08) node[above] {$(9,1)$};
             \end{tikzpicture}
         \end{center}
         \end{multicols}
@@ -7710,8 +7712,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.05:8,xscale=0.8,yscale=0.7,yshift=0.7cm] plot (\x,{(ln(\x))/(ln(4))});
-            \draw[black,fill] (0.8,0.49) circle (0.05) node[above] {$(1,1)$};
-            \draw[black,fill] (0.8*4,1.19) circle (0.05) node[above] {$(4,2)$};
+            \draw[black,fill] (0.8,0.49) circle (0.08) node[above] {$(1,1)$};
+            \draw[black,fill] (0.8*4,1.19) circle (0.08) node[above] {$(4,2)$};
             \end{tikzpicture}
         \end{center}
         \item $y=\log_{7}x-1$\\
@@ -7721,8 +7723,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.05:12,xscale=0.6,yscale=0.5,yshift=-1cm] plot (\x,{(ln(\x))/(ln(7))});
-            \draw[black,fill] (0.6,-0.5) circle (0.05) node[below right] {$(1,-1)$};
-            \draw[black,fill] (4.2,0) circle (0.05) node[above] {$(7,0)$};
+            \draw[black,fill] (0.6,-0.5) circle (0.08) node[below right] {$(1,-1)$};
+            \draw[black,fill] (4.2,0) circle (0.08) node[above] {$(7,0)$};
             \end{tikzpicture}
         \end{center}
         \item $y=\log_{5}x+2$\\
@@ -7732,8 +7734,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.05:7,xscale=1,yscale=0.5,yshift=1.5cm] plot (\x,{(ln(\x))/(ln(5))});
-            \draw[black,fill] (1,0.75) circle (0.05) node[above] {$(1,2)$};
-            \draw[black,fill] (5,1.25) circle (0.05) node[above] {$(5,3)$};
+            \draw[black,fill] (1,0.75) circle (0.08) node[above] {$(1,2)$};
+            \draw[black,fill] (5,1.25) circle (0.08) node[above] {$(5,3)$};
             \end{tikzpicture}
         \end{center}
         \end{multicols}
@@ -7747,8 +7749,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=5.01:15,xscale=0.5] plot (\x,{(ln(\x-5))/(ln(8))});
-            \draw[black,fill] (3,0) circle (0.05) node[below right] {$5$};
-            \draw[black,fill] (6.5,1) circle (0.05) node[above] {$(8,6)$};
+            \draw[black,fill] (3,0) circle (0.08) node[below right] {$5$};
+            \draw[black,fill] (6.5,1) circle (0.08) node[above] {$(8,6)$};
             \draw[dashed] (2.4,-2) -- (2.4,1.5) node[above] {$x=5$};
             \end{tikzpicture}
         \end{center}
@@ -7759,8 +7761,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-4.5,0) -- (4,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=0.22:4,xshift=-3cm] plot (\x,{(ln(\x))/(ln(2))});
-            \draw[black,fill] (-2,0) circle (0.05) node[below right] {$-2$};
-            \draw[black,fill] (-1,1) circle (0.05) node[above left,xshift=0.2cm,yshift=-0.1cm] {$(-1,1)$};
+            \draw[black,fill] (-2,0) circle (0.08) node[below right] {$-2$};
+            \draw[black,fill] (-1,1) circle (0.08) node[above left,xshift=0.2cm,yshift=-0.1cm] {$(-1,1)$};
             \draw[dashed] (-3.1,-2) -- (-3.1,1.5) node[above] {$x=-3$};
             \end{tikzpicture}
         \end{center}
@@ -7771,8 +7773,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-2.2) -- (-0.1,2) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=2.1:11,xscale=0.5] plot (\x,{(ln(\x-2))/(ln(3))});
-            \draw[black,fill] (1.5,0) circle (0.05) node[below right] {$3$};
-            \draw[black,fill] (2.5,1) circle (0.05) node[below right,yshift=0.2cm,xshift=-0.1cm] {$(5,1)$};
+            \draw[black,fill] (1.5,0) circle (0.08) node[below right] {$3$};
+            \draw[black,fill] (2.5,1) circle (0.08) node[below right,yshift=0.2cm,xshift=-0.1cm] {$(5,1)$};
             \draw[dashed] (0.5*1.9,-2) -- (0.5*1.9,1.5) node[above] {$x=2$};
             \end{tikzpicture}
         \end{center}
@@ -7787,8 +7789,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-3.5,0) -- (5,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-0.8) -- (-0.1,3.4) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=-2.89:8,xscale=0.5] plot (\x,{(ln(\x+3))/(ln(7))+2});
-            \draw[black,fill] (-1,2) circle (0.05) node[above left] {$(-2,2)$};
-            \draw[black,fill] (2,3) circle (0.05) node[below] {$(4,3)$};
+            \draw[black,fill] (-1,2) circle (0.08) node[above left] {$(-2,2)$};
+            \draw[black,fill] (2,3) circle (0.08) node[below] {$(4,3)$};
             \draw[dashed] (-1.6,3.5) -- (-1.6,0) node[below] {$x=-3$};
             \end{tikzpicture}
         \end{center}
@@ -7799,8 +7801,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-0.5,0) -- (8,0) node[below] {$x$};
             \draw[-stealth] (-0.1,-1.2) -- (-0.1,3) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=3.1:12,xscale=0.5] plot (\x,{(ln(\x-3))/(ln(5))+1});
-            \draw[black,fill] (2,1) circle (0.05) node[below right] {$(4,1)$};
-            \draw[black,fill] (4,2) circle (0.05) node[above] {$(8,2)$};
+            \draw[black,fill] (2,1) circle (0.08) node[below right] {$(4,1)$};
+            \draw[black,fill] (4,2) circle (0.08) node[above] {$(8,2)$};
             \draw[dashed] (1.4,-1) -- (1.4,2.5) node[above] {$x=3$};
             \end{tikzpicture}
         \end{center}
@@ -7811,8 +7813,8 @@ The following problems \textbf{do not} represent the kind of question expected t
             \draw[-stealth] (-3.5,0) -- (5,0) node[below] {$x$};
             \draw[-stealth] (0,-2.5) -- (0,1.7) node[left] {$y$};
             \draw[smooth,samples=100,thick,domain=-1.9:8,xscale=0.5] plot (\x,{(ln(\x+2))/(ln(6))-1});
-            \draw[black,fill] (-0.5,-1) circle (0.05) node[right,xshift=0.2cm] {$(-1,-1)$};
-            \draw[black,fill] (2,0) circle (0.05) node[above] {$(4,0)$};
+            \draw[black,fill] (-0.5,-1) circle (0.08) node[right,xshift=0.2cm] {$(-1,-1)$};
+            \draw[black,fill] (2,0) circle (0.08) node[above] {$(4,0)$};
             \draw[dashed] (-1.1,-2.5) -- (-1.1,0.5) node[above,xshift=-0.1cm] {$x=-2$};
             \end{tikzpicture}
         \end{center}
@@ -7942,6 +7944,8 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
+\vspace{-0.5cm}
+
 \phantomsection\label{ex158a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158q]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8-1}
@@ -7997,6 +8001,8 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
+\vspace{-0.5cm}
+
 \phantomsection\label{ex159a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159q]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9-1}
@@ -8022,6 +8028,8 @@ The following problems \textbf{do not} represent the kind of question expected t
         \end{multicols}
     \end{enumerate}
 \end{enumerate}
+
+\vspace{-0.5cm}
 
 \phantomsection\label{ex1510a}{}
 
@@ -8049,14 +8057,111 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
+\vspace{-0.5cm}
+
 \phantomsection\label{ex15Ra}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex15Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-15}
 \addcontentsline{toc}{subsubsection}{\hyperref[ex15Rq]{Review Exercise}}
 
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $y=4^x+2$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-2,0) -- (5.5,0) node[below] {$x$};
+            \draw[-stealth] (0,-0.4) -- (0,3.6) node[left] {$y$};
+            \draw[smooth,samples=100,thick,domain=-1:2.5,xscale=1.5,yscale=0.1] plot (\x,{4^(\x)+2});
+            \draw[black,fill] (0,0.3) circle (0.08) node[above left] {$3$};
+            \draw[black,fill] (1.5,0.6) circle (0.08) node[right,yshift=-0.1cm,xshift=0.05cm] {$(1,6)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=5^{x+2}$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-2.5,-0.1) -- (5,-0.1) node[below] {$x$};
+            \draw[-stealth] (-0.1,-0.4) -- (-0.1,3.6) node[left] {$y$};
+            \draw[smooth,samples=100,thick,domain=-1.2:1.9,xscale=2,yscale=0.005] plot (\x,{5^(\x+2)});
+            \draw[black,fill] (-0.1,25*0.005) circle (0.08) node[above left] {$25$};
+            \draw[black,fill] (2,125*0.005) circle (0.08) node[right,yshift=-0.1cm,xshift=0.1cm] {$(1,125)$};
+            \draw[fill] (-2,5*0.005) circle (0.08);
+            \draw[stealth-] (-2,0.2) -- (-1.5,2) node[above] {$(-1,5)$};
+            \end{tikzpicture}
+        \end{center}
+        \item $y=\log_3{(x-2)}+4$\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-0.5,0) -- (7,0) node[below] {$x$};
+            \draw[-stealth] (0,-0.4) -- (0,3.6) node[left] {$y$};
+            \draw[smooth,samples=100,thick,domain=2.005:13,xscale=0.5,yscale=0.5] plot (\x,{(ln(\x-2))/(ln(3))+4});
+            \draw[black,fill] (1.5,2) circle (0.08) node[below right,xshift=-0.1cm,yshift=0.1cm] {$(3,4)$};
+            \draw[black,fill] (2.5,2.5) circle (0.08) node[above] {$(5,5)$};
+            \draw[dashed] (0.9,0) -- (0.9,2.5) node[above] {\scriptsize{$x=2$}};
+            \end{tikzpicture}
+        \end{center}
+        \end{multicols}
+    \end{enumerate}
+    \vspace{-0.3cm}
+    \item $\log_p{4}$
+    \begin{multicols}{6}
+    \item
+    \begin{enumerate}
+            \item $1$
+            \item $2$
+            \item $-1$
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+            \item $x=10$
+            \item $x=9$
+            \item $x=1$
+    \end{enumerate}
+    \end{multicols}
+    \begin{multicols}{6}
+    \item $p=2$
+    \item
+    \begin{enumerate}
+            \item $80$
+            \item $k=0.135$
+            \item $5.13$ weeks
+    \end{enumerate}
+    \end{multicols}
+    \begin{multicols}{3}
+    \item
+    \begin{enumerate}
+    \item $a=9$\newline$b=\frac{1}{2}$
+    \item $a=\frac{1}{9}$\newline$b=81$
+    \end{enumerate}
+    \vfill\null
+    \columnbreak
+    \item
+    \begin{enumerate}
+            \item $x>2$
+            \item $a=-2$\newline$b=1$
+            \item $y=f^{-1}(x)$:\\
+            \begin{center}
+            \vspace{-0.5cm}
+            \begin{tikzpicture}[scale=0.6]
+            \draw[-stealth] (-2,0) -- (5.5,0) node[below] {$x$};
+            \draw[-stealth] (0,-0.4) -- (0,3.6) node[left] {$y$};
+            \draw[smooth,samples=100,thick,domain=-1.5:3.4,xscale=1,yscale=0.2] plot (\x,{3^(\x-1)+2});
+            \draw[black,fill] (1,0.6) circle (0.08) node[above] {$(1,3)$};
+            \draw[black,fill] (2,1) circle (0.08) node[right,xshift=0.05cm] {$(2,5)$};
+            \draw[dashed] (-1.5,0.3) -- (3.5,0.3) node[right] {\scriptsize{$y=2$}};
+            \end{tikzpicture}
+            \end{center}
+    \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+
 \endgroup
 
-\newpage
+\pagebreak
 
 \newpage
 

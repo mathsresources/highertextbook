@@ -1355,7 +1355,7 @@ All questions: \faCalculator
             \item $P=P_0e^{-0.00197t}$
         \end{multicols}
     \end{enumerate}
-    \item The temperature $T$ (in $\degree\text{C}$) of a substance $t$ minutes after the end of an experiment can be modelled by the equation $T=T_0e^{-kt}$. After 7 minutes, the substance has cooled from $140\degree\text{C}$ to $55\degree\text{C}$.
+    \item The temperature $T$ (in $\degree\text{C}$) of a substance $t$ minutes after a chemical reaction can be modelled by the equation $T=T_0e^{-kt}$. After 7 minutes, the substance has cooled from $140\degree\text{C}$ to $55\degree\text{C}$.
     \begin{enumerate}
         \item Determine the value of $k$ to three significant figures.
         \item Find the time taken for the substance to cool to $30\degree\text{C}$.
@@ -1363,7 +1363,7 @@ All questions: \faCalculator
     \item The concentration $C$ of a drug in a patient's blood $t$ hours after being given a dose can be modelled by the equation $C=28e^{-kt}$.
     \begin{enumerate}
         \item If the concentration is 23 after 90 minutes, calculate the value of $k$ to three significant figures.
-        \item Find the time taken for the concentrate to reduce by half.
+        \item Find the time taken for the concentration to reduce by half.
         \item Find the time taken for the concentration to be only 15\% of its original value.
     \end{enumerate}
 \end{enumerate}
@@ -1768,7 +1768,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
 
 \newpage
 
-## Logs and Exponentials Review Exercise {-}
+[]{#ex15Rq}
+
+## [Logs and Exponentials Review Exercise](#ex15Ra) {-}
 
 \vspace{-0.5cm}
 
@@ -1786,7 +1788,7 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
     \item Evaluate the following:
     \begin{enumerate}
         \begin{multicols}{3}
-            \item $\log_{8}{}+\log_{8}{}-\log_{8}{}$
+            \item $\log_{8}{6}+\log_{8}{12}-\log_{8}{9}$
             \item $\log_{3}{\frac{1}{4}}+2\log_{3}{6}$
             \item $\frac{1}{2}\log_{5}{64}-\log_{5}{40}$
         \end{multicols}
@@ -1800,7 +1802,7 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
         \end{multicols}
     \end{enumerate}
     \item Given that $\log_{p}{4}+3=\log_p{32}$, find the value of $p$.
-    \item A population of mice is discovered living in some woodland, and number of mice can be modelled by:
+    \item A population of mice is discovered living in some woodland. The number of mice can be modelled by:
     \[M=80e^{kt}\]
     where $M$ is the estimated number of mice in the population, $t$ is the number of weeks since the population was discovered and $k$ is a constant.
     \begin{enumerate}
@@ -1817,7 +1819,7 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                 \node[below left] at (6,4) {$y=ax^b$};
                 \draw[-stealth] (-2,0) -- (5,0) node[below] {$\log_3{x}$};
                 \draw[-stealth] (0,-1) -- (0,3.5) node[left] {$\log_3{y}$};
-                \draw[thick] (0,1) circle (0.05) node[left] {$(0,2)$} -- (2,2) circle (0.05) node[right] {$(4,2)$};
+                \draw[thick] (0,1) circle (0.05) node[left] {$(0,2)$} -- (2,2) circle (0.05) node[right] {$(4,4)$};
                 \node[below left] {\scriptsize{O}};
             \end{tikzpicture}
         \end{center}
@@ -1840,9 +1842,9 @@ Note the the process of solving for $a$ and solving for $b$ may require solving 
                     \draw[-stealth] (-0.5,0) -- (9,0) node [above] {$x$};
                     \draw[-stealth] (0,-1) -- (0,3) node[left] {$y$};
                     \draw[smooth,thick,domain=0.1:5.5,xshift=2cm,yshift=1cm] plot (\x,{ln(\x)/ln(3)}) node[right] {$y=f(x)$};
-                    \draw[fill] (3,1) circle (0.05) node[above left] {$(3,1)$};
+                    \draw[fill] (3,1) circle (0.05) node[below right] {$(3,1)$};
                     \draw[fill] (5,2) circle (0.05) node[above] {$(5,2)$};
-                    \draw[dashed] (2,-1) -- (2,3);
+                    \draw[dashed] (2,-1) -- (2,2) node[above] {$x=2$};
                 \end{tikzpicture}
                 \end{center}
                 \columnbreak

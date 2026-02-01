@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.27)  31 JAN 2026 22:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.27)  1 FEB 2026 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,7 +824,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box83
 \tcb@temp=\box84
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -844,7 +844,7 @@ Package pdftexcmds Info: \pdfdraftmode not found.
 )) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
@@ -860,28 +860,28 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 \Hy@linkcounter=\count357
 \Hy@pagecounter=\count358
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 ) (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count359
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4066.
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Option `unicode' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count360
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
+LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen319
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -891,20 +891,20 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 \Fld@menulength=\count361
 \Field@Width=\dimen320
 \Fld@charsize=\dimen321
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count362
 \c@Item=\count363
 \c@Hfootnote=\count364
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/andyjames/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
+File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
 \pdfm@box=\box85
 \c@Hy@AnnotLevel=\count365
 \HyField@AnnotCount=\count366
@@ -3724,6 +3724,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [184]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 6553.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -4051,42 +4055,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [227]
-Underfull \hbox (badness 10000) in paragraph at lines 7326--7327
+Underfull \hbox (badness 10000) in paragraph at lines 7328--7329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7337--7338
+Underfull \hbox (badness 10000) in paragraph at lines 7339--7340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7353--7354
+Underfull \hbox (badness 10000) in paragraph at lines 7355--7356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7365--7366
+Underfull \hbox (badness 10000) in paragraph at lines 7367--7368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7380--7381
+Underfull \hbox (badness 10000) in paragraph at lines 7382--7383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7391--7392
+Underfull \hbox (badness 10000) in paragraph at lines 7393--7394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7407--7408
+Underfull \hbox (badness 10000) in paragraph at lines 7409--7410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7418--7419
+Underfull \hbox (badness 10000) in paragraph at lines 7420--7421
 
  []
 
@@ -4106,107 +4110,107 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [229]
-Underfull \hbox (badness 10000) in paragraph at lines 7668--7669
+Underfull \hbox (badness 10000) in paragraph at lines 7670--7671
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7677--7678
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7679--7680
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7679--7680
+Underfull \hbox (badness 10000) in paragraph at lines 7681--7682
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7688--7689
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7690--7691
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7690--7691
+Underfull \hbox (badness 10000) in paragraph at lines 7692--7693
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7699--7700
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7701--7702
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7706--7707
+Underfull \hbox (badness 10000) in paragraph at lines 7708--7709
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7715--7716
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7717--7718
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7717--7718
+Underfull \hbox (badness 10000) in paragraph at lines 7719--7720
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7726--7727
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7728--7729
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7728--7729
+Underfull \hbox (badness 10000) in paragraph at lines 7730--7731
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7737--7738
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7739--7740
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7743--7744
+Underfull \hbox (badness 10000) in paragraph at lines 7745--7746
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7753--7754
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7755--7756
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7755--7756
+Underfull \hbox (badness 10000) in paragraph at lines 7757--7758
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7767--7768
+Underfull \hbox (badness 10000) in paragraph at lines 7769--7770
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7777--7778
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7779--7780
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7783--7784
+Underfull \hbox (badness 10000) in paragraph at lines 7785--7786
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7795--7796
+Underfull \hbox (badness 10000) in paragraph at lines 7797--7798
 
  []
 
 
-Overfull \hbox (5.65933pt too wide) in paragraph at lines 7805--7806
+Overfull \hbox (5.65933pt too wide) in paragraph at lines 7807--7808
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7807--7808
+Underfull \hbox (badness 10000) in paragraph at lines 7809--7810
 
  []
 
@@ -4218,8 +4222,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [230]
+Underfull \hbox (badness 10000) in paragraph at lines 8071--8072
 
-LaTeX Warning: Hyper reference `ex15Rq' on page 231 undefined on input line 8054.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8082--8083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8095--8096
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8146--8147
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4243,17 +4263,14 @@ No file _main.bbl.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 63664 strings out of 470190
- 1486428 string characters out of 5477670
- 2292299 words of memory out of 5000000
- 91216 multiletter control sequences out of 15000+600000
+ 64177 strings out of 470190
+ 1497117 string characters out of 5477670
+ 2292429 words of memory out of 5000000
+ 91729 multiletter control sequences out of 15000+600000
  675084 words of font info for 183 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 116i,18n,128p,1686b,1094s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,18n,128p,1686b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on _main.pdf (238 pages).
