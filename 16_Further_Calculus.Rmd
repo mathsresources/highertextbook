@@ -31,11 +31,11 @@ To begin comparing $f(x)=\color{RoyalBlue}(2x-5)^3$ to its derivative, notice th
 \begin{align*}
     f'(x)&=24x^2-120x+150\\[0.5em]
     &=6(4x^2-20x+25)\\[0.5em]
-    &=6(2x-5)^3\\[0.5em]
-    &=\color{RoyalBlue}3(2x-5)^3\color{black}\times2
+    &=6(2x-5)^2\\[0.5em]
+    &=\color{RoyalBlue}3(2x-5)^2\color{black}\times2
 \end{align*}
 
-Combining this result with knowledge that the derivative of $\color{RoyalBlue}x^3$ is $\color{RoyalBlue}3x^2$ clearly suggests that some method may exist which allows faster derivatives of expressions of the form $\color{RoyalBlue}(ax+b)^n$. Investigation may be used to obtain the following derivatives:
+Combining this result with knowledge that the derivative of $\color{RoyalBlue}x^3$ is $\color{RoyalBlue}3x^2$ clearly suggests that some method may exist which allows more direct differentiation of expressions of the form $\color{RoyalBlue}(ax+b)^n$. Investigation may be used to obtain the following derivatives:
 
 \[\frac{\text{d}}{\text{d}y}\left(\color{RoyalBlue}(7x+2)^4\color{black}\right)=\color{RoyalBlue}4(7x+2)^3\color{black}\times7\]
 
