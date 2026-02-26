@@ -6672,11 +6672,11 @@ To begin comparing \(f(x)=\color{RoyalBlue}(2x-5)^3\) to its derivative, notice 
 \begin{align*}
     f'(x)&=24x^2-120x+150\\[0.5em]
     &=6(4x^2-20x+25)\\[0.5em]
-    &=6(2x-5)^3\\[0.5em]
-    &=\color{RoyalBlue}3(2x-5)^3\color{black}\times2
+    &=6(2x-5)^2\\[0.5em]
+    &=\color{RoyalBlue}3(2x-5)^2\color{black}\times2
 \end{align*}
 
-Combining this result with knowledge that the derivative of \(\color{RoyalBlue}x^3\) is \(\color{RoyalBlue}3x^2\) clearly suggests that some method may exist which allows faster derivatives of expressions of the form \(\color{RoyalBlue}(ax+b)^n\). Investigation may be used to obtain the following derivatives:
+Combining this result with knowledge that the derivative of \(\color{RoyalBlue}x^3\) is \(\color{RoyalBlue}3x^2\) clearly suggests that some method may exist which allows more direct differentiation of expressions of the form \(\color{RoyalBlue}(ax+b)^n\). Investigation may be used to obtain the following derivatives:
 
 \[\frac{\text{d}}{\text{d}y}\left(\color{RoyalBlue}(7x+2)^4\color{black}\right)=\color{RoyalBlue}4(7x+2)^3\color{black}\times7\]
 
@@ -6694,6 +6694,8 @@ In this chapter methods for differentiating and integrating a number of differen
 
 \textcolor{RoyalBlue}{Powers of }\(\color{RoyalBlue}{(ax+b)}\) may be differentiated using the rule below, as seen on the previous page.
 
+\vspace{-0.2cm}
+
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=13.5cm,colframe=red!70!black,height=2.2cm]
 \vspace{-0.5cm}
@@ -6706,7 +6708,11 @@ In this chapter methods for differentiating and integrating a number of differen
 \end{tcolorbox}
 \end{center}
 
+\vspace{-0.3cm}
+
 This may be summarised as:
+
+\vspace{-0.1cm}
 
 \begin{itemize}
     \item Keep the bracket the same.
@@ -6769,6 +6775,8 @@ f'(x)&=6\times4(3-x)^5\times(-1)\\[0.5em]
 
 The rule introduced on the previous page is part of a more general rule for differentiating expressions of the form \(\color{RoyalBlue}{f\left(g(x)\right)}\), called the \textcolor{RoyalBlue}{Chain Rule for Differentiation}.
 
+\vspace{-0.2cm}
+
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=12cm,colframe=red!70!black,height=2.2cm]
 \vspace{-0.5cm}
@@ -6781,7 +6789,11 @@ The rule introduced on the previous page is part of a more general rule for diff
 \end{tcolorbox}
 \end{center}
 
+\vspace{-0.3cm}
+
 This may be summarised as:
+
+\vspace{-0.1cm}
 
 \begin{itemize}
     \item Keep the \textcolor{RoyalBlue}{inner function} in the bracket the same.
@@ -6791,7 +6803,7 @@ This may be summarised as:
 
 \begin{multicols}{2}
 
-\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=5.6cm]
+\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=5.2cm]
 
 Given $y=(2x^3-1)^8$, find $\dfrac{\text{d}y}{\text{d}x}$.
 
@@ -6808,7 +6820,7 @@ Given $y=(2x^3-1)^8$, find $\dfrac{\text{d}y}{\text{d}x}$.
 \end{tcolorbox}
 
 
-\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=5.6cm]
+\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=5.2cm]
 
 Given $f(x)=\sqrt[3]{x^2+5x+7}^{\;4}$, find $f'(x)$.
 
@@ -6819,8 +6831,8 @@ Given $f(x)=\sqrt[3]{x^2+5x+7}^{\;4}$, find $f'(x)$.
 
 \begin{align*}
 f(x)&=(x^2+5x+7)^{\frac{4}{3}}\\[0.5em]
-f'(x)&=\frac{4}{3}(x^2+5x+7)^{\frac{1}{3}}\times(2x+5)\\[0.5em]
-&=\frac{4}{3}(2x+5)\sqrt[3]{x^2+5x+7}
+f'(x)&=\tfrac{4}{3}(x^2+5x+7)^{\frac{1}{3}}\times(2x+5)\\[0.5em]
+&=\tfrac{4}{3}(2x+5)\sqrt[3]{x^2+5x+7}
 \end{align*}
 
 \end{tcolorbox}
@@ -6875,6 +6887,56 @@ The trigonometric expressions \(\sin{x}\) and \(\cos{x}\) can be differentiated 
 \vspace{-0.5cm}
 
 A versions of these rules may be found on the Higher formula sheet, stating the derivatives of \(\sin{ax}\) and \(\cos{ax}\). However they may be more powerfully combined with the Chain Rule for Differentiation, allowing expressions such as \(\color{RoyalBlue}{\sin{(3x-\pi)}}\) to be differentiated, giving \(\color{RoyalBlue}{\cos{(3x-\pi)}}\color{black}\times 3=3\cos{(3x-\pi)}\).
+
+\begin{multicols}{2}
+
+\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=6.6cm]
+
+Given $y=4\sin{2x}-3\cos{5x}$, find the rate of change of $y$ with respect to $x$.
+
+\vspace{-0.1cm}
+\tcblower
+
+\vspace{-0.1cm}
+
+\begin{align*}
+y&=4\sin{2x}-3\cos{5x}\\[1em]
+\frac{\mathrm{d}y}{\mathrm{d}x}&=4\cos{2x}\times 2 + 3\sin{5x}\times 5\\[1em]
+&=8\cos{2x}+15\sin{5x}
+\end{align*}
+
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=Example,colback=RoyalBlue!2!, colframe=RoyalBlue,width=8.5cm,height=6.6cm]
+
+If $g(x)=5\cos{\left(2x-\frac{\pi}{3}\right)}$, find $g'\left(\frac{\pi}{4}\right)$.
+
+\vspace{-0.1cm}
+\tcblower
+
+\vspace{-0.3cm}
+
+\begin{align*}
+g'(x)&=-10\sin{\left(2x-\tfrac{\pi}{3}\right)}\\[0.5em]
+g'\left(\tfrac{\pi}{4}\right)&=-10\sin{\left(2\left(\tfrac{\pi}{4}\right)-\tfrac{\pi}{3}\right)}\\[0.5em]
+&=-10\sin{\left(\tfrac{\pi}{6}\right)}\\[0.5em]
+&=-10\times \tfrac{1}{2}\\[0.5em]
+&=-5
+\end{align*}
+
+\end{tcolorbox}
+
+\end{multicols}
+
+\vspace{-1cm}
+
+\phantomsection\label{ex163q}{}
+
+\subsubsection*{\texorpdfstring{\hyperref[ex163a]{Exercise 16.3}}{Exercise 16.3}}\label{exercise-16.3}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex163a]{Exercise 16.3}}
+
+\vspace{-0.5cm}
 
 \newpage
 
