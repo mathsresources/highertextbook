@@ -39,6 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -169,6 +170,10 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
 \hypersetup{
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -1493,9 +1498,9 @@ $\text{When }x=3,\quad y=(3)^{3}+\frac{1}{2}(3)^{2}-\frac{7}{2}=28$\hspace{3.5cm
 
 \pagebreak
 
-\section*{9.4 Maximum and Minimum Values}
+\section{Maximum and Minimum Values}\label{maximum-and-minimum-values}
 
-If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.\textbackslash{[}0.1em{]}
+If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.
 
 \begin{tcolorbox}[title=Example 9.4.1,colback=blue!1, colframe=blue!70!black!70!]
 Determine the value of $x$ for which the function $f$, defined by $f(x)=x+\frac{1}{x}$, $x>0$, has its minimum value.
@@ -4267,10 +4272,10 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex141q}{}
+\protect\phantomsection\label{ex141q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex141a]{Exercise 14.1}}{Exercise 14.1}}\label{exercise-14.1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex141a]{Exercise 14.1}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.1}}
 
 \vspace{-0.3cm}
 
@@ -4370,10 +4375,10 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex142q}{}
+\protect\phantomsection\label{ex142q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex142a]{Exercise 14.2}}{Exercise 14.2}}\label{exercise-14.2}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex142a]{Exercise 14.2}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.2}}
 
 \vspace{-0.3cm}
 
@@ -4495,10 +4500,10 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex143q}{}
+\protect\phantomsection\label{ex143q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex143a]{Exercise 14.3}}{Exercise 14.3}}\label{exercise-14.3}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex143a]{Exercise 14.3}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.3}}
 
 \vspace{-0.3cm}
 
@@ -4587,10 +4592,10 @@ Note that any solutions outwith the domain (often \(0<x<360\)) should have \(360
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex144q}{}
+\protect\phantomsection\label{ex144q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex144a]{Exercise 14.4}}{Exercise 14.4}}\label{exercise-14.4}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex144a]{Exercise 14.4}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.4}}
 
 \vspace{-0.3cm}
 
@@ -4686,10 +4691,10 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex145q}{}
+\protect\phantomsection\label{ex145q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex145a]{Exercise 14.5}}{Exercise 14.5}}\label{exercise-14.5}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex145a]{Exercise 14.5}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.5}}
 
 \vspace{-0.3cm}
 
@@ -4714,10 +4719,10 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
-\phantomsection\label{ex14Rq}{}
+\protect\phantomsection\label{ex14Rq}{}
 
 \section*{\texorpdfstring{\hyperref[ex14Ra]{Wave Function Review Exercise}}{Wave Function Review Exercise}}\label{wave-function-review-exercise}
-\addcontentsline{toc}{section}{\hyperref[ex14Ra]{Wave Function Review Exercise}}
+\addcontentsline{toc}{section}{{Wave Function Review Exercise}}
 
 \begin{enumerate}
     \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x+a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
@@ -4926,10 +4931,10 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
 
 \pagebreak
 
-\phantomsection\label{ex151q}{}
+\protect\phantomsection\label{ex151q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex151a]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex151a]{Exercise 15.1}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.1}}
 
 \vspace{-0.5cm}
 
@@ -5129,10 +5134,10 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \vspace{-1.2cm}
 
-\phantomsection\label{ex152q}{}
+\protect\phantomsection\label{ex152q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex152a]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex152a]{Exercise 15.2}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.2}}
 
 \vspace{-0.6cm}
 
@@ -5325,10 +5330,10 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \vspace{-0.6cm}
 
-\phantomsection\label{ex153q}{}
+\protect\phantomsection\label{ex153q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex153a]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex153a]{Exercise 15.3}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.3}}
 
 \vspace{-0.4cm}
 
@@ -5438,10 +5443,10 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex154q}{}
+\protect\phantomsection\label{ex154q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex154a]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex154a]{Exercise 15.4}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.4}}
 
 \vspace{-0.4cm}
 
@@ -5648,10 +5653,10 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex155q}{}
+\protect\phantomsection\label{ex155q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex155a]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex155a]{Exercise 15.5}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.5}}
 
 \vspace{-0.5cm}
 
@@ -5806,10 +5811,10 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.3cm}
 
-\phantomsection\label{ex156q}{}
+\protect\phantomsection\label{ex156q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex156a]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex156a]{Exercise 15.6}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.6}}
 
 \vspace{-0.3cm}
 
@@ -5932,10 +5937,10 @@ k&=-1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex157q}{}
+\protect\phantomsection\label{ex157q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex157a]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex157a]{Exercise 15.7}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.7}}
 
 \vspace{-0.5cm}
 
@@ -6094,10 +6099,10 @@ t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex158q}{}
+\protect\phantomsection\label{ex158q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158a]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex158a]{Exercise 15.8}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.8}}
 
 \vspace{-0.3cm}
 
@@ -6235,10 +6240,10 @@ Therefore the relationship between \(x\) and \(y\) is \(y=27x^{\frac{3}{2}}\).
 
 \newpage
 
-\phantomsection\label{ex159q}{}
+\protect\phantomsection\label{ex159q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159a]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex159a]{Exercise 15.9}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.9}}
 
 \vspace{-0.5cm}
 
@@ -6445,10 +6450,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\phantomsection\label{ex1510q}{}
+\protect\phantomsection\label{ex1510q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex1510a]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex1510a]{Exercise 15.10}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.10}}
 
 \vspace{-0.5cm}
 
@@ -6547,10 +6552,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\phantomsection\label{ex15Rq}{}
+\protect\phantomsection\label{ex15Rq}{}
 
 \section*{\texorpdfstring{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}{Logs and Exponentials Review Exercise}}\label{logs-and-exponentials-review-exercise}
-\addcontentsline{toc}{section}{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}
+\addcontentsline{toc}{section}{{Logs and Exponentials Review Exercise}}
 
 \vspace{-0.5cm}
 
@@ -6760,10 +6765,10 @@ f'(x)&=6\times4(3-x)^5\times(-1)\\[0.5em]
 
 \vspace{-1cm}
 
-\phantomsection\label{ex161q}{}
+\protect\phantomsection\label{ex161q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex161a]{Exercise 16.1}}{Exercise 16.1}}\label{exercise-16.1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex161a]{Exercise 16.1}}
+\addcontentsline{toc}{subsubsection}{{Exercise 16.1}}
 
 \vspace{-0.5cm}
 
@@ -6841,10 +6846,10 @@ f'(x)&=\tfrac{4}{3}(x^2+5x+7)^{\frac{1}{3}}\times(2x+5)\\[0.5em]
 
 \vspace{-1cm}
 
-\phantomsection\label{ex162q}{}
+\protect\phantomsection\label{ex162q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex162a]{Exercise 16.2}}{Exercise 16.2}}\label{exercise-16.2}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex162a]{Exercise 16.2}}
+\addcontentsline{toc}{subsubsection}{{Exercise 16.2}}
 
 \vspace{-0.5cm}
 
@@ -6931,10 +6936,10 @@ g'\left(\tfrac{\pi}{4}\right)&=-10\sin{\left(2\left(\tfrac{\pi}{4}\right)-\tfrac
 
 \vspace{-1cm}
 
-\phantomsection\label{ex163q}{}
+\protect\phantomsection\label{ex163q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex163a]{Exercise 16.3}}{Exercise 16.3}}\label{exercise-16.3}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex163a]{Exercise 16.3}}
+\addcontentsline{toc}{subsubsection}{{Exercise 16.3}}
 
 \vspace{-0.5cm}
 
@@ -7232,10 +7237,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.2cm}
 
-\phantomsection\label{ex141a}{}
+\protect\phantomsection\label{ex141a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex141q]{Exercise 14.1}}{Exercise 14.1}}\label{exercise-14.1-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex141q]{Exercise 14.1}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.1}}
 
 \vspace{-0.2cm}
 
@@ -7268,10 +7273,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.3cm}
 
-\phantomsection\label{ex142a}{}
+\protect\phantomsection\label{ex142a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex142q]{Exercise 14.2}}{Exercise 14.2}}\label{exercise-14.2-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex142q]{Exercise 14.2}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.2}}
 
 \vspace{-0.2cm}
 
@@ -7304,10 +7309,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.3cm}
 
-\phantomsection\label{ex143a}{}
+\protect\phantomsection\label{ex143a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex143q]{Exercise 14.3}}{Exercise 14.3}}\label{exercise-14.3-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex143q]{Exercise 14.3}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.3}}
 
 \vspace{-0.2cm}
 
@@ -7429,10 +7434,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\phantomsection\label{ex144a}{}
+\protect\phantomsection\label{ex144a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex144q]{Exercise 14.4}}{Exercise 14.4}}\label{exercise-14.4-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex144q]{Exercise 14.4}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.4}}
 
 \begin{enumerate}
     \item
@@ -7468,10 +7473,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\phantomsection\label{ex145a}{}
+\protect\phantomsection\label{ex145a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex145q]{Exercise 14.5}}{Exercise 14.5}}\label{exercise-14.5-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex145q]{Exercise 14.5}}
+\addcontentsline{toc}{subsubsection}{{Exercise 14.5}}
 
 \begin{enumerate}
     \item $5\sin{(t-233.1)\degree}$
@@ -7492,10 +7497,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\phantomsection\label{ex14Ra}{}
+\protect\phantomsection\label{ex14Ra}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex14Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-14}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex14Rq]{Review Exercise}}
+\addcontentsline{toc}{subsubsection}{{Review Exercise}}
 
 \begin{enumerate}
     \item $\sqrt{113}\sin{(x+41.2)\degree}$
@@ -7574,10 +7579,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.2cm}
 
-\phantomsection\label{ex151a}{}
+\protect\phantomsection\label{ex151a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex151q]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex151q]{Exercise 15.1}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.1}}
 
 \vspace{-0.3cm}
 
@@ -7716,10 +7721,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\phantomsection\label{ex152a}{}
+\protect\phantomsection\label{ex152a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex152q]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex152q]{Exercise 15.2}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.2}}
 
 \begin{enumerate}
     \item 
@@ -7799,10 +7804,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\phantomsection\label{ex153a}{}
+\protect\phantomsection\label{ex153a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex153q]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex153q]{Exercise 15.3}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.3}}
 
 \begin{enumerate}
     \item 
@@ -7852,10 +7857,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\phantomsection\label{ex154a}{}
+\protect\phantomsection\label{ex154a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex154q]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex154q]{Exercise 15.4}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.4}}
 
 \begin{enumerate}
     \item Solve:
@@ -7933,10 +7938,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex155a}{}
+\protect\phantomsection\label{ex155a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex155q]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex155q]{Exercise 15.5}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.5}}
 
 \vspace{-0.5cm}
 
@@ -8110,10 +8115,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex156a}{}
+\protect\phantomsection\label{ex156a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex156q]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex156q]{Exercise 15.6}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.6}}
 
 \vspace{-0.5cm}
 
@@ -8187,10 +8192,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\phantomsection\label{ex157a}{}
+\protect\phantomsection\label{ex157a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex157q]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex157q]{Exercise 15.7}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.7}}
 
 \begin{enumerate}
     \item 
@@ -8223,10 +8228,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex158a}{}
+\protect\phantomsection\label{ex158a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158q]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex158q]{Exercise 15.8}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.8}}
 
 \begin{enumerate}
     \item
@@ -8280,10 +8285,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex159a}{}
+\protect\phantomsection\label{ex159a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159q]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex159q]{Exercise 15.9}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.9}}
 
 \begin{enumerate}
     \item
@@ -8308,10 +8313,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex1510a}{}
+\protect\phantomsection\label{ex1510a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex1510q]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10-1}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex1510q]{Exercise 15.10}}
+\addcontentsline{toc}{subsubsection}{{Exercise 15.10}}
 
 \begin{enumerate}
     \item
@@ -8336,10 +8341,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\phantomsection\label{ex15Ra}{}
+\protect\phantomsection\label{ex15Ra}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex15Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-15}
-\addcontentsline{toc}{subsubsection}{\hyperref[ex15Rq]{Review Exercise}}
+\addcontentsline{toc}{subsubsection}{{Review Exercise}}
 
 \begin{enumerate}
     \item

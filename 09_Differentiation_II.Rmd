@@ -756,9 +756,9 @@ $\text{When }x=3,\quad y=(3)^{3}+\frac{1}{2}(3)^{2}-\frac{7}{2}=28$\hspace{3.5cm
 
 \pagebreak
 
-\section*{9.4 Maximum and Minimum Values}
+## Maximum and Minimum Values
 
-If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.\\[0.1em]
+If a smooth, continuous function has only one stationary point within its domain, and it is a \textit{maximum turning point}, the \textit{greatest value} of the function will be located at the turning point. The corresponding will be true for the \textit{least} value of a function with only a \textit{minimum} turning point.
 
 \begin{tcolorbox}[title=Example 9.4.1,colback=blue!1, colframe=blue!70!black!70!]
 Determine the value of $x$ for which the function $f$, defined by $f(x)=x+\frac{1}{x}$, $x>0$, has its minimum value.
