@@ -14,12 +14,11 @@
 \end{tikzpicture}
 \end{center}
 
-
-## Polynomials and Synthetic Division
+## Synthetic Division
 
 \vspace{-0.5cm}
 
-Expressions comprised of sums of \textit{positive, integer} powers of $x$ are referred to as \textit{polynomials in }$x$.
+A *polynomial in* $x$ is a finite sum of non-negative integer powers of $x$, each multiplied by a constant coefficient.
 
 \begin{multicols}{5}
     \begin{center}
@@ -63,7 +62,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Quartic}};
             \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 4}}};
-            \node at (0,1.5) {e.g. $x^4-3x^3+1$};
+            \node at (0,1.5) {e.g. $x^4-3x^3$};
             \draw[domain=-1.1:1.4,smooth] plot (\x,\x*\x*\x*\x-\x*\x*\x-\x*\x+\x);
         \end{tikzpicture}
     \end{center}
@@ -71,7 +70,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of $x$ are re
 
 \vspace{-1.3cm}
 
-A polynomial function such as $f(x)=2x^3-7x^2+4x-1$ can be evaluated for some value of $x$:
+A polynomial function such as $f(x)=2x^3-7x^2+4x+1$ can be evaluated directly when $x=3$:
 
 \vspace{-0.6cm}
 
@@ -161,39 +160,7 @@ Another way to evaluate $f(3)$ is to use synthetic division, as follows:
     \end{tikzpicture}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.1.1,colback=PineGreen!2, colframe=PineGreen]
-
-Given $f(x)=x^4-4x^3+3x^2+9$, use synthetic division to evaluate $f(2)$.
-
-\tcblower
-
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (-1.5,1.6) -- (-1.5,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-2.25,1.2) {$2$};
-        \node at (-0.75,1.2) {$1$};
-        \node at (0.75,1.2) {$-4$};
-        \node at (2.25,1.2) {$\phantom{-}3$};
-        \node at (3.75,1.2) {$\phantom{-}0$};
-        \node at (5.25,1.2) {$\phantom{-}9$};
-        \node at (-0.75,-0.4) {$1$};
-        \node at (0.75,0.4) {$\phantom{-}2$};
-        \node at (0.75,-0.4) {$-2$};
-        \node at (2.25,0.4) {$-4$};
-        \node at (2.25,-0.4) {$-1$};
-        \node at (3.75,0.4) {$-2$};
-        \node at (3.75,-0.4) {$-2$};
-        \node at (5.25,0.4) {$-4$};
-        \node at (5.25,-0.4) {$\phantom{-}5$};
-        \node[right] at (6.5,-0.4) {$\therefore f(2)=5$};
-    \end{tikzpicture}
-\end{center}
-
-\end{tcolorbox}
-
-The top line within a synthetic division box should be \textit{ordered in decreasing powers of }$x$.\\Any missing powers are included with a coefficient of \textit{zero}.
+The top line within a synthetic division box should be \textit{ordered in decreasing powers of }$x$.\newline Any missing powers are included with a coefficient of \textit{zero}.
 
 \pagebreak
 
@@ -203,15 +170,20 @@ The top line within a synthetic division box should be \textit{ordered in decrea
 
 Addition, subtraction and multiplication of polynomials were all required for the National 5 course.
 
-Since $3\times 4 + 1=13$, this implies that:
+The Higher course introduces *division* of a polynomial expression by a linear expression.
 
-$$\dfrac{13}{3}=4\textbf{ Remainder }1$$
+It is helpful to know the terms **divisor**, **dividend**, **remainder** and **quotient**.
 
-Since $(x-2)(x^2-3x+4)+7=x^3-5x^2+x-1$, this implies that:
 
-$$\dfrac{x^3-5x^2+x-1}{x-2}=x^2-3x+4\textbf{ Remainder }7$$
+\begin{center}
+    \begin{tikzpicture}
+        \node at (0,0) {$\dfrac{13}{3}=4\textcolor{PineGreen}{\textit{ Remainder }}1$};
+        \draw[PineGreen,stealth-] (-1.8,0.7) -- (-2,1.1) node[above] {\textit{Dividend}};
+        \draw[PineGreen,stealth-] (-1.8,-0.7) -- (-2,-1.1) node[below] {\textit{Divisor}};
+        \draw[PineGreen,stealth-] (-0.6,0.36) -- (-0.3,0.8) node[above] {\textit{Quotient}};
+    \end{tikzpicture}
+\end{center}
 
-Note that for $f(x)=x^3-5x^2+x-1$, $f(2)=(2)^3-5(2)^2+(2)-1=7$.
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=18cm,colframe=red!70!black]
@@ -222,7 +194,7 @@ Note that for $f(x)=x^3-5x^2+x-1$, $f(2)=(2)^3-5(2)^2+(2)-1=7$.
 \end{tcolorbox}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.2.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Find the remainder when $3x^3-x^2+5$ is divided by $(x-1)$.
 
@@ -255,13 +227,13 @@ So the remainder is $7$.
 
 \end{tcolorbox}
 
-The \textit{quotient}, $Q(x)$, can be determined from the values to the left of the remainder.\\ Since  $3x^3-x^2+5$ is a \textit{cubic}, the quotient $Q(x)$ is \textit{quadratic}:\quad $3x^2+2x+2$.
+The \textit{quotient}, $Q(x)$, can be determined from the values to the left of the remainder.\newline Since  $3x^3-x^2+5$ is a \textit{cubic}, the quotient $Q(x)$ is \textit{quadratic}:\quad $3x^2+2x+2$.
 
-$$3x^3-x^2+5=(x-1)(3x^2+2x+2)+7$$
+$$\dfrac{3x^3-x^2+5}{x-1}=3x^2+2x+2\quad\text{ with remainder }7$$
 
-\begin{tcolorbox}[title=Example 10.2.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
-Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(x)$ is divided by $(x+1)$, and hence express $f(x)$ in the form $(x+1)Q(x)+r$ where $Q(x)$ is a quadratic.
+Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(x)$ is divided by $(x+1)$, and hence state the quadratic quotient.
 
 \tcblower
 
@@ -287,13 +259,13 @@ Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(
     \end{tikzpicture}
 \end{center}
 
-So the remainder is $-1$ and $x^3+4x^2-3x-7=(x+1)(x^2+3x-6)-1$.
+So the remainder is $-1$ and the quotient is $x^2+3x-6$.
 
 \end{tcolorbox}
 
 \pagebreak
 
-\section*{10.3 Factor Theorem}
+## Factor Theorem
 
 \vspace{-0.5cm}
 
@@ -313,7 +285,7 @@ Since 20 can be divided by 5 to give 4 \textbf{with no remainder}, this means 5 
 
 \vspace{-0.3cm}
 
-Given a linear factor, synthetic division allows a cubic expression $f(x)$ to be expressed as a the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially by further factorised:
+Given a linear factor, synthetic division allows a cubic expression $f(x)$ to be expressed as the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially be further factorised:
 \vspace{-0.1cm}
 \begin{align*}
     f(x)=&\text{ }(\textit{cubic})\\
@@ -323,7 +295,7 @@ Given a linear factor, synthetic division allows a cubic expression $f(x)$ to be
 
 \vspace{-0.3cm}
 
-\begin{tcolorbox}[title=Example 10.3.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x+4)$ is a factor of $x^3-x^2-14x+24$, and hence factorise it fully.
 
@@ -364,7 +336,7 @@ Remainder$=0\therefore (x+4)$ is a factor. \textcolor{PineGreen}{$\longleftarrow
 
 For some cubic expressions, a resulting quadratic quotient may not be able to be factorised.
 
-\begin{tcolorbox}[title=Example 10.3.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $2x^3-x^2+x-14$, and hence factorise it fully.
 
@@ -398,7 +370,7 @@ Show that $(x-2)$ is a factor of $2x^3-x^2+x-14$, and hence factorise it fully.
     =&\text{ }(x-2)(2x^2+3x+7)
 \end{align*}
 
-Since $3^2-4\times2\times7=-65$, and $-65<0$, the quadratic quotient cannot be factorised\\ Therefore the cubic cannot be further factorised. 
+Since $3^2-4\times2\times7=-47$, and $-47<0$, the quadratic quotient cannot be factorised\\ Therefore the cubic cannot be further factorised. 
 
 \end{tcolorbox}
 
@@ -406,13 +378,15 @@ Since $3^2-4\times2\times7=-65$, and $-65<0$, the quadratic quotient cannot be f
 
 Where a linear factor of a polynomial function is unknown, a suggested approach is to consider the factors of the constant term with the aim of obtaining a value such that the remainder is zero.
 
-\begin{tcolorbox}[title=Example 10.3.3,colback=PineGreen!2, colframe=PineGreen]
+*Solving* a cubic equation (equal to zero) is achieved by first factorising the cubic expression.
 
-Factorise $x^3-x^2-17x=15$.
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
+
+Solve $x^3-x^2-17x-15=0$.
 
 \tcblower
 
-\textcolor{PineGreen}{\textit{Consider }$\pm1,\pm3\pm5\pm15$}\\[-0.5em]
+\textcolor{PineGreen}{\textit{Consider }$\pm1,\pm3,\pm5,\pm15$}\\[-0.5em]
 
 $f(1)=(1)^3-(1)^2-17(1)-15=-32\therefore$ $(x-1)$ is \textbf{not} a factor.\\[-0.5em]
 
@@ -447,22 +421,15 @@ $f(-1)=(-1)^3-(-1)^2-17(-1)-15=0\therefore$ $(x+1)$ \textbf{is} a factor.
     =&\text{ }(x+1)(x+3)(x-5)
 \end{align*}
 
+Hence $(x+1)(x+3)(x-5)=0$, and solutions are:
+
+\[x=-1,x=-3,x=5\]
+
 \end{tcolorbox}
 
-Repeated use of synthetic dvision may allow a \textit{quartic} ($x^4$) to be expressed as a product of up to four linear factors.
+A \textit{quartic} ($x^4$) to be expressed as a product of up to four linear factors.
 
-\vspace{-1cm}
-
-\begin{align*}
-    f(x)=&\text{ }(\textit{quartic})\\
-    =&\text{ }(\textit{linear})(\textit{cubic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
-    \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{linear})(\textit{quadratic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
-    =&\text{ }(\textit{linear})(\textit{linear})(\textit{linear})(\textit{linear})
-\end{align*}
-
-\vspace{-0.1cm}
-
-\begin{tcolorbox}[title=Example 10.3.4,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $x^4-2x^3-7x^2+8x+12$ and hence factorise it fully.
 
@@ -536,7 +503,7 @@ $x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
 
 An unknown coefficient of a polynomial expression may be calculated if a factor of the expression is known, or the remainder given a linear divisor is known. It may be preferred to use synthetic division, or to evaluate the expression directly.
 
-\begin{tcolorbox}[title=Example 10.4.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Given that $(x+2)$ is a factor of $2x^3+kx^2-14x+8$, determine the value of $k$.
 
@@ -575,7 +542,7 @@ Since $(x+2)$ is a factor, remainder$=0$.
 
 Where a polynomial has \textit{two} unknown coefficients, \textit{simultaneous equations} may be formed and solved.
 
-\begin{tcolorbox}[title=Example 10.4.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Find the values of $a$ and $b$ given that:\\
 \begin{itemize}
@@ -668,14 +635,6 @@ Remainder $=10$ $\implies$ $a+b+13=10$.
 
 \pagebreak
 
-## Solving Polynomial Equations
-
-\vspace{-0.5cm}
-
-\textit{Quadratic} equations such as $x^2-4x-21=0$ are typically solved through factorising, or using the quadratic formula. There is no equivalent \textit{general formula} for solving polynomial equations of degree 3 (\textit{cubic}) or higher. Instead, such polynomial equations are solved through \textit{factorising}.
-
-\newpage
-
 ## Identifying Polynomial Functions
 
 Given the form a polynomial function takes and its graph, showing any $x$-intercepts and at least one other coordinate, the factorised form of the polynomial may be deduced.
@@ -746,5 +705,3 @@ The value of $k$ can only be found if a \textit{non-root} coordinate is also kno
 By comparing the form given and the final equation, it can be seen that: $k=\frac{1}{2},a=1,b=3,c=-2$
 
 \pagebreak
-
-## Review Exercise {-}

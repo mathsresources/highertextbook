@@ -2,7 +2,7 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \documentclass[
-  12pt,
+  11pt,
   openany]{book}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb}
@@ -39,7 +39,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{longtable,booktabs,array}
-\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -170,10 +169,6 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
-% fallback for those not using the hyperref driver hyperxmp:
-\makeatletter
-\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
-\makeatother
 \hypersetup{
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -1927,11 +1922,11 @@ For cubic function $g(x)$, part of the graph of $y=g(x)$ is shown below. Sketch 
 \end{tikzpicture}
 \end{center}
 
-\section{Polynomials and Synthetic Division}\label{polynomials-and-synthetic-division}
+\section{Synthetic Division}\label{synthetic-division}
 
 \vspace{-0.5cm}
 
-Expressions comprised of sums of \textit{positive, integer} powers of \(x\) are referred to as \textit{polynomials in }\(x\).
+A \emph{polynomial in} \(x\) is a finite sum of non-negative integer powers of \(x\), each multiplied by a constant coefficient.
 
 \begin{multicols}{5}
     \begin{center}
@@ -1975,7 +1970,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of \(x\) are 
             \draw[white] (-1.5,-1.7) rectangle (1.5,1.7);
             \node at (0,2.5) {\textbf{Quartic}};
             \node at (0,2) {\textcolor{PineGreen}{\textit{Degree 4}}};
-            \node at (0,1.5) {e.g. $x^4-3x^3+1$};
+            \node at (0,1.5) {e.g. $x^4-3x^3$};
             \draw[domain=-1.1:1.4,smooth] plot (\x,\x*\x*\x*\x-\x*\x*\x-\x*\x+\x);
         \end{tikzpicture}
     \end{center}
@@ -1983,7 +1978,7 @@ Expressions comprised of sums of \textit{positive, integer} powers of \(x\) are 
 
 \vspace{-1.3cm}
 
-A polynomial function such as \(f(x)=2x^3-7x^2+4x-1\) can be evaluated for some value of \(x\):
+A polynomial function such as \(f(x)=2x^3-7x^2+4x+1\) can be evaluated directly when \(x=3\):
 
 \vspace{-0.6cm}
 
@@ -2090,39 +2085,7 @@ Another way to evaluate \(f(3)\) is to use synthetic division, as follows:
     \end{tikzpicture}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.1.1,colback=PineGreen!2, colframe=PineGreen]
-
-Given $f(x)=x^4-4x^3+3x^2+9$, use synthetic division to evaluate $f(2)$.
-
-\tcblower
-
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (-1.5,1.6) -- (-1.5,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-2.25,1.2) {$2$};
-        \node at (-0.75,1.2) {$1$};
-        \node at (0.75,1.2) {$-4$};
-        \node at (2.25,1.2) {$\phantom{-}3$};
-        \node at (3.75,1.2) {$\phantom{-}0$};
-        \node at (5.25,1.2) {$\phantom{-}9$};
-        \node at (-0.75,-0.4) {$1$};
-        \node at (0.75,0.4) {$\phantom{-}2$};
-        \node at (0.75,-0.4) {$-2$};
-        \node at (2.25,0.4) {$-4$};
-        \node at (2.25,-0.4) {$-1$};
-        \node at (3.75,0.4) {$-2$};
-        \node at (3.75,-0.4) {$-2$};
-        \node at (5.25,0.4) {$-4$};
-        \node at (5.25,-0.4) {$\phantom{-}5$};
-        \node[right] at (6.5,-0.4) {$\therefore f(2)=5$};
-    \end{tikzpicture}
-\end{center}
-
-\end{tcolorbox}
-
-The top line within a synthetic division box should be \textit{ordered in decreasing powers of }\(x\).\textbackslash Any missing powers are included with a coefficient of \textit{zero}.
+The top line within a synthetic division box should be \textit{ordered in decreasing powers of }\(x\).\newline Any missing powers are included with a coefficient of \textit{zero}.
 
 \pagebreak
 
@@ -2132,15 +2095,18 @@ The top line within a synthetic division box should be \textit{ordered in decrea
 
 Addition, subtraction and multiplication of polynomials were all required for the National 5 course.
 
-Since \(3\times 4 + 1=13\), this implies that:
+The Higher course introduces \emph{division} of a polynomial expression by a linear expression.
 
-\[\dfrac{13}{3}=4\textbf{ Remainder }1\]
+It is helpful to know the terms \textbf{divisor}, \textbf{dividend}, \textbf{remainder} and \textbf{quotient}.
 
-Since \((x-2)(x^2-3x+4)+7=x^3-5x^2+x-1\), this implies that:
-
-\[\dfrac{x^3-5x^2+x-1}{x-2}=x^2-3x+4\textbf{ Remainder }7\]
-
-Note that for \(f(x)=x^3-5x^2+x-1\), \(f(2)=(2)^3-5(2)^2+(2)-1=7\).
+\begin{center}
+    \begin{tikzpicture}
+        \node at (0,0) {$\dfrac{13}{3}=4\textcolor{PineGreen}{\textit{ Remainder }}1$};
+        \draw[PineGreen,stealth-] (-1.8,0.7) -- (-2,1.1) node[above] {\textit{Dividend}};
+        \draw[PineGreen,stealth-] (-1.8,-0.7) -- (-2,-1.1) node[below] {\textit{Divisor}};
+        \draw[PineGreen,stealth-] (-0.6,0.36) -- (-0.3,0.8) node[above] {\textit{Quotient}};
+    \end{tikzpicture}
+\end{center}
 
 \begin{center}
 \begin{tcolorbox}[colback=red!5,width=18cm,colframe=red!70!black]
@@ -2151,78 +2117,33 @@ Note that for \(f(x)=x^3-5x^2+x-1\), \(f(2)=(2)^3-5(2)^2+(2)-1=7\).
 \end{tcolorbox}
 \end{center}
 
-\begin{tcolorbox}[title=Example 10.2.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Find the remainder when $3x^3-x^2+5$ is divided by $(x-1)$.
 
 \tcblower
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$1$};
-        \node at (0.75,1.2) {$3$};
-        \node at (2.25,1.2) {$-1$};
-        \node at (3.75,1.2) {$0$};
-        \node at (5.25,1.2) {$5$};
-        \node at (0.75,-0.4) {$3$};
-        \node at (2.25,0.4) {$\phantom{-}3$};
-        \node at (2.25,-0.4) {$\phantom{-}2$};
-        \node at (3.75,0.4) {$2$};
-        \node at (3.75,-0.4) {$2$};
-        \node at (5.25,0.4) {$2$};
-        \node at (5.25,-0.4) {$7$};
-        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,PineGreen] at (-2.5,1.2) {$(x-1)$};
-        \node[left,PineGreen] at (-2.5,0.4) {$\rightarrow f(1)$};
-    \end{tikzpicture}
-\end{center}
-
-So the remainder is $7$.
+\vspace{3cm}
 
 \end{tcolorbox}
 
-The \textit{quotient}, \(Q(x)\), can be determined from the values to the left of the remainder.\textbackslash{} Since \(3x^3-x^2+5\) is a \textit{cubic}, the quotient \(Q(x)\) is \textit{quadratic}:\quad \(3x^2+2x+2\).
+The \textit{quotient}, \(Q(x)\), can be determined from the values to the left of the remainder.\newline Since \(3x^3-x^2+5\) is a \textit{cubic}, the quotient \(Q(x)\) is \textit{quadratic}:\quad \(3x^2+2x+2\).
 
-\[3x^3-x^2+5=(x-1)(3x^2+2x+2)+7\]
+\[\dfrac{3x^3-x^2+5}{x-1}=3x^2+2x+2\quad\text{ with remainder }7\]
 
-\begin{tcolorbox}[title=Example 10.2.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
-Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(x)$ is divided by $(x+1)$, and hence express $f(x)$ in the form $(x+1)Q(x)+r$ where $Q(x)$ is a quadratic.
+Function $f$ is defined by $f(x)=x^3+4x^2-3x-7$. Find the remainder $r$ when $f(x)$ is divided by $(x+1)$, and hence state the quadratic quotient.
 
 \tcblower
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$-1$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$\phantom{-}4$};
-        \node at (3.75,1.2) {$-3$};
-        \node at (5.25,1.2) {$-7$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$-1$};
-        \node at (2.25,-0.4) {$\phantom{-}3$};
-        \node at (3.75,0.4) {$-3$};
-        \node at (3.75,-0.4) {$-6$};
-        \node at (5.25,0.4) {$\phantom{-}6$};
-        \node at (5.25,-0.4) {$-1$};
-        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,PineGreen] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
-    \end{tikzpicture}
-\end{center}
-
-So the remainder is $-1$ and $x^3+4x^2-3x-7=(x+1)(x^2+3x-6)-1$.
+\vspace{3cm}
 
 \end{tcolorbox}
 
 \pagebreak
 
-\section*{10.3 Factor Theorem}
+\section{Factor Theorem}\label{factor-theorem}
 
 \vspace{-0.5cm}
 
@@ -2242,7 +2163,7 @@ Since 20 can be divided by 5 to give 4 \textbf{with no remainder}, this means 5 
 
 \vspace{-0.3cm}
 
-Given a linear factor, synthetic division allows a cubic expression \(f(x)\) to be expressed as a the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially by further factorised:
+Given a linear factor, synthetic division allows a cubic expression \(f(x)\) to be expressed as the product of the \textit{linear} factor and a \textit{quadratic} quotient, which may potentially be further factorised:
 \vspace{-0.1cm}
 \begin{align*}
     f(x)=&\text{ }(\textit{cubic})\\
@@ -2252,82 +2173,25 @@ Given a linear factor, synthetic division allows a cubic expression \(f(x)\) to 
 
 \vspace{-0.3cm}
 
-\begin{tcolorbox}[title=Example 10.3.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x+4)$ is a factor of $x^3-x^2-14x+24$, and hence factorise it fully.
 
 \tcblower
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$-4$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$-1$};
-        \node at (3.75,1.2) {$-14$};
-        \node at (5.25,1.2) {$\phantom{-}24$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$-4$};
-        \node at (2.25,-0.4) {$-5$};
-        \node at (3.75,0.4) {$\phantom{-}20$};
-        \node at (3.75,-0.4) {$\phantom{-}6$};
-        \node at (5.25,0.4) {$-24$};
-        \node at (5.25,-0.4) {$\phantom{-}0$};
-        \node[right,PineGreen] at (6.5,-0.4) {$\longleftarrow$ \textit{Remainder}};
-        \node[left,PineGreen] at (-0.5,-0.4) {\textit{Quotient}$\longrightarrow$};
-    \end{tikzpicture}
-\end{center}
-\centering
-Remainder$=0\therefore (x+4)$ is a factor. \textcolor{PineGreen}{$\longleftarrow$ \textit{``Show that..''}}
-
-\vspace{-0.3cm}
-\begin{align*}
-    &\text{ }x^3-x^2-14x+24\\
-    =&\text{ }(x+4)(x^2-5x+6)\\
-    =&\text{ }(x+4)(x-2)(x-3)
-\end{align*}
+\vspace{5cm}
 
 \end{tcolorbox}
 
 For some cubic expressions, a resulting quadratic quotient may not be able to be factorised.
 
-\begin{tcolorbox}[title=Example 10.3.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $2x^3-x^2+x-14$, and hence factorise it fully.
 
 \tcblower
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$2$};
-        \node at (0.75,1.2) {$2$};
-        \node at (2.25,1.2) {$-1$};
-        \node at (3.75,1.2) {$1$};
-        \node at (5.25,1.2) {$-14$};
-        \node at (0.75,-0.4) {$2$};
-        \node at (2.25,0.4) {$\phantom{-}4$};
-        \node at (2.25,-0.4) {$\phantom{-}3$};
-        \node at (3.75,0.4) {$6$};
-        \node at (3.75,-0.4) {$7$};
-        \node at (5.25,0.4) {$\phantom{-}14$};
-        \node at (5.25,-0.4) {$\phantom{-}0$};
-    \end{tikzpicture}
-\end{center}
-\centering
-\textcolor{PineGreen}{\textit{``Show that }$(x-2)$\textit{ is a factor...'' }$\longrightarrow$} Remainder$=0\therefore (x-2)$ is a factor.
-
-\vspace{-0.3cm}
-\begin{align*}
-    &\text{ }2x^3-x^2+x-14\\
-    =&\text{ }(x-2)(2x^2+3x+7)
-\end{align*}
-
-Since $3^2-4\times2\times7=-65$, and $-65<0$, the quadratic quotient cannot be factorised\\ Therefore the cubic cannot be further factorised. 
+\vspace{5cm}
 
 \end{tcolorbox}
 
@@ -2335,125 +2199,27 @@ Since $3^2-4\times2\times7=-65$, and $-65<0$, the quadratic quotient cannot be f
 
 Where a linear factor of a polynomial function is unknown, a suggested approach is to consider the factors of the constant term with the aim of obtaining a value such that the remainder is zero.
 
-\begin{tcolorbox}[title=Example 10.3.3,colback=PineGreen!2, colframe=PineGreen]
+\emph{Solving} a cubic equation (equal to zero) is achieved by first factorising the cubic expression.
 
-Factorise $x^3-x^2-17x=15$.
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
+
+Solve $x^3-x^2-17x-15=0$.
 
 \tcblower
 
-\textcolor{PineGreen}{\textit{Consider }$\pm1,\pm3\pm5\pm15$}\\[-0.5em]
-
-$f(1)=(1)^3-(1)^2-17(1)-15=-32\therefore$ $(x-1)$ is \textbf{not} a factor.\\[-0.5em]
-
-$f(-1)=(-1)^3-(-1)^2-17(-1)-15=0\therefore$ $(x+1)$ \textbf{is} a factor.
-
-
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$-1$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$-1$};
-        \node at (3.75,1.2) {$-17$};
-        \node at (5.25,1.2) {$-15$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$-1$};
-        \node at (2.25,-0.4) {$-2$};
-        \node at (3.75,0.4) {$\phantom{-}2$};
-        \node at (3.75,-0.4) {$-15$};
-        \node at (5.25,0.4) {$\phantom{-}15$};
-        \node at (5.25,-0.4) {$\phantom{-}0$};
-    \end{tikzpicture}
-\end{center}
-\centering
-
-\vspace{-0.7cm}
-\begin{align*}
-    &\text{ }x^3-x^2-17x-15\\
-    =&\text{ }(x+1)(x^2-2x-15)\\
-    =&\text{ }(x+1)(x+3)(x-5)
-\end{align*}
+\vspace{8cm}
 
 \end{tcolorbox}
 
-Repeated use of synthetic dvision may allow a \textit{quartic} (\(x^4\)) to be expressed as a product of up to four linear factors.
+A \textit{quartic} (\(x^4\)) to be expressed as a product of up to four linear factors.
 
-\vspace{-1cm}
-
-\begin{align*}
-    f(x)=&\text{ }(\textit{quartic})\\
-    =&\text{ }(\textit{linear})(\textit{cubic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
-    \qquad \qquad \qquad =&\text{ }(\textit{linear})(\textit{linear})(\textit{quadratic})&&\textcolor{PineGreen}{\longleftarrow\textit{ Using synthetic division}}\\
-    =&\text{ }(\textit{linear})(\textit{linear})(\textit{linear})(\textit{linear})
-\end{align*}
-
-\vspace{-0.1cm}
-
-\begin{tcolorbox}[title=Example 10.3.4,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Show that $(x-2)$ is a factor of $x^4-2x^3-7x^2+8x+12$ and hence factorise it fully.
 
 \tcblower
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (-1.5,1.6) -- (-1.5,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-2.25,1.2) {$2$};
-        \node at (-0.75,1.2) {$1$};
-        \node at (0.75,1.2) {$-2$};
-        \node at (2.25,1.2) {$-7$};
-        \node at (3.75,1.2) {$\phantom{-}8$};
-        \node at (5.25,1.2) {$\phantom{-}12$};
-        \node at (-0.75,-0.4) {$1$};
-        \node at (0.75,0.4) {$\phantom{-}2$};
-        \node at (0.75,-0.4) {$\phantom{-}0$};
-        \node at (2.25,0.4) {$\phantom{-}0$};
-        \node at (2.25,-0.4) {$-7$};
-        \node at (3.75,0.4) {$-14$};
-        \node at (3.75,-0.4) {$-6$};
-        \node at (5.25,0.4) {$-12$};
-        \node at (5.25,-0.4) {$\phantom{-}0$};
-    \end{tikzpicture}
-\end{center}
-
-\centering
-Remainder$=0\therefore (x-2)$ is a factor.\\[0.5em]
-
-$x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
-
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-5,1.6) -- (11,1.6);
-        \draw (0,1.6) -- (0,0) -- (6,0);
-        \draw (4.5,0) -- (4.5,-0.8) -- (6,-0.8);
-        \node at (-0.75,1.2) {$3$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$0$};
-        \node at (3.75,1.2) {$-7$};
-        \node at (5.25,1.2) {$-6$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$3$};
-        \node at (2.25,-0.4) {$3$};
-        \node at (3.75,0.4) {$\phantom{-}9$};
-        \node at (3.75,-0.4) {$\phantom{-}2$};
-        \node at (5.25,0.4) {$\phantom{-}6$};
-        \node at (5.25,-0.4) {$\phantom{-}0$};
-        \node[left] at (-1.5,0) {\textcolor{PineGreen}{\textit{Try factors of 6}}};
-        \draw[PineGreen,-stealth] (-1.5,0.3) -- (-0.9,0.9);
-    \end{tikzpicture}
-\end{center}
-
-\vspace{-0.8cm}
-
-\begin{align*}
-    x^4-2x^3-7x^2+8x+12&=(x-2)(x^3-7x-6)\\
-    &=(x-2)(x-3)(x^2+3x+2)\\
-    &=(x-2)(x-3)(x+1)(x+2)
-\end{align*}
+\vspace{9cm}
 
 \end{tcolorbox}
 
@@ -2465,46 +2231,20 @@ $x^4-2x^3-7x^2+8x+12=(x-2)(x^3-7x-6)$
 
 An unknown coefficient of a polynomial expression may be calculated if a factor of the expression is known, or the remainder given a linear divisor is known. It may be preferred to use synthetic division, or to evaluate the expression directly.
 
-\begin{tcolorbox}[title=Example 10.4.1,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Given that $(x+2)$ is a factor of $2x^3+kx^2-14x+8$, determine the value of $k$.
 
 \tcblower
 
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-4,1.6) -- (12,1.6);
-        \fill[PineGreen!10] (5.5,-0.8) rectangle (7.5,0);
-        \draw (0,1.6) -- (0,0) -- (7.5,0);
-        \draw (5.5,0) -- (5.5,-0.8) -- (7.5,-0.8);
-        \node at (-0.75,1.2) {$-2$};
-        \node at (0.75,1.2) {$2$};
-        \node at (2.25,1.2) {$\phantom{-}k$};
-        \node at (4.25,1.2) {$-14$};
-        \node at (6.55,1.2) {$8$};
-        \node at (0.75,-0.4) {$2$};
-        \node at (2.25,0.4) {$-4$};
-        \node at (2.25,-0.4) {$k-4$};
-        \node at (4.25,0.4) {$-2k+8$};
-        \node at (4.25,-0.4) {$-2k-6$};
-        \node at (6.55,0.4) {$4k+12$};
-        \node at (6.55,-0.4) {$4k+20$};
-        \node[right] at (7.7,-0.4) {\textcolor{PineGreen}{$\longleftarrow$\textit{ Remainder}}};
-    \end{tikzpicture}
-\end{center}
-\centering
-Since $(x+2)$ is a factor, remainder$=0$.
-\begin{align*}
-    4k+20&=0\\
-    4k&=-20\\
-    k&=-5
-\end{align*}
+\vspace{5cm}
+
 \end{tcolorbox}
 
 Where a polynomial has \textit{two} unknown coefficients, \textit{simultaneous equations} may be formed and solved.
 
-\begin{tcolorbox}[title=Example 10.4.2,colback=PineGreen!2, colframe=PineGreen]
+\begin{tcolorbox}[title=Example,colback=PineGreen!2, colframe=PineGreen]
 
 Find the values of $a$ and $b$ given that:\\
 \begin{itemize}
@@ -2515,95 +2255,12 @@ Find the values of $a$ and $b$ given that:\\
 \tcblower
 
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-3.5,1.6) -- (11.5,1.6);
-        \draw (0,1.6) -- (0,0) -- (8.9,0);
-        \draw (6.1,0) -- (6.1,-0.8) -- (8.9,-0.8);
-        \node at (-0.75,1.2) {$2$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$a$};
-        \node at (4.55,1.2) {$b$};
-        \node at (7.55,1.2) {$12$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$2$};
-        \node at (2.25,-0.4) {$a+2$};
-        \node at (4.55,0.4) {$2a+4$};
-        \node at (4.55,-0.4) {$2a+b+4$};
-        \node at (7.55,0.4) {$4a+2b+8$};
-        \node at (7.55,-0.4) {$4a+2b+20$};
-    \end{tikzpicture}
-\end{center}
-\centering
-Since $(x-2)$ is a factor, remainder $=0$ $\implies$ $4a+2b+20=0$.
 
-\begin{center}
-    \begin{tikzpicture}
-        \draw[white] (-3.5,1.6) -- (11.5,1.6);
-        \draw (0,1.6) -- (0,0) -- (8.9,0);
-        \draw (6.1,0) -- (6.1,-0.8) -- (8.9,-0.8);
-        \node at (-0.75,1.2) {$1$};
-        \node at (0.75,1.2) {$1$};
-        \node at (2.25,1.2) {$a$};
-        \node at (4.55,1.2) {$b$};
-        \node at (7.55,1.2) {$12$};
-        \node at (0.75,-0.4) {$1$};
-        \node at (2.25,0.4) {$1$};
-        \node at (2.25,-0.4) {$a+1$};
-        \node at (4.55,0.4) {$a+1$};
-        \node at (4.55,-0.4) {$a+b+1$};
-        \node at (7.55,0.4) {$a+b+1$};
-        \node at (7.55,-0.4) {$a+b+13$};
-    \end{tikzpicture}
-\end{center}
+\vspace{10cm}
 
-\centering
-Remainder $=10$ $\implies$ $a+b+13=10$.
-\vspace{-0.3cm}
-\flushleft
-\textcolor{PineGreen}{\textit{Solve simultaneously:}}
-\vspace{-0.8cm}
-\begin{center}
-    \begin{tikzpicture}
-        \node[below left] at (0,0) {
-        \begin{minipage}{7cm}
-            \begin{align*}
-                4a+2b&=-20&\qquad \qquad 4a+2b&=-20\\[0.2em]
-                a+b&=-3&\qquad \qquad 2a+2b&=-6\\[0.2em]
-                &&2a&=-14\\
-                &&a&=-7
-            \end{align*}
-        \end{minipage}
-        };
-        \node[below right] at (1.5,-0.57) {
-        \begin{minipage}{4cm}
-            \centering
-            \textcolor{PineGreen}{\textit{Sub }$a=-7$:}
-            \vspace{-0.3cm}
-            \begin{align*}
-                a+b&=-3\\[0.2em]
-                (-7)+b&=-3\\[0.2em]
-                b&=4
-            \end{align*}
-        \end{minipage}
-        };
-        \draw[PineGreen] (-3,-2) -- (0,-2) node[right] {\scriptsize{$(-)$}};
-        \draw [decoration={brace,amplitude=0.5em},decorate,thick,PineGreen]
-(-4.5,-0.8) -- (-4.5,-1.8);
-        \node[PineGreen] at (-4.2,-1.8) {\scriptsize{$\times 2$}};
-    \end{tikzpicture}
-\end{center}
 \end{tcolorbox}
 
 \pagebreak
-
-\section{Solving Polynomial Equations}\label{solving-polynomial-equations}
-
-\vspace{-0.5cm}
-
-\textit{Quadratic} equations such as \(x^2-4x-21=0\) are typically solved through factorising, or using the quadratic formula. There is no equivalent \textit{general formula} for solving polynomial equations of degree 3 (\textit{cubic}) or higher. Instead, such polynomial equations are solved through \textit{factorising}.
-
-\newpage
 
 \section{Identifying Polynomial Functions}\label{identifying-polynomial-functions}
 
@@ -2675,9 +2332,6 @@ The value of \(k\) can only be found if a \textit{non-root} coordinate is also k
 By comparing the form given and the final equation, it can be seen that: \(k=\frac{1}{2},a=1,b=3,c=-2\)
 
 \pagebreak
-
-\section*{Review Exercise}\label{review-exercise-9}
-\addcontentsline{toc}{section}{Review Exercise}
 
 \chapterfont{\color{white}}
 
@@ -3222,7 +2876,7 @@ Part of the graphs of $y=-3x$ and $y=4-x^2$ are shown. Calculate the shaded area
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-10}
+\section*{Review Exercise}\label{review-exercise-9}
 \addcontentsline{toc}{section}{Review Exercise}
 
 \chapterfont{\color{white}}
@@ -3450,7 +3104,7 @@ Given $\sin{q}=\dfrac{4}{11}$, where $0<q<\dfrac{\pi}{2}$, find $\cos{2q}$.
 
 \end{tcolorbox}
 
-\section*{Review Exercise}\label{review-exercise-11}
+\section*{Review Exercise}\label{review-exercise-10}
 \addcontentsline{toc}{section}{Review Exercise}
 
 \chapterfont{\color{white}}
@@ -4086,7 +3740,7 @@ Show that circles $\text{C}_1$ and $\text{C}_2$, with equations $(x-3)^2+(y+6)^2
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-12}
+\section*{Review Exercise}\label{review-exercise-11}
 \addcontentsline{toc}{section}{Review Exercise}
 
 \chapterfont{\color{white}}
@@ -4272,10 +3926,10 @@ Express $3\cos{x}-\sin{x}$ in the form $k\cos{(x-a)}$ where $k>0$ and $0<a<2\pi$
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex141q}{}
+\phantomsection\label{ex141q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex141a]{Exercise 14.1}}{Exercise 14.1}}\label{exercise-14.1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.1}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex141a]{Exercise 14.1}}
 
 \vspace{-0.3cm}
 
@@ -4375,10 +4029,10 @@ Express $12\cos{x}\degree-5\sin{x}\degree$ in the form $k\sin{(x-a)}\degree$ whe
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex142q}{}
+\phantomsection\label{ex142q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex142a]{Exercise 14.2}}{Exercise 14.2}}\label{exercise-14.2}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.2}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex142a]{Exercise 14.2}}
 
 \vspace{-0.3cm}
 
@@ -4500,10 +4154,10 @@ Hence the minimum value of $f(x)$ is $-5$, which occurs when $x=216.9$.
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex143q}{}
+\phantomsection\label{ex143q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex143a]{Exercise 14.3}}{Exercise 14.3}}\label{exercise-14.3}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.3}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex143a]{Exercise 14.3}}
 
 \vspace{-0.3cm}
 
@@ -4592,10 +4246,10 @@ Note that any solutions outwith the domain (often \(0<x<360\)) should have \(360
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex144q}{}
+\phantomsection\label{ex144q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex144a]{Exercise 14.4}}{Exercise 14.4}}\label{exercise-14.4}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.4}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex144a]{Exercise 14.4}}
 
 \vspace{-0.3cm}
 
@@ -4691,10 +4345,10 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex145q}{}
+\phantomsection\label{ex145q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex145a]{Exercise 14.5}}{Exercise 14.5}}\label{exercise-14.5}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.5}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex145a]{Exercise 14.5}}
 
 \vspace{-0.3cm}
 
@@ -4719,10 +4373,10 @@ Express $5\cos{2t}\degree-3\sin{2t}\degree$ in the form $k\sin{(2t+a)}\degree$ w
 
 \pagebreak
 
-\protect\phantomsection\label{ex14Rq}{}
+\phantomsection\label{ex14Rq}{}
 
 \section*{\texorpdfstring{\hyperref[ex14Ra]{Wave Function Review Exercise}}{Wave Function Review Exercise}}\label{wave-function-review-exercise}
-\addcontentsline{toc}{section}{{Wave Function Review Exercise}}
+\addcontentsline{toc}{section}{\hyperref[ex14Ra]{Wave Function Review Exercise}}
 
 \begin{enumerate}
     \item Express $8\sin{x}\degree+7\cos{x}\degree$ in the form $k\sin{(x+a)}\degree$ where $k>0$ and $0<a<360$. \faCalculator\\[0.5em]
@@ -4931,10 +4585,10 @@ The graph of $y=a^x+b$ is below. Find the values of $a$ and $b$, and state the r
 
 \pagebreak
 
-\protect\phantomsection\label{ex151q}{}
+\phantomsection\label{ex151q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex151a]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.1}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex151a]{Exercise 15.1}}
 
 \vspace{-0.5cm}
 
@@ -5134,10 +4788,10 @@ $\log_3{\frac{1}{9}}=-2\color{PineGreen}\longleftarrow\text{Since }3^{-2}=\frac{
 
 \vspace{-1.2cm}
 
-\protect\phantomsection\label{ex152q}{}
+\phantomsection\label{ex152q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex152a]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.2}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex152a]{Exercise 15.2}}
 
 \vspace{-0.6cm}
 
@@ -5330,10 +4984,10 @@ Evaluate $\log_{6}{8}+2\log_{6}{3}-\log_{6}{2}$.
 
 \vspace{-0.6cm}
 
-\protect\phantomsection\label{ex153q}{}
+\phantomsection\label{ex153q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex153a]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.3}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex153a]{Exercise 15.3}}
 
 \vspace{-0.4cm}
 
@@ -5443,10 +5097,10 @@ x&=18 && \color{PineGreen}\longleftarrow\text{Multiply both sides by }2\text{ to
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex154q}{}
+\phantomsection\label{ex154q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex154a]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.4}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex154a]{Exercise 15.4}}
 
 \vspace{-0.4cm}
 
@@ -5653,10 +5307,10 @@ Sketch the graph of $y=\log_3{(x-1)}+2$.
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex155q}{}
+\phantomsection\label{ex155q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex155a]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.5}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex155a]{Exercise 15.5}}
 
 \vspace{-0.5cm}
 
@@ -5811,10 +5465,10 @@ x&=0.957 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.3cm}
 
-\protect\phantomsection\label{ex156q}{}
+\phantomsection\label{ex156q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex156a]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.6}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex156a]{Exercise 15.6}}
 
 \vspace{-0.3cm}
 
@@ -5937,10 +5591,10 @@ k&=-1.18 \text{ (to 3sf)} && \color{PineGreen}\longleftarrow\text{Calculate the 
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex157q}{}
+\phantomsection\label{ex157q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex157a]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.7}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex157a]{Exercise 15.7}}
 
 \vspace{-0.5cm}
 
@@ -6099,10 +5753,10 @@ t&=7.60\text{ hours} && \color{PineGreen}\longleftarrow \text{Calculate}
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex158q}{}
+\phantomsection\label{ex158q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158a]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.8}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex158a]{Exercise 15.8}}
 
 \vspace{-0.3cm}
 
@@ -6240,10 +5894,10 @@ Therefore the relationship between \(x\) and \(y\) is \(y=27x^{\frac{3}{2}}\).
 
 \newpage
 
-\protect\phantomsection\label{ex159q}{}
+\phantomsection\label{ex159q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159a]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.9}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex159a]{Exercise 15.9}}
 
 \vspace{-0.5cm}
 
@@ -6450,10 +6104,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\protect\phantomsection\label{ex1510q}{}
+\phantomsection\label{ex1510q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex1510a]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.10}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex1510a]{Exercise 15.10}}
 
 \vspace{-0.5cm}
 
@@ -6552,10 +6206,10 @@ Note the the process of solving for \(a\) and solving for \(b\) may require solv
 
 \newpage
 
-\protect\phantomsection\label{ex15Rq}{}
+\phantomsection\label{ex15Rq}{}
 
 \section*{\texorpdfstring{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}{Logs and Exponentials Review Exercise}}\label{logs-and-exponentials-review-exercise}
-\addcontentsline{toc}{section}{{Logs and Exponentials Review Exercise}}
+\addcontentsline{toc}{section}{\hyperref[ex15Ra]{Logs and Exponentials Review Exercise}}
 
 \vspace{-0.5cm}
 
@@ -6765,10 +6419,10 @@ f'(x)&=6\times4(3-x)^5\times(-1)\\[0.5em]
 
 \vspace{-1cm}
 
-\protect\phantomsection\label{ex161q}{}
+\phantomsection\label{ex161q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex161a]{Exercise 16.1}}{Exercise 16.1}}\label{exercise-16.1}
-\addcontentsline{toc}{subsubsection}{{Exercise 16.1}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex161a]{Exercise 16.1}}
 
 \vspace{-0.5cm}
 
@@ -6846,10 +6500,10 @@ f'(x)&=\tfrac{4}{3}(x^2+5x+7)^{\frac{1}{3}}\times(2x+5)\\[0.5em]
 
 \vspace{-1cm}
 
-\protect\phantomsection\label{ex162q}{}
+\phantomsection\label{ex162q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex162a]{Exercise 16.2}}{Exercise 16.2}}\label{exercise-16.2}
-\addcontentsline{toc}{subsubsection}{{Exercise 16.2}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex162a]{Exercise 16.2}}
 
 \vspace{-0.5cm}
 
@@ -6936,10 +6590,10 @@ g'\left(\tfrac{\pi}{4}\right)&=-10\sin{\left(2\left(\tfrac{\pi}{4}\right)-\tfrac
 
 \vspace{-1cm}
 
-\protect\phantomsection\label{ex163q}{}
+\phantomsection\label{ex163q}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex163a]{Exercise 16.3}}{Exercise 16.3}}\label{exercise-16.3}
-\addcontentsline{toc}{subsubsection}{{Exercise 16.3}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex163a]{Exercise 16.3}}
 
 \vspace{-0.5cm}
 
@@ -6973,7 +6627,7 @@ g'\left(\tfrac{\pi}{4}\right)&=-10\sin{\left(2\left(\tfrac{\pi}{4}\right)-\tfrac
 
 \newpage
 
-\section*{Review Exercise}\label{review-exercise-13}
+\section*{Review Exercise}\label{review-exercise-12}
 \addcontentsline{toc}{section}{Review Exercise}
 
 \chapterfont{\color{white}}
@@ -7237,10 +6891,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.2cm}
 
-\protect\phantomsection\label{ex141a}{}
+\phantomsection\label{ex141a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex141q]{Exercise 14.1}}{Exercise 14.1}}\label{exercise-14.1-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.1}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex141q]{Exercise 14.1}}
 
 \vspace{-0.2cm}
 
@@ -7273,10 +6927,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.3cm}
 
-\protect\phantomsection\label{ex142a}{}
+\phantomsection\label{ex142a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex142q]{Exercise 14.2}}{Exercise 14.2}}\label{exercise-14.2-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.2}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex142q]{Exercise 14.2}}
 
 \vspace{-0.2cm}
 
@@ -7309,10 +6963,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.3cm}
 
-\protect\phantomsection\label{ex143a}{}
+\phantomsection\label{ex143a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex143q]{Exercise 14.3}}{Exercise 14.3}}\label{exercise-14.3-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.3}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex143q]{Exercise 14.3}}
 
 \vspace{-0.2cm}
 
@@ -7434,10 +7088,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\protect\phantomsection\label{ex144a}{}
+\phantomsection\label{ex144a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex144q]{Exercise 14.4}}{Exercise 14.4}}\label{exercise-14.4-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.4}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex144q]{Exercise 14.4}}
 
 \begin{enumerate}
     \item
@@ -7473,10 +7127,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\protect\phantomsection\label{ex145a}{}
+\phantomsection\label{ex145a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex145q]{Exercise 14.5}}{Exercise 14.5}}\label{exercise-14.5-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 14.5}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex145q]{Exercise 14.5}}
 
 \begin{enumerate}
     \item $5\sin{(t-233.1)\degree}$
@@ -7497,10 +7151,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\protect\phantomsection\label{ex14Ra}{}
+\phantomsection\label{ex14Ra}{}
 
-\subsubsection*{\texorpdfstring{\hyperref[ex14Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-14}
-\addcontentsline{toc}{subsubsection}{{Review Exercise}}
+\subsubsection*{\texorpdfstring{\hyperref[ex14Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-13}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex14Rq]{Review Exercise}}
 
 \begin{enumerate}
     \item $\sqrt{113}\sin{(x+41.2)\degree}$
@@ -7579,10 +7233,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.2cm}
 
-\protect\phantomsection\label{ex151a}{}
+\phantomsection\label{ex151a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex151q]{Exercise 15.1}}{Exercise 15.1}}\label{exercise-15.1-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.1}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex151q]{Exercise 15.1}}
 
 \vspace{-0.3cm}
 
@@ -7721,10 +7375,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\protect\phantomsection\label{ex152a}{}
+\phantomsection\label{ex152a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex152q]{Exercise 15.2}}{Exercise 15.2}}\label{exercise-15.2-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.2}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex152q]{Exercise 15.2}}
 
 \begin{enumerate}
     \item 
@@ -7804,10 +7458,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\protect\phantomsection\label{ex153a}{}
+\phantomsection\label{ex153a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex153q]{Exercise 15.3}}{Exercise 15.3}}\label{exercise-15.3-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.3}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex153q]{Exercise 15.3}}
 
 \begin{enumerate}
     \item 
@@ -7857,10 +7511,10 @@ The following problems \textbf{do not} represent the kind of question expected t
     \end{enumerate}
 \end{enumerate}
 
-\protect\phantomsection\label{ex154a}{}
+\phantomsection\label{ex154a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex154q]{Exercise 15.4}}{Exercise 15.4}}\label{exercise-15.4-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.4}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex154q]{Exercise 15.4}}
 
 \begin{enumerate}
     \item Solve:
@@ -7938,10 +7592,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex155a}{}
+\phantomsection\label{ex155a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex155q]{Exercise 15.5}}{Exercise 15.5}}\label{exercise-15.5-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.5}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex155q]{Exercise 15.5}}
 
 \vspace{-0.5cm}
 
@@ -8115,10 +7769,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex156a}{}
+\phantomsection\label{ex156a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex156q]{Exercise 15.6}}{Exercise 15.6}}\label{exercise-15.6-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.6}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex156q]{Exercise 15.6}}
 
 \vspace{-0.5cm}
 
@@ -8192,10 +7846,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 \begingroup
 \footnotesize
 
-\protect\phantomsection\label{ex157a}{}
+\phantomsection\label{ex157a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex157q]{Exercise 15.7}}{Exercise 15.7}}\label{exercise-15.7-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.7}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex157q]{Exercise 15.7}}
 
 \begin{enumerate}
     \item 
@@ -8228,10 +7882,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex158a}{}
+\phantomsection\label{ex158a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex158q]{Exercise 15.8}}{Exercise 15.8}}\label{exercise-15.8-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.8}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex158q]{Exercise 15.8}}
 
 \begin{enumerate}
     \item
@@ -8285,10 +7939,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex159a}{}
+\phantomsection\label{ex159a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex159q]{Exercise 15.9}}{Exercise 15.9}}\label{exercise-15.9-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.9}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex159q]{Exercise 15.9}}
 
 \begin{enumerate}
     \item
@@ -8313,10 +7967,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex1510a}{}
+\phantomsection\label{ex1510a}{}
 
 \subsubsection*{\texorpdfstring{\hyperref[ex1510q]{Exercise 15.10}}{Exercise 15.10}}\label{exercise-15.10-1}
-\addcontentsline{toc}{subsubsection}{{Exercise 15.10}}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex1510q]{Exercise 15.10}}
 
 \begin{enumerate}
     \item
@@ -8341,10 +7995,10 @@ The following problems \textbf{do not} represent the kind of question expected t
 
 \vspace{-0.5cm}
 
-\protect\phantomsection\label{ex15Ra}{}
+\phantomsection\label{ex15Ra}{}
 
-\subsubsection*{\texorpdfstring{\hyperref[ex15Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-15}
-\addcontentsline{toc}{subsubsection}{{Review Exercise}}
+\subsubsection*{\texorpdfstring{\hyperref[ex15Rq]{Review Exercise}}{Review Exercise}}\label{review-exercise-14}
+\addcontentsline{toc}{subsubsection}{\hyperref[ex15Rq]{Review Exercise}}
 
 \begin{enumerate}
     \item
